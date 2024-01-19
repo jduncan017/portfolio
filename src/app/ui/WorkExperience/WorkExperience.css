@@ -1,0 +1,132 @@
+.work-experience-outer-container {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.experience-container,
+.tech-experience-container {
+  display: flex;
+}
+
+.tech-experience-container {
+  margin-top: -50px;
+}
+
+.experience-heading-box {
+  display: flex;
+  height: 30px;
+  margin-top: 90px;
+  width: 30%;
+}
+
+.experience-heading-border {
+  border-bottom: 3px solid #752082;
+  margin-left: 25%;
+  width: auto;
+}
+
+.experience-heading {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.experience-right-container,
+.tech-skills-container {
+  margin-top: 80px;
+  width: 70%;
+}
+
+.tech-skills-container {
+  columns: 2;
+}
+
+.tech-skills-bullets {
+  margin: 0% 8% 0% 2%;
+  padding-bottom: 10%;
+}
+
+.job-container {
+  margin-bottom: 50px;
+}
+
+.experience-title {
+  font-size: 150%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.experience-position {
+  font-family: 'Muli';
+}
+
+.experience-time {
+  display: block;
+  font-family: 'Muli';
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.experience-item {
+  font-family: 'Muli';
+  margin-bottom: 10px;
+}
+
+.description-list {
+  letter-spacing: .3px;
+  line-height: 150%;
+  padding-right: 100px;
+}
+
+@media only screen and (max-width: 760px) {
+
+  .work-experience-outer-container {
+    padding-top: 40px;
+  }
+
+  .experience-container,
+  .tech-experience-container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .experience-heading-box {
+    margin-top: 50px;
+  }
+
+  .tech-skills-bullets {
+    margin-bottom: 40px;
+    margin-left: 30%;
+    padding: 0px;
+  }
+
+  .experience-heading-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .experience-title {
+    font-size: 120%;
+  }
+
+  .experience-heading-border {
+    margin: 0px;
+  }
+
+  .description-list {
+    padding-right: 0px;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+
+  .tech-skills-container {
+    columns: 1;
+  }
+
+}

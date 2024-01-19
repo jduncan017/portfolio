@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TrianglesAnimation should match the snapshot 1`] = `
+<section
+  className="triangles-outer-container"
+>
+  <svg
+    className="triangle-container"
+    viewBox="0 0 1000 1000"
+  >
+    <polygon
+      className="triangle triangle-1"
+      key="1"
+      points="500,200 759,650 241,650"
+    />
+    <polygon
+      className="triangle triangle-2"
+      key="2"
+      points="500,200 759,650 241,650"
+    />
+    <polygon
+      className="triangle triangle-3"
+      key="3"
+      points="500,200 759,650 241,650"
+    />
+    <polygon
+      className="triangle triangle-4"
+      key="4"
+      points="500,200 759,650 241,650"
+    />
+    <polygon
+      className="triangle triangle-5"
+      key="5"
+      points="500,200 759,650 241,650"
+    />
+    <polygon
+      className="triangle triangle-6"
+      key="6"
+      points="500,200 759,650 241,650"
+    />
+    <polygon
+      className="triangle triangle-7"
+      key="7"
+      points="500,200 759,650 241,650"
+    />
+  </svg>
+</section>
+`;

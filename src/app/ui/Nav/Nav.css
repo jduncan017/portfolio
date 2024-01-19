@@ -1,0 +1,136 @@
+.nav-buttons {
+  background-color: #004e54;
+  border: none;
+  color: #fff;
+  font-size: 70%;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin: 1px 1px 1px 1px;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-buttons:hover {
+  background-color: #000000a1;
+  cursor: pointer;
+}
+
+.full-nav-container {
+  background-color: #004e54;
+  box-shadow: 0px 5px 13px 0px #000;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.hamburger-button,
+.hamburger-button-active {
+  background: center/100% url("/triangle_purple.png");
+  border: 2px solid #a72db9;
+  height: 50px;
+  position: fixed;
+  width: 50px;
+  z-index: 10;
+}
+
+.hamburger-button-turn-left {
+  animation: turnLeft 0.9s 1;
+}
+
+.hamburger-button-active {
+  background: center/100% url("/triangle_white.png");
+  transform: rotate(180deg);
+  animation: turnRight 0.9s 1;
+}
+
+.hamburger-button:hover {
+  cursor: pointer;
+}
+
+.mobile-nav-container {
+  display: none;
+  position: absolute;
+}
+
+.mobile-menu {
+  background-color: #752082;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 5px 5px 13px 2px #000;
+  height: auto;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+@keyframes turnRight {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes turnLeft {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    top: -250px;
+  }
+
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    top: 0px;
+  }
+
+  100% {
+    top: -250px;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.9s 1;
+}
+
+.animate-slide-out {
+  animation: slide-out 0.9s 1;
+}
+
+@media only screen and (max-width: 660px) {
+  .mobile-nav-container {
+    display: block;
+  }
+
+  .full-nav-container {
+    display: none;
+  }
+
+  .nav-buttons {
+    font-size: 110%;
+    width: 100%;
+  }
+
+  .nav-buttons:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
