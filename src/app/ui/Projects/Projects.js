@@ -20,7 +20,9 @@ export const Projects = () => {
                 href={project.repoURL}
                 target="_blank"
               >
-                <button className="project-button">GitHub Repo</button>
+                <button className="project-button global__button">
+                  GitHub Repo
+                </button>
               </Link>
               <Link
                 rel="noopener noreferrer"
@@ -29,7 +31,7 @@ export const Projects = () => {
                 href={project.liveLink}
                 target="_blank"
               >
-                <button className="project-button">
+                <button className="project-button global__button">
                   {project.liveButtonText}
                 </button>
               </Link>

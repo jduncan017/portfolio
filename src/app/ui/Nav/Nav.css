@@ -2,18 +2,20 @@
   background-color: #004e54;
   border: none;
   color: #fff;
-  font-size: 70%;
+  font-size: 85%;
   font-weight: bold;
-  letter-spacing: 0.5px;
-  margin: 1px 1px 1px 1px;
+  letter-spacing: 1px;
+  margin: 0.5px;
   padding: 10px 30px 10px 30px;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 3px;
 }
 
 .nav-buttons:hover {
-  background-color: #000000a1;
+  background-color: #2a2a2a;
   cursor: pointer;
+  transition: background-color 0.5s;
 }
 
 .full-nav-container {
@@ -25,16 +27,19 @@
   position: fixed;
   width: 100%;
   z-index: 5;
+  padding: 2px;
 }
 
 .hamburger-button,
 .hamburger-button-active {
   background: center/100% url("/triangle_purple.png");
-  border: 2px solid #a72db9;
+  border: none;
   height: 50px;
   position: fixed;
   width: 50px;
   z-index: 10;
+  margin: 5px;
+  transition: margin 0.5s;
 }
 
 .hamburger-button-turn-left {
@@ -45,6 +50,8 @@
   background: center/100% url("/triangle_white.png");
   transform: rotate(180deg);
   animation: turnRight 0.9s 1;
+  margin: 0;
+  transition: margin 0.5s;
 }
 
 .hamburger-button:hover {
@@ -57,9 +64,9 @@
 }
 
 .mobile-menu {
-  background-color: #752082;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  background-color: #000000;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   box-shadow: 5px 5px 13px 2px #000;
   height: auto;
   position: fixed;
@@ -127,10 +134,11 @@
   .nav-buttons {
     font-size: 110%;
     width: 100%;
+    padding: 15px;
   }
 
   .nav-buttons:last-child {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }

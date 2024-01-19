@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { resumeData } from "@/src/lib/resumeData";
-// import { ParticlesAnimation } from '../ParticlesAnimation/ParticlesAnimation';
+import { ParticlesAnimation } from "../ParticlesAnimation/ParticlesAnimation";
 import gitHubIcon from "@/public/github_icon.png";
 import twitterIcon from "@/public/twitter_icon.png";
 import linkedInIcon from "@/public/linkedin_icon.png";
@@ -18,7 +18,7 @@ export const Header = () => {
 
   return (
     <section id="home-section" className="header-outer-container">
-      {/* <ParticlesAnimation /> */}
+      <ParticlesAnimation />
       <h1 className="title-name">Joshua</h1>
       <h1 className="title-name">Duncan</h1>
       <h2 className="title-industry">Software Engineer</h2>
@@ -32,7 +32,7 @@ export const Header = () => {
           <Image
             alt="Github icon"
             src={gitHubIcon}
-            className="social-icon icon"
+            className="social-icon icon global__hover-animation"
             width={45}
             height={45}
           />
@@ -46,7 +46,7 @@ export const Header = () => {
           <Image
             alt="Linkedin icon"
             src={linkedInIcon}
-            className="social-icon icon"
+            className="social-icon icon global__hover-animation"
             width={45}
             height={45}
           />
@@ -60,7 +60,7 @@ export const Header = () => {
           <Image
             alt="Twitter icon"
             src={twitterIcon}
-            className="social-icon icon"
+            className="social-icon icon global__hover-animation"
             width={45}
             height={45}
           />
@@ -69,7 +69,7 @@ export const Header = () => {
       <button
         aria-label="scroll down"
         onClick={performSmoothScroll}
-        className="down-arrow icon"
+        className="down-arrow icon global__hover-animation"
       ></button>
     </section>
   );

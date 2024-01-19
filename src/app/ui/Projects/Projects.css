@@ -10,7 +10,7 @@
 }
 
 .project-container {
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 15px;
   box-shadow: 5px 10px 18px #bbbbbb;
   margin-bottom: 50px;
@@ -24,42 +24,42 @@
 }
 
 .project-techs {
-  font-family: 'Muli';
+  font-family: "Muli";
 }
 
 .project-description {
-  font-family: 'Muli';
-  letter-spacing: .3px;
+  font-family: "Muli";
+  letter-spacing: 0.3px;
   line-height: 150%;
   margin-top: 10px;
 }
 
 .project-button {
-  background-color: #FFF;
-  border: 2px solid #a72db9;
+  background-color: #fff;
+  border: 2px solid #5e00a4;
   border-radius: 21px;
   color: #000;
   font-size: 80%;
   height: 40px;
   margin: 2% 2% 0% 0%;
   width: 130px;
+  transition: background-color 0.3s;
 }
 
 .project-button:hover {
-  background-color: #a72db9;
-  color: #FFF;;
+  background-color: #5e00a4;
+  color: #fff;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 @media only screen and (max-width: 1000px) {
-  
   .projects-outer-container {
     padding-bottom: 80px;
   }
 }
 
 @media only screen and (max-width: 450px) {
-
   .projects-outer-container {
     padding-top: 35px;
     padding-bottom: 60px;

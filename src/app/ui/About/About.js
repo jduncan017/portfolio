@@ -66,9 +66,9 @@ export const About = () => {
               <button
                 tabIndex="-1"
                 aria-label="view resume as PDF"
-                className="resume-button"
+                className="resume-button global__button"
               >
-                resume.pdf
+                Resume.pdf
               </button>
             </Link>
           </div>

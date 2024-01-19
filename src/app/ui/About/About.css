@@ -36,8 +36,8 @@
 }
 
 .about-text {
-  color: #FFF;
-  font-family: 'Muli';
+  color: #fff;
+  font-family: "Muli";
   letter-spacing: 0.7px;
   line-height: 180%;
 }
@@ -55,25 +55,11 @@
 }
 
 .resume-button {
-  background-color: #383838;
-  border: 2px solid #a72db9;
-  border-radius: 26px;
-  color: #FFF;
-  font-size: 100%;
-  height: 50px;
   margin-top: 5%;
-  padding: 0px 20px;
-  width: auto;
-}
-
-.resume-button:hover {
-  background-color: #a72db9;
-  color: #FFF;
-  cursor: pointer;
 }
 
 .tech-skills-link {
-  font-family: 'Muli';
+  font-family: "Muli";
   text-decoration: underline;
 }
 
@@ -86,16 +72,13 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  
   .about-clip-path-top {
     height: 113px;
     margin-top: -112px;
   }
-
 }
 
 @media only screen and (max-width: 800px) {
-
   .about-outer-container {
     height: auto;
     padding-bottom: 50px;
@@ -112,16 +95,11 @@
   .resume-button {
     margin-top: 8%;
   }
-
 }
 
 @media only screen and (max-width: 500px) {
-
   .about-clip-path-top {
     height: 75px;
     margin-top: -74px;
   }
-
 }
-
-

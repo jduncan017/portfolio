@@ -1,5 +1,5 @@
 .work-experience-outer-container {
-  background-color: #FFF;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -24,7 +24,7 @@
 }
 
 .experience-heading-border {
-  border-bottom: 3px solid #752082;
+  border-bottom: 3px solid #5e00a4;
   margin-left: 25%;
   width: auto;
 }
@@ -60,29 +60,28 @@
 }
 
 .experience-position {
-  font-family: 'Muli';
+  font-family: "Muli";
 }
 
 .experience-time {
   display: block;
-  font-family: 'Muli';
+  font-family: "Muli";
   margin-bottom: 20px;
   margin-top: 10px;
 }
 
 .experience-item {
-  font-family: 'Muli';
+  font-family: "Muli";
   margin-bottom: 10px;
 }
 
 .description-list {
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
   line-height: 150%;
   padding-right: 100px;
 }
 
 @media only screen and (max-width: 760px) {
-
   .work-experience-outer-container {
     padding-top: 40px;
   }
@@ -120,13 +119,10 @@
   .description-list {
     padding-right: 0px;
   }
-
 }
 
 @media only screen and (max-width: 450px) {
-
   .tech-skills-container {
     columns: 1;
   }
-
 }
