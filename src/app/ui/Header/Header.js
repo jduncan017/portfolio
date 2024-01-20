@@ -5,7 +5,7 @@ import Link from "next/link";
 import { resumeData } from "@/src/lib/resumeData";
 import { ParticlesAnimation } from "../ParticlesAnimation/ParticlesAnimation";
 import gitHubIcon from "@/public/github_icon.png";
-import twitterIcon from "@/public/twitter_icon.png";
+import xIcon from "@/public/x-social-icon.png";
 import linkedInIcon from "@/public/linkedin_icon.png";
 import "./Header.css";
 
@@ -59,7 +59,7 @@ export const Header = () => {
         >
           <Image
             alt="Twitter icon"
-            src={twitterIcon}
+            src={xIcon}
             className="social-icon icon global__hover-animation"
             width={45}
             height={45}

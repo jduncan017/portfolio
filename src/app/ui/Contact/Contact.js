@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import gitHubIcon from "@/public/github_icon.png";
-import twitterIcon from "@/public/twitter_icon.png";
+import xIcon from "@/public/x-social-icon.png";
 import linkedInIcon from "@/public/linkedin_icon.png";
 import { resumeData } from "@/src/lib/resumeData";
 import "./Contact.css";
@@ -84,7 +84,7 @@ export const Contact = () => {
           >
             <Image
               alt="Twitter icon"
-              src={twitterIcon}
+              src={xIcon}
               className="social-icon icon global__hover-animation"
               width={45}
               height={45}

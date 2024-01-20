@@ -7,6 +7,7 @@ export const projectData = [
     repoURL: "https://github.com/jduncan017/jgsite",
     liveButtonText: "Visit Site",
     liveLink: "https://jgwoodworking.vercel.app/",
+    previewPath: "/jg_site.webp",
   },
   {
     name: "What to Wear",
@@ -17,6 +18,7 @@ export const projectData = [
       "https://github.com/jduncan017/se_project_react?tab=readme-ov-file",
     liveButtonText: "Visit Site",
     liveLink: "https://wtwr.blinklab.com/#/",
+    previewPath: "/wtwr.webp",
   },
   {
     name: "Around The US",
@@ -27,5 +29,6 @@ export const projectData = [
       "https://github.com/jduncan017/se_project_aroundtheus?tab=readme-ov-file",
     liveButtonText: "Visit Site",
     liveLink: "https://jduncan017.github.io/se_project_aroundtheus/",
+    previewPath: "/around_us.webp",
   },
 ];
