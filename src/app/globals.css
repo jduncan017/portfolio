@@ -3,16 +3,25 @@
   margin: 0px;
 }
 
+p {
+  font-family: var(--font-enriqueta);
+}
+
+h1 {
+  font-family: var(--font-cardo);
+}
+
 .global__hover-animation {
   cursor: pointer;
   transform: scale(1);
-  transition: transform 0.5s;
+  transition: transform 0.4s, opacity 0.4s;
 }
 
 .global__hover-animation:hover {
   cursor: pointer;
   transform: scale(1.2);
-  transition: transform 0.5s;
+  transition: transform 0.4s, opacity 0.4s;
+  opacity: 0.5;
 }
 
 .global__button {

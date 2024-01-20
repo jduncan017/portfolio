@@ -13,21 +13,22 @@ export const About = () => {
   };
 
   const printBio = () => {
-    const bio1 = resumeData.bioDescription1.split("<skillsLink>");
-    const bio2 = resumeData.bioDescription2;
+    const bio1 = resumeData.bioDescription1;
+    const bio2 = resumeData.bioDescription2.split("<skillsLink>");
     return (
       <div>
-        <p className="about-text">
-          {bio1[0]}
+        <p className="about-text">{bio1}</p>
+        <p className="about-text about-text-2">
+          {" "}
+          {bio2[0]}
           <span
             onClick={scrollToTechSkillsSection}
             className="tech-skills-link"
           >
-            see complete list
+            See complete list
           </span>
-          {bio1[1]}
+          {bio2[1]}
         </p>
-        <p className="about-text about-text-2">{bio2}</p>
       </div>
     );
   };
@@ -53,7 +54,7 @@ export const About = () => {
             <Link
               rel="noopener noreferrer"
               aria-label="send email"
-              href="mailto: ZaNemeroff@gmail.com"
+              href="mailto: EmailJoshDuncan@gmail.com"
               target="_blank"
             >
               <p className="about-text email-text">EmailJoshDuncan@gmail.com</p>
@@ -74,6 +75,7 @@ export const About = () => {
           </div>
         </div>
       </section>
+      <div className="about-clip-path-bottom"></div>
     </div>
   );
 };

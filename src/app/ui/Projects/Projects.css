@@ -20,18 +20,20 @@
 
 .project-title {
   font-size: 150%;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .project-techs {
   font-family: "Muli";
+  font-size: 18px;
 }
 
 .project-description {
   font-family: "Muli";
   letter-spacing: 0.3px;
   line-height: 150%;
-  margin-top: 10px;
+  margin-top: 8px;
+  font-size: 16px;
 }
 
 .project-button {
@@ -41,16 +43,16 @@
   color: #000;
   font-size: 80%;
   height: 40px;
-  margin: 2% 2% 0% 0%;
+  margin: 15px 15px 0 0;
   width: 130px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.7s;
 }
 
 .project-button:hover {
   background-color: #5e00a4;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.7s;
 }
 
 @media only screen and (max-width: 1000px) {

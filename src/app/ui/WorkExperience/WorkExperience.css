@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  padding-bottom: 60px;
+  padding: 60px 0;
   width: 100%;
 }
 
@@ -19,7 +19,7 @@
 .experience-heading-box {
   display: flex;
   height: 30px;
-  margin-top: 90px;
+  margin-top: 62px;
   width: 30%;
 }
 
@@ -36,12 +36,12 @@
 
 .experience-right-container,
 .tech-skills-container {
-  margin-top: 80px;
+  margin-top: 60px;
   width: 70%;
 }
 
 .tech-skills-container {
-  columns: 2;
+  columns: 3;
 }
 
 .tech-skills-bullets {
@@ -50,35 +50,40 @@
 }
 
 .job-container {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .experience-title {
   font-size: 150%;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .experience-position {
   font-family: "Muli";
+  font-size: 20px;
 }
 
 .experience-time {
   display: block;
   font-family: "Muli";
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-size: 16px;
 }
 
 .experience-item {
   font-family: "Muli";
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  list-style-type: square;
 }
 
 .description-list {
   letter-spacing: 0.3px;
-  line-height: 150%;
-  padding-right: 100px;
+  line-height: 1.4rem;
+  padding-right: 20%;
+  padding-left: 30px;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 760px) {
@@ -92,12 +97,20 @@
     flex-direction: column;
   }
 
+  .experience-right-container,
+  .tech-skills-container {
+    margin-top: 20px;
+  }
+
   .experience-heading-box {
     margin-top: 50px;
   }
 
+  .experience-heading-border {
+    width: 70vw;
+  }
+
   .tech-skills-bullets {
-    margin-bottom: 40px;
     margin-left: 30%;
     padding: 0px;
   }

@@ -1,21 +1,22 @@
 .nav-buttons {
-  background-color: #004e54;
+  background-color: transparent;
   border: none;
   color: #fff;
   font-size: 85%;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin: 0.5px;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 3px;
 }
 
 .nav-buttons:hover {
-  background-color: #2a2a2a;
+  background-color: #dddddd;
   cursor: pointer;
-  transition: background-color 0.5s;
+  transition: background-color 0.75s, color 1.5s;
+  color: black;
 }
 
 .full-nav-container {
@@ -28,6 +29,12 @@
   width: 100%;
   z-index: 5;
   padding: 2px;
+  transition: background-color 0.5s;
+}
+
+.full-nav-container:hover {
+  background-color: #5e00a4;
+  transition: background-color 0.5s;
 }
 
 .hamburger-button,

@@ -29,7 +29,7 @@ export const Contact = () => {
         <Link
           rel="noopener noreferrer"
           aria-label="send email"
-          href="mailto: ZaNemeroff@gmail.com"
+          href="mailto: EmailJoshDuncan@gmail.com"
           target="_blank"
         >
           <p className="about-text email-text">EmailJoshDuncan@gmail.com</p>
