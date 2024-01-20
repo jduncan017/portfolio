@@ -57,7 +57,7 @@ export const ParticlesAnimation = () => {
           distance: 200,
           enable: true,
           opacity: 1,
-          width: 2,
+          width: 1,
         },
         move: {
           direction: "none",

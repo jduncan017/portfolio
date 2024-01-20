@@ -1,3 +1,21 @@
+.full-nav-container {
+  background-color: #004e54;
+  box-shadow: 0px 5px 13px 0px #000;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  padding: 2px;
+  transition: background-color 0.5s;
+}
+
+.full-nav-container:hover {
+  background-color: #5e00a4;
+  transition: background-color 0.5s;
+}
+
 .nav-buttons {
   background-color: transparent;
   border: none;
@@ -19,24 +37,6 @@
   color: black;
 }
 
-.full-nav-container {
-  background-color: #004e54;
-  box-shadow: 0px 5px 13px 0px #000;
-  display: flex;
-  height: 35px;
-  justify-content: center;
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-  padding: 2px;
-  transition: background-color 0.5s;
-}
-
-.full-nav-container:hover {
-  background-color: #5e00a4;
-  transition: background-color 0.5s;
-}
-
 .hamburger-button,
 .hamburger-button-active {
   background: center/100% url("/triangle_purple.png");
@@ -46,7 +46,7 @@
   width: 50px;
   z-index: 10;
   margin: 5px;
-  transition: margin 0.5s;
+  transition: margin 0.5s, background 1s;
 }
 
 .hamburger-button-turn-left {
@@ -58,10 +58,11 @@
   transform: rotate(180deg);
   animation: turnRight 0.9s 1;
   margin: 0;
-  transition: margin 0.5s;
+  transition: margin 0.5s, background 1s;
 }
 
-.hamburger-button:hover {
+.hamburger-button:hover,
+.hamburger-button-active:hover {
   cursor: pointer;
 }
 
@@ -142,6 +143,7 @@
     font-size: 110%;
     width: 100%;
     padding: 15px;
+    border-bottom: darkgray 1px solid;
   }
 
   .nav-buttons:last-child {

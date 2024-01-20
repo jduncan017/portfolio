@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-// import smoothscroll from "smoothscroll-polyfill";
 import { Nav } from "@/src/app/ui/Nav/Nav";
 import { Header } from "@/src/app/ui/Header/Header";
 import { About } from "@/src/app/ui/About/About";
@@ -9,8 +8,6 @@ import { Projects } from "@/src/app/ui/Projects/Projects";
 import { Contact } from "@/src/app/ui/Contact/Contact";
 
 export default function Home() {
-  // smoothscroll.polyfill();
-
   return (
     <main className="">
       <Nav />

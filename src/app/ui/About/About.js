@@ -34,7 +34,7 @@ export const About = () => {
   };
 
   return (
-    <div class="about-wrapper">
+    <div className="about-wrapper">
       <div className="about-clip-path-top"></div>
       <section id="about-section" className="about-outer-container">
         <div className="profile-pic-container">

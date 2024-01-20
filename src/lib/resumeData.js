@@ -1,6 +1,5 @@
 export const resumeData = {
-  resumeURL: "https://zanemeroff.github.io/resume_host",
-  turingAlumniURL: "https://alumni.turing.io/alumni/zachary-nemeroff",
+  resumeURL: "https://jduncan017.github.io/resume/",
   gitHubURL: "https://github.com/jduncan017",
   twitterURL: "https://twitter.com/Jduncan017",
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
@@ -34,10 +33,10 @@ export const resumeData = {
     {
       name: "Adrift Tiki Bar",
       position: "General Manager | Beverage Director",
-      time: "Denver, CO | June 2020 - June 2021",
+      time: "Denver, CO | January 2017 - April 2022",
       description: [
         "Transformed a struggling business into a profitable high-end bar and restaurant, increasing sales by 30% in the first year and doubling them over a 5-year tenure. Achieved profitability within the first year.",
-        "Fostered a team-oriented culture that emphasized personal growth, resulting in a significant reduction in employee turnover and increasing average employee tenure to 2 years.",
+        "Fostered a team-oriented culture that emphasized personal growth, significantly reducing employee turnover and increasing average employee tenure to 2 years.",
         "Developed and managed a craft cocktail program that received recognition in local and national publications, balancing cost efficiency with a high standard of quality",
         "Streamlined SOPs to optimize daily operations, reducing labor costs and increasing efficiency.",
         "Identified and capitalized on new revenue streams, such as to-go cocktails and private events, although specific revenue figures are not available.",

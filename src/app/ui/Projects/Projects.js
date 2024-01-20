@@ -16,23 +16,23 @@ export const Projects = () => {
               <Link
                 rel="noopener noreferrer"
                 tabIndex="-1"
-                aria-label="github project repo"
-                href={project.repoURL}
-                target="_blank"
-              >
-                <button className="project-button global__button">
-                  GitHub Repo
-                </button>
-              </Link>
-              <Link
-                rel="noopener noreferrer"
-                tabIndex="-1"
                 aria-label="live project"
                 href={project.liveLink}
                 target="_blank"
               >
                 <button className="project-button global__button">
                   {project.liveButtonText}
+                </button>
+              </Link>
+              <Link
+                rel="noopener noreferrer"
+                tabIndex="-1"
+                aria-label="github project repo"
+                href={project.repoURL}
+                target="_blank"
+              >
+                <button className="project-button global__button">
+                  GitHub Repo
                 </button>
               </Link>
             </div>

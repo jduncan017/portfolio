@@ -1,5 +1,14 @@
 export const projectData = [
   {
+    name: "JG Woodworking - Business Page",
+    techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3",
+    description:
+      "WORK IN PROGRESS. This is a live business site for John-Gerard Woodworking Company. The site is responsive and focuses on efficient handling of a large amount of image components and items. Contact page will feature email API with global state management of currently selected items. Other future updates to include admin endpoint url for content management and database integration. Also looking to add URL filtering to gallery page.",
+    repoURL: "https://github.com/jduncan017/jgsite",
+    liveButtonText: "Visit Site",
+    liveLink: "https://jgwoodworking.vercel.app/",
+  },
+  {
     name: "What to Wear",
     techsUsed: "React, JavaScript, REST API, Node, Express, MongoDB",
     description:

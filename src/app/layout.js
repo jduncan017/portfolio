@@ -1,8 +1,8 @@
-import { cardo, enriqueta, inter } from "./ui/fonts";
+import { cardo } from "./ui/fonts";
 import "./globals.css";
 
 export const metadata = {
-  title: "Josh Duncan Portfolio",
+  title: "Josh Duncan's Portfolio",
   description: "Josh Duncan's professional software engineering portfolio",
 };
 
