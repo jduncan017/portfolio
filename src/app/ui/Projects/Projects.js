@@ -21,8 +21,8 @@ export const Projects = () => {
                 className="project__site-preview"
                 src={project.previewPath}
                 alt="Screenshot of project"
-                width={600}
-                height={380}
+                width={300}
+                height={190}
               />
             </Link>
             <div className="project-info">
