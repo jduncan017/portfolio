@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import profilePic from "@/public/profile_pic.jpeg";
-import { resumeData } from "@/src/lib/resumeData";
 import "./About.css";
 
-export const About = () => {
+export const About = ({ resumeData }) => {
+  console.log(resumeData);
   const scrollToTechSkillsSection = () => {
     document
       .querySelector("#skills-section")

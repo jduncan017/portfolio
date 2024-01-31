@@ -1,19 +1,19 @@
 export const projectData = [
   {
     name: "JG Woodworking - Business Page",
-    techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3",
+    techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, Nodemailer",
     description:
-      "WORK IN PROGRESS. This is a live business site for John-Gerard Woodworking Company. The site is responsive and focuses on efficient handling of a large amount of image components and items. Contact page will feature email API with global state management of currently selected items. Other future updates to include admin endpoint url for content management and database integration. Also looking to add URL filtering to gallery page.",
+      "A dynamic business site for John-Gerard Woodworking Company that I desgined, developed, and deployed from scratch. The site features item modals that display dynamic item content and a contact page with an email API, leveraging global state management for user selections. Enhanced user experience through custom keyboard listeners, mobile touch capabilities, pagination, and informative tooltips. Actively working on integrating an admin endpoint for content management and database enhancement. This project sharpened my skills in server-side rendering, image management, email api integration, typescript, web design, and the mentioned UX features. It was an incredible learning experience and a project I'll continue to maintain.",
     repoURL: "https://github.com/jduncan017/jgsite",
     liveButtonText: "Visit Site",
-    liveLink: "https://jgwoodworking.vercel.app/",
+    liveLink: "https://www.johngerardwoodwork.com",
     previewPath: "/jg_site.webp",
   },
   {
     name: "What to Wear",
     techsUsed: "React, JavaScript, REST API, Node, Express, MongoDB",
     description:
-      "What to Wear (WTWR) is a front-end web application that helps users decide on their outfit by reading weather data from a Weather API. It recommends suitable clothing based on the current weather conditions. The app is built using React and integrates a Weather API to fetch real-time weather data.",
+      "A project from my coding bootcamp - What to Wear (WTWR) is a front-end web application that helps users decide on their outfit by reading weather data from a Weather API. It recommends suitable clothing based on the current weather conditions. The app is built using React and integrates a Weather API to fetch real-time weather data.",
     repoURL:
       "https://github.com/jduncan017/se_project_react?tab=readme-ov-file",
     liveButtonText: "Visit Site",
@@ -24,7 +24,7 @@ export const projectData = [
     name: "Around The US",
     techsUsed: "Vanilla JavaScript, HTML5, CSS3",
     description:
-      "My first Javascript Application - Around The U.S. is a responsive, interactive web application where users can share, like, and delete cards featuring different U.S. locations. The site is built with HTML5, CSS3, and styled according to the Flat BEM methodology. It offers form validation and API integration using JavaScript classes and OOP principles.",
+      "A project from my coding bootcamp - My first Javascript Application - Around The U.S. is a responsive, interactive web application where users can share, like, and delete cards featuring different U.S. locations. The site is built with HTML5, CSS3, and styled according to the Flat BEM methodology. It offers form validation and API integration using JavaScript classes and OOP principles.",
     repoURL:
       "https://github.com/jduncan017/se_project_aroundtheus?tab=readme-ov-file",
     liveButtonText: "Visit Site",
