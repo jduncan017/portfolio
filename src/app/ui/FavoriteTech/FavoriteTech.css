@@ -1,0 +1,70 @@
+a {
+  color: white;
+  text-underline-offset: 3px;
+  padding: 5px 0;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+a:visited {
+  color: white;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: #004e54;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.fav-tech {
+  height: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: #313131;
+  color: white;
+}
+
+.fav-tech__text-container {
+  padding: 60px 0 80px;
+  width: 80vw;
+  max-width: 700px;
+}
+
+.fav-tech__header {
+  padding: 0 20px;
+}
+
+.fav-tech__description {
+  padding: 0 20px;
+  margin-top: 2px;
+}
+
+.fav-tech__list {
+  padding-left: 20px;
+}
+
+.fav-tech__item {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.fav-tech__title-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fav-tech__title {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.fav-tech__item-description {
+  margin-top: 8px;
+  line-height: 1.4rem;
+}

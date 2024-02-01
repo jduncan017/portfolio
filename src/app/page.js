@@ -7,6 +7,7 @@ import { WorkExperience } from "@/src/app/ui/WorkExperience/WorkExperience";
 import { Projects } from "@/src/app/ui/Projects/Projects";
 import { Contact } from "@/src/app/ui/Contact/Contact";
 import { resumeData } from "../lib/resumeData";
+import FavoriteTech from "./ui/FavoriteTech/FavoriteTech";
 
 export default function Home() {
   console.log(resumeData);
@@ -17,6 +18,7 @@ export default function Home() {
       <About resumeData={resumeData} />
       <WorkExperience />
       <Projects />
+      <FavoriteTech />
       <Contact />
     </main>
   );

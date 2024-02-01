@@ -1,6 +1,6 @@
 export const projectData = [
   {
-    name: "JG Woodworking - Business Page",
+    name: "John-Gerard Woodwork - Business Page",
     techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, Nodemailer",
     description:
       "A business webpage for John-Gerard Woodworking Company that I desgined, developed, and deployed from scratch. The site features modals that display dynamic item content and a contact page with a functioning email API. Users experience is enhanced via keyboard listeners, mobile touch capabilities, pagination, and informative tooltips. Actively working on integrating an admin endpoint for content management and database enhancement. This project was a great learning experience for Next.js 14, server-side rendering, image handling, email integration, typescript, web design with figma, and the mentioned UX features.",
@@ -24,7 +24,7 @@ export const projectData = [
     name: "Around The US",
     techsUsed: "Vanilla JavaScript, HTML5, CSS3",
     description:
-      "A project from my coding bootcamp - My first Javascript Application - Around The U.S. is a responsive, interactive web application where users can share, like, and delete cards featuring different U.S. locations. The site is built with HTML5, CSS3, and styled according to the Flat BEM methodology. It offers form validation and API integration using JavaScript classes and OOP principles.",
+      "A project from my coding bootcamp - My first Javascript Application - Around The U.S. is a responsive, interactive web application where users can share, like, and delete cards featuring different U.S. locations. This project taught me a lot about working with vanilla javascript, form validation, basic API integration, and BEM methodology.",
     repoURL:
       "https://github.com/jduncan017/se_project_aroundtheus?tab=readme-ov-file",
     liveButtonText: "Visit Site",

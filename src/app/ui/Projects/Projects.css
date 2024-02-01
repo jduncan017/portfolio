@@ -18,7 +18,6 @@
   width: 85%;
   display: flex;
   gap: 40px;
-  align-items: center;
 }
 
 .project-title {
@@ -75,9 +74,17 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
+  .project-container {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    position: relative;
+  }
+
   .project__site-preview {
-    display: none;
+    width: 83vw;
+    height: auto;
   }
 }
 
@@ -100,7 +107,6 @@
 
   .project-buttons-container {
     display: flex;
-    justify-content: flex-start;
     margin-top: 5px;
   }
 }

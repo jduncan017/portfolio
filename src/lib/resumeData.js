@@ -6,7 +6,7 @@ export const resumeData = {
   bioDescription1:
     "My name is Joshua Duncan, and I'm a full stack javascript developer with a background in hospitality management and brand development. My work history brings a wealth of experience in leadership, communication, and project management.",
   bioDescription2:
-    "I am passionate about the opportunity to enhance other's lives with creative thinking and problem solving. I thoroughly the challenges of being a developer and the ability to create modern tools using languages and frameworks like TypeScript, React, Next.js, Node.js, HTML5, and CSS3 (to name a few <skillsLink>).",
+    "I ennjoy the challenges of being a developer and the ability to create modern applications using tools like TypeScript, React, Next.js, Node.js, HTML5, and CSS3 (to name a few <skillsLink>).",
   education: {
     school: "TripleTen by Yandex",
     position: "Graduate Full-Stack Software Developer Program",

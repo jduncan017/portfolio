@@ -18,7 +18,7 @@ export const Contact = () => {
   });
 
   return (
-    <div>
+    <div className="contact">
       <div className="contact-clip-path-top"></div>
       <section id="contact-section" className="contact-outer-container">
         <i className="contact-message">
