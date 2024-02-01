@@ -3,7 +3,7 @@ export const projectData = [
     name: "JG Woodworking - Business Page",
     techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, Nodemailer",
     description:
-      "A dynamic business site for John-Gerard Woodworking Company that I desgined, developed, and deployed from scratch. The site features modals that display dynamic item content and a contact page with an email API. Userser experienc is enhanced via keyboard listeners, mobile touch capabilities, pagination, and informative tooltips. Actively working on integrating an admin endpoint for content management and database enhancement. This project was a great learning experience in Next.js 14, server-side rendering, image management, email integration, typescript, web design with figma, and the mentioned UX features.",
+      "A business webpage for John-Gerard Woodworking Company that I desgined, developed, and deployed from scratch. The site features modals that display dynamic item content and a contact page with a functioning email API. Users experience is enhanced via keyboard listeners, mobile touch capabilities, pagination, and informative tooltips. Actively working on integrating an admin endpoint for content management and database enhancement. This project was a great learning experience for Next.js 14, server-side rendering, image handling, email integration, typescript, web design with figma, and the mentioned UX features.",
     repoURL: "https://github.com/jduncan017/jgsite",
     liveButtonText: "Visit Site",
     liveLink: "https://www.johngerardwoodwork.com",
