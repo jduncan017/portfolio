@@ -13,20 +13,22 @@ export const About = ({ resumeData }) => {
 
   const printBio = () => {
     const bio1 = resumeData.bioDescription1;
-    const bio2 = resumeData.bioDescription2.split("<skillsLink>");
+    const bio2 = resumeData.bioDescription2;
+    const bio3 = resumeData.bioDescription3.split("<skillsLink>");
     return (
       <div>
         <p className="about-text">{bio1}</p>
+        <p className="about-text about-text-2">{bio2}</p>
         <p className="about-text about-text-2">
           {" "}
-          {bio2[0]}
+          {bio3[0]}
           <span
             onClick={scrollToTechSkillsSection}
             className="tech-skills-link"
           >
             See complete list
           </span>
-          {bio2[1]}
+          {bio3[1]}
         </p>
       </div>
     );

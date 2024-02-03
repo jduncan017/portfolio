@@ -13,7 +13,7 @@ export const projectData = [
     name: "What to Wear",
     techsUsed: "React, JavaScript, REST API, Node, Express, MongoDB",
     description:
-      "A project from my coding bootcamp - What to Wear (WTWR) is a front-end web application that helps users decide on their outfit by reading weather data from a Weather API. It recommends suitable clothing based on the current weather conditions. The app is built using React and integrates a Weather API to fetch real-time weather data.",
+      "A project from my bootcamp - What to Wear (WTWR) is a front-end web application that helps users decide on their outfit by reading weather data from a Weather API. It recommends suitable clothing based on the current weather conditions. The app is built using React and integrates a Weather API to fetch real-time weather data.",
     repoURL:
       "https://github.com/jduncan017/se_project_react?tab=readme-ov-file",
     liveButtonText: "Visit Site",
@@ -24,7 +24,7 @@ export const projectData = [
     name: "Around The US",
     techsUsed: "Vanilla JavaScript, HTML5, CSS3",
     description:
-      "A project from my coding bootcamp - My first Javascript Application - Around The U.S. is a responsive, interactive web application where users can share, like, and delete cards featuring different U.S. locations. This project taught me a lot about working with vanilla javascript, form validation, basic API integration, and BEM methodology.",
+      "A project from my bootcamp - My first Javascript Application - Around The U.S. is a responsive, interactive web application where users can share, like, and delete cards featuring different U.S. locations. This project taught me a lot about working with vanilla javascript, form validation, basic API integration, and BEM methodology.",
     repoURL:
       "https://github.com/jduncan017/se_project_aroundtheus?tab=readme-ov-file",
     liveButtonText: "Visit Site",
