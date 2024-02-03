@@ -101,6 +101,7 @@
   background-color: #1f1f1f;
   border: 2px solid #5e00a4;
   transition: background-color 0.3s, color 0.7s;
+  color: white;
 }
 
 .fav-tech__button:hover {
@@ -155,13 +156,17 @@
     padding-bottom: 60px;
   }
 
+  .fav-tech__info {
+    padding: 5px 2px 0;
+  }
+
   .fav-tech__container {
     margin-bottom: 35px;
     padding: 4%;
   }
 
   .fav-tech__button {
-    margin: 10px 10px;
+    margin: 10px 0 0;
     padding: 0px 20px;
     width: auto;
   }
@@ -169,5 +174,6 @@
   .fav-tech__buttons-container {
     display: flex;
     margin-top: 5px;
+    gap: 10px;
   }
 }

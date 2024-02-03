@@ -29,12 +29,12 @@
   margin-top: 5px;
 }
 
-.social-icon-container {
+.home-section__social-container {
   margin-top: 80px;
   position: relative;
 }
 
-.social-icon {
+.home-section__social-icon {
   height: 45px;
   margin: 0px 10px;
   width: 45px;
@@ -73,7 +73,7 @@
     padding-top: 10px;
   }
 
-  .social-icon-container {
+  .home-section__social-container {
     margin-top: 60px;
   }
 

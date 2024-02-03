@@ -47,7 +47,7 @@ export const Contact = () => {
             Resume.pdf
           </button>
         </Link>
-        <div className="social-icons-container">
+        <div className="contact__social-container">
           <Link
             rel="noopener noreferrer"
             aria-label="github profile"
@@ -57,7 +57,7 @@ export const Contact = () => {
             <Image
               alt="Github icon"
               src={gitHubIcon}
-              className="social-icon icon global__hover-animation"
+              className="contact__social-icon global__hover-animation"
               width={45}
               height={45}
             />
@@ -71,7 +71,7 @@ export const Contact = () => {
             <Image
               alt="Linkedin icon"
               src={linkedInIcon}
-              className="social-icon icon global__hover-animation"
+              className="contact__social-icon global__hover-animation"
               width={45}
               height={45}
             />
@@ -85,7 +85,7 @@ export const Contact = () => {
             <Image
               alt="Twitter icon"
               src={xIcon}
-              className="social-icon icon global__hover-animation"
+              className="contact__social-icon global__hover-animation"
               width={45}
               height={45}
             />

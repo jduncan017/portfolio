@@ -33,10 +33,16 @@
   width: 250px;
 }
 
-.social-icons-container {
+.contact__social-container {
   margin-top: 50px;
   text-align: center;
   width: 100%;
+}
+
+.contact__social-icon {
+  height: 45px;
+  margin: 0px 10px;
+  width: 45px;
 }
 
 @media only screen and (max-width: 1000px) {

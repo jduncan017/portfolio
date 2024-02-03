@@ -2,6 +2,7 @@ import { cardo } from "./ui/fonts";
 import "./globals.css";
 
 export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
   title: "Joshua Duncan's Software Engineering Portfolio",
   keywords: "software, engineer, developer, web, portfolio, resume, career",
   authors: { name: "Joshua Duncan" },
@@ -10,18 +11,18 @@ export const metadata = {
   description:
     "Explore Joshua Duncan's innovative software engineering portfolio. Discover projects showcasing expertise in coding, design, and technology solutions.",
   alternates: {
-    canonical: "https://www.joshuaduncan.info",
+    canonical: "/",
   },
   openGraph: {
     images: {
-      url: "https://www.joshuaduncan.info/open-graph-preview.png",
+      url: "/open-graph-preview.png",
       width: 1903,
       height: 997,
     },
     title: "Joshua Duncan's Software Engineering Portfolio",
     description:
       "Explore Joshua Duncan's innovative software engineering portfolio. Discover projects showcasing expertise in coding, design, and technology solutions.",
-    url: "https://www.joshuaduncan.info",
+    url: "/",
     locale: "en_US",
     type: "website",
   },

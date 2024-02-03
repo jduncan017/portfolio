@@ -19,6 +19,8 @@ body {
 
 .main {
   background-color: #171717;
+  touch-action: pan-y;
+  overflow-x: hidden;
 }
 
 .global__hover-animation {

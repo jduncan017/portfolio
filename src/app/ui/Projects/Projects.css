@@ -91,7 +91,7 @@
 
 @media only screen and (max-width: 1000px) {
   .projects-outer-container {
-    padding-bottom: 80px;
+    padding-bottom: 20px;
   }
 }
 
@@ -112,7 +112,10 @@
 @media only screen and (max-width: 450px) {
   .projects-outer-container {
     padding-top: 35px;
-    padding-bottom: 60px;
+  }
+
+  .project-info {
+    padding: 5px 2px 0;
   }
 
   .project-container {
@@ -121,7 +124,7 @@
   }
 
   .project-button {
-    margin: 10px 10px;
+    margin: 10px 0;
     padding: 0px 20px;
     width: auto;
   }
@@ -129,5 +132,6 @@
   .project-buttons-container {
     display: flex;
     margin-top: 5px;
+    gap: 10px;
   }
 }

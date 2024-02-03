@@ -25,15 +25,21 @@ const ImageLoadingWrapper = ({ techItem, className }) => {
   if (isLoading) return <Loader />;
   if (isError)
     return (
-      <img src={errorImage} alt="Error loading image" className={className} />
+      <>
+        {/*eslint-disable-next-line @next/next/no-img-element*/}
+        <img src={errorImage} alt="Error loading image" className={className} />
+      </>
     );
 
   return (
-    <img
-      src={imageUrl}
-      alt={`Screenshot of ${techItem.name}`}
-      className={className}
-    />
+    <>
+      {/*eslint-disable-next-line @next/next/no-img-element*/}
+      <img
+        src={imageUrl}
+        alt={`Screenshot of ${techItem.name}`}
+        className={className}
+      />
+    </>
   );
 };
 

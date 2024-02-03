@@ -22,7 +22,7 @@ export const Header = () => {
       <h1 className="title-name">Joshua</h1>
       <h1 className="title-name">Duncan</h1>
       <h2 className="title-industry">Software Engineer</h2>
-      <div className="social-icon-container">
+      <div className="home-section__social-container">
         <Link
           rel="noopener noreferrer"
           aria-label="github profile"
@@ -32,7 +32,7 @@ export const Header = () => {
           <Image
             alt="Github icon"
             src={gitHubIcon}
-            className="social-icon icon global__hover-animation"
+            className="home-section__social-icon global__hover-animation"
             width={45}
             height={45}
           />
@@ -46,7 +46,7 @@ export const Header = () => {
           <Image
             alt="Linkedin icon"
             src={linkedInIcon}
-            className="social-icon icon global__hover-animation"
+            className="home-section__social-icon global__hover-animation"
             width={45}
             height={45}
           />
@@ -60,7 +60,7 @@ export const Header = () => {
           <Image
             alt="Twitter icon"
             src={xIcon}
-            className="social-icon icon global__hover-animation"
+            className="home-section__social-icon global__hover-animation"
             width={45}
             height={45}
           />
@@ -69,7 +69,7 @@ export const Header = () => {
       <button
         aria-label="scroll down"
         onClick={performSmoothScroll}
-        className="down-arrow icon global__hover-animation"
+        className="down-arrow global__hover-animation"
       ></button>
     </section>
   );
