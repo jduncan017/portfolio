@@ -1,4 +1,4 @@
-.techItem-outer-container {
+.fav-tech__outer-container {
   align-items: center;
   background-color: #303030;
   display: flex;
@@ -10,7 +10,7 @@
   color: white;
 }
 
-.techItems__header-section {
+.fav-tech__header-section {
   width: 87%;
   margin-bottom: 20px;
   box-sizing: content-box;
@@ -23,7 +23,7 @@
   text-transform: uppercase;
 }
 
-.techItems__bottom-border {
+.fav-tech__bottom-border {
   border-bottom: 3px solid #8913e1;
   width: fit-content;
   padding-bottom: 6px;
@@ -35,7 +35,7 @@
   align-self: flex-start;
 }
 
-.techItem-container {
+.fav-tech__container {
   background-color: #1f1f1f;
   border-radius: 15px;
   box-shadow: 5px 10px 18px #101010;
@@ -54,7 +54,7 @@
   background-color: #101010;
 }
 
-.techItem-info {
+.fav-tech__info {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -73,16 +73,16 @@
   align-items: center;
 }
 
-.techItem-title {
+.fav-tech__title {
   font-size: 150%;
 }
 
-.techItem-techs {
+.fav-tech__techs {
   font-family: "Muli";
   font-size: 18px;
 }
 
-.techItem-description {
+.fav-tech__description {
   font-family: "Muli";
   letter-spacing: 0.3px;
   line-height: 150%;
@@ -90,7 +90,7 @@
   font-size: 16px;
 }
 
-.techItem-button {
+.fav-tech__button {
   border-radius: 21px;
   font-size: 80%;
   height: 40px;
@@ -103,7 +103,7 @@
   transition: background-color 0.3s, color 0.7s;
 }
 
-.techItems-button:hover {
+.fav-tech__button:hover {
   background-color: #5e00a4;
   color: #fff;
   cursor: pointer;
@@ -124,13 +124,13 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .techItem-outer-container {
+  .fav-tech__outer-container {
     padding-bottom: 80px;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  .techItem-container {
+  .fav-tech__container {
     flex-direction: column;
     gap: 10px;
     align-items: flex-start;
@@ -150,23 +150,23 @@
 }
 
 @media only screen and (max-width: 450px) {
-  .techItem-outer-container {
+  .fav-tech__outer-container {
     padding-top: 35px;
     padding-bottom: 60px;
   }
 
-  .techItem-container {
+  .fav-tech__container {
     margin-bottom: 35px;
     padding: 4%;
   }
 
-  .techItem-button {
+  .fav-tech__button {
     margin: 10px 10px;
     padding: 0px 20px;
     width: auto;
   }
 
-  .techItem-buttons-container {
+  .fav-tech__buttons-container {
     display: flex;
     margin-top: 5px;
   }
