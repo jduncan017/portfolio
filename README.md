@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Joshua Duncan's Software Engineering Portfolio
 
-## Getting Started
+Welcome to my professional portfolio, showcasing my journey, projects, and skills in software engineering. This portfolio will be my growing representation of software projects I take on as I dive deeper into this exciting career.
 
-First, run the development server:
+## About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I'm Joshua Duncan, a software engineer based in Denver, CO. With a background in sales, business management, and hospitality. I specialize in full-stack development using next.js and typescript. I'm passionate about designing beautiful and intuitive user interfaces and creating impactful software solutions to everyday problems. I'm also constantly looking to explore new technologies and continue my education.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Skills
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Programming Languages**: Typescript, JavaScript, HTML5, CSS3
+- **Frameworks & Tools**: Next.js, React, Node.js, Express.js, MongoDB, Postman, Git/Github, Figma
+- **Other Hard Skills**: Web Design, Business Management, Small Business Consulting
+- **Soft Skills**: Problem-solving, Communication, Culture Development, Project Management, People Management, Brand Development, Marketing, & Sales
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Education & Certifications
 
-## Learn More
+- Tripleten Software Engineering Bootcamp
+- Full-Stack Developer
 
-To learn more about Next.js, take a look at the following resources:
+## Contact Me
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I'm always open to discussing new projects, opportunities, or collaborations. Feel free to connect with me:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Email**: emailjoshduncan@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/jduncan017
+- **X(Twitter)**: https://twitter.com/Jduncan017
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thanks for checking out my portfolio. Let me know if you have any questions, comments, or if you'd like to work together!
