@@ -1,6 +1,6 @@
 .techItem-outer-container {
   align-items: center;
-  background-color: #303030;
+  background-color: #383838;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -48,8 +48,8 @@
 
 .techItem__site-image-container {
   position: relative;
-  min-width: 300px;
-  min-height: 190px;
+  width: 300px;
+  height: 190px;
   border-radius: 10px;
   background-color: #101010;
 }
@@ -135,6 +135,12 @@
     gap: 10px;
     align-items: flex-start;
     position: relative;
+  }
+
+  .techItem__site-image-container {
+    width: 83vw;
+    min-height: 41vw;
+    height: fit-content;
   }
 
   .techItem__site-preview {
