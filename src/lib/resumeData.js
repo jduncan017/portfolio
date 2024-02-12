@@ -1,5 +1,5 @@
 export const resumeData = {
-  resumeURL: "https://jduncan017.github.io/resume/",
+  resumeURL: "https://jduncan017.github.io/resume/JoshDuncan.pdf",
   gitHubURL: "https://github.com/jduncan017",
   twitterURL: "https://twitter.com/Jduncan017",
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
