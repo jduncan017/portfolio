@@ -1,5 +1,5 @@
 import React from "react";
-import { resumeData } from "@/src/lib/resumeData";
+import { RESUME_DATA } from "@/src/lib/resumeData";
 import "./WorkExperience.css";
 
 export const WorkExperience = () => {
@@ -21,7 +21,7 @@ export const WorkExperience = () => {
       <div className="experience-container">
         {buildExperienceHeading("Experience")}
         <div className="experience-right-container">
-          {resumeData.jobs.map((job) => {
+          {RESUME_DATA.jobs.map((job) => {
             return (
               <div key={job.name} className="job-container">
                 <p className="experience-title">{job.name}</p>
@@ -43,7 +43,7 @@ export const WorkExperience = () => {
         {buildExperienceHeading("Technologies")}
         <div className="tech-skills-container">
           <ul className="tech-skills-bullets">
-            {resumeData.techSkillz.map((item) => (
+            {RESUME_DATA.techSkillz.map((item) => (
               <li key={item} className="experience-item">
                 {item}
               </li>
@@ -54,11 +54,13 @@ export const WorkExperience = () => {
       <div className="experience-container">
         {buildExperienceHeading("Education")}
         <div className="experience-right-container">
-          <h3 className="experience-title">{resumeData.education.school}</h3>
-          <i className="experience-position">{resumeData.education.position}</i>
-          <i className="experience-time">{resumeData.education.time}</i>
+          <h3 className="experience-title">{RESUME_DATA.education.school}</h3>
+          <i className="experience-position">
+            {RESUME_DATA.education.position}
+          </i>
+          <i className="experience-time">{RESUME_DATA.education.time}</i>
           <ul className="description-list">
-            {resumeData.education.description.map((item) => (
+            {RESUME_DATA.education.description.map((item) => (
               <li key={item} className="experience-item">
                 {item}
               </li>

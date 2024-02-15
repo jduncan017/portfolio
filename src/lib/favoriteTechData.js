@@ -1,4 +1,4 @@
-export const favoriteTechData = [
+export const FAVORITE_TECH_DATA = [
   {
     name: "Arc Browser",
     description: `The Browser Company is changing the way we interact with internet browsers. Their software is beautifully 

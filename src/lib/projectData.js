@@ -1,4 +1,4 @@
-export const projectData = [
+export const PROJECT_DATA = [
   {
     name: "John-Gerard Woodwork - Business Page",
     techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, Nodemailer",

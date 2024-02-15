@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { projectData } from "@/src/lib/projectData";
+import { PROJECT_DATA } from "@/src/lib/projectData";
 import Image from "next/image";
 import "./Projects.css";
 
@@ -12,7 +12,7 @@ export const Projects = () => {
           <h1 className="projects__header">Recent Projects</h1>
         </div>
       </div>
-      {projectData.map((project) => {
+      {PROJECT_DATA.map((project) => {
         return (
           <div key={project.name} className="project-container">
             <Link

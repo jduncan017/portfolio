@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { favoriteTechData } from "@/src/lib/favoriteTechData";
+import { FAVORITE_TECH_DATA } from "@/src/lib/favoriteTechData";
 import Image from "next/image";
 import "./FavTech.css";
 import ImageLoadingWrapper from "@/src/utils/PreLoader/ImageLoadingWrapper";
@@ -14,7 +14,7 @@ export const FavTech = () => {
           <h1 className="fav-tech__header">Favorite Technologies</h1>
         </div>
       </div>
-      {favoriteTechData.map((techItem) => {
+      {FAVORITE_TECH_DATA.map((techItem) => {
         return (
           <div key={techItem.name} className="fav-tech__container">
             <Link

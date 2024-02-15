@@ -4,7 +4,7 @@ import Image from "next/image";
 import gitHubIcon from "@/public/github_icon.png";
 import xIcon from "@/public/x-social-icon.png";
 import linkedInIcon from "@/public/linkedin_icon.png";
-import { resumeData } from "@/src/lib/resumeData";
+import { RESUME_DATA } from "@/src/lib/resumeData";
 import "./Contact.css";
 
 export const Contact = () => {
@@ -37,7 +37,7 @@ export const Contact = () => {
         <Link
           rel="noopener noreferrer"
           tabIndex="-1"
-          href={resumeData.resumeURL}
+          href={RESUME_DATA.resumeURL}
           target="_blank"
         >
           <button
@@ -51,7 +51,7 @@ export const Contact = () => {
           <Link
             rel="noopener noreferrer"
             aria-label="github profile"
-            href={resumeData.gitHubURL}
+            href={RESUME_DATA.gitHubURL}
             target="_blank"
           >
             <Image
@@ -65,7 +65,7 @@ export const Contact = () => {
           <Link
             rel="noopener noreferrer"
             aria-label="linkedin profile"
-            href={resumeData.linkedInURL}
+            href={RESUME_DATA.linkedInURL}
             target="_blank"
           >
             <Image
@@ -79,7 +79,7 @@ export const Contact = () => {
           <Link
             rel="noopener noreferrer"
             aria-label="twitter profile"
-            href={resumeData.twitterURL}
+            href={RESUME_DATA.twitterURL}
             target="_blank"
           >
             <Image

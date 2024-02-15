@@ -27,3 +27,12 @@ I'm always open to discussing new projects, opportunities, or collaborations. Fe
 - **X(Twitter)**: https://twitter.com/Jduncan017
 
 Thanks for checking out my portfolio. Let me know if you have any questions, comments, or if you'd like to work together!
+
+## Ideas Site Improvements
+
+- **Carousels**: I want to add carousels for the cards that display my projects and favorite technologies.
+- **Contact Form**: A contact form would be a nice improvement, especiall with the addition of a "comment box".
+- **Testemonials**: Just waiting to get some testemonials back that I can add.
+- **Modals**: A resuable modal would be nice to use in a few places around the site.
+- **Icons for Technologies**: Instead of bullets, I want to display the technology icon.
+- **Iframe for Resume**: Would be great to display the resume in a modal iframe instead of a separate site.

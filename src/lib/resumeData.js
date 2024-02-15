@@ -1,4 +1,4 @@
-export const resumeData = {
+export const RESUME_DATA = {
   resumeURL: "https://jduncan017.github.io/resume/JoshDuncan.pdf",
   gitHubURL: "https://github.com/jduncan017",
   twitterURL: "https://twitter.com/Jduncan017",

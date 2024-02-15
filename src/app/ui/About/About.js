@@ -4,7 +4,7 @@ import Link from "next/link";
 import profilePic from "@/public/profile_pic.jpeg";
 import "./About.css";
 
-export const About = ({ resumeData }) => {
+export const About = ({ RESUME_DATA }) => {
   const scrollToTechSkillsSection = () => {
     document
       .querySelector("#skills-section")
@@ -12,9 +12,9 @@ export const About = ({ resumeData }) => {
   };
 
   const printBio = () => {
-    const bio1 = resumeData.bioDescription1;
-    const bio2 = resumeData.bioDescription2;
-    const bio3 = resumeData.bioDescription3.split("<skillsLink>");
+    const bio1 = RESUME_DATA.bioDescription1;
+    const bio2 = RESUME_DATA.bioDescription2;
+    const bio3 = RESUME_DATA.bioDescription3.split("<skillsLink>");
     return (
       <div>
         <p className="about-text">{bio1}</p>
@@ -62,7 +62,7 @@ export const About = ({ resumeData }) => {
             </Link>
             <Link
               rel="noopener noreferrer"
-              href={resumeData.resumeURL}
+              href={RESUME_DATA.resumeURL}
               target="_blank"
             >
               <button

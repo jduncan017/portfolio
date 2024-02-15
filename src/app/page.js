@@ -6,7 +6,7 @@ import { About } from "@/src/app/ui/About/About";
 import { WorkExperience } from "@/src/app/ui/WorkExperience/WorkExperience";
 import { Projects } from "@/src/app/ui/Projects/Projects";
 import { Contact } from "@/src/app/ui/Contact/Contact";
-import { resumeData } from "../lib/resumeData";
+import { RESUME_DATA } from "../lib/resumeData";
 import { FavTech } from "./ui/FavTech/FavTech";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
     <main className="">
       <Nav />
       <Header />
-      <About resumeData={resumeData} />
+      <About RESUME_DATA={RESUME_DATA} />
       <WorkExperience />
       <Projects />
       <FavTech />
