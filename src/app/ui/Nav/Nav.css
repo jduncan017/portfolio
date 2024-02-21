@@ -60,9 +60,9 @@
 .hamburger-button-active {
   background: center/100% url("/triangle_purple.png");
   border: none;
-  height: 50px;
+  height: 45px;
   position: fixed;
-  width: 50px;
+  width: 45px;
   z-index: 10;
   margin: 5px;
   transition:

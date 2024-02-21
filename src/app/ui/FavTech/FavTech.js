@@ -9,9 +9,11 @@ import ImageLoadingWrapper from "@/src/utils/PreLoader/ImageLoadingWrapper";
 export const FavTech = () => {
   return (
     <section id="technologies-section" className="fav-tech__outer-container">
-      <div className="fav-tech__header-section">
-        <div className="fav-tech__bottom-border">
-          <h1 className="fav-tech__header">Favorite Technologies</h1>
+      <div className="fav-tech__header-section mb-5 w-[80%]">
+        <div className="fav-tech__bottom-border w-fit border-b-2 border-solid border-[#8913e1]">
+          <h1 className="fav-tech__header self-start text-lg font-semibold uppercase tracking-widest">
+            Favorite Technologies
+          </h1>
         </div>
       </div>
       {FAVORITE_TECH_DATA.map((techItem) => {

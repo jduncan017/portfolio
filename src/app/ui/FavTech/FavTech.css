@@ -8,25 +8,7 @@
   padding-top: 50px;
   width: 100%;
   color: white;
-}
-
-.fav-tech__header-section {
-  width: 87%;
-  margin-bottom: 20px;
-  box-sizing: content-box;
-}
-
-.fav-tech__header {
-  font-size: 19px;
-  align-self: flex-start;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.fav-tech__bottom-border {
-  border-bottom: 3px solid #8913e1;
-  width: fit-content;
-  padding-bottom: 6px;
+  padding: 4%;
 }
 
 .fav-tech__description {

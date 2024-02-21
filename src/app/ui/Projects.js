@@ -7,10 +7,10 @@ export const Projects = () => {
   return (
     <section
       id="projects-section"
-      className="_projects-outer-container flex w-full flex-col items-center bg-[#ebeeee] px-4 py-12"
+      className="_projects-outer-container flex w-full flex-col items-center bg-[#ebeeee] px-[4%] py-12"
     >
-      <div className="_projects__header-section mb-5 w-[87%]">
-        <div className="_projects__bottom-border border-b-3 w-fit border-[#8913e1] pb-1.5">
+      <div className="_projects__header-section mb-5 w-[80%]">
+        <div className="_projects__bottom-border w-fit border-b-2 border-solid border-[#8913e1]">
           <h1 className="_projects__header self-start text-lg font-semibold uppercase tracking-widest">
             Recent Projects
           </h1>

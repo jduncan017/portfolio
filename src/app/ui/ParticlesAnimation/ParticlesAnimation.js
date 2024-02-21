@@ -75,7 +75,7 @@ export const ParticlesAnimation = () => {
             enable: true,
             height: 600,
           },
-          value: 150,
+          value: 200,
         },
         opacity: {
           value: 1,
