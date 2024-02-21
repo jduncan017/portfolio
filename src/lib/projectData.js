@@ -25,6 +25,18 @@ export const PROJECT_DATA = [
     previewPath: "/open-graph-preview.png",
   },
   {
+    name: "ACME Invoice Tracker - Next JS Tutorial",
+    techsUsed:
+      "Next.js 14, Javascript, Postgres SQL, NextAuth.js, Tailwind CSS, Zod, HTML5",
+    description: `The Next.js tutorial project was incredibly insightful! The project taught me proper use of dynamic routes, 
+    server-side rendering, React server actions, NextAuth, Zod for validation schemas, accessibility, streaming, partial prerendering, 
+    loading skeletons, and implimentation of metadata. Note for login that the form is pre-filled so you can login and explore the application.`,
+    repoURL: "https://github.com/jduncan017/next-tutorial",
+    liveButtonText: "Visit Site",
+    liveLink: "https:next-tutorial-six-puce.vercel.app",
+    previewPath: "/next-opengraph.png",
+  },
+  {
     name: "What to Wear",
     techsUsed: "React, JavaScript, REST API, Node, Express, MongoDB",
     description: `A project from my bootcamp - What to Wear (WTWR) is a front-end web application that helps users decide on their 

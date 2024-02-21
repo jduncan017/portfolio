@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   font-family: sans-serif;
   margin: 0px;
@@ -11,14 +15,20 @@ h1 {
   font-family: var(--font-cardo);
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   max-width: 1800px;
   margin: auto;
-  background-color: #004e54;
+  background-color: #000000;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .main {
-  background-color: #171717;
+  background-color: black;
   touch-action: pan-y;
   overflow-x: hidden;
 }
@@ -26,13 +36,17 @@ body {
 .global__hover-animation {
   cursor: pointer;
   transform: scale(1);
-  transition: transform 0.4s, opacity 0.4s;
+  transition:
+    transform 0.4s,
+    opacity 0.4s;
 }
 
 .global__hover-animation:hover {
   cursor: pointer;
   transform: scale(1.2);
-  transition: transform 0.4s, opacity 0.4s;
+  transition:
+    transform 0.4s,
+    opacity 0.4s;
   opacity: 0.5;
 }
 

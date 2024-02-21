@@ -54,18 +54,22 @@ export const WorkExperience = () => {
       <div className="experience-container">
         {buildExperienceHeading("Education")}
         <div className="experience-right-container">
-          <h3 className="experience-title">{RESUME_DATA.education.school}</h3>
-          <i className="experience-position">
-            {RESUME_DATA.education.position}
-          </i>
-          <i className="experience-time">{RESUME_DATA.education.time}</i>
-          <ul className="description-list">
-            {RESUME_DATA.education.description.map((item) => (
-              <li key={item} className="experience-item">
-                {item}
-              </li>
-            ))}
-          </ul>
+          {RESUME_DATA.education.map((item) => {
+            return (
+              <div key={item.school} className="job-container">
+                <h3 className="experience-title">{item.school}</h3>
+                <i className="experience-position">{item.position}</i>
+                <i className="experience-time">{item.time}</i>
+                <ul className="description-list">
+                  {item.description.map((item) => (
+                    <li key={item} className="experience-item">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

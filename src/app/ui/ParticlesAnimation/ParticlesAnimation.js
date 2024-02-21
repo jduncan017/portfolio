@@ -5,6 +5,7 @@ import "./ParticlesAnimation.css";
 
 export const ParticlesAnimation = () => {
   const [init, setInit] = useState(false);
+  const [particleLoad, setParticleLoad] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -15,6 +16,7 @@ export const ParticlesAnimation = () => {
   }, []);
 
   const particlesLoaded = (container) => {
+    setParticleLoad(true);
     console.log(container);
   };
 
@@ -88,12 +90,16 @@ export const ParticlesAnimation = () => {
       },
       detectRetina: true,
     }),
-    []
+    [],
   );
 
   if (init) {
     return (
-      <div className="particles-outer-container">
+      <div
+        className={
+          particleLoad ? "particles-outer-container" : "particles-hidden"
+        }
+      >
         <Particles
           className="particles"
           id="tsparticles"

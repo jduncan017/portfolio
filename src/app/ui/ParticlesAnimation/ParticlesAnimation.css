@@ -1,12 +1,19 @@
 .particles-outer-container {
-	height: 100%;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	width: 100%;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 2s;
 }
 
 .particles {
-	height: 100%;
+  height: 100%;
+}
+
+.particles-hidden {
+  opacity: 0;
+  transition: opacity 2s;
 }

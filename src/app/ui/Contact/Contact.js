@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import gitHubIcon from "@/public/github_icon.png";
-import xIcon from "@/public/x-social-icon.png";
-import linkedInIcon from "@/public/linkedin_icon.png";
 import { RESUME_DATA } from "@/src/lib/resumeData";
+import SocialContainer from "../SocialContainer/SocialContainer";
 import "./Contact.css";
 
 export const Contact = () => {
@@ -12,7 +9,7 @@ export const Contact = () => {
     const socialIcons = document.querySelectorAll(".icon");
     socialIcons.forEach((icon) => {
       icon.addEventListener("mouseleave", (e) =>
-        icon.classList.add("mouse-leave")
+        icon.classList.add("mouse-leave"),
       );
     });
   });
@@ -47,50 +44,7 @@ export const Contact = () => {
             Resume.pdf
           </button>
         </Link>
-        <div className="contact__social-container">
-          <Link
-            rel="noopener noreferrer"
-            aria-label="github profile"
-            href={RESUME_DATA.gitHubURL}
-            target="_blank"
-          >
-            <Image
-              alt="Github icon"
-              src={gitHubIcon}
-              className="contact__social-icon global__hover-animation"
-              width={45}
-              height={45}
-            />
-          </Link>
-          <Link
-            rel="noopener noreferrer"
-            aria-label="linkedin profile"
-            href={RESUME_DATA.linkedInURL}
-            target="_blank"
-          >
-            <Image
-              alt="Linkedin icon"
-              src={linkedInIcon}
-              className="contact__social-icon global__hover-animation"
-              width={45}
-              height={45}
-            />
-          </Link>
-          <Link
-            rel="noopener noreferrer"
-            aria-label="twitter profile"
-            href={RESUME_DATA.twitterURL}
-            target="_blank"
-          >
-            <Image
-              alt="Twitter icon"
-              src={xIcon}
-              className="contact__social-icon global__hover-animation"
-              width={45}
-              height={45}
-            />
-          </Link>
-        </div>
+        <SocialContainer />
       </section>
     </div>
   );

@@ -1,76 +1,52 @@
 "use client";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { RESUME_DATA } from "@/src/lib/resumeData";
-import { ParticlesAnimation } from "../ParticlesAnimation/ParticlesAnimation";
-import gitHubIcon from "@/public/github_icon.png";
-import xIcon from "@/public/x-social-icon.png";
-import linkedInIcon from "@/public/linkedin_icon.png";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
+import SocialContainer from "../SocialContainer/SocialContainer";
 
-export const Header = () => {
+export const Header = (Loaded) => {
+  const [headerLoaded, setHeaderLoaded] = useState(false);
+
   const performSmoothScroll = () => {
     document
       .querySelector("#about-section")
       .scrollIntoView({ behavior: "smooth" });
   };
 
+  // initiates effects on component load
+  useEffect(() => {
+    setHeaderLoaded(true);
+  }, []);
+
   return (
-    <section id="home-section" className="header-outer-container">
-      <ParticlesAnimation />
-      <h1 className="title-name">Joshua</h1>
-      <h1 className="title-name">Duncan</h1>
-      <h2 className="title-industry">Software Engineer</h2>
-      <div className="home-section__social-container">
-        <Link
-          rel="noopener noreferrer"
-          aria-label="github profile"
-          href={RESUME_DATA.gitHubURL}
-          target="_blank"
-        >
-          <Image
-            alt="Github icon"
-            src={gitHubIcon}
-            className="home-section__social-icon global__hover-animation"
-            width={45}
-            height={45}
-          />
-        </Link>
-        <Link
-          rel="noopener noreferrer"
-          aria-label="linkedin profile"
-          href={RESUME_DATA.linkedInURL}
-          target="_blank"
-        >
-          <Image
-            alt="Linkedin icon"
-            src={linkedInIcon}
-            className="home-section__social-icon global__hover-animation"
-            width={45}
-            height={45}
-          />
-        </Link>
-        <Link
-          rel="noopener noreferrer"
-          aria-label="twitter profile"
-          href={RESUME_DATA.twitterURL}
-          target="_blank"
-        >
-          <Image
-            alt="Twitter icon"
-            src={xIcon}
-            className="home-section__social-icon global__hover-animation"
-            width={45}
-            height={45}
-          />
-        </Link>
+    <div
+      className={`_header-container relative h-dvh transition-all duration-1000 ${!headerLoaded && "opacity-0"}`}
+      id="header-section"
+    >
+      <div className="_header-text-container mx-auto flex flex-col items-center pt-[25vh] sm:pt-[35vh]">
+        <h1 className="_title px-20 pb-4 text-center font-serif text-6xl font-medium uppercase leading-normal text-white sm:text-nowrap sm:pb-0 lg:text-7xl">
+          Joshua Duncan
+        </h1>
+        <h2 className="_description mb-10 mt-1 font-serif text-3xl font-bold text-white">
+          Software Engineer
+        </h2>
+        <div className="_social-container">
+          <SocialContainer />
+        </div>
+        <div className="_scroll mt-[20vh] flex flex-col items-center">
+          <h3
+            className="_scroll-down global__hover-animation font-serif text-xl font-bold italic text-white"
+            onClick={performSmoothScroll}
+          >
+            (Scroll Down)
+          </h3>
+          <button
+            aria-label="scroll down"
+            onClick={performSmoothScroll}
+            className="_down-arrow global__hover-animation relative mt-4 h-10 w-10 border-none"
+            id="nav-trigger"
+          ></button>
+        </div>
       </div>
-      <button
-        aria-label="scroll down"
-        onClick={performSmoothScroll}
-        className="down-arrow global__hover-animation"
-      ></button>
-    </section>
+    </div>
   );
 };

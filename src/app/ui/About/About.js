@@ -35,9 +35,9 @@ export const About = ({ RESUME_DATA }) => {
   };
 
   return (
-    <div className="about-wrapper">
+    <div className="about-wrapper" id="about-section">
       <div className="about-clip-path-top"></div>
-      <section id="about-section" className="about-outer-container">
+      <section className="about-outer-container">
         <div className="profile-pic-container">
           <Image
             alt="Josh's Picture"
@@ -46,7 +46,7 @@ export const About = ({ RESUME_DATA }) => {
           />
         </div>
         <div className="about-info-container">
-          <h2 className="about-title">Greetings!</h2>
+          <h2 className="about-title">Hello! 👋🏼</h2>
           {printBio()}
           <div className="contact-info-container">
             <h2 className="about-title">Contact Details</h2>

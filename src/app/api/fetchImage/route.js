@@ -5,8 +5,7 @@ export async function GET(req) {
   const url = req.headers.get("xurl");
 
   if (!url) {
-    NextResponse.json({ error: "no url provided" }, { status: 400 });
-    return;
+    return NextResponse.json({ error: "no url provided" }, { status: 400 });
   }
 
   try {
@@ -16,7 +15,7 @@ export async function GET(req) {
 
     const ogImageTag = metaTags.find(
       (tag) =>
-        tag.includes('property="og:image"') || tag.includes('name="og:image"')
+        tag.includes('property="og:image"') || tag.includes('name="og:image"'),
     );
     const ogImageUrl = ogImageTag.match(/content="([^"]+)"/)[1];
 

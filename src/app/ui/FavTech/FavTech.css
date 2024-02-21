@@ -46,12 +46,17 @@
   gap: 30px;
 }
 
+.techItem__image-link {
+  max-width: 100%;
+}
+
 .techItem__site-image-container {
   position: relative;
   width: 300px;
   height: 190px;
   border-radius: 10px;
   background-color: #101010;
+  max-width: 100%;
 }
 
 .fav-tech__info {
@@ -100,7 +105,9 @@
   border: none;
   background-color: #1f1f1f;
   border: 2px solid #5e00a4;
-  transition: background-color 0.3s, color 0.7s;
+  transition:
+    background-color 0.3s,
+    color 0.7s;
   color: white;
 }
 
@@ -108,7 +115,9 @@
   background-color: #5e00a4;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.7s;
+  transition:
+    background-color 0.3s,
+    color 0.7s;
 }
 
 .techItem__site-preview {
@@ -140,7 +149,7 @@
 
   .techItem__site-image-container {
     width: 83vw;
-    min-height: 41vw;
+    min-height: 39vw;
     height: fit-content;
   }
 

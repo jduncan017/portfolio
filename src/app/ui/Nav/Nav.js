@@ -5,7 +5,35 @@ export const Nav = () => {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
   const [animateClass, setAnimateClass] = useState("hidden");
   const [hamburgerBtnTurnLeft, setHamburgerBtnTurnLeft] = useState("");
+  const [navStyle, setNavStyle] = useState("full-nav__background_hidden");
   const mobileNavRef = useRef();
+
+  //this controls the animation of the full nav bar background
+  useEffect(() => {
+    const navTrigger = document.querySelector("#nav-trigger");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        // If header is not in viewport, change nav background
+        if (!entry.isIntersecting) {
+          setNavStyle("full-nav__background");
+        } else {
+          setNavStyle("full-nav__background full-nav__background_hidden");
+        }
+      },
+      {
+        root: null, // viewport
+        threshold: 0, // trigger callback when header is just not visible
+      },
+    );
+
+    if (navTrigger) observer.observe(navTrigger);
+
+    return () => {
+      if (navTrigger) observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -37,19 +65,27 @@ export const Nav = () => {
   }, [mobileNavVisible]);
 
   const printNavButtons = () => {
-    const navHeadings = ["home", "about", "experience", "projects", "contact"];
-    const navButtons = navHeadings.map((heading) => {
+    const navHeadings = [
+      "home",
+      "about",
+      "experience",
+      "projects",
+      "technologies",
+      "contact",
+    ];
+    return navHeadings.map((heading, index) => {
+      const delay = index * 100; // Incremental delay, e.g., 0ms, 100ms, 200ms, etc.
       return (
         <button
           tabIndex="0"
           aria-label={`${heading} section`}
           key={`${heading}`}
           onClick={() => performSmoothScroll(`${heading}`)}
+          style={{ animationDelay: `${delay}ms` }}
           className="nav-buttons"
         >{`${heading}`}</button>
       );
     });
-    return navButtons;
   };
 
   const onHamburgerClick = () => {
@@ -66,7 +102,14 @@ export const Nav = () => {
   };
 
   return (
-    <nav>
+    <nav className="nav">
+      {/* full nav */}
+      <div className="full-nav hidden sm:block">
+        <div className="full-nav__links">{printNavButtons()}</div>
+        <div className={navStyle} />
+      </div>
+
+      {/* mobile nav */}
       <div ref={mobileNavRef} className="mobile-nav-container">
         <button
           onClick={onHamburgerClick}
@@ -94,7 +137,6 @@ export const Nav = () => {
           />
         </div>
       </div>
-      <div className="full-nav-container">{printNavButtons()}</div>
     </nav>
   );
 };

@@ -1,83 +1,46 @@
-.header-outer-container {
-  align-items: center;
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 625px;
-  padding-bottom: 100px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-.title-name {
-  display: inline-block;
-  color: #fff;
-  font-family: "Jost";
-  font-size: 500%;
-  font-weight: lighter;
-  margin: 175px 15px 0px 15px;
-  position: relative;
-  text-transform: uppercase;
-}
-
-.title-industry {
-  color: #fff;
-  font-family: "Jost";
-  font-size: 200%;
-  position: relative;
-  margin-top: 5px;
-}
-
-.home-section__social-container {
-  margin-top: 80px;
-  position: relative;
-}
-
-.home-section__social-icon {
-  height: 45px;
-  margin: 0px 10px;
-  width: 45px;
-}
-
-.down-arrow {
+._down-arrow {
   background: center/100% url("/down_arrow_icon.png");
-  border: none;
-  height: 40px;
-  margin-top: 100px;
-  position: relative;
-  width: 40px;
 }
 
-@media only screen and (max-width: 950px) {
-  .title-name {
-    font-size: 350%;
-  }
+/* Initial state for animation elements */
+._title,
+._description,
+._social-container,
+._scroll-down,
+._down-arrow {
+  opacity: 0; /* Start elements as invisible */
+  animation: fadeInDown 0.5s ease-out forwards; /* Use forwards to retain the final animation state */
 }
 
-@media only screen and (max-width: 660px) {
-  .header-outer-container {
-    height: 550px;
-  }
+/* Animation delays */
+._title {
+  animation-delay: 1s;
+}
 
-  .title-name:nth-child(2) {
-    margin-top: 120px;
-  }
+._description {
+  animation-delay: 1s;
+}
 
-  .title-name:nth-child(3) {
-    margin-top: 0px;
-  }
+._social-container {
+  animation-delay: 1s;
+}
 
-  .title-industry {
-    font-size: 150%;
-    padding-top: 10px;
-  }
+._scroll-down {
+  animation-delay: 2.5s;
+}
 
-  .home-section__social-container {
-    margin-top: 60px;
-  }
+._down-arrow {
+  animation-delay: 3s;
+}
 
-  .down-arrow {
-    margin-top: 90px;
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
   }
 }

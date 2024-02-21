@@ -8,7 +8,7 @@ import ImageLoadingWrapper from "@/src/utils/PreLoader/ImageLoadingWrapper";
 
 export const FavTech = () => {
   return (
-    <section id="fav-tech__section" className="fav-tech__outer-container">
+    <section id="technologies-section" className="fav-tech__outer-container">
       <div className="fav-tech__header-section">
         <div className="fav-tech__bottom-border">
           <h1 className="fav-tech__header">Favorite Technologies</h1>
@@ -23,6 +23,7 @@ export const FavTech = () => {
               aria-label="live project"
               href={techItem.liveLink}
               target="_blank"
+              className="techItem__image-link"
             >
               <div className="techItem__site-image-container">
                 <ImageLoadingWrapper

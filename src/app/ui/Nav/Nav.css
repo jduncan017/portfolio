@@ -1,20 +1,35 @@
-.full-nav-container {
-  background-color: #004e54;
-  box-shadow: 0px 5px 13px 0px #000;
-  display: flex;
-  height: 35px;
-  justify-content: center;
+.full-nav {
   position: fixed;
   width: 100%;
   z-index: 5;
-  padding: 2px;
-  transition: background-color 0.5s;
-  max-width: 1800px;
 }
 
-.full-nav-container:hover {
-  background-color: #5e00a4;
-  transition: background-color 0.5s;
+.full-nav__links {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+  padding: 2px;
+  height: 40px;
+  max-width: 1800px;
+  position: absolute;
+}
+
+.full-nav__background {
+  background-color: #004e54;
+  box-shadow: 0px 5px 13px 0px #000;
+  height: 40px;
+  transition:
+    background-color 0.5s,
+    transform 0.5s;
+}
+
+.full-nav__background_hidden {
+  transform: translateX(-100%);
+  transition:
+    background-color 0.5s,
+    transform 0.5s;
 }
 
 .nav-buttons {
@@ -25,16 +40,19 @@
   font-weight: bold;
   letter-spacing: 2px;
   margin: 0.5px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
+  padding: 10px 15px;
   text-transform: uppercase;
   border-radius: 3px;
+  opacity: 0; /* Starts transparent, fades in */
+  animation: fadeIn 1s ease forwards;
 }
 
 .nav-buttons:hover {
   background-color: #dddddd;
   cursor: pointer;
-  transition: background-color 0.75s, color 1.5s;
+  transition:
+    background-color 0.75s,
+    color 1.5s;
   color: black;
 }
 
@@ -47,7 +65,9 @@
   width: 50px;
   z-index: 10;
   margin: 5px;
-  transition: margin 0.5s, background 1s;
+  transition:
+    margin 0.5s,
+    background 1s;
 }
 
 .hamburger-button-turn-left {
@@ -59,7 +79,9 @@
   transform: rotate(180deg);
   animation: turnRight 0.9s 1;
   margin: 0;
-  transition: margin 0.5s, background 1s;
+  transition:
+    margin 0.5s,
+    background 1s;
 }
 
 .hamburger-button:hover,
@@ -166,5 +188,19 @@
   .nav-buttons:last-child {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translatey(-40px);
+  }
+  70% {
+    opacity: 0.3;
+    transform: translatey(0);
+  }
+  100% {
+    opacity: 1;
   }
 }
