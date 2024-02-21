@@ -14,13 +14,13 @@ export default function Home() {
   return (
     <main className="" id="home-section">
       <Nav />
-      <ToggleScrollbarButton />
       <Header />
       <About RESUME_DATA={RESUME_DATA} />
       <WorkExperience />
       <Projects />
       <FavTech />
       <Contact />
+      <ToggleScrollbarButton />
     </main>
   );
 }
