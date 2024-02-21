@@ -9,7 +9,7 @@
 ._scroll-down,
 ._down-arrow {
   opacity: 0; /* Start elements as invisible */
-  animation: fadeInDown 0.5s ease-out forwards; /* Use forwards to retain the final animation state */
+  animation: fadeInDown 1.5s ease-out forwards; /* Use forwards to retain the final animation state */
 }
 
 /* Animation delays */
@@ -22,23 +22,20 @@
 }
 
 ._social-container {
-  animation-delay: 1s;
+  animation-delay: 1.25s;
 }
 
 ._scroll-down {
-  animation-delay: 2.5s;
+  animation-delay: 2s;
 }
 
 ._down-arrow {
-  animation-delay: 3s;
+  animation-delay: 2.2s;
 }
 
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-  }
-  70% {
-    opacity: 0.3;
   }
   100% {
     opacity: 1;
