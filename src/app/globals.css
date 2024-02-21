@@ -15,16 +15,18 @@ h1 {
   font-family: var(--font-cardo);
 }
 
-::-webkit-scrollbar {
-  display: none;
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
 }
 
 body {
   max-width: 1800px;
   margin: auto;
   background-color: #000000;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .main {

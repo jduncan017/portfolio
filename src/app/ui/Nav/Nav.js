@@ -55,15 +55,6 @@ export const Nav = () => {
     onHamburgerClick();
   };
 
-  // stops bodyscroll when modal is open
-  useEffect(() => {
-    if (mobileNavVisible) {
-      document.body.classList.add("global__no-scroll");
-    } else {
-      document.body.classList.remove("global__no-scroll");
-    }
-  }, [mobileNavVisible]);
-
   const printNavButtons = () => {
     const navHeadings = [
       "home",

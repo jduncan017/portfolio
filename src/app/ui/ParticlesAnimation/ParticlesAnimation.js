@@ -17,7 +17,6 @@ export const ParticlesAnimation = () => {
 
   const particlesLoaded = (container) => {
     setParticleLoad(true);
-    console.log(container);
   };
 
   const options = useMemo(
@@ -28,7 +27,7 @@ export const ParticlesAnimation = () => {
           value: "#000",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 60,
       interactivity: {
         events: {
           onClick: {

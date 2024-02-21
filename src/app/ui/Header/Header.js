@@ -1,27 +1,24 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Header.css";
 import SocialContainer from "../SocialContainer/SocialContainer";
+import { ParticlesAnimation } from "../ParticlesAnimation/ParticlesAnimation";
 
 export const Header = (Loaded) => {
-  const [headerLoaded, setHeaderLoaded] = useState(false);
-
   const performSmoothScroll = () => {
     document
       .querySelector("#about-section")
       .scrollIntoView({ behavior: "smooth" });
   };
 
-  // initiates effects on component load
-  useEffect(() => {
-    setHeaderLoaded(true);
-  }, []);
-
   return (
     <div
-      className={`_header-container relative h-dvh transition-all duration-1000 ${!headerLoaded && "opacity-0"}`}
+      className="_header-container relative h-dvh transition-all duration-1000"
       id="header-section"
     >
+      <section className="_particles-background pb-25 absolute z-[-10] h-[116vh] w-full text-center">
+        <ParticlesAnimation />
+      </section>
       <div className="_header-text-container mx-auto flex flex-col items-center pt-[15vh] sm:pt-[30vh]">
         <div
           className="_text-container flex max-w-[80%] flex-col items-center rounded-[20px] bg-black/5 

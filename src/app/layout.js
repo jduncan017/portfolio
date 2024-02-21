@@ -31,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`main ${cardo.className}`}>{children}</body>
+      <body className={`main no-scrollbar ${cardo.className}`}>{children}</body>
     </html>
   );
 }

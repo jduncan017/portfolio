@@ -8,18 +8,13 @@ import { Projects } from "@/src/app/ui/Projects/Projects";
 import { Contact } from "@/src/app/ui/Contact/Contact";
 import { RESUME_DATA } from "../lib/resumeData";
 import { FavTech } from "./ui/FavTech/FavTech";
-import { ParticlesAnimation } from "./ui/ParticlesAnimation/ParticlesAnimation";
+import { ToggleScrollbarButton } from "./ui/ScrollBarButton";
 
 export default function Home() {
   return (
-    <main className="">
-      <section
-        id="home-section"
-        className="_particles-background pb-25 fixed z-[-10] h-full w-full text-center"
-      >
-        <ParticlesAnimation />
-      </section>
+    <main className="" id="home-section">
       <Nav />
+      <ToggleScrollbarButton />
       <Header />
       <About RESUME_DATA={RESUME_DATA} />
       <WorkExperience />

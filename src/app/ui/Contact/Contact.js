@@ -5,15 +5,6 @@ import SocialContainer from "../SocialContainer/SocialContainer";
 import "./Contact.css";
 
 export const Contact = () => {
-  useEffect(() => {
-    const socialIcons = document.querySelectorAll(".icon");
-    socialIcons.forEach((icon) => {
-      icon.addEventListener("mouseleave", (e) =>
-        icon.classList.add("mouse-leave"),
-      );
-    });
-  });
-
   return (
     <div className="contact">
       <div className="contact-clip-path-top"></div>
