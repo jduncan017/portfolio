@@ -20,7 +20,7 @@ module.exports = {
         },
       },
       boxShadow: {
-        custom: "0 0 10px rgba(150, 150, 150, 0.3)",
+        custom: "0 0 10px rgba(116, 255, 229, 0.2)",
       },
       fontFamily: {
         serif: ["Jost", "serif"],
