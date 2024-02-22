@@ -32,10 +32,9 @@ export const Projects = () => {
             <Image
               src={project.previewPath}
               alt="Screenshot of project"
-              width={300}
-              height={190}
-              className="_project__site-preview xs:max-w-fit xs:h-[190px] h-auto max-w-full cursor-pointer rounded-lg transition-all duration-500 
-              hover:brightness-125 hover:contrast-50"
+              width={560}
+              height={280}
+              className="_project__site-preview transition-filter h-auto w-[83vw] cursor-pointer rounded-lg duration-500 hover:brightness-125 hover:contrast-50 md:h-[190px] md:w-auto md:max-w-[300px]"
             />
           </Link>
           <div className="_project-info flex flex-col">

@@ -17,14 +17,14 @@ export const About = ({ RESUME_DATA }) => {
     const bio3 = RESUME_DATA.bioDescription3.split("<skillsLink>");
     return (
       <div>
-        <p className="about-text">{bio1}</p>
-        <p className="about-text about-text-2">{bio2}</p>
-        <p className="about-text about-text-2">
+        <p className="global-p-text text-white">{bio1}</p>
+        <p className="global-p-text mt-[12px] text-white">{bio2}</p>
+        <p className="global-p-text mt-[12px] text-white">
           {" "}
           {bio3[0]}
           <span
             onClick={scrollToTechSkillsSection}
-            className="tech-skills-link"
+            className="_skills-link font-serif underline transition-opacity hover:cursor-pointer hover:opacity-60"
           >
             See complete list
           </span>
@@ -35,30 +35,37 @@ export const About = ({ RESUME_DATA }) => {
   };
 
   return (
-    <div className="about-wrapper" id="about-section">
-      <div className="about-clip-path-top"></div>
-      <section className="about-outer-container">
-        <div className="profile-pic-container">
-          <Image
-            alt="Josh's Picture"
-            src={profilePic}
-            className="profile-pic"
-          />
-        </div>
-        <div className="about-info-container">
-          <h2 className="about-title">Hello! 👋🏼</h2>
+    <div className="_about-wrapper" id="_about-section">
+      <div
+        className="_about-clip-path-top bg-darkGrey h-[150px] w-full"
+        style={{ clipPath: "polygon(0% 50%, 0% 100%, 100% 100%)" }}
+      />
+      <section className="_about-outer-container bg-darkGrey flex h-auto w-full flex-col items-center justify-center gap-8 px-[14%] py-10 text-justify md:px-[20%] lg:flex-row lg:items-start lg:gap-16 lg:text-left">
+        <Image
+          alt="Josh's Picture"
+          src={profilePic}
+          className="_profile-pic xs:block hidden h-auto max-h-[275px] w-[40vw] max-w-[275px] rounded-full lg:w-[20vw]"
+        />
+        <div className="_info-container w-full">
+          <h2 className="_about-title font-serif text-2xl leading-relaxed tracking-wide text-white sm:text-2xl">
+            Hello! 👋🏼
+          </h2>
           {printBio()}
-          <div className="contact-info-container">
-            <h2 className="about-title">Contact Details</h2>
-            <p className="about-text">Joshua Duncan</p>
-            <p className="about-text">Denver, CO</p>
+          <div className="_contact-container mt-[5%]">
+            <h2 className="_contact-title font-serif text-2xl leading-relaxed tracking-wide text-white sm:text-2xl">
+              Contact Details
+            </h2>
+            <p className="global-p-text text-white">Joshua Duncan</p>
+            <p className="global-p-text text-white">Denver, CO</p>
             <Link
               rel="noopener noreferrer"
               aria-label="send email"
               href="mailto: EmailJoshDuncan@gmail.com"
               target="_blank"
             >
-              <p className="about-text email-text">EmailJoshDuncan@gmail.com</p>
+              <p className="global-p-text text-white underline">
+                EmailJoshDuncan@gmail.com
+              </p>
             </Link>
             <Link
               rel="noopener noreferrer"
@@ -68,7 +75,7 @@ export const About = ({ RESUME_DATA }) => {
               <button
                 tabIndex="-1"
                 aria-label="view resume as PDF"
-                className="resume-button global__button"
+                className="_resume-button global-button mt-6"
               >
                 Resume.pdf
               </button>
@@ -76,7 +83,10 @@ export const About = ({ RESUME_DATA }) => {
           </div>
         </div>
       </section>
-      <div className="about-clip-path-bottom"></div>
+      <div
+        className="_clip-path-bottom bg-darkGrey mb-[-80px] h-20 w-full"
+        style={{ clipPath: "polygon(0% 0%, 100% -50%, 100% 100%)" }}
+      ></div>
     </div>
   );
 };

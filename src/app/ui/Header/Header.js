@@ -12,10 +12,7 @@ export const Header = () => {
   };
 
   return (
-    <div
-      className="_header-container relative h-dvh transition-all duration-1000"
-      id="header-section"
-    >
+    <div className="_header-container relative h-dvh" id="header-section">
       <section className="_particles-bacperkground pb-25 absolute z-[-10] h-[116vh] w-full text-center">
         <ParticlesAnimation />
       </section>

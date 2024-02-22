@@ -35,7 +35,8 @@
 .techItem__site-image-container {
   position: relative;
   width: 300px;
-  height: 190px;
+  height: fit-content;
+  min-height: 180px;
   border-radius: 10px;
   background-color: #101010;
   max-width: 100%;
@@ -131,7 +132,7 @@
 
   .techItem__site-image-container {
     width: 83vw;
-    min-height: 39vw;
+    min-height: 35vw;
     height: fit-content;
   }
 

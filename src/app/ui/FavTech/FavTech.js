@@ -56,7 +56,7 @@ export const FavTech = () => {
                   href={techItem.liveLink}
                   target="_blank"
                 >
-                  <button className="fav-tech__button global__button">
+                  <button className="fav-tech__button global-button">
                     {techItem.liveButtonText}
                   </button>
                 </Link>

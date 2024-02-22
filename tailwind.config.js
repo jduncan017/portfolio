@@ -13,6 +13,9 @@ module.exports = {
       xl: "1280px",
     },
     extend: {
+      transitionProperty: {
+        filter: "filter",
+      },
       styles: {
         img: {
           maxWidth: "none",
@@ -28,6 +31,7 @@ module.exports = {
       colors: {
         darkTeal: "#004e54",
         neonPurple: "#5e00a4",
+        darkGrey: "#383838",
       },
     },
   },

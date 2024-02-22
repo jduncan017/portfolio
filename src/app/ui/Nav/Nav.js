@@ -120,11 +120,8 @@ export const Nav = () => {
         >
           {printNavButtons()}
           <div
-            className={
-              mobileNavVisible
-                ? "mobile-nav__overlay"
-                : "mobil-nav__overlay_hidden"
-            }
+            className={`_mobile-overlay fixed inset-0 z-[-1] justify-center 
+            bg-black opacity-50 ${mobileNavVisible ? "flex" : "hidden"}`}
           />
         </div>
       </div>

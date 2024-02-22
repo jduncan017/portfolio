@@ -12,15 +12,17 @@ export const Contact = () => {
         <i className="contact-message">
           Please feel free to contact me for work, suggestions, or networking!
         </i>
-        <p className="about-text">Joshua Duncan</p>
-        <p className="about-text">Denver, CO</p>
+        <p className="global-p-text text-white">Joshua Duncan</p>
+        <p className="global-p-text text-white">Denver, CO</p>
         <Link
           rel="noopener noreferrer"
           aria-label="send email"
           href="mailto: EmailJoshDuncan@gmail.com"
           target="_blank"
         >
-          <p className="about-text email-text">EmailJoshDuncan@gmail.com</p>
+          <p className="global-p-text text-white underline">
+            EmailJoshDuncan@gmail.com
+          </p>
         </Link>
         <Link
           rel="noopener noreferrer"
@@ -30,7 +32,7 @@ export const Contact = () => {
         >
           <button
             aria-label="view resume as PDF"
-            className="resume-button-footer global__button"
+            className="resume-button-footer global-button"
           >
             Resume.pdf
           </button>
