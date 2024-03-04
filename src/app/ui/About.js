@@ -41,7 +41,7 @@ export const About = ({ RESUME_DATA }) => {
       />
       <section
         className="_about-outer-container flex h-auto w-full flex-col items-center justify-center gap-8 
-      bg-darkGrey px-[14%] py-10 text-justify md:px-[15%] lg:flex-row lg:items-start lg:gap-16 lg:text-left"
+      bg-darkGrey px-[14%] py-0 text-justify md:px-[15%] md:py-10 lg:flex-row lg:items-start lg:gap-16 lg:text-left"
       >
         <Image
           alt="Josh's Picture"
@@ -79,7 +79,7 @@ export const About = ({ RESUME_DATA }) => {
                 aria-label="view resume as PDF"
                 className="_resume-button global-button mt-6"
               >
-                Resume.pdf
+                View Resume
               </button>
             </Link>
           </div>

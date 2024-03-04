@@ -34,7 +34,7 @@ export const Contact = () => {
             aria-label="view resume as PDF"
             className="resume-button-footer global-button"
           >
-            Resume.pdf
+            View Resume
           </button>
         </Link>
         <SocialContainer />
