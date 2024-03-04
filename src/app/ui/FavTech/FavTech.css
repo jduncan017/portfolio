@@ -4,11 +4,10 @@
   display: flex;
   flex-direction: column;
   height: auto;
+  padding-top: 84px;
   padding-bottom: 100px;
-  padding-top: 50px;
   width: 100%;
   color: white;
-  padding: 4%;
 }
 
 .fav-tech__description {

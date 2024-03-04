@@ -34,25 +34,25 @@ export const About = ({ RESUME_DATA }) => {
   };
 
   return (
-    <div className="_about-wrapper" id="_about-section">
+    <section className="_about-wrapper" id="about-section">
       <div
-        className="_about-clip-path-top bg-darkGrey h-[150px] w-full"
+        className="_about-clip-path-top h-[150px] w-full bg-darkGrey"
         style={{ clipPath: "polygon(0% 50%, 0% 100%, 100% 100%)" }}
       />
       <section
-        className="_about-outer-container bg-darkGrey flex h-auto w-full flex-col items-center justify-center 
-      gap-8 px-[14%] py-10 text-justify md:px-[20%] lg:flex-row lg:items-start lg:gap-16 lg:text-left"
+        className="_about-outer-container flex h-auto w-full flex-col items-center justify-center gap-8 
+      bg-darkGrey px-[14%] py-10 text-justify md:px-[15%] lg:flex-row lg:items-start lg:gap-16 lg:text-left"
       >
         <Image
           alt="Josh's Picture"
           src={profilePic}
-          className="_profile-pic xs:block hidden h-auto max-h-[275px] w-[40vw] max-w-[275px] rounded-full lg:w-[20vw]"
+          className="_profile-pic hidden h-auto max-h-[275px] w-[40vw] max-w-[275px] rounded-full xs:block lg:w-[20vw]"
         />
         <div className="_info-container w-full">
-          <h2 className="_about-title font-serif text-2xl leading-relaxed tracking-wide text-white sm:text-2xl">
+          <h2 className="_about-title font-serif text-2xl leading-normal tracking-wide text-white sm:text-2xl">
             Hello! 👋🏼
           </h2>
-          {printBio()}
+          <div className="_about__bio">{printBio()}</div>
           <div className="_contact-container mt-[5%]">
             <h2 className="_contact-title font-serif text-2xl leading-relaxed tracking-wide text-white sm:text-2xl">
               Contact Details
@@ -86,9 +86,9 @@ export const About = ({ RESUME_DATA }) => {
         </div>
       </section>
       <div
-        className="_clip-path-bottom bg-darkGrey mb-[-80px] h-20 w-full"
+        className="_clip-path-bottom mb-[-80px] h-20 w-full bg-darkGrey"
         style={{ clipPath: "polygon(0% 0%, 100% -50%, 100% 100%)" }}
       ></div>
-    </div>
+    </section>
   );
 };

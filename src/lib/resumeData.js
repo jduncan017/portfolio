@@ -13,17 +13,6 @@ export const RESUME_DATA = {
     Next.js, Node.js, MongoDB, HTML5, and CSS3 (<skillsLink>).`,
   education: [
     {
-      school: "TripleTen by Yandex",
-      position: "Graduate Full-Stack Software Developer Program",
-      time: "January 2023 - January 2024",
-      description: [
-        "Completed 1000+ hours of hands-on coding experience in JavaScript, React, Node.js, HTML5, and CSS3, using BEM methods, studying best practices and modern approaches to design challenges.",
-        "Developed several responsive single-page applications, focusing on efficiency and user experience.",
-        "Studied and implemented front-end and back-end aspects of applications, including database modeling, user authentication, REST APIs, web deployment, and modern UI/UX.",
-        "Finished my final project using Figma, Next.js 14, and PostgreSQL to develop a business site from start to finish for a real-world client.",
-      ],
-    },
-    {
       school: "Monroe Community College",
       position: "Associate of Science - Focus: Chemical Engineering",
       time: "September 2009 - June 2012",
@@ -34,6 +23,17 @@ export const RESUME_DATA = {
     },
   ],
   jobs: [
+    {
+      name: "TripleTen by Yandex",
+      position: "Graduate Full-Stack Software Developer Program",
+      time: "January 2023 - January 2024",
+      description: [
+        "Completed 1000+ hours of hands-on coding experience in JavaScript, React, Node.js, HTML5, and CSS3, using BEM methods, studying best practices and modern approaches to design challenges.",
+        "Developed several responsive single-page applications, focusing on efficiency and user experience.",
+        "Studied and implemented front-end and back-end aspects of applications, including database modeling, user authentication, REST APIs, web deployment, and modern UI/UX.",
+        "Finished my final project using Figma, Next.js 14, and PostgreSQL to develop a business site from start to finish for a real-world client.",
+      ],
+    },
     {
       name: "Team Enterprises",
       position: "Brand Ambassador (Santa Teresa Rum)",

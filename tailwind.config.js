@@ -32,6 +32,8 @@ module.exports = {
         darkTeal: "#004e54",
         neonPurple: "#5e00a4",
         darkGrey: "#383838",
+        darkerGrey: "#303030",
+        lightGrey: "#ebeeee",
       },
     },
   },
