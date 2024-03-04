@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import profilePic from "@/public/profile_pic.jpeg";
-import "./About.css";
 
 export const About = ({ RESUME_DATA }) => {
   const scrollToTechSkillsSection = () => {
@@ -40,7 +39,10 @@ export const About = ({ RESUME_DATA }) => {
         className="_about-clip-path-top bg-darkGrey h-[150px] w-full"
         style={{ clipPath: "polygon(0% 50%, 0% 100%, 100% 100%)" }}
       />
-      <section className="_about-outer-container bg-darkGrey flex h-auto w-full flex-col items-center justify-center gap-8 px-[14%] py-10 text-justify md:px-[20%] lg:flex-row lg:items-start lg:gap-16 lg:text-left">
+      <section
+        className="_about-outer-container bg-darkGrey flex h-auto w-full flex-col items-center justify-center 
+      gap-8 px-[14%] py-10 text-justify md:px-[20%] lg:flex-row lg:items-start lg:gap-16 lg:text-left"
+      >
         <Image
           alt="Josh's Picture"
           src={profilePic}

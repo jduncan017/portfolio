@@ -2,7 +2,7 @@
 import React from "react";
 import { Nav } from "./ui/Nav/Nav";
 import { Header } from "@/src/app/ui/Header/Header";
-import { About } from "@/src/app/ui/About/About";
+import { About } from "@/src/app/ui/About";
 import { WorkExperience } from "@/src/app/ui/WorkExperience/WorkExperience";
 import { Projects } from "@/src/app/ui/Projects";
 import { Contact } from "@/src/app/ui/Contact/Contact";
