@@ -69,19 +69,34 @@ export const About = ({ RESUME_DATA }) => {
                 EmailJoshDuncan@gmail.com
               </p>
             </Link>
-            <Link
-              rel="noopener noreferrer"
-              href={RESUME_DATA.resumeURL}
-              target="_blank"
-            >
-              <button
-                tabIndex="-1"
-                aria-label="view resume as PDF"
-                className="_resume-button global-button mt-6"
+            <div className="_about__button-container my-6 flex flex-col gap-4 sm:flex-row">
+              <Link
+                rel="noopener noreferrer"
+                href={RESUME_DATA.resumeURL}
+                target="_blank"
               >
-                View Resume
-              </button>
-            </Link>
+                <button
+                  tabIndex="-1"
+                  aria-label="view resume as PDF"
+                  className="_resume-button global-button"
+                >
+                  View Resume
+                </button>
+              </Link>
+              <Link
+                rel="noopener noreferrer"
+                href="https://calendly.com/jduncan017/1-hour-meeting"
+                target="_blank"
+              >
+                <button
+                  tabIndex="-1"
+                  aria-label="Schedule a meeting"
+                  className="_schedule-button global-button"
+                >
+                  Schedule a Meeting
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
