@@ -8,7 +8,7 @@ export const Projects = () => {
     <section id="projects-section" className="_projects-wrapper">
       <div
         id="projects-section"
-        className="_projects-outer-container bg-lightGrey flex w-full flex-col items-center px-[4%] pb-12 pt-24"
+        className="_projects-outer-container flex w-full flex-col items-center bg-lightGrey px-[4%] pb-12 pt-24"
       >
         <div className="_projects__header-section mb-5 w-[80%]">
           <div className="_projects__bottom-border w-fit border-b-2 border-solid border-[#8913e1]">
@@ -83,7 +83,7 @@ export const Projects = () => {
         ))}
       </div>
       <div
-        className="_clip-path-bottom bg-lightGrey mb-[-80px] h-20 w-full"
+        className="_clip-path-bottom mb-[-80px] h-20 w-full bg-lightGrey"
         style={{ clipPath: "polygon(0% 0%, 100% -50%, 100% 100%)" }}
       ></div>
     </section>

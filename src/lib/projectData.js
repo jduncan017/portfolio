@@ -37,18 +37,6 @@ export const PROJECT_DATA = [
     previewPath: "/next-opengraph.png",
   },
   {
-    name: "What to Wear",
-    techsUsed: "React, JavaScript, REST API, Node, Express, MongoDB",
-    description: `A project from my bootcamp - What to Wear (WTWR) is a front-end web application that helps users decide on their 
-      outfit by reading weather data from a Weather API. It recommends suitable clothing based on the current weather conditions. 
-      The app is built using React and integrates a Weather API to fetch real-time weather data.`,
-    repoURL:
-      "https://github.com/jduncan017/se_project_react?tab=readme-ov-file",
-    liveButtonText: "Visit Site",
-    liveLink: "https://wtwr.blinklab.com/#/",
-    previewPath: "/wtwr.webp",
-  },
-  {
     name: "Around The US",
     techsUsed: "Vanilla JavaScript, HTML5, CSS3",
     description: `A project from my bootcamp - My first Javascript Application - Around The U.S. is a responsive, 
