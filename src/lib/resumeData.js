@@ -3,8 +3,8 @@ export const RESUME_DATA = {
   gitHubURL: "https://github.com/jduncan017",
   twitterURL: "https://twitter.com/Jduncan017",
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
-  bioDescription1: `As a multifaceted full-stack developer, I bring a diverse wealth of experience to the table. My career has encompassed software development, 
-  project management, brand strategy, leadership, marketing, and entrepreneurship - providing me with a broad and insightful perspective.`,
+  bioDescription1: `I'm Josh, a multifaceted full-stack developer with a diverse background of various career experiences including roles
+  dealing with project management, brand strategy, leadership, marketing, and entrepreneurship.`,
   bioDescription2: `Currently, I am thriving as a freelance brand strategist and web developer, thoroughly enjoying the creative freedom of the client process. 
   However, my true passion lies in harnessing technology to tackle real-world issues, and I am actively seeking the right opportunity with a forward-thinking, impactful company.`,
   bioDescription3: `Driving impactful growth through determination and creative thinking is ingrained in my character. I am eager to leverage my unique mix of skills for 
