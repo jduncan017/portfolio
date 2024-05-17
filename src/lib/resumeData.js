@@ -3,14 +3,12 @@ export const RESUME_DATA = {
   gitHubURL: "https://github.com/jduncan017",
   twitterURL: "https://twitter.com/Jduncan017",
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
-  bioDescription1: `My name is Josh, and I’m a full-stack developer with a background in sales, marketing, and business development. 
-    With over seven years of experience building and running businesses, I understand the value in culture building 
-    and excel in the management of both people and projects.`,
-  bioDescription2: `As a software engineer, I am passionate about systems design and problem solving. With an aptitude for understanding user experience, 
-    I aim to build modern tools that improve the quality of people's lives. I've recently completed a full-stack developer program with 
-    TripleTen, and now I'm working to build my portfolio as I switch entirely into tech.`,
-  bioDescription3: `I'm adaptable and ready to learn any language or framework needed to tackle a project. My current tech stack of choice is TypeScript, 
-    Next.js, Node.js, MongoDB, HTML5, and CSS3 (<skillsLink>).`,
+  bioDescription1: `As a multifaceted full-stack developer, I bring a diverse wealth of experience to the table. My career has encompassed software development, 
+  project management, brand strategy, leadership, marketing, and entrepreneurship - providing me with a broad and insightful perspective.`,
+  bioDescription2: `Currently, I am thriving as a freelance brand strategist and web developer, thoroughly enjoying the creative freedom of the client process. 
+  However, my true passion lies in harnessing technology to tackle real-world issues, and I am actively seeking the right opportunity with a forward-thinking, impactful company.`,
+  bioDescription3: `Driving impactful growth through determination and creative thinking is ingrained in my character. I am eager to leverage my unique mix of skills for 
+  an exciting new project where I can have a profound influence.`,
   education: [
     {
       school: "Monroe Community College",
