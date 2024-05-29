@@ -60,6 +60,11 @@
   align-items: center;
 }
 
+.tech-item__icon {
+  width: auto;
+  height: auto;
+}
+
 .fav-tech__title {
   font-size: 150%;
 }

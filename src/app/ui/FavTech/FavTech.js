@@ -16,20 +16,20 @@ export const FavTech = () => {
           </h1>
         </div>
       </div>
-      {FAVORITE_TECH_DATA.map((techItem) => {
+      {FAVORITE_TECH_DATA.map((project) => {
         return (
-          <div key={techItem.name} className="fav-tech__container">
+          <div key={project.name} className="fav-tech__container">
             <Link
               rel="noopener noreferrer"
               tabIndex="-1"
               aria-label="live project"
-              href={techItem.liveLink}
+              href={project.liveLink}
               target="_blank"
               className="techItem__image-link"
             >
               <div className="techItem__site-image-container">
                 <ImageLoadingWrapper
-                  techItem={techItem}
+                  project={project}
                   className="techItem__site-preview"
                 />
               </div>
@@ -38,26 +38,26 @@ export const FavTech = () => {
               <div className="techItem__text-container">
                 <div className="techItem__title-container">
                   <Image
-                    className="techItem__icon"
-                    src={techItem.iconPath}
+                    className="tech-item__icon"
+                    src={project.iconPath}
                     alt="Screenshot of techItem"
                     width={20}
                     height={20}
                   />
-                  <h3 className="fav-tech__title">{techItem.name}</h3>
+                  <h3 className="fav-tech__title">{project.name}</h3>
                 </div>
-                <p className="fav-tech__description">{techItem.description}</p>
+                <p className="fav-tech__description">{project.description}</p>
               </div>
               <div className="fav-tech__buttons-container">
                 <Link
                   rel="noopener noreferrer"
                   tabIndex="-1"
                   aria-label="live techItem"
-                  href={techItem.liveLink}
+                  href={project.liveLink}
                   target="_blank"
                 >
                   <button className="fav-tech__button global-button">
-                    {techItem.liveButtonText}
+                    {project.liveButtonText}
                   </button>
                 </Link>
               </div>

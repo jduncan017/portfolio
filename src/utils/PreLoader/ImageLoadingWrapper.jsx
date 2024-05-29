@@ -5,14 +5,15 @@ import errorImage from "@/public/image-error.png";
 // Assuming fetchOgImage is a function that fetches the image URL and returns a promise
 import { fetchOgImage } from "@/src/utils/fetchOgImage";
 
-const ImageLoadingWrapper = ({ techItem, className }) => {
+const ImageLoadingWrapper = ({ project, className }) => {
   const [imageUrl, setImageUrl] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    fetchOgImage(techItem.liveLink)
+    fetchOgImage(project.liveLink)
       .then((url) => {
+        console.log(project.liveLink, url);
         setImageUrl(url);
         setIsLoading(false);
       })
@@ -20,7 +21,7 @@ const ImageLoadingWrapper = ({ techItem, className }) => {
         setIsError(true);
         setIsLoading(false);
       });
-  }, [techItem.liveLink]);
+  }, [project.liveLink]);
 
   if (isLoading) return <Loader />;
   if (isError)
@@ -36,7 +37,7 @@ const ImageLoadingWrapper = ({ techItem, className }) => {
       {/*eslint-disable-next-line @next/next/no-img-element*/}
       <img
         src={imageUrl}
-        alt={`Screenshot of ${techItem.name}`}
+        alt={`Screenshot of ${project.name}`}
         className={className}
       />
     </>
