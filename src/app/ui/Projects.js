@@ -8,7 +8,7 @@ export const Projects = () => {
     <section id="projects-section" className="_projects-wrapper">
       <div
         id="projects-section"
-        className="_projects-outer-container flex w-full flex-col items-center bg-lightGrey px-[4%] pb-12 pt-24"
+        className="_projects-outer-container flex w-full flex-col items-center bg-lightGrey pb-12 pt-24"
       >
         <div className="_projects__header-section mb-5 w-[80%]">
           <div className="_projects__bottom-border w-fit border-b-2 border-solid border-[#8913e1]">
@@ -21,7 +21,8 @@ export const Projects = () => {
           <div
             key={project.name}
             className="_project-container mb-7 flex w-[85%] flex-wrap items-start gap-7 rounded-2xl bg-white 
-          p-5 shadow-[5px_10px_18px_#bbbbbb] md:flex-nowrap">
+          p-5 shadow-[5px_10px_18px_#bbbbbb] md:flex-nowrap"
+          >
             <Link
               href={project.liveLink}
               rel="noopener noreferrer"
@@ -56,24 +57,28 @@ export const Projects = () => {
                   <button
                     className="_project-button my-1.5 h-10 cursor-pointer rounded-full border-2 
                 border-[#5e00a4] bg-white px-5 text-sm text-black transition-all duration-300 
-                hover:bg-[#5e00a4] hover:text-white">
+                hover:bg-[#5e00a4] hover:text-white"
+                  >
                     Visit Site
                   </button>
                 </Link>
-                <Link
-                  href={project.repoURL}
-                  rel="noopener noreferrer"
-                  tabIndex="-1"
-                  aria-label="github project repo"
-                  target="_blank"
-                >
-                  <button
-                    className="_project-button my-1.5 h-10 cursor-pointer rounded-full border-2
+                {project.repoURL && (
+                  <Link
+                    href={project.repoURL}
+                    rel="noopener noreferrer"
+                    tabIndex="-1"
+                    aria-label="github project repo"
+                    target="_blank"
+                  >
+                    <button
+                      className="_project-button my-1.5 h-10 cursor-pointer rounded-full border-2
                  border-[#5e00a4] bg-white px-5 text-sm text-black transition-all duration-300
-                  hover:bg-[#5e00a4] hover:text-white">
-                    GitHub Repo
-                  </button>
-                </Link>
+                  hover:bg-[#5e00a4] hover:text-white"
+                    >
+                      GitHub Repo
+                    </button>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
