@@ -35,7 +35,7 @@ export const Projects = () => {
                 alt="Screenshot of project"
                 width={560}
                 height={280}
-                className="_project__site-preview h-auto w-[83vw] cursor-pointer rounded-lg transition-filter duration-500 hover:brightness-125 hover:contrast-50 md:h-[190px] md:w-auto md:max-w-[300px]"
+                className="_project__site-preview h-auto w-[83vw] cursor-pointer rounded-lg bg-gradient-to-br from-cyan-600 to-cyan-900 transition-filter duration-500 hover:brightness-125 hover:contrast-50 md:h-[190px] md:w-auto md:max-w-[300px]"
               />
             </Link>
             <div className="_project-info flex flex-col">
@@ -59,7 +59,7 @@ export const Projects = () => {
                 border-[#5e00a4] bg-white px-5 text-sm text-black transition-all duration-300 
                 hover:bg-[#5e00a4] hover:text-white"
                   >
-                    Visit Site
+                    {project.liveButtonText}
                   </button>
                 </Link>
                 {project.repoURL && (

@@ -22,6 +22,18 @@ export const PROJECT_DATA = [
     previewPath: "/rpi.png",
   },
   {
+    name: `VsCode Plugin - Tailwind Fold (With ClassNames)`,
+    techsUsed: "TypeScript",
+    description: `VsCode plugin that I modified for a better tailwind experience. Hides all tailwind classes except for the first word
+    in the class or className prop. This allows for naming tailwind classes which keeps code clean and makes it easy to sort through HTML 
+    elements. Checkout the linkedIn article if your looking for more info.`,
+    liveButtonText: "Read Article",
+    repoURL: "https://github.com/jduncan017/tailwind-fold-with-class-names",
+    liveLink:
+      "https://www.linkedin.com/pulse/how-i-fixed-messy-tailwind-css-simple-inline-fold-hack-joshua-duncan-bbq7e/",
+    previewPath: "/tailwind.png",
+  },
+  {
     name: "John-Gerard Woodwork - Business Site",
     techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, Nodemailer",
     description: `A web design project I did for a client. Site was designed, developed, and deployed fully by myself. 
