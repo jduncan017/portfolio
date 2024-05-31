@@ -13,7 +13,7 @@ export const Header = () => {
 
   return (
     <div className="_header-container relative h-dvh" id="header-section">
-      <section className="_particles-bacperkground pb-25 absolute z-[-10] h-[116vh] w-full text-center">
+      <section className="_particles-background pb-25 absolute z-[-10] h-[116vh] w-full text-center">
         <ParticlesAnimation />
       </section>
       <div className="_header-text-container mx-auto flex flex-col items-center pt-[15vh] sm:pt-[30vh]">

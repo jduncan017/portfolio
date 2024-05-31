@@ -18,7 +18,7 @@ export const PROJECT_DATA = [
     the client in a brand strategy guide complete with fonts, color schemes, copy, and imagery. The Site was designed in figma
     and built in framer. This was my first time using framer and a great project for learning to develop and launch sites quickly.`,
     liveButtonText: "Visit Site",
-    liveLink: "https://sienna-variations-370016.framer.app/",
+    liveLink: "https://www.ryanpretection.com",
     previewPath: "/rpi.png",
   },
   {
