@@ -21,12 +21,6 @@ export const About = ({ RESUME_DATA }) => {
         <p className="global-p-text mt-[12px] text-white">
           {" "}
           {bio3[0]}
-          <span
-            onClick={scrollToTechSkillsSection}
-            className="_skills-link font-serif underline transition-opacity hover:cursor-pointer hover:opacity-60"
-          >
-            See complete list
-          </span>
           {bio3[1]}
         </p>
       </div>

@@ -1,6 +1,6 @@
 export const PROJECT_DATA = [
   {
-    name: "'Current Project - LifeGuide Holistic Healing - Business Site",
+    name: "CURRENT PROJECT - LifeGuide Holistic Healing - Business Site",
     techsUsed:
       "Next.js 14, React, TypeScript, HTML5, CSS3, Prisma, SqLite, tRPC",
     description: `My Current Project - A full branding and design package for a holistic health site. Logo and all branding was designed 
