@@ -8,7 +8,7 @@ export const PROJECT_DATA = [
     was designed in figma and is currently being built in Next.js`,
     repoURL: "https://github.com/jduncan017/lifeguide-holistic-healing",
     liveButtonText: "Visit Site",
-    liveLink: "https://lifeguide-holistic-healing.vercel.app/",
+    liveLink: "https://lifeguidehealing.com/",
     previewPath: "/lhh.png",
   },
   {
