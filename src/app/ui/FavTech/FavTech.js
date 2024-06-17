@@ -21,7 +21,7 @@ export const FavTech = () => {
           <div key={project.name} className="fav-tech__container">
             <Link
               rel="noopener noreferrer"
-              tabIndex="-1"
+              tabIndex={-1}
               aria-label="live project"
               href={project.liveLink}
               target="_blank"

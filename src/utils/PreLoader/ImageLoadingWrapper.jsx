@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./PreLoader";
 import errorImage from "@/public/image-error.png";
-
-// Assuming fetchOgImage is a function that fetches the image URL and returns a promise
 import { fetchOgImage } from "@/src/utils/fetchOgImage";
 
 const ImageLoadingWrapper = ({ project, className }) => {

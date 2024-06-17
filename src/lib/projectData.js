@@ -1,5 +1,16 @@
 export const PROJECT_DATA = [
   {
+    name: "CURRENT PROJECT - Happy Hour Hunt - Personal Project",
+    techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3",
+    description: `IN BETA. A happy hour website for finding local happy hours at any time of the day. All brand work was done by myself using 
+    figma. Site was designed in figma and I'm currently building it in Next.js. Site features will include GraphQL database with intricate
+    data modeling for restaurants. Google maps integration, user feedback, user auth, and the ability for restaurants to take ownership of
+    their content will be features as well.`,
+    liveButtonText: "Visit Beta Site",
+    liveLink: "https://www.happyhourhunt.net",
+    previewPath: "/h3-opengraph.png",
+  },
+  {
     name: "CURRENT PROJECT - LifeGuide Holistic Healing - Business Site",
     techsUsed:
       "Next.js 14, React, TypeScript, HTML5, CSS3, Prisma, SqLite, tRPC",
@@ -12,7 +23,7 @@ export const PROJECT_DATA = [
     previewPath: "/lhh.png",
   },
   {
-    name: `Ryan "Pretection" Insurance - Business Site`,
+    name: `Ryan Insurance - Business Site`,
     techsUsed: "Framer, Figma, Formspark",
     description: `A web design project I did for a client. Logo and all branding was designed by myself using figma and delivered to
     the client in a brand strategy guide complete with fonts, color schemes, copy, and imagery. The Site was designed in figma
