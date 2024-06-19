@@ -14,9 +14,11 @@ export default function Home() {
     <main className="" id="home-section">
       <Nav />
       <Header />
-      <About RESUME_DATA={RESUME_DATA} />
-      <Projects />
-      <FavTech />
+      <div className="PageContent bg-gradient-to-b from-black via-cyan-950 to-gray-950 py-20">
+        <About RESUME_DATA={RESUME_DATA} />
+        <Projects />
+        <FavTech />
+      </div>
       <Contact />
       <ToggleScrollbarButton />
     </main>

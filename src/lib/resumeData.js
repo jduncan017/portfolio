@@ -5,10 +5,11 @@ export const RESUME_DATA = {
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
   bioDescription1: `I'm Josh, a full-stack developer with a diverse career history including roles dealing with project management, 
   brand development, design, marketing, and entrepreneurship.`,
-  bioDescription2: `Currently, I'm working as a freelance brand strategist and web developer, enjoying the creative freedom of the client process. 
-  However, I entered the tech industry with the goal of working with technology to tackle real-world issues, and I'm actively seeking the right opportunity for the next step in my career.`,
-  bioDescription3: `I'm passionate about the work I do and get fully immersed in whatever project I'm currently working on. I'm eager to leverage my skillset with
-  a new company where I can have a positive influence for both the business and it's users!`,
+  bioDescription2: `Currently, I am enjoying the creative freedom of the client process as a freelance brand strategist and web developer. 
+  However, my true passion lies in tackling real-world issues, and I am actively seeking the right opportunity improve people's lives with
+   a forward-thinking, impactful company.`,
+  bioDescription3: `Driving impactful growth through determination and creative thinking is ingrained in my character. I am eager to leverage 
+  my unique mix of skills for an exciting new project where I can have a profound influence.`,
   education: [
     {
       school: "Monroe Community College",

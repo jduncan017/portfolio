@@ -4,12 +4,6 @@ import Link from "next/link";
 import profilePic from "@/public/profile_pic.jpeg";
 
 export const About = ({ RESUME_DATA }) => {
-  const scrollToTechSkillsSection = () => {
-    document
-      .querySelector("#skills-section")
-      .scrollIntoView({ behavior: "smooth" });
-  };
-
   const printBio = () => {
     const bio1 = RESUME_DATA.bioDescription1;
     const bio2 = RESUME_DATA.bioDescription2;
@@ -28,27 +22,23 @@ export const About = ({ RESUME_DATA }) => {
   };
 
   return (
-    <section className="_about-wrapper" id="about-section">
+    <section className="AboutWrapper py-10" id="about-section">
       <div
-        className="_about-clip-path-top h-[150px] w-full bg-darkGrey"
-        style={{ clipPath: "polygon(0% 50%, 0% 100%, 100% 100%)" }}
-      />
-      <section
         className="_about-outer-container flex h-auto w-full flex-col items-center justify-center gap-8 
-      bg-darkGrey px-[14%] py-0 md:px-[15%] md:py-10 lg:flex-row lg:items-start lg:gap-16 lg:text-left"
+       px-[14%] py-0 md:px-[15%] md:py-10 lg:flex-row lg:items-start lg:gap-16 lg:text-left"
       >
         <Image
           alt="Josh's Picture"
           src={profilePic}
-          className="_profile-pic hidden h-auto max-h-[275px] w-[40vw] max-w-[275px] rounded-full xs:block lg:w-[20vw]"
+          className="_profile-pic hidden h-auto max-h-[350px] w-[40vw] max-w-[350px] rounded-2xl xs:block lg:w-[20vw]"
         />
         <div className="_info-container w-full">
-          <h2 className="_about-title font-serif text-2xl leading-normal tracking-wide text-white sm:text-2xl">
+          <h2 className="_about-title font-serif text-4xl leading-normal tracking-wide text-white sm:text-4xl">
             Hello! 👋🏼
           </h2>
-          <div className="_about__bio">{printBio()}</div>
+          <div className="_about__bio text-xl">{printBio()}</div>
           <div className="_contact-container mt-[5%]">
-            <h2 className="_contact-title font-serif text-2xl leading-relaxed tracking-wide text-white sm:text-2xl">
+            <h2 className="_contact-title font-serif text-3xl leading-relaxed tracking-wide text-white sm:text-2xl">
               Contact Details
             </h2>
             <p className="global-p-text text-white">Joshua Duncan</p>
@@ -93,11 +83,7 @@ export const About = ({ RESUME_DATA }) => {
             </div>
           </div>
         </div>
-      </section>
-      <div
-        className="_clip-path-bottom mb-[-80px] h-20 w-full bg-darkGrey"
-        style={{ clipPath: "polygon(0% 0%, 100% -50%, 100% 100%)" }}
-      ></div>
+      </div>
     </section>
   );
 };

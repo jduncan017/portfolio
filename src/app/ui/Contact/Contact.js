@@ -7,7 +7,6 @@ import "./Contact.css";
 export const Contact = () => {
   return (
     <div className="contact">
-      <div className="contact-clip-path-top"></div>
       <section id="contact-section" className="contact-outer-container">
         <i className="contact-message">
           Please feel free to contact me for work, suggestions, or networking!
