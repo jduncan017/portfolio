@@ -11,10 +11,10 @@ export const PROJECT_DATA = [
     previewPath: "/h3-opengraph.png",
   },
   {
-    name: "CURRENT PROJECT - LifeGuide Holistic Healing - Business Site",
+    name: "CURRENT PROJECT - LifeGuide Holistic Healing - Client Site",
     techsUsed:
       "Next.js 14, React, TypeScript, HTML5, CSS3, Prisma, SqLite, tRPC",
-    description: `My Current Project - A full branding and design package for a holistic health site. Logo and all branding was designed 
+    description: `Currently Under Construction - A full branding and design package for a holistic health site. Logo and all branding was designed 
     by myself using figma and delivered to the client in a brand strategy guide complete with fonts, color schemes, copy, and imagery. Site
     was designed in figma and is currently being built in Next.js`,
     repoURL: "https://github.com/jduncan017/lifeguide-holistic-healing",
@@ -23,7 +23,17 @@ export const PROJECT_DATA = [
     previewPath: "/lhh.png",
   },
   {
-    name: `Ryan Insurance - Business Site`,
+    name: "Cifernoise Productions - Client Site",
+    techsUsed: "Duda, EmbedSocial",
+    description: `A simple client site rebrand for a silent disco company. I updated the site to use modern web design practices and 
+    simplified the website copy to make the site more engaging. Additionally, SEO was updated to help drive traffic and I'm currently
+    working with this client to improve traffic and conversion rates.`,
+    liveButtonText: "Visit Site",
+    liveLink: "https://www.cifernoiseproductions.com",
+    previewPath: "/cifernoise.png",
+  },
+  {
+    name: "Ryan Insurance - Client Site",
     techsUsed: "Framer, Figma, Formspark",
     description: `A web design project I did for a client. Logo and all branding was designed by myself using figma and delivered to
     the client in a brand strategy guide complete with fonts, color schemes, copy, and imagery. The Site was designed in figma
@@ -45,7 +55,7 @@ export const PROJECT_DATA = [
     previewPath: "/tailwind.png",
   },
   {
-    name: "John-Gerard Woodwork - Business Site",
+    name: "John-Gerard Woodwork - Client Site",
     techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, Nodemailer",
     description: `A web design project I did for a client. Site was designed, developed, and deployed fully by myself. 
       The site features modals that display dynamic item content and a contact page with a functioning email API. 
