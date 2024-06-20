@@ -20,7 +20,7 @@ export const Projects = () => {
             </h1>
           </div>
         </div>
-        <div className="ProjectsContainer bg-blurBlack mt-8 flex flex-wrap justify-evenly gap-16 rounded-2xl py-20 backdrop-blur-md">
+        <div className="ProjectsContainer mt-8 grid h-fit w-[80vw] auto-cols-max justify-center gap-10 rounded-2xl bg-blurBlack p-10">
           {PROJECT_DATA.map((project) => (
             <Link
               key={project.name}
@@ -32,7 +32,7 @@ export const Projects = () => {
               className="ImageLink"
             >
               <BackgroundGradient
-                className="ProjectInnerDiv bg-blurBlack flex h-full flex-col items-start gap-2 rounded-[18px] bg-opacity-90 p-6 text-white saturate-0 transition-all duration-500 hover:bg-gray-950 hover:saturate-100"
+                className="ProjectInnerDiv flex h-full flex-col items-start gap-2 rounded-[12px] bg-gray-950 bg-opacity-90 p-6 text-white saturate-0 transition-all duration-500 hover:bg-blurBlack hover:saturate-100"
                 containerClassName="ProjectContainer p-1 hover:scale-105 transition-all duration-500 w-[420px]"
               >
                 <h3 className="Title mb-2 w-full text-center text-2xl uppercase text-orange-200">
