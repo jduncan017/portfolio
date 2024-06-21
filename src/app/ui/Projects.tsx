@@ -4,7 +4,6 @@ import Link from "next/link";
 import { PROJECT_DATA } from "@/src/lib/projectData";
 import Image from "next/image";
 import { BackgroundGradient } from "./UILibraries/background-gradient";
-import { ReactLoadableManifest } from "next/dist/server/load-components";
 
 export const Projects = () => {
   return (

@@ -34,7 +34,7 @@ module.exports = {
         darkGrey: "#383838",
         darkerGrey: "#303030",
         lightGrey: "#ebeeee",
-        blurWhite: "rgba(255, 255, 255, 0.5)",
+        blurWhite: "rgba(200, 200, 200, 0.6)",
         blurBlack: "rgba(0, 0, 0, 0.75)",
       },
     },
