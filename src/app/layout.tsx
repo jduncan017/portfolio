@@ -1,6 +1,10 @@
 import { cardo } from "./ui/fonts";
 import "./globals.css";
 
+if (!process.env.NEXT_PUBLIC_BASE_URL) {
+  throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
+}
+
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
   title: "Joshua Duncan's Software Engineering Portfolio",
@@ -28,10 +32,18 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={`main no-scrollbar ${cardo.className}`}>{children}</body>
+      <body
+        className={`no-scrollbar touch-pan-y overflow-x-hidden bg-black ${cardo.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -6,8 +6,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      xs: "480px",
-      sm: "661px",
+      mini: "480px",
+      xs: "550px",
+      sm: "660px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
@@ -34,7 +35,7 @@ module.exports = {
         darkGrey: "#383838",
         darkerGrey: "#303030",
         lightGrey: "#ebeeee",
-        blurWhite: "rgba(200, 200, 200, 0.6)",
+        blurWhite: "rgba(255, 255, 255, 0.5)",
         blurBlack: "rgba(0, 0, 0, 0.75)",
       },
     },

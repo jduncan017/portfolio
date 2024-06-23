@@ -5,7 +5,7 @@
 /* custom utility classes: */
 @layer components {
   .global-p-text {
-    @apply font-serif text-base leading-normal tracking-wide sm:text-lg;
+    @apply font-serif text-lg leading-normal tracking-wide;
   }
   .global-button {
     @apply h-[50px] w-[200px] rounded-2xl border-0 bg-darkTeal px-5 text-base text-white transition-colors hover:cursor-pointer hover:bg-neonPurple;
@@ -37,12 +37,6 @@ body {
   max-width: 1800px;
   margin: auto;
   background-color: #000000;
-}
-
-.main {
-  background-color: black;
-  touch-action: pan-y;
-  overflow-x: hidden;
 }
 
 .global__hover-animation {

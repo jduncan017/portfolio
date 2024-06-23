@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
 import Link from "next/link";
 import { RESUME_DATA } from "@/src/lib/resumeData";
-import SocialContainer from "../SocialContainer/SocialContainer";
-import "./Contact.css";
+import SocialContainer from "./UI-Elements/SocialContainer";
 
 export const Contact = () => {
   return (
-    <div className="contact">
-      <section id="contact-section" className="contact-outer-container">
-        <i className="contact-message">
+    <div className="Contact bg-gray-800">
+      <section
+        id="contact-section"
+        className="ContactOuterContainer flex w-full flex-col items-center bg-black pb-16 pt-6"
+      >
+        <i className="ContactMessage my-5 px-14 text-center text-gray-400">
           Please feel free to contact me for work, suggestions, or networking!
         </i>
         <p className="global-p-text text-white">Joshua Duncan</p>
@@ -16,7 +17,7 @@ export const Contact = () => {
         <Link
           rel="noopener noreferrer"
           aria-label="send email"
-          href="mailto: EmailJoshDuncan@gmail.com"
+          href="mailto:EmailJoshDuncan@gmail.com"
           target="_blank"
         >
           <p className="global-p-text text-white underline">
@@ -25,13 +26,13 @@ export const Contact = () => {
         </Link>
         <Link
           rel="noopener noreferrer"
-          tabIndex="-1"
+          tabIndex={-1}
           href={RESUME_DATA.resumeURL}
           target="_blank"
         >
           <button
             aria-label="view resume as PDF"
-            className="resume-button-footer global-button"
+            className="ResumeButtonFooter global-button mb-5 mt-10 w-64"
           >
             View Resume
           </button>

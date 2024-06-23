@@ -1,18 +1,25 @@
 "use client";
 import React from "react";
 import "./Header.css";
-import SocialContainer from "../SocialContainer/SocialContainer";
+import SocialContainer from "../UI-Elements/SocialContainer";
 import { ParticlesAnimation } from "../ParticlesAnimation/ParticlesAnimation";
 
 export const Header = () => {
   const performSmoothScroll = () => {
-    document
-      .querySelector("#about-section")
-      .scrollIntoView({ behavior: "smooth" });
+    const aboutSection = document.querySelector("#about-section");
+
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error("About section does not exist!");
+    }
   };
 
   return (
-    <div className="_header-container relative h-dvh" id="header-section">
+    <div
+      className="_header-container relative h-dvh max-h-[1200px]"
+      id="header-section"
+    >
       <section className="_particles-background pb-25 absolute z-[-10] h-svh w-full text-center">
         <ParticlesAnimation />
       </section>

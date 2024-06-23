@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const ToggleScrollbarButton = () => {
+export default function ToggleScrollbarButton() {
   const [scrollbarVisible, setScrollbarVisible] = useState(false);
 
   const toggleScrollbar = (e) => {
@@ -21,4 +21,4 @@ export const ToggleScrollbarButton = () => {
       {scrollbarVisible ? "Hide Scrollbar" : "Show Scrollbar"}
     </button>
   );
-};
+}

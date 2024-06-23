@@ -1,4 +1,28 @@
-export const RESUME_DATA = {
+export type ResumeData = {
+  resumeURL: string;
+  gitHubURL: string;
+  twitterURL: string;
+  linkedInURL: string;
+  bioDescription1: string;
+  bioDescription2: string;
+  bioDescription3: string;
+  education: [
+    {
+      school: string;
+      position: string;
+      time: string;
+      description: string[];
+    },
+  ];
+  jobs: {
+    name: string;
+    position: string;
+    time: string;
+    description: string[];
+  }[];
+};
+
+export const RESUME_DATA: ResumeData = {
   resumeURL: "https://jduncan017.github.io/resume/JoshDuncan.pdf",
   gitHubURL: "https://github.com/jduncan017",
   twitterURL: "https://twitter.com/Jduncan017",
@@ -58,25 +82,26 @@ export const RESUME_DATA = {
       ],
     },
   ],
-  techSkillz: [
-    "JavaScript",
-    "TypeScript",
-    "HTML5",
-    "CSS3 / Tailwind",
-    "React",
-    "Next.js 14",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "PostgreSQL",
-    "GraphQL",
-    "DNS & Domain Management",
-    "Vercel",
-    "Google Cloud",
-    "Figma",
-    "Canva",
-    "Jest",
-    "NPM / Yarn",
-    "Git / GitHub",
-  ],
 };
+
+export const techSkills = [
+  "JavaScript",
+  "TypeScript",
+  "HTML5",
+  "CSS3 / Tailwind",
+  "React",
+  "Next.js 14",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "PostgreSQL",
+  "GraphQL",
+  "DNS & Domain Management",
+  "Vercel",
+  "Google Cloud",
+  "Figma",
+  "Canva",
+  "Jest",
+  "NPM / Yarn",
+  "Git / GitHub",
+];

@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./PreLoader";
-import errorImage from "@/public/image-error.png";
 import { fetchOgImage } from "@/src/utils/fetchOgImage";
+import type { Project } from "@/src/lib/projectData";
 
-const ImageLoadingWrapper = ({ project, className }) => {
+type WrapperProps = {
+  project: Project;
+  className: string;
+};
+
+const ImageLoadingWrapper = ({ project, className }: WrapperProps) => {
   const [imageUrl, setImageUrl] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -26,7 +31,11 @@ const ImageLoadingWrapper = ({ project, className }) => {
     return (
       <>
         {/*eslint-disable-next-line @next/next/no-img-element*/}
-        <img src={errorImage} alt="Error loading image" className={className} />
+        <img
+          src="/image-error.png"
+          alt="Error loading image"
+          className={className}
+        />
       </>
     );
 
