@@ -98,7 +98,7 @@ export const PROJECT_DATA: Project[] = [
   {
     name: "Developer Portfolio",
     lastUpdated: "6/21/24",
-    techsUsed: "Next.js 14, React, JavaScript, HTML5, CSS3, tsParticles",
+    techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, tsParticles",
     shortDescription:
       "This portfolio page that you're currently on. An ever evolving page of my work.",
     description:

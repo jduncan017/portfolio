@@ -12,11 +12,11 @@ export default function TestimonialSection() {
       <h1 className="Header mb-4 w-[90%] border-solid text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
         Testimonials
       </h1>
-      <div className="CardContainer flex justify-between gap-5">
+      <div className="CardContainer flex h-full justify-between gap-5">
         {TESTIMONIAL_DATA.map((testimonial) => (
           <BackgroundGradient
             key={testimonial.name}
-            containerClassName="CarouselTrack w-full rounded-xl"
+            containerClassName="h-full w-full rounded-xl"
           >
             <TestimonialCard testimonial={testimonial} />
           </BackgroundGradient>

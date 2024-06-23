@@ -39,23 +39,24 @@ export const Projects = () => {
                 </h3>
                 <Image
                   className="ProjectImage aspect-video w-full cursor-pointer rounded-lg bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover opacity-75"
-                  src={project.previewPath}
+                  src={project.imagePath}
                   alt="Screenshot of project"
                   width={456}
                   height={239}
                 />
                 <div className="ProjectInfo flex h-full w-full flex-col text-gray-500">
                   <div className="TagsContainer mb-2 flex flex-wrap gap-2">
-                    {project.tags.sort().map((tag): ReactNode => {
-                      return (
-                        <div
-                          className="Tag flex-grow rounded-md bg-gray-800 p-1.5 text-center"
-                          key={tag}
-                        >
-                          {tag}
-                        </div>
-                      );
-                    })}
+                    {project.tags &&
+                      project.tags.sort().map((tag): ReactNode => {
+                        return (
+                          <div
+                            className="Tag flex-grow rounded-md bg-gray-800 p-1.5 text-center"
+                            key={tag}
+                          >
+                            {tag}
+                          </div>
+                        );
+                      })}
                   </div>
                   <p className="Description my-2 w-full text-center font-[Muli] text-lg capitalize leading-6 text-gray-400">
                     {project.shortDescription}
