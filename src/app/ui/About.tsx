@@ -57,7 +57,7 @@ export const About = () => {
             <div className="BioDescription mb-10 max-w-[600px] font-sans text-lg">
               {printBio()}
             </div>
-            <ContactCard />
+            <ContactCard titlePosition="justify-start" />
             <div className="ButtonContainer my-6 flex flex-col gap-4 mini:flex-row">
               <Link
                 rel="noopener noreferrer"

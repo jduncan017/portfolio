@@ -15,7 +15,7 @@ export default function Home() {
     <main className="Main overflow-hidden" id="home-section">
       <Nav />
       <Header />
-      <div className="PageContent flex flex-col gap-16 bg-gradient-to-b from-black to-slate-950 py-20">
+      <div className="PageContent flex flex-col gap-12 bg-gradient-to-b from-black to-slate-950 py-20 sm:gap-20">
         <About />
         <SliderSection
           cardArray={PROJECT_DATA}

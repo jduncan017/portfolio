@@ -2,16 +2,22 @@ import Image from "next/image";
 import { useModal } from "@/src/contexts/ModalContext";
 import ContactModal from "../Modals/contactModal";
 
-export default function ContactCard() {
+type ContactCardProps = {
+  titlePosition: "justify-start" | "justify-center";
+};
+
+export default function ContactCard({ titlePosition }: ContactCardProps) {
   const { showModal } = useModal();
   return (
     <div className="ContactCard">
-      <div className="ContactHeader mb-1 flex h-min items-end gap-1">
+      <div
+        className={`ContactHeader mb-1 flex h-min w-full items-end gap-1 ${titlePosition}`}
+      >
         <h3 className="ContactTitle text-semibold text-lg uppercase text-white">
           Contact Card
         </h3>
-        <p className="ContactCard text-sm italic leading-7 text-gray-300">
-          {"(click)"}
+        <p className="ContactCard text-xs italic leading-7 text-gray-300">
+          {"(click me!)"}
         </p>
       </div>
       <div

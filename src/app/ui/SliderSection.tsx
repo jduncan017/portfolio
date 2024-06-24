@@ -91,7 +91,6 @@ export default function SliderSection({
           ))}
         </Carousel>
       </BackgroundGradient>
-      ;
     </section>
   );
 }
