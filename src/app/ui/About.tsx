@@ -5,6 +5,7 @@ import { RESUME_DATA } from "@/src/lib/resumeData";
 import { BackgroundGradient } from "./UILibraries/background-gradient";
 import { FlipWords } from "./UILibraries/FlipWords";
 import ContactCard from "./UI-Elements/ContactCard";
+import SiteButton from "./UI-Elements/SiteButton";
 
 export const About = () => {
   const words = ["Hello!", "Aloha!", "Hola!", "Greetings!"];
@@ -14,10 +15,10 @@ export const About = () => {
     const bio2 = RESUME_DATA.bioDescription2;
     const bio3 = RESUME_DATA.bioDescription3.split("<skillsLink>");
     return (
-      <div>
-        <p className="text-white">{bio1}</p>
-        <p className="mt-[12px] text-white">{bio2}</p>
-        <p className="mt-[12px] text-white">
+      <div className="text-white">
+        <p className="">{bio1}</p>
+        <p className="my-3">{bio2}</p>
+        <p className="">
           {" "}
           {bio3[0]}
           {bio3[1]}
@@ -37,9 +38,9 @@ export const About = () => {
             <Image
               alt="Josh's Picture"
               src="/profile_pic.jpeg"
-              className="_profile-pic aspect-square h-auto max-h-[350px] w-auto rounded-xl object-contain lg:aspect-square lg:h-full lg:max-h-none lg:w-auto"
-              width={700}
-              height={700}
+              className="_profile-pic aspect-square h-auto max-h-[350px] w-auto rounded-xl object-contain lg:aspect-square lg:h-full lg:max-h-[450px] lg:w-auto"
+              width={450}
+              height={450}
             />
           </div>
         </BackgroundGradient>
@@ -47,7 +48,11 @@ export const About = () => {
           <div className="RightContainer w-full overflow-hidden rounded-xl bg-black/90 px-8 py-6 lg:w-full lg:rounded-r-none">
             <h2 className="Title mb-3 flex gap-2 font-sans text-4xl font-bold uppercase leading-normal tracking-widest text-white">
               <p>👋🏼</p>
-              <FlipWords words={words} duration={2000} className="pl-0" />
+              <FlipWords
+                words={words}
+                duration={2000}
+                className="pl-0 text-white"
+              />
             </h2>
             <div className="BioDescription mb-10 max-w-[600px] font-sans text-lg">
               {printBio()}
@@ -59,13 +64,13 @@ export const About = () => {
                 href={RESUME_DATA.resumeURL}
                 target="_blank"
               >
-                <button
-                  tabIndex={-1}
-                  aria-label="view resume as PDF"
-                  className="ResumeButton global-button"
+                <SiteButton
+                  size="large"
+                  aria="View resume as PDF"
+                  textColor="text-orange-200"
                 >
                   View Resume
-                </button>
+                </SiteButton>
               </Link>
               <Link
                 rel="noopener noreferrer"
@@ -73,14 +78,13 @@ export const About = () => {
                 target="_blank"
                 type="button"
               >
-                <button
-                  tabIndex={-1}
-                  aria-label="Schedule a meeting"
-                  className="MeetingButton global-button"
-                  type="button"
+                <SiteButton
+                  size="large"
+                  aria="Schedule a meeting"
+                  textColor="text-orange-200"
                 >
                   Schedule a Meeting
-                </button>
+                </SiteButton>
               </Link>
             </div>
           </div>

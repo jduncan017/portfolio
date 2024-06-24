@@ -1,12 +1,16 @@
 import { BackgroundGradient } from "../UILibraries/background-gradient";
 import Image from "next/image";
 import type { TestimonialData } from "@/src/lib/dataTypes";
+import { useModal } from "@/src/contexts/ModalContext";
+import ContactModal from "../Modals/contactModal";
+import SiteButton from "./SiteButton";
 
 interface TestimonialArray {
   testimonial: TestimonialData;
 }
 
 export default function TestimonialCard({ testimonial }: TestimonialArray) {
+  const { showModal } = useModal();
   return (
     <BackgroundGradient
       containerClassName="Container w-full h-full lg:h-[530px] xl:h-[515px] sxl:h-[480px] mx-auto p-0.5 hover:scale-105 transition-all duration-500"
@@ -28,14 +32,19 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
         height={150}
       />
       <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
-        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center font-sans text-base leading-6">
+        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center font-sans text-base leading-6 text-gray-200">
           {testimonial.shortDescription}
         </p>
         <p className="Date text-gray-400">{`- ${testimonial.date} -`}</p>
       </div>
-      <button className="ReviewButton relative bottom-2 my-4 w-fit rounded-md border border-solid border-orange-300 px-4 py-1.5 text-center font-medium uppercase tracking-widest text-orange-200 transition-all duration-500 hover:bg-orange-200 hover:text-black lg:absolute">
+      <SiteButton
+        onSubmit={() => showModal(<ContactModal />)}
+        aria="View full review"
+        addClasses="ReviewButton relative bottom-2 my-4 font-medium uppercase tracking-widest lg:absolute"
+        textColor="text-gray-300"
+      >
         Full Review
-      </button>
+      </SiteButton>
     </BackgroundGradient>
   );
 }

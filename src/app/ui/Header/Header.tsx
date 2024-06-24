@@ -16,13 +16,13 @@ export const Header = () => {
   };
 
   return (
-    <div
+    <section
       className="_header-container relative h-dvh max-h-[1200px]"
       id="header-section"
     >
-      <section className="_particles-background pb-25 absolute z-[-10] h-svh w-full text-center">
+      <div className="_particles-background pb-25 absolute z-[-10] h-svh w-full text-center">
         <ParticlesAnimation />
-      </section>
+      </div>
       <div className="_header-text-container mx-auto flex flex-col items-center pt-[15vh] sm:pt-[30vh]">
         <div
           className="_text-container flex max-w-[80%] flex-col items-center rounded-[20px] bg-black/5 
@@ -56,6 +56,6 @@ export const Header = () => {
           ></button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

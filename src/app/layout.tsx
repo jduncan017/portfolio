@@ -1,5 +1,5 @@
-import { cardo } from "./ui/fonts";
 import "./globals.css";
+import { ModalProvider } from "../contexts/ModalContext";
 
 if (!process.env.NEXT_PUBLIC_BASE_URL) {
   throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
@@ -39,9 +39,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="no-scrollbar touch-pan-y overflow-x-hidden bg-black">
-        {children}
-      </body>
+      <ModalProvider>
+        <body className="no-scrollbar touch-pan-y overflow-x-hidden bg-black">
+          {children}
+        </body>
+      </ModalProvider>
     </html>
   );
 }

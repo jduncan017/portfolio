@@ -2,6 +2,7 @@ import Link from "next/link";
 import { RESUME_DATA } from "@/src/lib/resumeData";
 import SocialContainer from "./UI-Elements/SocialContainer";
 import ContactCard from "./UI-Elements/ContactCard";
+import SiteButton from "./UI-Elements/SiteButton";
 
 export const Footer = () => {
   return (
@@ -26,12 +27,14 @@ export const Footer = () => {
           href={RESUME_DATA.resumeURL}
           target="_blank"
         >
-          <button
-            aria-label="view resume as PDF"
-            className="ResumeButtonFooter global-button my-6 w-64"
+          <SiteButton
+            aria="view resume as PDF"
+            addClasses="ResumeButtonFooter my-6 w-56"
+            textColor="text-gray-300"
+            size="large"
           >
             View Resume
-          </button>
+          </SiteButton>
         </Link>
       </div>
     </section>

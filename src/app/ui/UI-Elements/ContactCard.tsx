@@ -1,17 +1,23 @@
 import Image from "next/image";
+import { useModal } from "@/src/contexts/ModalContext";
+import ContactModal from "../Modals/contactModal";
 
 export default function ContactCard() {
+  const { showModal } = useModal();
   return (
     <div className="ContactCard">
       <div className="ContactHeader mb-1 flex h-min items-end gap-1">
         <h3 className="ContactTitle text-semibold text-lg uppercase text-white">
           Contact Card
         </h3>
-        {/* <p className="ContactCard text-sm italic leading-7 text-gray-300">
-                {"(click)"}
-              </p> */}
+        <p className="ContactCard text-sm italic leading-7 text-gray-300">
+          {"(click)"}
+        </p>
       </div>
-      <div className="ContactContainer w-[300px] cursor-pointer rounded-sm border-4 border-double border-stone-500 bg-stone-200 px-6 py-4 text-stone-700 transition-all duration-500 hover:scale-105 xs:w-[340px]">
+      <div
+        onClick={() => showModal(<ContactModal />)}
+        className="ContactContainer w-[300px] cursor-pointer rounded-sm border-4 border-double border-stone-500 bg-stone-200 px-6 py-4 text-stone-700 transition-all duration-500 hover:scale-105 xs:w-[340px]"
+      >
         <h2 className="Name font-serif text-xl uppercase leading-relaxed tracking-wide sm:text-2xl">
           Joshua Duncan
         </h2>

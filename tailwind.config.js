@@ -19,6 +19,9 @@ module.exports = {
       sxl: "1480px",
     },
     extend: {
+      shadow: {
+        themeShadow: "",
+      },
       transitionProperty: {
         filter: "filter",
       },
@@ -29,17 +32,15 @@ module.exports = {
         },
       },
       boxShadow: {
-        custom: "0 0 10px rgba(116, 255, 229, 0.2)",
+        custom: "0 0 10px rgba(116, 255, 229, 0.3)",
+        themeOrange: "0 0 8px rgba(254, 215, 170, 0.6)",
+        themeBright: "0 0 20px rgba(254, 215, 170, 0.8)",
       },
       fontFamily: {
         serif: ["Jost", "serif"],
       },
       colors: {
-        darkTeal: "#004e54",
-        neonPurple: "#5e00a4",
-        darkGrey: "#383838",
-        darkerGrey: "#303030",
-        lightGrey: "#ebeeee",
+        darkTeal: "rgb(26, 143, 152)",
         blurWhite: "rgba(255, 255, 255, 0.5)",
         blurBlack: "rgba(0, 0, 0, 0.75)",
       },
