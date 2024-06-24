@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { TestimonialData } from "@/src/lib/dataTypes";
 import { useModal } from "@/src/contexts/ModalContext";
 import ModalWrapper from "./modalWrapper";
+import parse from "html-react-parser";
 
 interface TestimonialArray {
   testimonial: TestimonialData;
@@ -11,8 +12,8 @@ export default function TestimonialModal({ testimonial }: TestimonialArray) {
   const { showModal } = useModal();
   return (
     <ModalWrapper>
-      <div className="TestomonialModal flex flex-col gap-5 px-10 py-2">
-        <div className="TitleSection flex items-center gap-2">
+      <div className="TestomonialModal flex flex-col gap-5 py-2 md:px-6">
+        <div className="TitleSection flex items-center gap-4">
           <Image
             className="TestimonialImage pointer-events-none aspect-square w-16 rounded-full object-cover"
             src={testimonial.imagePath}
@@ -29,14 +30,14 @@ export default function TestimonialModal({ testimonial }: TestimonialArray) {
             </p>
           </div>
         </div>
-        <div className="InfoSection flex gap-4">
+        <div className="InfoSection flex flex-col gap-1">
           <p className="Date text-start text-gray-400">{`Date: ${testimonial.date}`}</p>
           <p className="Date text-start text-gray-400">{`Contact: ${testimonial.contact}`}</p>
         </div>
 
         <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
-          <p className="Description pointer-events-none h-full w-full max-w-[700px] text-start font-sans text-base leading-6 text-gray-200">
-            {testimonial.fullReview}
+          <p className="Description custom-scrollbar max-h-[550px] w-full max-w-[700px] overflow-y-scroll rounded-md border border-gray-900 bg-gray-800 p-4 text-start font-sans leading-6 text-gray-200">
+            {parse(testimonial.fullReview)}
           </p>
         </div>
       </div>
