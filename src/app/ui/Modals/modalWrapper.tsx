@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useModal } from "@/src/contexts/ModalContext";
 import Image from "next/image";
 import useEscape from "../../../hooks/useEscape";
-import { BackgroundGradient } from "../UILibraries/background-gradient";
 
 interface ModalWrapperProps {
   children: ReactElement;
@@ -28,14 +27,14 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ children }) => {
 
   return (
     <div
-      className="modal__backdrop fixed inset-0 z-20 flex h-dvh items-center justify-center bg-black/50 backdrop-blur-lg backdrop-filter xs:p-6"
+      className="modal__backdrop fixed inset-0 z-20 flex h-svh items-center justify-center bg-black/80 backdrop-blur-lg backdrop-filter xs:p-6"
       onClick={hideModal}
     >
       <motion.div
         animate={{ scale: 1 }}
         initial={{ scale: 0 }}
         transition={{ duration: 0.2 }}
-        className="modal__content relative h-fit max-h-[84vh] w-fit max-w-[98vw] rounded-lg bg-slate-950 px-6 py-6 text-center shadow-custom xs:py-10"
+        className="modal__content shadow-customDim relative h-fit max-h-[84vh] w-fit max-w-[96vw] rounded-lg bg-slate-950 px-6 py-6 text-center xs:py-8"
         onClick={handleModalContentClick}
       >
         <button
@@ -45,8 +44,8 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ children }) => {
         >
           <Image
             src="/close-button.svg"
-            width={14}
-            height={14}
+            width={16}
+            height={16}
             alt="modal close button"
           />
         </button>

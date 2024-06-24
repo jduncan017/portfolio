@@ -32,7 +32,7 @@ export const About = () => {
       <h1 className="Header mx-auto mb-4 w-[80%] border-solid text-start font-sans text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
         About
       </h1>
-      <div className="OuterContainer to=black flex h-full w-full flex-col items-center justify-center gap-8 border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 py-8 md:py-16 lg:flex-row lg:items-start lg:gap-16 lg:text-left">
+      <div className="OuterContainer shadow-customBright flex h-full w-full flex-col items-center justify-center gap-8 border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 to-black py-8 md:py-16 lg:flex-row lg:items-start lg:gap-16 lg:text-left">
         <BackgroundGradient containerClassName="w-full lg:w-full sm:w-[75%] p-0 mr-10 sm:mr-0">
           <div className="LeftContainer flex h-full w-full justify-end overflow-hidden rounded-xl bg-black/90 p-4 sm:justify-center lg:justify-end lg:rounded-l-none">
             <Image
@@ -68,6 +68,7 @@ export const About = () => {
                   size="large"
                   aria="View resume as PDF"
                   textColor="text-orange-200"
+                  style="orange"
                 >
                   View Resume
                 </SiteButton>
@@ -82,6 +83,7 @@ export const About = () => {
                   size="large"
                   aria="Schedule a meeting"
                   textColor="text-orange-200"
+                  style="orange"
                 >
                   Schedule a Meeting
                 </SiteButton>

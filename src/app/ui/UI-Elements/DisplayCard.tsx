@@ -1,16 +1,20 @@
-import { BackgroundGradient } from "../UILibraries/background-gradient";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CardData } from "@/src/lib/dataTypes";
 import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "./SiteButton";
+import { useModal } from "@/src/contexts/ModalContext";
+import ProjectModal from "../Modals/ProjectModal";
 
 type DisplayCardProps = {
   cardData: CardData;
+  dataType: "project" | "technology";
 };
 
-export default function DisplayCard({ cardData }: DisplayCardProps) {
+export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
+  let cardButton: ReactNode;
+  const { showModal } = useModal();
   const isURL = (path: string) => {
     try {
       new URL(path);
@@ -20,12 +24,50 @@ export default function DisplayCard({ cardData }: DisplayCardProps) {
     }
   };
 
+  switch (dataType) {
+    case "project":
+      cardButton = (
+        <SiteButton
+          size="small"
+          aria={`View Project`}
+          addClasses="tracking-widest font-medium sm:text-sm uppercase"
+          textColor="text-gray-300"
+          onSubmit={() => showModal(<ProjectModal cardData={cardData} />)}
+          style="orange"
+        >
+          View Project
+        </SiteButton>
+      );
+      break;
+    case "technology":
+      cardButton = (
+        <Link
+          href={cardData.liveLink}
+          rel="noopener noreferrer"
+          aria-label="visit site"
+          target="_blank"
+        >
+          <SiteButton
+            size="small"
+            aria={`View Project`}
+            addClasses="tracking-widest font-medium sm:text-sm uppercase"
+            textColor="text-gray-300"
+            onSubmit={() => showModal(<ProjectModal cardData={cardData} />)}
+            style="orange"
+          >
+            {cardData.liveButtonText}
+          </SiteButton>
+        </Link>
+      );
+      break;
+  }
+
   const cardImage = () => {
     if (isURL(cardData.imagePath)) {
       return (
         <ImageLoadingWrapper
           cardData={cardData}
-          className="Image aspect-video w-full rounded-sm"
+          className="Image pointer-events-none aspect-video w-full rounded-sm"
         />
       );
     } else {
@@ -42,7 +84,7 @@ export default function DisplayCard({ cardData }: DisplayCardProps) {
   };
 
   return (
-    <div className="Card mx-auto flex h-full w-[92%] flex-col items-center gap-2 rounded-lg bg-gray-900 p-4 text-orange-200 shadow-themeOrange transition-all duration-500 hover:scale-105 hover:bg-slate-950 hover:text-orange-200 hover:opacity-100 hover:shadow-themeBright hover:saturate-100 xs:w-[95%] xs:bg-black/90 xs:p-3 xs:text-gray-700 xs:saturate-0 xl:p-4">
+    <div className="Card shadow-customBright mx-auto flex h-full w-[92%] flex-col items-center gap-2 rounded-lg bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:bg-black/90 xs:p-3 xs:text-gray-700 xs:saturate-0 sm:hover:scale-105 sm:hover:bg-slate-950 sm:hover:text-orange-200 sm:hover:opacity-100 sm:hover:shadow-themeBright sm:hover:saturate-100 xl:p-4">
       <div className="TitleSection flex flex-col items-center">
         <h3 className="Title pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-lg xl:text-xl">
           {cardData.name}
@@ -65,26 +107,10 @@ export default function DisplayCard({ cardData }: DisplayCardProps) {
             );
           })}
       </div>
-      <p className="Description pointer-events-none h-16 w-full text-center font-sans text-lg capitalize leading-5 text-gray-300 xs:h-20 xs:leading-5 sm:text-base xl:h-16">
+      <p className="Description pointer-events-none h-16 w-full text-center font-sans text-lg capitalize leading-5 text-gray-300 xs:h-20 sm:text-base xl:h-20">
         {cardData.shortDescription}
       </p>
-      <Link
-        href={cardData.liveLink}
-        rel="noopener noreferrer"
-        tabIndex={-1}
-        aria-label="live project"
-        target="_blank"
-        className="ImageLink my-4 w-fit"
-      >
-        <SiteButton
-          size="small"
-          aria={`Visit ${cardData.name}`}
-          addClasses="tracking-widest font-medium sm:text-sm uppercase"
-          textColor="text-gray-300"
-        >
-          {cardData.liveButtonText}
-        </SiteButton>
-      </Link>
+      {cardButton}
     </div>
   );
 }

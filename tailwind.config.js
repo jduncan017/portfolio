@@ -33,6 +33,8 @@ module.exports = {
       },
       boxShadow: {
         custom: "0 0 10px rgba(116, 255, 229, 0.3)",
+        customBright: "0 0 20px rgba(143, 142, 255, 0.8)",
+        customDim: "0 0 20px rgba(143, 142, 255, 0.4)",
         themeOrange: "0 0 8px rgba(254, 215, 170, 0.6)",
         themeBright: "0 0 20px rgba(254, 215, 170, 0.8)",
       },
@@ -41,6 +43,7 @@ module.exports = {
       },
       colors: {
         darkTeal: "rgb(26, 143, 152)",
+        themePurple: "rgb(143, 142, 255)",
         blurWhite: "rgba(255, 255, 255, 0.5)",
         blurBlack: "rgba(0, 0, 0, 0.75)",
       },

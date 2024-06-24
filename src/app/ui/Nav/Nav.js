@@ -1,12 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Nav.css";
+import ContactModal from "../Modals/contactModal";
+import { useModal } from "@/src/contexts/ModalContext";
 
 export const Nav = () => {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
   const [animateClass, setAnimateClass] = useState("hidden");
   const [hamburgerBtnTurnLeft, setHamburgerBtnTurnLeft] = useState("");
   const [navStyle, setNavStyle] = useState("full-nav__background_hidden");
+  const { showModal } = useModal();
   const mobileNavRef = useRef();
+  const navHeadings = [
+    "home",
+    "about",
+    "projects",
+    "testimonials",
+    "technologies",
+  ];
 
   //this controls the animation of the full nav bar background
   useEffect(() => {
@@ -56,14 +66,6 @@ export const Nav = () => {
   };
 
   const printNavButtons = () => {
-    const navHeadings = [
-      "home",
-      "about",
-      "projects",
-      "testimonials",
-      "technologies",
-      "contact",
-    ];
     return navHeadings.map((heading, index) => {
       const delay = index * 100; // Incremental delay, e.g., 0ms, 100ms, 200ms, etc.
       return (
@@ -96,7 +98,18 @@ export const Nav = () => {
     <nav className="nav">
       {/* full nav */}
       <div className="full-nav hidden sm:block">
-        <div className="full-nav__links">{printNavButtons()}</div>
+        <div className="full-nav__links">
+          {printNavButtons()}{" "}
+          <button
+            tabIndex="0"
+            aria-label="contact form"
+            onClick={() => showModal(<ContactModal />)}
+            style={{ animationDelay: `${(navHeadings.length + 1) * 100}ms` }}
+            className="nav-buttons"
+          >
+            Contact
+          </button>
+        </div>
         <div className={navStyle} />
       </div>
 
@@ -119,6 +132,15 @@ export const Nav = () => {
           }
         >
           {printNavButtons()}
+          <button
+            tabIndex="0"
+            aria-label="contact form"
+            onClick={() => showModal(<ContactModal />)}
+            style={{ animationDelay: `${(navHeadings.length + 1) * 100}ms` }}
+            className="nav-buttons"
+          >
+            Contact
+          </button>
           <div
             className={`_mobile-overlay fixed inset-0 z-[-1] justify-center 
             bg-black opacity-50 ${mobileNavVisible ? "flex" : "hidden"}`}

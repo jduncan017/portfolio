@@ -10,6 +10,7 @@ type SliderSectionProps = {
   cardArray: CardData[];
   id: string;
   title: string;
+  dataType: "project" | "technology";
 };
 
 const responsive = {
@@ -35,6 +36,7 @@ export default function SliderSection({
   cardArray,
   id,
   title,
+  dataType,
 }: SliderSectionProps) {
   const [centerMode, setCenterMode] = useState(false);
 
@@ -62,7 +64,7 @@ export default function SliderSection({
       <h1 className="Header mb-4 w-[90%] border-solid text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
         {title}
       </h1>
-      <BackgroundGradient containerClassName="CarouselTrack w-[95%] xs:w-[105%] rounded-xl">
+      <BackgroundGradient containerClassName="CarouselTrack w-[95%] xs:w-[105%] rounded-xl p-0.5 sm:p-1">
         <Carousel
           responsive={responsive}
           swipeable={true}
@@ -74,14 +76,18 @@ export default function SliderSection({
           keyBoardControl={true}
           customTransition="transform 500ms ease"
           transitionDuration={500}
-          containerClass="py-4 xs:py-8 bg-blurBlack rounded-xl"
+          containerClass="py-4 xs:py-8 bg-black sm:bg-blurBlack rounded-xl"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           itemClass="project-item gap-10"
           centerMode={centerMode}
           rtl={false}
         >
           {cardArray.map((cardData: CardData) => (
-            <DisplayCard key={cardData.name} cardData={cardData} />
+            <DisplayCard
+              key={cardData.name}
+              cardData={cardData}
+              dataType={dataType}
+            />
           ))}
         </Carousel>
       </BackgroundGradient>

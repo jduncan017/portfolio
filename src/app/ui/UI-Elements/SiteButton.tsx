@@ -8,6 +8,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   aria: string;
   textColor: string;
+  style: string;
   children: React.ReactNode;
 }
 
@@ -19,9 +20,11 @@ const SiteButton = ({
   type = "button",
   aria,
   textColor,
+  style,
   children,
 }: ButtonProps) => {
   let buttonSize: string;
+  let buttonStyle: string;
 
   switch (size) {
     case "small":
@@ -34,9 +37,22 @@ const SiteButton = ({
       buttonSize = "w-[220px] py-3 flex-1";
   }
 
+  switch (style) {
+    case "orange":
+      buttonStyle =
+        "border-orange-200 border hover:bg-orange-200 hover:text-black";
+      break;
+    case "teal":
+      buttonStyle =
+        "border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black";
+      break;
+    default:
+      buttonStyle = "";
+  }
+
   return (
     <button
-      className={`SiteButton rounded-lg border border-orange-200 font-sans text-sm transition-all duration-300 hover:scale-105 hover:bg-orange-200 hover:text-black disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white sm:text-base ${buttonSize} ${addClasses} ${textColor}
+      className={`SiteButton rounded-lg font-sans text-sm transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white sm:text-base ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
       `}
       type={type ?? "button"}
       onClick={onSubmit}

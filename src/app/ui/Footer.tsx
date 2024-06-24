@@ -7,7 +7,7 @@ import SiteButton from "./UI-Elements/SiteButton";
 export const Footer = () => {
   return (
     <section
-      className="Footer flex flex-col items-center gap-10 border-t border-t-gray-800 bg-black px-5 py-10 xs:px-20 md:flex-row md:items-start lg:gap-20"
+      className="Footer shadow-customBright flex flex-col items-center gap-10 border-t border-t-gray-800 bg-black px-5 py-10 xs:px-20 md:flex-row md:items-start lg:gap-20"
       id="contact-section"
     >
       <ContactCard />
@@ -32,6 +32,7 @@ export const Footer = () => {
             addClasses="ResumeButtonFooter my-6 w-56"
             textColor="text-gray-300"
             size="large"
+            style="orange"
           >
             View Resume
           </SiteButton>

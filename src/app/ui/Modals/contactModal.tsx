@@ -51,16 +51,16 @@ export default function ContactModal() {
     <ModalWrapper>
       <div className="contactModal">
         <div className="formWrapper relative flex max-h-[100dvh] w-full max-w-[500px] flex-col px-2 font-sans xs:px-6">
-          <h1 className="mb-2 border-b border-dotted border-gray-400 font-sans text-3xl font-bold uppercase leading-10 tracking-widest text-darkTeal xs:text-4xl">
-            Reach Out!
+          <h1 className="mb-2 border-b border-dotted border-gray-400 pb-1 text-start font-sans text-3xl font-bold uppercase leading-10 tracking-widest text-darkTeal xs:text-4xl">
+            Contact
           </h1>
-          <p className="formDescription m-0 w-full leading-5 text-gray-400">
+          <p className="formDescription m-0 w-full text-start leading-5 text-gray-400">
             {`If you'd like to work together or have questions, you can schedule a meeting or reach me via this contact form.`}
           </p>
 
           {/* Contact Form */}
           <form
-            className="contactForm flex w-full flex-col items-center gap-2 pt-2 text-start text-darkTeal xs:gap-4 xs:pt-5"
+            className="contactForm flex w-full flex-col items-center gap-2 pt-2 text-start text-gray-200 xs:gap-4 xs:pt-5"
             onSubmit={handleSubmit}
             noValidate
           >
@@ -69,7 +69,7 @@ export default function ContactModal() {
             <div className="NameSection flex w-full gap-6">
               <div className="FirstNameContainer flex w-full flex-col gap-1">
                 <label className="m-0" htmlFor="name">
-                  First Name:*
+                  First Name:
                 </label>
                 <input
                   className="FirstNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-400 p-1 text-black"
@@ -82,7 +82,7 @@ export default function ContactModal() {
               </div>
               <div className="LastNameContainer flex w-full flex-col gap-1">
                 <label className="m-0" htmlFor="name">
-                  Last Name:*
+                  Last Name:
                 </label>
                 <input
                   className="LastNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-400 p-1 text-black"
@@ -98,7 +98,7 @@ export default function ContactModal() {
             {/* Email Input */}
             <div className="EmailContainer w-full">
               <label className="m-0" htmlFor="email">
-                Email:*
+                Email:
               </label>
               <input
                 className="EmailInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-400 p-1 text-black"
@@ -137,6 +137,7 @@ export default function ContactModal() {
                   aria="Schedule a meeting"
                   textColor="text-gray-200"
                   addClasses="border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black uppercase"
+                  style="teal"
                 >
                   Schedule a Meeting
                 </SiteButton>
@@ -147,6 +148,7 @@ export default function ContactModal() {
                 disabled={buttonDisabled}
                 aria="submit"
                 textColor="text-gray-200"
+                style="teal"
               >
                 {buttonDisplay}
               </SiteButton>
