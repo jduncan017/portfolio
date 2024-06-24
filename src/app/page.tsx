@@ -3,7 +3,7 @@ import React from "react";
 import { Nav } from "./ui/Nav/Nav";
 import { Header } from "@/src/app/ui/Header/Header";
 import { About } from "@/src/app/ui/About";
-import { Contact } from "@/src/app/ui/Contact";
+import { Footer } from "@/src/app/ui/Footer";
 import SliderSection from "./ui/SliderSection";
 import ToggleScrollbarButton from "@/src/app/ui/UI-Elements/ScrollBarButton";
 import TestimonialSection from "./ui/TestimonialSection";
@@ -15,7 +15,7 @@ export default function Home() {
     <main className="Main overflow-hidden" id="home-section">
       <Nav />
       <Header />
-      <div className="PageContent flex flex-col gap-16 bg-gradient-to-b from-black via-cyan-950 to-slate-950 py-20">
+      <div className="PageContent flex flex-col gap-16 bg-gradient-to-b from-black to-slate-950 py-20">
         <About />
         <SliderSection
           cardArray={PROJECT_DATA}
@@ -29,7 +29,7 @@ export default function Home() {
           title="Favorite Technologies"
         />
       </div>
-      <Contact />
+      <Footer />
       <ToggleScrollbarButton />
     </main>
   );

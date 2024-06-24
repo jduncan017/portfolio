@@ -77,7 +77,7 @@ export default function DisplayCard({ cardData }: DisplayCardProps) {
         tabIndex={-1}
         aria-label="live project"
         target="_blank"
-        className="ImageLink my-4 w-fit rounded-md border border-solid border-orange-300 px-4 py-1.5 text-center font-medium uppercase tracking-widest text-orange-200 transition-all duration-500 hover:bg-orange-200 hover:text-black"
+        className="ImageLink my-4 w-fit rounded-md border border-solid border-orange-200 px-4 py-1.5 text-center font-medium uppercase tracking-widest text-orange-200 transition-all duration-500 hover:bg-orange-200 hover:text-black"
       >
         {cardData.liveButtonText}
       </Link>

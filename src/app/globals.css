@@ -8,7 +8,7 @@
     @apply font-serif text-lg leading-normal tracking-wide;
   }
   .global-button {
-    @apply h-[50px] w-[200px] rounded-2xl border-0 bg-darkTeal px-5 text-base text-white transition-colors hover:cursor-pointer hover:bg-neonPurple;
+    @apply h-[50px] w-[200px] rounded-lg border border-orange-200 px-5 text-base text-orange-200 transition-all duration-500 hover:cursor-pointer hover:bg-orange-200 hover:text-black;
   }
 }
 
