@@ -21,22 +21,37 @@ export const Footer = () => {
         <p className="FooterMessage my-4 max-w-[500px] text-center text-gray-400 md:text-start">
           Please feel free to contact me for work, suggestions, or networking!
         </p>
-        <Link
-          rel="noopener noreferrer"
-          tabIndex={-1}
-          href={RESUME_DATA.resumeURL}
-          target="_blank"
-        >
-          <SiteButton
-            aria="view resume as PDF"
-            addClasses="ResumeButtonFooter my-6 w-56"
-            textColor="text-gray-300"
-            size="large"
-            style="orange"
+        <div className="ButtonContainer my-6 flex flex-col gap-4 mini:flex-row">
+          <Link
+            rel="noopener noreferrer"
+            href={RESUME_DATA.resumeURL}
+            target="_blank"
           >
-            View Resume
-          </SiteButton>
-        </Link>
+            <SiteButton
+              size="large"
+              aria="View resume as PDF"
+              textColor="text-orange-200"
+              style="orange"
+            >
+              View Resume
+            </SiteButton>
+          </Link>
+          <Link
+            rel="noopener noreferrer"
+            href="https://calendly.com/jduncan017/1-hour-meeting"
+            target="_blank"
+            type="button"
+          >
+            <SiteButton
+              size="large"
+              aria="Schedule a meeting"
+              textColor="text-orange-200"
+              style="orange"
+            >
+              Schedule a Meeting
+            </SiteButton>
+          </Link>
+        </div>
       </div>
     </section>
   );
