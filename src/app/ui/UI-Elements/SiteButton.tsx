@@ -8,7 +8,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   aria: string;
   textColor: string;
-  style: string;
+  style: "orange" | "teal";
   children: React.ReactNode;
 }
 

@@ -28,8 +28,6 @@ Thanks for checking out my portfolio. Let me know if you have any questions, com
 
 ## Ideas Site Improvements
 
-- **Contact Form**: A contact form would be a nice improvement, especiall with the addition of a "comment box".
-- **Modals**: A resuable modal would be nice to use in a few places around the site.
 - **Icons for Technologies**: Instead of bullets, I want to display the technology icon.
 - **Modal for Resume**: Would be great to display the resume in a modal iframe instead of a separate site.
 - **Matrix Style Section Titles**: Creating a cool matric style text effect for the section titles.

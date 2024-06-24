@@ -21,6 +21,7 @@ export default function SubmitConfirmModal() {
             aria="submit"
             addClasses="border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black mt-4"
             textColor="text-gray-200"
+            style="teal"
           >
             Close
           </SiteButton>
