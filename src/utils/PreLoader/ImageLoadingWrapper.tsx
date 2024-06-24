@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Loader from "./PreLoader";
 import { fetchOgImage } from "@/src/utils/fetchOgImage";
-import type { Project } from "@/src/lib/projectData";
+import type { CardData } from "@/src/lib/dataTypes";
 
 type WrapperProps = {
-  cardData: Project;
+  cardData: CardData;
   className: string;
 };
 
