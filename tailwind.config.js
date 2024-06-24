@@ -5,6 +5,10 @@ const {
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+      serif: ["Playfair", "serif"],
+    },
     screens: {
       mini: "480px",
       xs: "550px",

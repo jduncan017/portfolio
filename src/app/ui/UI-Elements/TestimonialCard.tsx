@@ -9,7 +9,7 @@ interface TestimonialArray {
 export default function TestimonialCard({ testimonial }: TestimonialArray) {
   return (
     <BackgroundGradient
-      containerClassName="Container w-full h-full lg:h-[530px] xl:h-[515px] sxl:h-[480px] mx-auto p-0 hover:scale-105 transition-all duration-500"
+      containerClassName="Container w-full h-full lg:h-[530px] xl:h-[515px] sxl:h-[480px] mx-auto p-0.5 hover:scale-105 transition-all duration-500"
       className="Card relative flex h-full flex-col items-center gap-3 rounded-[12px] bg-gray-900 p-4 text-orange-200 transition-all duration-500 hover:bg-gray-900 hover:text-orange-200 hover:saturate-100 xs:text-orange-200 xs:saturate-0 xl:px-10 xl:py-6"
     >
       <div className="TitleSection flex flex-col items-center">
@@ -28,7 +28,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
         height={150}
       />
       <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
-        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center font-sans leading-6">
+        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center font-sans text-base leading-6">
           {testimonial.shortDescription}
         </p>
         <p className="Date text-gray-400">{`- ${testimonial.date} -`}</p>

@@ -59,8 +59,8 @@ export const Nav = () => {
     const navHeadings = [
       "home",
       "about",
-      "testimonials",
       "projects",
+      "testimonials",
       "technologies",
       "contact",
     ];

@@ -15,11 +15,19 @@ export default function Home() {
     <main className="Main overflow-hidden" id="home-section">
       <Nav />
       <Header />
-      <div className="PageContent flex flex-col gap-16 bg-gradient-to-b from-black via-cyan-950 to-black py-20">
+      <div className="PageContent flex flex-col gap-16 bg-gradient-to-b from-black via-cyan-950 to-slate-950 py-20">
         <About />
-        <SliderSection cardArray={PROJECT_DATA} id="projects-section" />
+        <SliderSection
+          cardArray={PROJECT_DATA}
+          id="projects-section"
+          title="My Projects"
+        />
         <TestimonialSection />
-        <SliderSection cardArray={FAV_TECH_DATA} id="technologies-section" />
+        <SliderSection
+          cardArray={FAV_TECH_DATA}
+          id="technologies-section"
+          title="Favorite Technologies"
+        />
       </div>
       <Contact />
       <ToggleScrollbarButton />

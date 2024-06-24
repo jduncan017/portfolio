@@ -4,7 +4,7 @@ import SocialContainer from "./UI-Elements/SocialContainer";
 
 export const Contact = () => {
   return (
-    <div className="Contact bg-gray-800">
+    <div className="Contact border border-t-gray-800 bg-gray-800">
       <section
         id="contact-section"
         className="ContactOuterContainer flex w-full flex-col items-center bg-black pb-16 pt-6"

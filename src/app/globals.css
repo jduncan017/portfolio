@@ -12,9 +12,16 @@
   }
 }
 
-* {
-  font-family: sans-serif;
-  margin: 0px;
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Apply the fonts globally */
+body {
+  font-family: "Inter", sans-serif;
 }
 
 p {

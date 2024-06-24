@@ -43,8 +43,8 @@ export default function DisplayCard({ cardData }: DisplayCardProps) {
 
   return (
     <BackgroundGradient
-      containerClassName="Container mx-auto p-0.5 hover:scale-105 transition-all duration-500 w-[92%] xs:w-[96%] hover:opacity-100 xs:opacity-70"
-      className="Card flex h-full flex-col items-center gap-2 rounded-[12px] bg-gray-900 p-4 text-orange-200 transition-all duration-500 hover:bg-gray-900 hover:text-orange-200 hover:saturate-100 xs:bg-blurWhite xs:p-3 xs:text-black xs:saturate-0 xl:p-4"
+      containerClassName="Container mx-auto p-0 hover:scale-105 transition-all duration-500 w-[92%] xs:w-[95%] hover:opacity-100 xs:opacity-70"
+      className="Card flex h-full flex-col items-center gap-2 rounded-[12px] bg-gray-900 p-4 text-orange-200 transition-all duration-500 hover:bg-gray-900 hover:text-orange-200 hover:saturate-100 xs:bg-black/90 xs:p-3 xs:text-gray-700 xs:saturate-0 xl:p-4"
     >
       <div className="TitleSection flex flex-col items-center">
         <h3 className="Title pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-lg xl:text-xl">
@@ -68,7 +68,7 @@ export default function DisplayCard({ cardData }: DisplayCardProps) {
             );
           })}
       </div>
-      <p className="Description pointer-events-none my-2 h-16 w-full text-center font-[Muli] text-xl capitalize leading-5 xs:h-20 xs:text-lg xs:leading-6 xl:h-16">
+      <p className="Description pointer-events-none my-2 h-16 w-full text-center font-sans text-lg capitalize leading-5 xs:h-20 xs:leading-6 sm:text-base xl:h-16">
         {cardData.shortDescription}
       </p>
       <Link

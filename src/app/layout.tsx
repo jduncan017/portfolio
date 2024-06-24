@@ -39,9 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`no-scrollbar touch-pan-y overflow-x-hidden bg-black ${cardo.className}`}
-      >
+      <body className="no-scrollbar touch-pan-y overflow-x-hidden bg-black">
         {children}
       </body>
     </html>

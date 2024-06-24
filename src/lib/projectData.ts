@@ -6,7 +6,7 @@ export const PROJECT_DATA: CardData[] = [
     lastUpdated: "6/17/24",
     techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3",
     shortDescription:
-      "A happy hour locator application. This beta site currently works only for Denver, CO.",
+      "Happy hour locator. This beta site currently works only for Denver, CO.",
     description:
       "IN BETA. A happy hour website for finding local happy hours at any time of the day. All brand work was done by myself using figma. Site was designed in figma and I'm currently building it in Next.js. Site features will include GraphQL database with intricate data modeling for restaurants. Google maps integration, user feedback, user auth, and the ability for restaurants to take ownership of their content will be features as well.",
     liveButtonText: "Visit Beta Site",

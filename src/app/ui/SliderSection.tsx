@@ -9,6 +9,7 @@ import { CardData } from "@/src/lib/dataTypes";
 type SliderSectionProps = {
   cardArray: CardData[];
   id: string;
+  title: string;
 };
 
 const responsive = {
@@ -30,7 +31,11 @@ const responsive = {
   },
 };
 
-export default function SliderSection({ cardArray, id }: SliderSectionProps) {
+export default function SliderSection({
+  cardArray,
+  id,
+  title,
+}: SliderSectionProps) {
   const [centerMode, setCenterMode] = useState(false);
 
   useEffect(() => {
@@ -55,7 +60,7 @@ export default function SliderSection({ cardArray, id }: SliderSectionProps) {
       id={id}
     >
       <h1 className="Header mb-4 w-[90%] border-solid text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
-        Favorite Technologies
+        {title}
       </h1>
       <BackgroundGradient containerClassName="CarouselTrack w-[95%] xs:w-[105%] rounded-xl">
         <Carousel
