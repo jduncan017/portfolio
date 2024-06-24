@@ -29,12 +29,12 @@ export const About = () => {
 
   return (
     <section className="AboutSection h-fit scroll-mt-20" id="about-section">
-      <h1 className="Header mx-auto mb-4 w-[80%] border-solid text-start font-sans text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
+      <h1 className="Header mx-auto mb-4 w-[90%] border-solid text-start font-sans text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
         About
       </h1>
       <div className="OuterContainer shadow-customBright flex h-full w-full flex-col items-center justify-center gap-8 border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 to-black py-8 md:py-16 lg:flex-row lg:items-start lg:gap-16 lg:text-left">
         <BackgroundGradient containerClassName="w-full lg:w-full sm:w-[75%] p-0 mr-10 sm:mr-0">
-          <div className="LeftContainer flex h-full w-full justify-end overflow-hidden rounded-xl bg-black/90 p-4 sm:justify-center lg:justify-end lg:rounded-l-none">
+          <div className="LeftContainer flex h-full w-full justify-end overflow-hidden rounded-r-xl bg-black/90 p-4 sm:justify-center sm:rounded-xl lg:justify-end lg:rounded-l-none">
             <Image
               alt="Josh's Picture"
               src="/profile_pic.jpeg"
@@ -45,7 +45,7 @@ export const About = () => {
           </div>
         </BackgroundGradient>
         <BackgroundGradient containerClassName="w-auto p-0 sm:w-[75%] lg:w-full ml-10 sm:ml-0">
-          <div className="RightContainer w-full overflow-hidden rounded-xl bg-black/90 px-8 py-6 lg:w-full lg:rounded-r-none">
+          <div className="RightContainer w-full overflow-hidden rounded-l-xl bg-black/90 px-8 py-6 sm:rounded-xl lg:w-full lg:rounded-r-none">
             <h2 className="Title mb-3 flex gap-2 font-sans text-4xl font-bold uppercase leading-normal tracking-widest text-white">
               <p>👋🏼</p>
               <FlipWords
