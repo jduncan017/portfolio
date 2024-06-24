@@ -1,18 +1,6 @@
-export type Project = {
-  name: string;
-  lastUpdated?: string;
-  techsUsed?: string;
-  shortDescription: string;
-  description: string;
-  liveButtonText: string;
-  liveLink: string;
-  imagePath: string;
-  tags?: string[];
-  repoURL?: string;
-  iconPath?: string;
-};
+import type { CardData } from "./dataTypes";
 
-export const PROJECT_DATA: Project[] = [
+export const PROJECT_DATA: CardData[] = [
   {
     name: "Happy Hour Hunt",
     lastUpdated: "6/17/24",

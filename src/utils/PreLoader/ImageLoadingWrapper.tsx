@@ -4,19 +4,19 @@ import { fetchOgImage } from "@/src/utils/fetchOgImage";
 import type { Project } from "@/src/lib/projectData";
 
 type WrapperProps = {
-  project: Project;
+  cardData: Project;
   className: string;
 };
 
-const ImageLoadingWrapper = ({ project, className }: WrapperProps) => {
+const ImageLoadingWrapper = ({ cardData, className }: WrapperProps) => {
   const [imageUrl, setImageUrl] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    fetchOgImage(project.liveLink)
+    fetchOgImage(cardData.liveLink)
       .then((url) => {
-        console.log(project.liveLink, url);
+        console.log(cardData.liveLink, url);
         setImageUrl(url);
         setIsLoading(false);
       })
@@ -24,7 +24,7 @@ const ImageLoadingWrapper = ({ project, className }: WrapperProps) => {
         setIsError(true);
         setIsLoading(false);
       });
-  }, [project.liveLink]);
+  }, [cardData.liveLink]);
 
   if (isLoading) return <Loader />;
   if (isError)
@@ -44,7 +44,7 @@ const ImageLoadingWrapper = ({ project, className }: WrapperProps) => {
       {/*eslint-disable-next-line @next/next/no-img-element*/}
       <img
         src={imageUrl}
-        alt={`Screenshot of ${project.name}`}
+        alt={`Screenshot of ${cardData.name}`}
         className={className}
       />
     </>

@@ -1,6 +1,6 @@
-import type { Project } from "./projectData";
+import type { CardData } from "./dataTypes";
 
-export const FAV_TECH_DATA: Project[] = [
+export const FAV_TECH_DATA: CardData[] = [
   {
     name: "Arc Browser",
     shortDescription: `A new chromium based internet browser that's changing the way we browse the web.`,

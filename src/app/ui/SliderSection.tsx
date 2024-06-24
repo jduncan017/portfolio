@@ -3,8 +3,13 @@ import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { BackgroundGradient } from "./UILibraries/background-gradient";
-import { FAV_TECH_DATA } from "@/src/lib/favoriteTechData";
 import DisplayCard from "./UI-Elements/DisplayCard";
+import { CardData } from "@/src/lib/dataTypes";
+
+type SliderSectionProps = {
+  cardArray: CardData[];
+  id: string;
+};
 
 const responsive = {
   superLargeDesktop: {
@@ -25,10 +30,13 @@ const responsive = {
   },
 };
 
-export default function FavTechSlider() {
-  const [centerMode, setCenterMode] = useState(window.innerWidth > 520);
+export default function SliderSection({ cardArray, id }: SliderSectionProps) {
+  const [centerMode, setCenterMode] = useState(false);
 
   useEffect(() => {
+    // set initial state
+    setCenterMode(window.innerWidth > 550);
+
     const handleResize = () => {
       setCenterMode(window.innerWidth > 550);
     };
@@ -42,8 +50,11 @@ export default function FavTechSlider() {
   }, []);
 
   return (
-    <div className="ProjectSlider flex flex-col items-center">
-      <h1 className="Header mb-4 w-[80%] border-solid text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
+    <section
+      className="SliderSection flex scroll-mt-20 flex-col items-center"
+      id={id}
+    >
+      <h1 className="Header mb-4 w-[90%] border-solid text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
         Favorite Technologies
       </h1>
       <BackgroundGradient containerClassName="CarouselTrack w-[95%] xs:w-[105%] rounded-xl">
@@ -64,12 +75,12 @@ export default function FavTechSlider() {
           centerMode={centerMode}
           rtl={false}
         >
-          {FAV_TECH_DATA.map((project) => (
-            <DisplayCard key={project.name} project={project} />
+          {cardArray.map((cardData: CardData) => (
+            <DisplayCard key={cardData.name} cardData={cardData} />
           ))}
         </Carousel>
       </BackgroundGradient>
       ;
-    </div>
+    </section>
   );
 }

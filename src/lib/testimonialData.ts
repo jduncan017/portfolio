@@ -1,11 +1,4 @@
-export type TestimonialData = {
-  name: string;
-  imagePath: string;
-  shortDescription: string;
-  fullReview: string;
-  relationship: string;
-  contact: string;
-};
+import type { TestimonialData } from "./dataTypes";
 
 export const TESTIMONIAL_DATA: TestimonialData[] = [
   {
@@ -48,6 +41,7 @@ export const TESTIMONIAL_DATA: TestimonialData[] = [
 `,
     relationship: "Manager",
     contact: "loren@littlemanicecream.com",
+    date: "02/21/24",
   },
   {
     name: "Nicholas Pasquarella",
@@ -64,6 +58,7 @@ export const TESTIMONIAL_DATA: TestimonialData[] = [
     efficiently, ensuring they align with your specific market needs. In summary, we wholeheartedly endorse Josh as a developer.`,
     relationship: "Client",
     contact: "nickypasq193@gmail.com",
+    date: "02/12/24",
   },
   {
     name: "Charles Ryan",
@@ -87,5 +82,6 @@ export const TESTIMONIAL_DATA: TestimonialData[] = [
     a better job of making me feel comfortable and confident during the pricing process compared to anyone else I contacted.`,
     relationship: "Client",
     contact: "cmryan303@gmail.com",
+    date: "06/05/24",
   },
 ];

@@ -1,33 +1,11 @@
-export type ResumeData = {
-  resumeURL: string;
-  gitHubURL: string;
-  twitterURL: string;
-  linkedInURL: string;
-  bioDescription1: string;
-  bioDescription2: string;
-  bioDescription3: string;
-  education: [
-    {
-      school: string;
-      position: string;
-      time: string;
-      description: string[];
-    },
-  ];
-  jobs: {
-    name: string;
-    position: string;
-    time: string;
-    description: string[];
-  }[];
-};
+import type { ResumeData } from "./dataTypes";
 
 export const RESUME_DATA: ResumeData = {
   resumeURL: "https://jduncan017.github.io/resume/JoshDuncan.pdf",
   gitHubURL: "https://github.com/jduncan017",
   twitterURL: "https://twitter.com/Jduncan017",
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
-  bioDescription1: `I'm Josh, a full-stack developer with a diverse career history including roles dealing with project management, 
+  bioDescription1: `I'm Josh, a full-stack developer with a career history spanning roles in project management, 
   brand development, design, marketing, and entrepreneurship.`,
   bioDescription2: `Currently, I am enjoying the creative freedom of the client process as a freelance brand strategist and web developer. 
   However, my true passion lies in tackling real-world issues, and I am actively seeking the right opportunity improve people's lives with
