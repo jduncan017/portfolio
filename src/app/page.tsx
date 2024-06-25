@@ -9,6 +9,7 @@ import ToggleScrollbarButton from "@/src/app/ui/UI-Elements/ScrollBarButton";
 import TestimonialSection from "./ui/TestimonialSection";
 import { FAV_TECH_DATA } from "../lib/favoriteTechData";
 import { PROJECT_DATA } from "../lib/projectData";
+import TechIcons from "./ui/UI-Elements/TechIcons";
 
 export default function Home() {
   return (

@@ -6,6 +6,7 @@ import { BackgroundGradient } from "./UILibraries/background-gradient";
 import { FlipWords } from "./UILibraries/FlipWords";
 import ContactCard from "./UI-Elements/ContactCard";
 import SiteButton from "./UI-Elements/SiteButton";
+import TechIcons from "./UI-Elements/TechIcons";
 
 export const About = () => {
   const words = ["Hello!", "Aloha!", "Hola!", "Greetings!"];
@@ -33,17 +34,24 @@ export const About = () => {
         About
       </h1>
       <div className="OuterContainer shadow-customBright flex h-full w-full flex-col items-center justify-center gap-8 border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 to-black py-8 md:py-16 lg:flex-row lg:items-start lg:gap-16 lg:text-left">
-        <BackgroundGradient containerClassName="w-full lg:w-full sm:w-[75%] p-0 mr-10 sm:mr-0">
-          <div className="LeftContainer flex h-full w-full justify-end overflow-hidden rounded-r-xl bg-black/90 p-4 sm:justify-center sm:rounded-xl lg:justify-end lg:rounded-l-none">
-            <Image
-              alt="Josh's Picture"
-              src="/profile_pic.jpeg"
-              className="_profile-pic aspect-square h-auto max-h-[350px] w-auto rounded-xl object-contain lg:aspect-square lg:h-full lg:max-h-[450px] lg:w-auto"
-              width={450}
-              height={450}
-            />
-          </div>
-        </BackgroundGradient>
+        <div className="LeftContainer mr-20 flex w-full flex-col gap-8 sm:mr-0 sm:w-[75%] lg:gap-16">
+          <BackgroundGradient containerClassName="w-full p-0">
+            <div className="ImageContainer flex h-full w-full justify-end overflow-hidden rounded-r-xl bg-black/90 p-4 sm:justify-center sm:rounded-xl lg:justify-end lg:rounded-l-none">
+              <Image
+                alt="Josh's Picture"
+                src="/profile_pic.jpeg"
+                className="_profile-pic aspect-square h-auto max-h-[350px] w-auto rounded-xl object-contain lg:aspect-square lg:h-full lg:max-h-[450px] lg:w-auto"
+                width={450}
+                height={450}
+              />
+            </div>
+          </BackgroundGradient>
+          {/* <BackgroundGradient containerClassName="w-full lg:w-full sm:w-[75%] p-0 mr-10 sm:mr-0">
+            <div className="TechIcons flex h-full w-full justify-end overflow-hidden rounded-r-xl bg-black/90 p-4 sm:justify-center sm:rounded-xl lg:justify-end lg:rounded-l-none">
+              <TechIcons />
+            </div>
+          </BackgroundGradient> */}
+        </div>
         <BackgroundGradient containerClassName="w-auto p-0 sm:w-[75%] lg:w-full ml-10 sm:ml-0">
           <div className="RightContainer w-full overflow-hidden rounded-l-xl bg-black/90 px-8 py-6 sm:rounded-xl lg:w-full lg:rounded-r-none">
             <h2 className="Title mb-3 flex gap-2 font-sans text-4xl font-bold uppercase leading-normal tracking-widest text-white">
