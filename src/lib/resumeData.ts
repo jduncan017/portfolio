@@ -8,7 +8,7 @@ export const RESUME_DATA: ResumeData = {
   bioDescription1: `I'm Josh, a full-stack developer with a career history spanning roles in project management, 
   brand development, design, marketing, and entrepreneurship.`,
   bioDescription2: `Currently, I am enjoying the creative freedom of the client process as a freelance brand strategist and web developer. 
-  However, my true passion lies in tackling real-world issues, and I am actively seeking the right opportunity improve people's lives with
+  However, my true passion lies in tackling real-world issues, and I am actively seeking the right opportunity to improve people's lives with
    a forward-thinking, impactful company.`,
   bioDescription3: `Driving impactful growth through determination and creative thinking is ingrained in my character. I am eager to leverage 
   my unique mix of skills for an exciting new project where I can have a profound influence.`,
