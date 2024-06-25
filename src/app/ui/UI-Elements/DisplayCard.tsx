@@ -52,7 +52,6 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
             aria={`View Project`}
             addClasses="tracking-widest font-medium sm:text-sm uppercase"
             textColor="text-gray-300"
-            onSubmit={() => showModal(<ProjectModal cardData={cardData} />)}
             style="orange"
           >
             {cardData.liveButtonText}
