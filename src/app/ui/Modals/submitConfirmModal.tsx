@@ -7,7 +7,7 @@ export default function SubmitConfirmModal() {
 
   return (
     <ModalWrapper>
-      <div className="ModalContainer flex h-fit w-[500px] flex-col items-center gap-4 rounded-2xl p-5 px-8 py-3 text-center font-serif">
+      <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl py-3 text-center font-serif sm:px-8">
         <h2 className="Header text-2xl font-medium uppercase text-darkTeal">
           Thank You!
         </h2>

@@ -17,7 +17,7 @@ export const Header = () => {
 
   return (
     <section
-      className="_header-container relative h-svh max-h-[1200px]"
+      className="_header-container relative h-lvh max-h-[1200px]"
       id="header-section"
     >
       <div className="_particles-background pb-25 absolute z-[-10] h-svh w-full text-center">
