@@ -25,7 +25,7 @@ export default function ExternalLinkModal({ cardData }: LinkModalProps) {
             onSubmit={() => hideModal()}
             size="lg"
             aria="submit"
-            addClasses="border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black mt-4"
+            addClasses="mt-4"
             textColor="text-gray-200"
             style="teal"
           >
@@ -41,7 +41,7 @@ export default function ExternalLinkModal({ cardData }: LinkModalProps) {
               onSubmit={() => hideModal()}
               size="lg"
               aria="submit"
-              addClasses="border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black mt-4"
+              addClasses="mt-4"
               textColor="text-gray-200"
               style="teal"
             >

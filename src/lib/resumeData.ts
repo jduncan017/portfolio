@@ -62,7 +62,7 @@ export const RESUME_DATA: ResumeData = {
   ],
 };
 
-export const techSkills = [
+export const TECH_SKILLS = [
   "JavaScript",
   "TypeScript",
   "HTML5",

@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { BackgroundGradient } from "./UILibraries/background-gradient";
+import { BackgroundGradient } from "./UI-Libraries/background-gradient";
 import DisplayCard from "./UI-Elements/DisplayCard";
 import { CardData } from "@/src/lib/dataTypes";
+import MatrixShuffle from "./UI-Elements/MatrixReveal";
 
 type SliderSectionProps = {
   cardArray: CardData[];
@@ -64,7 +65,7 @@ export default function SliderSection({
       <h1 className="Header mb-4 w-[90%] border-solid text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
         {title}
       </h1>
-      <BackgroundGradient containerClassName="CarouselTrack w-[105%] rounded-xl p-0.5 sm:p-1">
+      <BackgroundGradient containerClassName="CarouselTrack w-[105%] rounded-xl p-1">
         <Carousel
           responsive={responsive}
           swipeable={true}

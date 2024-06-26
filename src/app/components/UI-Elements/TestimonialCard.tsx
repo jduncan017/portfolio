@@ -1,4 +1,4 @@
-import { BackgroundGradient } from "../UILibraries/background-gradient";
+import { BackgroundGradient } from "../UI-Libraries/background-gradient";
 import Image from "next/image";
 import type { TestimonialData } from "@/src/lib/dataTypes";
 import { useModal } from "@/src/contexts/ModalContext";

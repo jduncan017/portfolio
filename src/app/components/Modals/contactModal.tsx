@@ -50,17 +50,17 @@ export default function ContactModal() {
   return (
     <ModalWrapper>
       <div className="contactModal">
-        <div className="formWrapper relative flex max-h-[100dvh] w-full max-w-[500px] flex-col px-2 font-sans xs:px-6">
-          <h1 className="mb-2 border-b border-dotted border-gray-400 pb-1 text-start font-sans text-3xl font-bold uppercase leading-10 tracking-widest text-darkTeal xs:text-4xl">
+        <div className="formWrapper relative flex max-h-[100dvh] w-full max-w-[500px] flex-col px-2 py-4 font-sans xs:px-8">
+          <h1 className="mb-3 border-b border-dotted border-gray-400 pb-1 text-center font-sans text-3xl font-bold uppercase leading-10 tracking-widest text-darkTeal xs:text-4xl sm:text-4xl">
             Contact
           </h1>
-          <p className="formDescription m-0 w-full text-start leading-5 text-gray-400">
+          <p className="formDescription m-0 w-full text-center leading-5 text-gray-400">
             {`If you'd like to work together or have questions, you can schedule a meeting or reach me via this contact form.`}
           </p>
 
           {/* Contact Form */}
           <form
-            className="contactForm flex w-full flex-col items-center gap-2 pt-2 text-start text-gray-200 xs:gap-4 xs:pt-5"
+            className="contactForm flex w-full flex-col items-center gap-2 pt-2 text-start text-gray-200 xs:gap-6 xs:pt-5"
             onSubmit={handleSubmit}
             noValidate
           >
@@ -126,7 +126,7 @@ export default function ContactModal() {
             </div>
 
             {/* Buttons */}
-            <div className="ButtonContainer mb-4 flex w-full justify-between gap-2">
+            <div className="ButtonContainer flex h-fit w-full flex-col items-center gap-3 sm:flex-row sm:gap-4">
               <Link
                 rel="noopener noreferrer"
                 href="https://calendly.com/jduncan017/1-hour-meeting"
@@ -135,8 +135,7 @@ export default function ContactModal() {
               >
                 <SiteButton
                   aria="Schedule a meeting"
-                  textColor="text-gray-200"
-                  addClasses="border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black uppercase"
+                  textColor="text-gray-200 uppercase"
                   style="teal"
                 >
                   Schedule a Meeting
@@ -144,10 +143,9 @@ export default function ContactModal() {
               </Link>
               <SiteButton
                 type="submit"
-                addClasses="border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black"
                 disabled={buttonDisabled}
                 aria="submit"
-                textColor="text-gray-200"
+                textColor="text-gray-200 uppercase"
                 style="teal"
               >
                 {buttonDisplay}

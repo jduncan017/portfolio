@@ -2,7 +2,7 @@
 import React from "react";
 import "./Header.css";
 import SocialContainer from "../UI-Elements/SocialContainer";
-import { ParticlesAnimation } from "../ParticlesAnimation/ParticlesAnimation";
+import { ParticlesAnimation } from "../UI-Libraries/ParticlesAnimation/ParticlesAnimation";
 
 export const Header = () => {
   const performSmoothScroll = () => {

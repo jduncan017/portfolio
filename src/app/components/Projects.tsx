@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { PROJECT_DATA } from "@/src/lib/projectData";
 import Image from "next/image";
-import { BackgroundGradient } from "./UILibraries/background-gradient";
+import { BackgroundGradient } from "./UI-Libraries/background-gradient";
 
 export const Projects = () => {
   return (

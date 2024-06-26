@@ -1,0 +1,103 @@
+import ModalWrapper from "./modalWrapper";
+import type { ResumeData } from "@/src/lib/dataTypes";
+import { RESUME_DATA, TECH_SKILLS } from "@/src/lib/resumeData";
+
+export default function ResumeModal() {
+  const buildExperienceHeading = (title: string) => {
+    return (
+      <div className="Container">
+        <div className="Border">
+          <h3 className="Heading mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase text-darkTeal">
+            {title}
+          </h3>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <ModalWrapper>
+      <div className="OuterContainer max-w-[800px] items-start py-4 text-start text-white sm:px-10">
+        <h2 className="Resume mb-6 text-center text-4xl font-bold uppercase">
+          Resume
+        </h2>
+        <div className="TechExperience">
+          {buildExperienceHeading("Tech Experience")}
+          <div className="SkillsContainer">
+            <ul className="Skills flex w-full flex-wrap justify-start gap-2">
+              {TECH_SKILLS.map((item) => (
+                <li
+                  key={item}
+                  className="ExperienceItem rounded-sm bg-slate-600/50 p-1 text-sm capitalize text-gray-300"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="WorkExperience mt-6 flex flex-col justify-start">
+          {buildExperienceHeading("Work Experience")}
+          <div className="experience-right-container">
+            {RESUME_DATA.jobs.map((job) => {
+              return (
+                <div
+                  key={job.name}
+                  className="Container mb-4 flex flex-col justify-start"
+                >
+                  <div className="TitleContainer flex flex-col items-start sm:flex-row sm:items-center sm:gap-2">
+                    <p className="Title text-xl font-bold capitalize text-white">
+                      {job.name}
+                    </p>
+                    <p className="Time text-sm italic text-gray-500">
+                      {job.time}
+                    </p>
+                  </div>
+                  <p className="Position text-lg font-medium capitalize text-gray-300">
+                    {job.position}
+                  </p>
+                  <ul className="Descriptions leading-6 text-gray-400">
+                    {job.description.map((item) => (
+                      <li key={item} className="ExperienceItem mt-1">
+                        {`- ${item}`}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="ExperienceContainer">
+          {buildExperienceHeading("Education")}
+          <div className="experience-right-container">
+            {RESUME_DATA.education.map((item) => {
+              return (
+                <div key={item.school} className="job-container">
+                  <div className="TitleContainer flex flex-col items-start sm:flex-row sm:items-center sm:gap-2">
+                    <h3 className="SchoolTitle text-xl font-bold capitalize text-white">
+                      {item.school}
+                    </h3>
+                    <p className="SchoolTime text-sm italic text-gray-500">
+                      {item.time}
+                    </p>
+                  </div>
+                  <p className="SchoolPosition text-lg font-medium capitalize text-gray-300">
+                    {item.position}
+                  </p>
+                  <ul className="Descriptions leading-6 text-gray-400">
+                    {item.description.map((item) => (
+                      <li key={item} className="ExperienceItem mt-1">
+                        {`- ${item}`}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </ModalWrapper>
+  );
+}

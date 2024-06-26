@@ -1,15 +1,14 @@
 "use client";
 import React from "react";
-import { Nav } from "./ui/Nav/Nav";
-import { Header } from "@/src/app/ui/Header/Header";
-import { About } from "@/src/app/ui/About";
-import { Footer } from "@/src/app/ui/Footer";
-import SliderSection from "./ui/SliderSection";
-import ToggleScrollbarButton from "@/src/app/ui/UI-Elements/ScrollBarButton";
-import TestimonialSection from "./ui/TestimonialSection";
+import { Nav } from "./components/Nav/Nav";
+import { Header } from "@/src/app/components/Header/Header";
+import { About } from "@/src/app/components/About";
+import { Footer } from "@/src/app/components/Footer";
+import SliderSection from "./components/SliderSection";
+import ToggleScrollbarButton from "@/src/app/components/UI-Elements/ScrollBarButton";
+import TestimonialSection from "./components/TestimonialSection";
 import { FAV_TECH_DATA } from "../lib/favoriteTechData";
 import { PROJECT_DATA } from "../lib/projectData";
-import TechIcons from "./ui/UI-Elements/TechIcons";
 
 export default function Home() {
   return (

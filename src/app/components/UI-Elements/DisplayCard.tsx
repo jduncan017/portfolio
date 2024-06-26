@@ -78,7 +78,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   };
 
   return (
-    <div className="Card mx-auto flex h-full w-[88%] flex-col items-center gap-2 rounded-lg bg-gray-950 p-4 text-orange-200 shadow-customBright transition-all duration-500 xs:w-[96%] xs:bg-black/90 xs:p-3 xs:text-gray-700 xs:saturate-0 sm:hover:scale-105 sm:hover:bg-slate-950 sm:hover:text-orange-200 sm:hover:opacity-100 sm:hover:shadow-themeBright sm:hover:saturate-100 xl:p-4">
+    <div className="Card mx-auto flex h-full w-[88%] flex-col items-center gap-2 rounded-lg bg-gray-950 p-4 text-orange-200 shadow-custom transition-all duration-500 xs:w-[96%] xs:bg-black/90 xs:p-3 xs:text-gray-700 xs:saturate-0 sm:hover:scale-105 sm:hover:bg-slate-950 sm:hover:text-orange-200 sm:hover:opacity-100 sm:hover:shadow-customBright sm:hover:saturate-100 xl:p-4">
       <div className="TitleSection flex flex-col items-center">
         <h3 className="Title pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-lg xl:text-xl">
           {cardData.name}

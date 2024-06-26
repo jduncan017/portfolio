@@ -28,6 +28,4 @@ Thanks for checking out my portfolio. Let me know if you have any questions, com
 
 ## Ideas Site Improvements
 
-- **Icons for Technologies**: Instead of bullets, I want to display the technology icon.
-- **Modal for Resume**: Would be great to display the resume in a modal iframe instead of a separate site.
 - **Matrix Style Section Titles**: Creating a cool matric style text effect for the section titles.
