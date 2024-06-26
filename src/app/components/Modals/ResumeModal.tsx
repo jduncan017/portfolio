@@ -1,5 +1,4 @@
 import ModalWrapper from "./modalWrapper";
-import type { ResumeData } from "@/src/lib/dataTypes";
 import { RESUME_DATA, TECH_SKILLS } from "@/src/lib/resumeData";
 
 export default function ResumeModal() {
