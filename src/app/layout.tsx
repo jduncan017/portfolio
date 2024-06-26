@@ -19,7 +19,7 @@ export const metadata = {
   },
   openGraph: {
     images: {
-      url: "/open-graph-preview.png",
+      url: "/opengraphImages/portfolio-og.png",
       width: 1903,
       height: 997,
     },
