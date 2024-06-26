@@ -64,7 +64,7 @@ export default function SliderSection({
       className="SliderSection flex scroll-mt-20 flex-col items-center"
       id={id}
     >
-      <div className="TitleContainer mb-4 flex w-[90%] items-end gap-4">
+      <div className="TitleContainer mb-4 flex w-[90%] flex-col items-start gap-2 sm:flex-row sm:items-end sm:gap-4">
         <h1 className="Title text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
           {title}
         </h1>
@@ -74,9 +74,9 @@ export default function SliderSection({
               <DisplayListModal cardArray={cardArray} dataType={dataType} />,
             )
           }
-          className="ShowAllButton text-xl italic text-gray-400 transition-all duration-500 hover:scale-105 hover:text-themePurple"
+          className="ShowAllButton text-lg italic text-gray-400 transition-all duration-500 hover:scale-105 hover:text-themePurple md:text-xl"
         >
-          Show All
+          View All
         </button>
       </div>
       <BackgroundGradient containerClassName="CarouselTrack w-[105%] rounded-xl p-1">

@@ -100,7 +100,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
             );
           })}
       </div>
-      <p className="Description pointer-events-none h-16 w-full text-center font-sans text-lg capitalize leading-5 text-gray-300 xs:h-20 sm:text-base xl:h-20">
+      <p className="Description pointer-events-none h-16 w-full text-center font-sans text-sm capitalize text-gray-300 mini:text-base mini:leading-5 xs:h-20 sm:text-base xl:h-20">
         {cardData.shortDescription}
       </p>
       {cardButton}
