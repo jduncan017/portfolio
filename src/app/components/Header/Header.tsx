@@ -14,9 +14,6 @@ export const Header = () => {
     };
 
     updateHeight(); // Set initial height
-    window.addEventListener("resize", updateHeight); // Update height on resize
-
-    return () => window.removeEventListener("resize", updateHeight); // Cleanup
   }, []);
 
   const performSmoothScroll = () => {
@@ -24,7 +21,7 @@ export const Header = () => {
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" });
     } else {
-      console.error("About section does not exist!");
+      console.error("Section does not exist!");
     }
   };
 
