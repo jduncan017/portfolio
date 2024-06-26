@@ -5,7 +5,6 @@ import "react-multi-carousel/lib/styles.css";
 import { BackgroundGradient } from "./UI-Libraries/background-gradient";
 import DisplayCard from "./UI-Elements/DisplayCard";
 import { CardData } from "@/src/lib/dataTypes";
-import MatrixShuffle from "./UI-Elements/MatrixReveal";
 
 type SliderSectionProps = {
   cardArray: CardData[];
