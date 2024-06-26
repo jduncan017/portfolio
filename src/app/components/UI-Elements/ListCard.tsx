@@ -27,13 +27,13 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
       return (
         <ImageLoadingWrapper
           cardData={cardData}
-          className="Image h-auto w-full rounded-md object-cover md:h-[110px] md:w-[210px] md:rounded-sm"
+          className="Image mt-2 h-auto w-full rounded-md object-cover md:h-[110px] md:w-[210px] md:rounded-sm"
         />
       );
     } else {
       return (
         <Image
-          className="cardDataImage rounded-md bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover md:h-[110px] md:w-[210px] md:rounded-sm"
+          className="cardDataImage mt-2 rounded-md bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover md:h-[110px] md:w-[210px] md:rounded-sm"
           src={cardData.imagePath}
           alt="Screenshot of cardData"
           width={456}
@@ -49,9 +49,11 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
         <h3 className="Title text-center text-lg font-semibold uppercase tracking-wider xs:text-2xl md:text-xl">
           {cardData.name}
         </h3>
-        <p className="LastUpdated mb-2 w-full text-center text-sm italic text-gray-400 md:text-start">
-          {`Last updated: ${cardData.lastUpdated}`}
-        </p>
+        {cardData.lastUpdated && (
+          <p className="LastUpdated w-full text-center text-sm italic text-gray-400 md:text-start">
+            {`Last updated: ${cardData.lastUpdated}`}
+          </p>
+        )}
         {cardImage()}
         <SiteButton
           size="small"

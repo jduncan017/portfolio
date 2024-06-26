@@ -60,13 +60,13 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
       return (
         <ImageLoadingWrapper
           cardData={cardData}
-          className="Image pointer-events-none aspect-video w-full rounded-sm"
+          className="Image pointer-events-none mt-2 aspect-video w-full rounded-sm"
         />
       );
     } else {
       return (
         <Image
-          className="cardDataImage pointer-events-none aspect-video w-full rounded-sm bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover"
+          className="cardDataImage pointer-events-none mt-2 aspect-video w-full rounded-sm bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover"
           src={cardData.imagePath}
           alt="Screenshot of cardData"
           width={456}
@@ -82,9 +82,11 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
         <h3 className="Title pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-lg xl:text-xl">
           {cardData.name}
         </h3>
-        <p className="LastUpdated mb-2 text-xs italic text-gray-400">
-          {`Last updated: ${cardData.lastUpdated}`}
-        </p>
+        {cardData.lastUpdated && (
+          <p className="LastUpdated text-xs italic text-gray-400">
+            {`Last updated: ${cardData.lastUpdated}`}
+          </p>
+        )}
       </div>
       {cardImage()}
       <div className="TagsContainer mb-2 flex w-full flex-wrap gap-2">
