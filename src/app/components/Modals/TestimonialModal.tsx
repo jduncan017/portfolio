@@ -12,7 +12,7 @@ interface TestimonialArray {
 export default function TestimonialModal({ testimonial }: TestimonialArray) {
   const { hideModal } = useModal();
   return (
-    <ModalWrapper>
+    <ModalWrapper title="Testimonial">
       <div className="TestomonialModal flex flex-col gap-5 overflow-hidden py-2 md:px-6">
         <div className="TitleSection flex items-center gap-4">
           <Image

@@ -9,11 +9,11 @@ type DisplayListProps = {
 
 export default function DisplayList({ cardArray, dataType }: DisplayListProps) {
   return (
-    <ModalWrapper>
+    <ModalWrapper title={dataType}>
       <div className="CardWrapper flex flex-col gap-6">
-        <h3 className="Title mx-auto w-[96%] text-start text-3xl font-semibold uppercase tracking-widest text-white md:w-[92%] md:text-4xl">
+        {/* <h3 className="Title mx-auto w-[96%] text-start text-3xl font-semibold uppercase tracking-widest text-white md:w-[92%] md:text-4xl">
           {dataType}
-        </h3>
+        </h3> */}
         {cardArray.map((cardData: CardData) => (
           <ListCard
             key={cardData.name}

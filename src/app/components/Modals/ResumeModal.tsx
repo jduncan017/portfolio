@@ -15,10 +15,13 @@ export default function ResumeModal() {
   };
 
   return (
-    <ModalWrapper>
+    <ModalWrapper title="Resume">
       <div className="OuterContainer max-w-[800px] items-start py-4 text-start text-white sm:px-10">
-        <h2 className="Resume mb-6 text-center text-4xl font-bold uppercase">
-          Resume
+        <h2 className="Resume mb-1 text-start text-4xl font-bold uppercase">
+          Joshua Duncan
+        </h2>
+        <h2 className="Resume mb-6 text-start text-2xl font-bold uppercase text-gray-400">
+          Software Engineer
         </h2>
         <div className="TechExperience">
           {buildExperienceHeading("Tech Experience")}
