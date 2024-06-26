@@ -3,6 +3,7 @@ import React from "react";
 import "./Header.css";
 import SocialContainer from "../UI-Elements/SocialContainer";
 import { ParticlesAnimation } from "../UI-Libraries/ParticlesAnimation/ParticlesAnimation";
+import Image from "next/image";
 
 export const Header = () => {
   const performSmoothScroll = () => {
@@ -17,7 +18,7 @@ export const Header = () => {
 
   return (
     <section
-      className="_header-container relative h-lvh max-h-[1200px]"
+      className="_header-container relative h-[100vh] max-h-[1200px]"
       id="header-section"
     >
       <div className="_particles-background pb-25 absolute z-[-10] h-svh w-full text-center">
@@ -48,12 +49,16 @@ export const Header = () => {
           >
             (Scroll Down)
           </h3>
-          <button
+          <Image
+            width={40}
+            height={40}
+            src={"/down-arrow.png"}
+            alt="scroll down"
             aria-label="scroll down"
             onClick={performSmoothScroll}
-            className="_down-arrow global__hover-animation relative mt-4 h-10 w-10 border-none"
+            className="_down-arrow global__hover-animation relative mt-4 h-10 w-10 border-none delay-300"
             id="nav-trigger"
-          ></button>
+          ></Image>
         </div>
       </div>
     </section>

@@ -19,9 +19,6 @@ module.exports = {
       sxl: "1480px",
     },
     extend: {
-      shadow: {
-        themeShadow: "",
-      },
       transitionProperty: {
         filter: "filter",
       },

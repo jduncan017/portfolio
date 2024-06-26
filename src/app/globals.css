@@ -86,3 +86,19 @@ body {
 .global__no-scroll {
   overflow: hidden;
 }
+
+/* for sliderSection buttons */
+.react-multiple-carousel__arrow {
+  background-color: #8f8eff !important;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 12px !important;
+  height: 48px;
+  width: 48px;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background-color: #000 !important;
+  filter: invert();
+  scale: 105%;
+  box-shadow: none;
+}

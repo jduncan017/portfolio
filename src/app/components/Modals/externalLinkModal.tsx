@@ -18,7 +18,7 @@ export default function ExternalLinkModal({ cardData }: LinkModalProps) {
           Note:
         </h3>
         <p className="Description text-xl text-gray-300">
-          {`This will take you to ${cardData.name}'s website.`}
+          {`This will take you to the ${cardData.name} website.`}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
           <SiteButton

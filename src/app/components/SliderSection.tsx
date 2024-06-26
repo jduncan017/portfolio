@@ -4,13 +4,15 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { BackgroundGradient } from "./UI-Libraries/background-gradient";
 import DisplayCard from "./UI-Elements/DisplayCard";
+import DisplayListModal from "@/src/app/components/Modals/DisplayListModal";
 import { CardData } from "@/src/lib/dataTypes";
+import { useModal } from "@/src/contexts/ModalContext";
 
 type SliderSectionProps = {
   cardArray: CardData[];
   id: string;
   title: string;
-  dataType: "project" | "technology";
+  dataType: "projects" | "technologies";
 };
 
 const responsive = {
@@ -39,6 +41,7 @@ export default function SliderSection({
   dataType,
 }: SliderSectionProps) {
   const [centerMode, setCenterMode] = useState(false);
+  const { showModal } = useModal();
 
   useEffect(() => {
     // set initial state
@@ -61,9 +64,21 @@ export default function SliderSection({
       className="SliderSection flex scroll-mt-20 flex-col items-center"
       id={id}
     >
-      <h1 className="Header mb-4 w-[90%] border-solid text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
-        {title}
-      </h1>
+      <div className="TitleContainer mb-4 flex w-[90%] items-end gap-4">
+        <h1 className="Title text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
+          {title}
+        </h1>
+        <button
+          onClick={() =>
+            showModal(
+              <DisplayListModal cardArray={cardArray} dataType={dataType} />,
+            )
+          }
+          className="ShowAllButton text-xl italic text-gray-400 transition-all duration-500 hover:scale-105 hover:text-themePurple"
+        >
+          Show All
+        </button>
+      </div>
       <BackgroundGradient containerClassName="CarouselTrack w-[105%] rounded-xl p-1">
         <Carousel
           responsive={responsive}

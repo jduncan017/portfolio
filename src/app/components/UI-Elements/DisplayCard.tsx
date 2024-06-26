@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { CardData } from "@/src/lib/dataTypes";
 import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
@@ -10,7 +9,7 @@ import ExternalLinkModal from "../Modals/externalLinkModal";
 
 type DisplayCardProps = {
   cardData: CardData;
-  dataType: "project" | "technology";
+  dataType: "projects" | "technologies";
 };
 
 export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
@@ -26,7 +25,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   };
 
   switch (dataType) {
-    case "project":
+    case "projects":
       cardButton = (
         <SiteButton
           size="small"
@@ -40,7 +39,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
         </SiteButton>
       );
       break;
-    case "technology":
+    case "technologies":
       cardButton = (
         <SiteButton
           size="small"

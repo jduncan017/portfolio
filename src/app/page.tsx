@@ -21,14 +21,14 @@ export default function Home() {
           cardArray={PROJECT_DATA}
           id="projects-section"
           title="My Projects"
-          dataType="project"
+          dataType="projects"
         />
         <TestimonialSection />
         <SliderSection
           cardArray={FAV_TECH_DATA}
           id="technologies-section"
           title="Favorite Technologies"
-          dataType="technology"
+          dataType="technologies"
         />
       </div>
       <Footer />

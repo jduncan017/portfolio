@@ -22,12 +22,12 @@ export default function ContactCard({ titlePosition }: ContactCardProps) {
       </div>
       <div
         onClick={() => showModal(<ContactModal />)}
-        className="ContactContainer w-[300px] cursor-pointer rounded-sm border-4 border-double border-stone-500 bg-stone-200 px-6 py-4 text-stone-700 transition-all duration-500 hover:scale-105 xs:w-[340px]"
+        className="ContactContainer w-[270px] cursor-pointer rounded-sm border-4 border-double border-stone-500 bg-stone-200 px-3 py-2 text-stone-700 transition-all duration-500 hover:scale-105 mini:w-[300px] mini:px-6 mini:py-4 xs:w-[340px]"
       >
         <h2 className="Name font-serif text-xl uppercase leading-relaxed tracking-wide sm:text-2xl">
           Joshua Duncan
         </h2>
-        <p className="Title mb-12 font-serif text-xs uppercase opacity-60">
+        <p className="Title mb-6 font-serif text-xs uppercase opacity-60 mini:mb-12">
           Software Engineer / Web Developer
         </p>
         <div className="InfoContainer flex gap-2">
