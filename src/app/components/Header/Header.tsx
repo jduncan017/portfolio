@@ -1,21 +1,11 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./Header.css";
 import SocialContainer from "../UI-Elements/SocialContainer";
 import { ParticlesAnimation } from "../UI-Libraries/ParticlesAnimation/ParticlesAnimation";
 import Image from "next/image";
 
 export const Header = () => {
-  const [sectionHeight, setSectionHeight] = useState(0);
-
-  useEffect(() => {
-    const updateHeight = () => {
-      setSectionHeight(window.innerHeight);
-    };
-
-    updateHeight(); // Set initial height
-  }, []);
-
   const performSmoothScroll = () => {
     const aboutSection = document.querySelector("#about-section");
     if (aboutSection) {
@@ -27,8 +17,7 @@ export const Header = () => {
 
   return (
     <section
-      style={{ height: `${sectionHeight}px`, maxHeight: "1200px" }}
-      className="HeaderContainer relative"
+      className="HeaderContainer relative h-svh max-h-[1200px]"
       id="header-section"
     >
       <div className="_particles-background pb-25 absolute z-[-10] h-svh w-full text-center">
