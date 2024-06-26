@@ -29,3 +29,6 @@ Thanks for checking out my portfolio. Let me know if you have any questions, com
 ## Ideas Site Improvements
 
 - **Matrix Style Section Titles**: Creating a cool matric style text effect for the section titles.
+- **Minigam**: Been pondering adding a minigame to the site.
+- **Articles**: A section for displaying Medium articles I've written.
+- **Github Live Updates**: Incorporating github API for live info.

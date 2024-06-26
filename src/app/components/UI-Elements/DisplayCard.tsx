@@ -31,7 +31,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           size="small"
           aria={`View Project`}
           addClasses="tracking-widest font-medium sm:text-sm uppercase"
-          textColor="text-gray-300"
+          textColor="text-gray-300 m-2"
           onSubmit={() => showModal(<ProjectModal cardData={cardData} />)}
           style="orange"
         >
@@ -45,7 +45,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           size="small"
           aria={`View`}
           addClasses="tracking-widest font-medium sm:text-sm uppercase"
-          textColor="text-gray-300"
+          textColor="text-gray-300 mb-2"
           style="orange"
           onSubmit={() => showModal(<ExternalLinkModal cardData={cardData} />)}
         >

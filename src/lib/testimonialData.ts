@@ -43,7 +43,7 @@ export const TESTIMONIAL_DATA: TestimonialData[] = [
   },
   {
     name: "Nicholas Pasquarella",
-    imagePath: "/testimonialPhotos/nick-p.jpg",
+    imagePath: "/testimonialPhotos/nick.jpg",
     shortDescription: `"He adeptly guides you through design, functionality, business insights, and associated costs. 
     What sets him apart is his honesty; he welcomes all ideas while offering insightful explanations for alternative approaches."`,
     fullReview: `"After experiencing the quality, seamlessness, and professionalism of working with Josh, my business partner and I are 
