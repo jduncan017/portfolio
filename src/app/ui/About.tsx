@@ -59,7 +59,7 @@ export const About = () => {
               className="pl-0 text-white"
             />
           </h2>
-          <div className="BioDescription mb-8 max-w-[350px] pr-4 font-sans text-lg xs:max-w-[600px]">
+          <div className="BioDescription mb-8 max-w-[350px] pr-4 font-sans xs:max-w-[600px] sm:text-lg">
             {printBio()}
           </div>
           <ContactCard titlePosition="justify-start" />
