@@ -1,5 +1,4 @@
-"use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { BackgroundGradient } from "./UI-Libraries/background-gradient";
@@ -41,23 +40,48 @@ export default function SliderSection({
   dataType,
 }: SliderSectionProps) {
   const [centerMode, setCenterMode] = useState(false);
+  const [autoPlay, setAutoPlay] = useState(true);
   const { showModal } = useModal();
 
+  // sets center mode based on screen width
   useEffect(() => {
-    // set initial state
     setCenterMode(window.innerWidth > 550);
-
     const handleResize = () => {
       setCenterMode(window.innerWidth > 550);
     };
-
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  //sets delay for autoplay after user interaction
+  const handleUserInteraction = useCallback(() => {
+    if (autoPlay) {
+      setAutoPlay(false);
+      setTimeout(() => setAutoPlay(true), 8000);
+    }
+  }, [autoPlay]);
+
+  //listener for user interaction
+  useEffect(() => {
+    const carouselElement = document.querySelector(
+      `#${id} .react-multi-carousel-list`,
+    );
+    if (carouselElement) {
+      carouselElement.addEventListener("mousedown", handleUserInteraction);
+      carouselElement.addEventListener("touchstart", handleUserInteraction);
+    }
+    return () => {
+      if (carouselElement) {
+        carouselElement.removeEventListener("mousedown", handleUserInteraction);
+        carouselElement.removeEventListener(
+          "touchstart",
+          handleUserInteraction,
+        );
+      }
+    };
+  }, [id, handleUserInteraction]);
 
   return (
     <section
@@ -85,9 +109,9 @@ export default function SliderSection({
           swipeable={true}
           draggable={true}
           showDots={false}
-          ssr={true} // means to render carousel on server-side.
+          ssr={true}
           infinite={true}
-          autoPlay={true}
+          autoPlay={autoPlay}
           keyBoardControl={true}
           customTransition="transform 500ms ease"
           transitionDuration={500}
