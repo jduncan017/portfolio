@@ -121,7 +121,7 @@ export default function DisplayCard({
                 showModal(
                   <ExternalLinkModal
                     name={cardData.name}
-                    link={cardData.liveLink}
+                    link={repoURL}
                     linkType="repository"
                     currentModal={
                       <DisplayListModal
