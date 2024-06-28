@@ -3,16 +3,14 @@ import type { TestimonialData } from "@/src/lib/dataTypes";
 import { useModal } from "@/src/contexts/ModalContext";
 import ModalWrapper from "./modalWrapper";
 import parse from "html-react-parser";
-import SiteButton from "../UI-Elements/SiteButton";
 
 interface TestimonialArray {
   testimonial: TestimonialData;
 }
 
 export default function TestimonialModal({ testimonial }: TestimonialArray) {
-  const { hideModal } = useModal();
   return (
-    <ModalWrapper title="Testimonial">
+    <ModalWrapper title="Testimonial" closeButton>
       <div className="TestomonialModal flex flex-col gap-5 overflow-hidden py-2 md:px-6">
         <div className="TitleSection flex items-center gap-4">
           <Image
@@ -40,16 +38,6 @@ export default function TestimonialModal({ testimonial }: TestimonialArray) {
           <p className="Description w-full max-w-[700px] rounded-md border border-gray-900 bg-gray-800 p-4 text-start font-sans leading-6 text-gray-200">
             {parse(testimonial.fullReview)}
           </p>
-        </div>
-        <div className="ButtonContainer mx-auto flex h-fit w-fit gap-4">
-          <SiteButton
-            onClick={() => hideModal()}
-            aria="close modal"
-            textColor="text-gray-200"
-            style="teal"
-          >
-            Close
-          </SiteButton>
         </div>
       </div>
     </ModalWrapper>

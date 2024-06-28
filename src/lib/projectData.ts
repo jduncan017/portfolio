@@ -4,7 +4,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Happy Hour Hunt",
     lastUpdated: "6/17/24",
-    techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3",
+    techsUsed: ["Next.js", "TypeScript", "HTML5", "CSS3"],
     shortDescription:
       "Happy hour locator. This beta site currently works only for Denver, CO.",
     description:
@@ -17,8 +17,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "LifeGuide Healing",
     lastUpdated: "6/14/24",
-    techsUsed:
-      "Next.js 14, React, TypeScript, HTML5, CSS3, Prisma, SqLite, tRPC",
+    techsUsed: ["Next.js", "TypeScript", "HTML5", "CSS3"],
     shortDescription:
       "Holistic healing website for a client in Oklahoma. Under construction.",
     description:
@@ -32,7 +31,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Cifernoise",
     lastUpdated: "6/20/24",
-    techsUsed: "Duda, EmbedSocial",
+    techsUsed: ["Duda", "EmbedSocial"],
     shortDescription:
       "Website for a popular silent disco company in Denver, CO.",
     description:
@@ -45,7 +44,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Ryan Insurance",
     lastUpdated: "6/05/24",
-    techsUsed: "Framer, Figma, Formspark",
+    techsUsed: ["Framer", "Figma", "Formspark"],
     shortDescription:
       "Website for an insurance company that sells life, disability, and long-term care insurances.",
     description:
@@ -58,7 +57,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Tailwind Plugin",
     lastUpdated: "5/8/24",
-    techsUsed: "TypeScript",
+    techsUsed: ["TypeScript"],
     shortDescription:
       "VS Code plugin that hides excess tailwind code and allows for naming classes.",
     description:
@@ -73,7 +72,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "John Gerard",
     lastUpdated: "6/15/24",
-    techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, Nodemailer",
+    techsUsed: ["Next.js", "TypeScript", "HTML5", "CSS3", "Nodemailer"],
     shortDescription: "A website for a woodworking company from Rochester, NY.",
     description:
       "A web design project I did for a client. Site was designed, developed, and deployed fully by myself. The site features modals that display dynamic item content and a contact page with a functioning email API. User experience is enhanced via keyboard listeners, mobile touch capabilities, accessibility features, and informative tooltips. Future plans to integrate an admin endpoint for content management and database enhancement.",
@@ -86,7 +85,14 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Developer Portfolio",
     lastUpdated: "6/21/24",
-    techsUsed: "Next.js 14, React, TypeScript, HTML5, CSS3, tsParticles",
+    techsUsed: [
+      "Next.js",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "tsParticles",
+      "Ascernity UI",
+    ],
     shortDescription:
       "This portfolio page that you're currently on. An ever evolving page of my work.",
     description:

@@ -102,7 +102,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           cardData.tags.sort().map((tag: string): ReactNode => {
             return (
               <div
-                className="Tag pointer-events-none flex-grow rounded-sm bg-gray-700 bg-opacity-70 p-1.5 text-center text-gray-400 xs:text-sm"
+                className="Tag pointer-events-none flex-grow rounded-sm bg-gray-600/50 bg-opacity-70 p-2 text-center text-gray-300 xs:text-sm"
                 key={tag}
               >
                 {tag}

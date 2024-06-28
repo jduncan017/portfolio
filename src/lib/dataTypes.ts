@@ -1,7 +1,7 @@
 export type CardData = {
   name: string;
   lastUpdated?: string;
-  techsUsed?: string;
+  techsUsed?: string[];
   shortDescription: string;
   description: string;
   liveButtonText: string;

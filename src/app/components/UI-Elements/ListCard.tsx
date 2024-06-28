@@ -71,21 +71,21 @@ export default function DisplayCard({
           </p>
         </div>
       </div>
-      <div className="BottomContainer flex h-fit w-full flex-col items-center justify-between gap-2 md:flex-row">
-        <div className="TagContainer flex w-fit items-start justify-start gap-2">
-          {cardData.tags &&
-            cardData.tags.sort().map((tag: string): ReactNode => {
+      <div className="BottomContainer flex h-fit w-full flex-col items-start justify-between gap-2 md:flex-row">
+        <div className="TechContainer flex w-fit flex-wrap items-start justify-start gap-2">
+          {cardData.techsUsed &&
+            cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="Tag h-fit w-fit rounded-sm bg-gray-700 bg-opacity-90 p-1.5 text-center text-gray-400"
-                  key={tag}
+                  className="Technology h-fit w-fit rounded-sm bg-gray-600/50 bg-opacity-90 p-1.5 text-center text-gray-300"
+                  key={tech}
                 >
-                  {tag}
+                  {tech}
                 </div>
               );
             })}
         </div>
-        <div className="ButtonContainer flex h-full w-full flex-col items-center sm:flex-row sm:gap-2 md:w-fit">
+        <div className="ButtonContainer flex h-full w-full min-w-fit flex-col items-center text-nowrap sm:flex-row sm:gap-2 md:w-fit">
           <SiteButton
             size="small"
             addClasses="tracking-widest mt-3 md:mt-0 uppercase w-full md:w-auto"
@@ -112,8 +112,8 @@ export default function DisplayCard({
           </SiteButton>
           {repoURL && (
             <SiteButton
-              aria={`github repo for ${repoURL}`}
               size="small"
+              aria={`github repo for ${repoURL}`}
               addClasses="tracking-widest uppercase mt-3 md:mt-0 w-full md:w-auto"
               textColor="text-gray-300"
               style="teal"

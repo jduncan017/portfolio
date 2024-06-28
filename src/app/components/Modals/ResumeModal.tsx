@@ -19,8 +19,8 @@ export default function ResumeModal() {
   };
 
   return (
-    <ModalWrapper title="Resume">
-      <div className="OuterContainer max-w-[800px] items-start py-4 text-start text-white sm:px-10">
+    <ModalWrapper title="Resume" closeButton>
+      <div className="OuterContainer max-w-[800px] items-start py-4 text-start text-white sm:px-4">
         <h2 className="Resume mb-1 text-start text-4xl font-bold uppercase">
           Joshua Duncan
         </h2>
@@ -76,10 +76,10 @@ export default function ResumeModal() {
         </div>
         <div className="ExperienceContainer">
           {buildExperienceHeading("Education")}
-          <div className="experience-right-container">
+          <div className="EducationContainer flex flex-col gap-4">
             {RESUME_DATA.education.map((item) => {
               return (
-                <div key={item.school} className="job-container">
+                <div key={item.school} className="JobContainer">
                   <div className="TitleContainer flex flex-col items-start sm:flex-row sm:items-center sm:gap-2">
                     <h3 className="SchoolTitle text-xl font-bold capitalize text-white">
                       {item.school}
@@ -103,15 +103,6 @@ export default function ResumeModal() {
             })}
           </div>
         </div>
-        <SiteButton
-          onClick={() => hideModal()}
-          aria="close modal"
-          textColor="text-gray-200"
-          style="teal"
-          addClasses="mt-8"
-        >
-          Close
-        </SiteButton>
       </div>
     </ModalWrapper>
   );
