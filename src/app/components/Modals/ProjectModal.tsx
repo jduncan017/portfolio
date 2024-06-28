@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { CardData } from "@/src/lib/dataTypes";
 import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
@@ -75,22 +74,25 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
           {cardData.description}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
-          <Link
-            href={cardData.liveLink}
-            rel="noopener noreferrer"
+          <SiteButton
+            size="large"
             aria-label={`Visit ${cardData.name}`}
-            target="_blank"
-            className="ImageLink mt-4 w-full"
+            addClasses="tracking-widest uppercase w-full mt-4"
+            textColor="text-gray-300"
+            style="teal"
+            onClick={() =>
+              showModal(
+                <ExternalLinkModal
+                  name={cardData.name}
+                  link={cardData.liveLink}
+                  linkType="website"
+                  currentModal={<ProjectModal cardData={cardData} />}
+                />,
+              )
+            }
           >
-            <SiteButton
-              size="large"
-              addClasses="tracking-widest uppercase w-full"
-              textColor="text-gray-300"
-              style="teal"
-            >
-              {cardData.liveButtonText}
-            </SiteButton>
-          </Link>
+            {cardData.liveButtonText}
+          </SiteButton>
           {repoURL && (
             <SiteButton
               aria={`github repo for ${repoURL}`}
@@ -100,7 +102,12 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
               style="teal"
               onClick={() =>
                 showModal(
-                  <ExternalLinkModal name={cardData.name} link={repoURL} />,
+                  <ExternalLinkModal
+                    name={cardData.name}
+                    link={repoURL}
+                    linkType="repository"
+                    currentModal={<ProjectModal cardData={cardData} />}
+                  />,
                 )
               }
             >

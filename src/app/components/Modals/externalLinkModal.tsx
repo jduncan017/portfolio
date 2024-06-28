@@ -2,14 +2,30 @@ import ModalWrapper from "./modalWrapper";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "../../../contexts/ModalContext";
 import Link from "next/link";
+import type { ReactNode } from "react";
 
 type LinkModalProps = {
   name: string;
   link: string;
+  currentModal?: ReactNode;
+  linkType: "repository" | "website";
 };
 
-export default function ExternalLinkModal({ name, link }: LinkModalProps) {
-  const { hideModal } = useModal();
+export default function ExternalLinkModal({
+  name,
+  link,
+  currentModal,
+  linkType,
+}: LinkModalProps) {
+  const { hideModal, showModal } = useModal();
+
+  const handleModal = () => {
+    if (currentModal) {
+      showModal(currentModal);
+    } else {
+      hideModal();
+    }
+  };
 
   return (
     <ModalWrapper>
@@ -18,11 +34,11 @@ export default function ExternalLinkModal({ name, link }: LinkModalProps) {
           Note:
         </h3>
         <p className="Description text-xl text-gray-300">
-          {`This will take you to the ${name} website.`}
+          {`This will take you to the ${name} ${linkType}.`}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
           <SiteButton
-            onClick={() => hideModal()}
+            onClick={() => handleModal()}
             aria="go back"
             addClasses="mt-4"
             textColor="text-gray-200"
@@ -37,7 +53,7 @@ export default function ExternalLinkModal({ name, link }: LinkModalProps) {
             target="_blank"
           >
             <SiteButton
-              onClick={() => hideModal()}
+              onClick={() => handleModal()}
               addClasses="mt-4"
               textColor="text-gray-200"
               style="teal"

@@ -52,6 +52,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
               <ExternalLinkModal
                 name={cardData.name}
                 link={cardData.liveLink}
+                linkType="repository"
               />,
             )
           }

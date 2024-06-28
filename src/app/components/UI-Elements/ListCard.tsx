@@ -5,13 +5,19 @@ import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "./SiteButton";
 import { useModal } from "@/src/contexts/ModalContext";
 import ExternalLinkModal from "../Modals/externalLinkModal";
+import DisplayListModal from "../Modals/DisplayListModal";
 
 type DisplayCardProps = {
   cardData: CardData;
+  cardArray: CardData[];
   dataType: "projects" | "technologies";
 };
 
-export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
+export default function DisplayCard({
+  cardData,
+  dataType,
+  cardArray,
+}: DisplayCardProps) {
   const { showModal } = useModal();
   // this had to be defined distinctly because TS wasn't picking up typesafety for the button
   const repoURL = cardData.repoURL;
@@ -91,6 +97,13 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
                 <ExternalLinkModal
                   name={cardData.name}
                   link={cardData.liveLink}
+                  linkType="website"
+                  currentModal={
+                    <DisplayListModal
+                      cardArray={cardArray}
+                      dataType={dataType}
+                    />
+                  }
                 />,
               )
             }
@@ -106,7 +119,17 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
               style="teal"
               onClick={() =>
                 showModal(
-                  <ExternalLinkModal name={cardData.name} link={repoURL} />,
+                  <ExternalLinkModal
+                    name={cardData.name}
+                    link={cardData.liveLink}
+                    linkType="repository"
+                    currentModal={
+                      <DisplayListModal
+                        cardArray={cardArray}
+                        dataType={dataType}
+                      />
+                    }
+                  />,
                 )
               }
             >

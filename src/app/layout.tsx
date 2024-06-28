@@ -39,11 +39,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ModalProvider>
-        <body className="no-scrollbar touch-pan-y overflow-x-hidden bg-black">
-          {children}
-        </body>
-      </ModalProvider>
+      <body className="no-scrollbar touch-pan-y overflow-x-hidden bg-black">
+        <ModalProvider>{children}</ModalProvider>
+      </body>
     </html>
   );
 }

@@ -20,6 +20,7 @@ export default function DisplayList({ cardArray, dataType }: DisplayListProps) {
               key={cardData.name}
               cardData={cardData}
               dataType={dataType}
+              cardArray={cardArray}
             />
           ))}
         </div>
