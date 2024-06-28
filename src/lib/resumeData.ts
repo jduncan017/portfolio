@@ -37,7 +37,7 @@ export const RESUME_DATA: ResumeData = {
   jobs: [
     {
       name: "WebSavvy Designs",
-      position: "Brand Strategist, Designer, & Web Developer",
+      position: "Web Developer, Designer, & Brand Strategist",
       time: "Remote | November 2023 - Current",
       description: [
         "Design and implement responsive, high-performance websites for clients using modern tech stacks including TypeScript, Next.js, and React, emphasizing user experience and SEO performance.",
@@ -48,29 +48,18 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       name: "Slopopedia",
-      position: "Full Stack React Engineer",
+      position: "Full Stack React Engineer (Freelance)",
       time: "Remote | January 2024 - April 2024",
       description: [
-        "Consistently hit 200% of my KPI targets, showcasing my ability to exceed goals and manage priorities.",
-        "Designed and executed marketing campaigns that led to a 60% increase in product sales across my accounts in the first year, which was triple that of my 20% target metric.",
-        "Collaborated with the local team to achieve a 150% increase in sales in the Colorado market within the first year, highlighting strong teamwork and communication skills.",
-        "Surpassed all sales and engagement targets while managing and staying under budget.",
-      ],
-    },
-    {
-      name: "Team Enterprises",
-      position: "Brand Ambassador (Santa Teresa Rum)",
-      time: "Denver, CO | September 2022 - January 2023",
-      description: [
-        "Consistently hit 300% of my KPI targets, showcasing my ability to exceed goals and manage priorities.",
-        "Designed and executed marketing campaigns that led to a 60% increase in product sales across my accounts in the first year, which was triple that of my 20% target metric.",
-        "Collaborated with the local team to achieve a 150% increase in sales in the Colorado market within the first year, highlighting strong teamwork and communication skills.",
-        "Surpassed all sales and engagement targets while managing and staying under budget.",
+        "Built and implemented full-stack CRUD functionality, allowing for user content management.",
+        "Designed database models and managed seamless data flow with GraphQL",
+        "Utilized Jira for agile project management, noting areas for improvement and resolving issues.",
+        "Conducted frequent code reviews, providing constructive feedback and suggesting improvements to enhance code quality and maintainability.",
       ],
     },
     {
       name: "Adrift Tiki Bar",
-      position: "General Manager | Beverage Director",
+      position: "General Manager",
       time: "Denver, CO | January 2017 - April 2022",
       description: [
         "Transformed a restaurant into a profitable, nationally recognized cocktail bar, doubling sales from $550k to $1.2M over my 5-year tenure.",

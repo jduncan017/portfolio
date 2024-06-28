@@ -8,7 +8,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   aria?: string;
   textColor: string;
-  style: "orange" | "teal";
+  style: "orange" | "teal" | "tealHollow";
   children: React.ReactNode;
 }
 
@@ -44,7 +44,11 @@ const SiteButton = ({
       break;
     case "teal":
       buttonStyle =
-        "border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black";
+        "border-none bg-darkTeal/90 hover:bg-white hover:text-black";
+      break;
+    case "tealHollow":
+      buttonStyle =
+        "border-darkTeal/90 border hover:bg-white hover:border-white hover:text-black";
       break;
     default:
       buttonStyle = "";

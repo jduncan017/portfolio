@@ -63,10 +63,10 @@ export const PROJECT_DATA: CardData[] = [
       "VS Code plugin that hides excess tailwind code and allows for naming classes.",
     description:
       "VsCode plugin that I modified for a better tailwind experience. Hides all tailwind classes except for the first word in the class or className prop. This allows for naming tailwind classes which keeps code clean and makes it easy to sort through HTML elements. Checkout the linkedIn article if your looking for more info.",
-    liveButtonText: "Read Article",
+    liveButtonText: "View Plugin",
     repoURL: "https://github.com/jduncan017/tailwind-fold-with-class-names",
     liveLink:
-      "https://www.linkedin.com/pulse/how-i-fixed-messy-tailwind-css-simple-inline-fold-hack-joshua-duncan-bbq7e/",
+      "https://marketplace.visualstudio.com/items?itemName=jduncan017.tailwind-fold-with-class-names",
     imagePath: "/opengraphImages/tailwind-og.png",
     tags: ["Typescript", "VS Code Plugin"],
   },

@@ -29,23 +29,14 @@ export default function ExternalLinkModal({
 
   return (
     <ModalWrapper>
-      <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl p-5 px-8 py-3 text-center font-serif">
-        <h3 className="Header text-2xl font-medium uppercase text-darkTeal">
+      <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl px-8 pb-5 text-center font-serif">
+        <h3 className="Header font-sans text-2xl font-extrabold uppercase text-darkTeal">
           Note:
         </h3>
-        <p className="Description text-xl text-gray-300">
+        <p className="Description font-sans text-xl text-gray-300">
           {`This will take you to the ${name} ${linkType}.`}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
-          <SiteButton
-            onClick={() => handleModal()}
-            aria="go back"
-            addClasses="mt-4"
-            textColor="text-gray-200"
-            style="teal"
-          >
-            Nevermind
-          </SiteButton>
           <Link
             href={link}
             rel="noopener noreferrer"
@@ -55,12 +46,21 @@ export default function ExternalLinkModal({
             <SiteButton
               onClick={() => handleModal()}
               addClasses="mt-4"
-              textColor="text-gray-200"
-              style="teal"
+              textColor="text-gray-200 uppercase"
+              style="tealHollow"
             >
               {`Let's Go!`}
             </SiteButton>
           </Link>
+          <SiteButton
+            onClick={() => handleModal()}
+            aria="go back"
+            addClasses="mt-4"
+            textColor="text-gray-200 uppercase"
+            style="teal"
+          >
+            Go Back
+          </SiteButton>
         </div>
       </div>
     </ModalWrapper>

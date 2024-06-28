@@ -50,7 +50,7 @@ export default function ContactModal() {
   return (
     <ModalWrapper>
       <div className="contactModal">
-        <div className="formWrapper relative flex max-h-[100dvh] w-full max-w-[500px] flex-col px-2 py-4 font-sans xs:px-8">
+        <div className="formWrapper relative flex max-h-[100dvh] w-full max-w-[500px] flex-col px-2 pb-4 font-sans xs:px-8">
           <h1 className="mb-3 border-b border-dotted border-gray-400 pb-1 text-center font-sans text-3xl font-bold uppercase leading-10 tracking-widest text-darkTeal xs:text-4xl sm:text-4xl">
             Contact
           </h1>
