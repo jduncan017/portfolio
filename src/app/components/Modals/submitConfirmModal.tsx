@@ -16,8 +16,7 @@ export default function SubmitConfirmModal() {
         </p>
         <div className="ButtonContainer flex h-fit w-fit gap-4">
           <SiteButton
-            onSubmit={() => hideModal()}
-            size="lg"
+            onClick={() => hideModal()}
             aria="submit"
             addClasses="border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black mt-4"
             textColor="text-gray-200"

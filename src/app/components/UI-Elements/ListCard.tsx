@@ -13,6 +13,8 @@ type DisplayCardProps = {
 
 export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   const { showModal } = useModal();
+  // this had to be defined distinctly because TS wasn't picking up typesafety for the button
+  const repoURL = cardData.repoURL;
   const isURL = (path: string) => {
     try {
       new URL(path);
@@ -44,44 +46,73 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   };
 
   return (
-    <div className="Card mx-auto flex h-fit w-full max-w-[456px] flex-col gap-2 rounded-xl bg-slate-950 px-4 py-6 text-start text-orange-200 shadow-customDim transition-all duration-500 xs:px-8 sm:hover:shadow-customBright md:w-[95%] md:max-w-none md:flex-row">
-      <div className="TitleImageSection mx-auto flex h-full flex-col items-center md:mx-0 md:w-[350px] md:items-start">
-        <h3 className="Title text-center text-lg font-semibold uppercase tracking-wider xs:text-2xl md:text-xl">
-          {cardData.name}
-        </h3>
-        {cardData.lastUpdated && (
-          <p className="LastUpdated w-full text-center text-sm italic text-gray-400 md:text-start">
-            {`Last updated: ${cardData.lastUpdated}`}
+    <div className="Card mx-auto flex h-fit w-full max-w-[456px] flex-col gap-2 rounded-xl bg-slate-950 px-4 py-6 text-start text-orange-200 shadow-customDim transition-all duration-500 xs:px-8 sm:hover:shadow-customBright md:w-[95%] md:max-w-none">
+      <div className="TopContainer flex flex-col gap-4 md:flex-row">
+        <div className="TitleImageSection mx-auto flex h-full flex-col items-center md:mx-0 md:w-[350px] md:items-start">
+          <h3 className="Title text-lg font-semibold uppercase tracking-wider xs:text-2xl md:text-xl">
+            {cardData.name}
+          </h3>
+          {cardData.lastUpdated && (
+            <p className="LastUpdated w-full text-center text-sm italic text-gray-400 md:text-start">
+              {`Last updated: ${cardData.lastUpdated}`}
+            </p>
+          )}
+          {cardImage()}
+        </div>
+        <div className="InfoContainer flex w-full flex-col items-start justify-between gap-2">
+          <p className="Description w-fit text-start font-sans text-sm capitalize leading-6 text-gray-300 xs:text-base">
+            {cardData.description}
           </p>
-        )}
-        {cardImage()}
-        <SiteButton
-          size="small"
-          aria={`Go to site`}
-          addClasses="tracking-widest font-medium sm:text-sm uppercase mt-3 w-full md:w-[210px] rounded-md"
-          textColor="text-gray-300"
-          style="teal"
-          onSubmit={() => showModal(<ExternalLinkModal cardData={cardData} />)}
-        >
-          {cardData.liveButtonText}
-        </SiteButton>
+        </div>
       </div>
-      <div className="InfoContainer flex w-full flex-col items-start justify-between gap-2">
-        <p className="Description w-fit text-start font-sans text-sm capitalize leading-6 text-gray-300 xs:text-base">
-          {cardData.description}
-        </p>
-        <div className="BottomContainer flex h-fit w-fit justify-between gap-2">
+      <div className="BottomContainer flex h-fit w-full flex-col items-center justify-between gap-2 md:flex-row">
+        <div className="TagContainer flex w-fit items-start justify-start gap-2">
           {cardData.tags &&
             cardData.tags.sort().map((tag: string): ReactNode => {
               return (
                 <div
-                  className="Tag flex-grow rounded-sm bg-gray-700 bg-opacity-90 p-1.5 text-center text-gray-400"
+                  className="Tag h-fit w-fit rounded-sm bg-gray-700 bg-opacity-90 p-1.5 text-center text-gray-400"
                   key={tag}
                 >
                   {tag}
                 </div>
               );
             })}
+        </div>
+        <div className="ButtonContainer flex h-full w-full flex-col items-center sm:flex-row sm:gap-2 md:w-fit">
+          <SiteButton
+            size="small"
+            addClasses="tracking-widest mt-3 md:mt-0 uppercase w-full md:w-auto"
+            textColor="text-gray-300"
+            style="teal"
+            aria={`Visit ${cardData.name}`}
+            onClick={() =>
+              showModal(
+                <ExternalLinkModal
+                  name={cardData.name}
+                  link={cardData.liveLink}
+                />,
+              )
+            }
+          >
+            {cardData.liveButtonText}
+          </SiteButton>
+          {repoURL && (
+            <SiteButton
+              aria={`github repo for ${repoURL}`}
+              size="small"
+              addClasses="tracking-widest uppercase mt-3 md:mt-0 w-full md:w-auto"
+              textColor="text-gray-300"
+              style="teal"
+              onClick={() =>
+                showModal(
+                  <ExternalLinkModal name={cardData.name} link={repoURL} />,
+                )
+              }
+            >
+              Github Repo
+            </SiteButton>
+          )}
         </div>
       </div>
     </div>

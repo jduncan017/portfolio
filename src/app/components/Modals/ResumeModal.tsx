@@ -1,7 +1,11 @@
 import ModalWrapper from "./modalWrapper";
 import { RESUME_DATA, TECH_SKILLS } from "@/src/lib/resumeData";
+import SiteButton from "../UI-Elements/SiteButton";
+import { useModal } from "@/src/contexts/ModalContext";
 
 export default function ResumeModal() {
+  const { hideModal } = useModal();
+
   const buildExperienceHeading = (title: string) => {
     return (
       <div className="Container">
@@ -99,6 +103,15 @@ export default function ResumeModal() {
             })}
           </div>
         </div>
+        <SiteButton
+          onClick={() => hideModal()}
+          aria="close modal"
+          textColor="text-gray-200"
+          style="teal"
+          addClasses="mt-8"
+        >
+          Close
+        </SiteButton>
       </div>
     </ModalWrapper>
   );

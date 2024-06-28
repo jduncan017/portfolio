@@ -32,7 +32,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           aria={`View Project`}
           addClasses="tracking-widest font-medium sm:text-sm uppercase"
           textColor="text-gray-300 m-2"
-          onSubmit={() => showModal(<ProjectModal cardData={cardData} />)}
+          onClick={() => showModal(<ProjectModal cardData={cardData} />)}
           style="orange"
         >
           View Project
@@ -47,7 +47,14 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           addClasses="tracking-widest font-medium sm:text-sm uppercase"
           textColor="text-gray-300 mb-2"
           style="orange"
-          onSubmit={() => showModal(<ExternalLinkModal cardData={cardData} />)}
+          onClick={() =>
+            showModal(
+              <ExternalLinkModal
+                name={cardData.name}
+                link={cardData.liveLink}
+              />,
+            )
+          }
         >
           {cardData.liveButtonText}
         </SiteButton>

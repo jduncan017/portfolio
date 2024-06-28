@@ -133,11 +133,7 @@ export default function ContactModal() {
                 target="_blank"
                 type="button"
               >
-                <SiteButton
-                  aria="Schedule a meeting"
-                  textColor="text-gray-200 uppercase"
-                  style="teal"
-                >
+                <SiteButton textColor="text-gray-200 uppercase" style="teal">
                   Schedule a Meeting
                 </SiteButton>
               </Link>

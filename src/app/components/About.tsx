@@ -62,10 +62,9 @@ export const About = () => {
           <div className="ButtonContainer my-6 mr-5 flex flex-col gap-4 mini:mr-0 mini:flex-row">
             <SiteButton
               size="large"
-              aria="View resume as PDF"
               textColor="text-orange-200"
               style="orange"
-              onSubmit={() => showModal(<ResumeModal />)}
+              onClick={() => showModal(<ResumeModal />)}
             >
               View Resume
             </SiteButton>
@@ -78,7 +77,6 @@ export const About = () => {
             >
               <SiteButton
                 size="large"
-                aria="Schedule a meeting"
                 textColor="text-orange-200"
                 style="orange"
                 addClasses="w-full mini:w-auto"

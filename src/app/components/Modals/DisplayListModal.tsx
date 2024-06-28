@@ -1,6 +1,8 @@
 import ModalWrapper from "./modalWrapper";
 import { CardData } from "@/src/lib/dataTypes";
 import ListCard from "@/src/app/components/UI-Elements/ListCard";
+import SiteButton from "../UI-Elements/SiteButton";
+import { useModal } from "@/src/contexts/ModalContext";
 
 type DisplayListProps = {
   cardArray: CardData[];
@@ -8,20 +10,29 @@ type DisplayListProps = {
 };
 
 export default function DisplayList({ cardArray, dataType }: DisplayListProps) {
+  const { hideModal } = useModal();
   return (
     <ModalWrapper title={dataType}>
-      <div className="CardWrapper flex flex-col gap-6">
-        {/* <h3 className="Title mx-auto w-[96%] text-start text-3xl font-semibold uppercase tracking-widest text-white md:w-[92%] md:text-4xl">
-          {dataType}
-        </h3> */}
-        {cardArray.map((cardData: CardData) => (
-          <ListCard
-            key={cardData.name}
-            cardData={cardData}
-            dataType={dataType}
-          />
-        ))}
-      </div>
+      <>
+        <div className="CardWrapper mt-8 flex flex-col gap-6">
+          {cardArray.map((cardData: CardData) => (
+            <ListCard
+              key={cardData.name}
+              cardData={cardData}
+              dataType={dataType}
+            />
+          ))}
+        </div>
+        <SiteButton
+          onClick={() => hideModal()}
+          aria="close modal"
+          textColor="text-gray-200"
+          style="teal"
+          addClasses="mt-8"
+        >
+          Close
+        </SiteButton>
+      </>
     </ModalWrapper>
   );
 }

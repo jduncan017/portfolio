@@ -3,11 +3,14 @@ import { RESUME_DATA } from "@/src/lib/resumeData";
 import SocialContainer from "./UI-Elements/SocialContainer";
 import ContactCard from "./UI-Elements/ContactCard";
 import SiteButton from "./UI-Elements/SiteButton";
+import { useModal } from "@/src/contexts/ModalContext";
+import ResumeModal from "./Modals/ResumeModal";
 
 export const Footer = () => {
+  const { showModal } = useModal();
   return (
     <section
-      className="Footer shadow-customBright flex flex-col items-center gap-10 border-t border-t-gray-800 bg-black px-5 py-10 xs:px-20 md:flex-row md:items-start lg:gap-20"
+      className="Footer flex flex-col items-center gap-10 border-t border-t-gray-800 bg-black px-5 py-10 shadow-customBright xs:px-20 md:flex-row md:items-start lg:gap-20"
       id="contact-section"
     >
       <ContactCard titlePosition="justify-center" />
@@ -22,32 +25,21 @@ export const Footer = () => {
           Please feel free to contact me for work, suggestions, or networking!
         </p>
         <div className="ButtonContainer my-6 flex flex-col items-center gap-4 mini:flex-row">
-          <Link
-            rel="noopener noreferrer"
-            href={RESUME_DATA.resumeURL}
-            target="_blank"
+          <SiteButton
+            size="large"
+            textColor="text-orange-200"
+            style="orange"
+            onClick={() => showModal(<ResumeModal />)}
           >
-            <SiteButton
-              size="large"
-              aria="View resume as PDF"
-              textColor="text-orange-200"
-              style="orange"
-            >
-              View Resume
-            </SiteButton>
-          </Link>
+            View Resume
+          </SiteButton>
           <Link
             rel="noopener noreferrer"
             href="https://calendly.com/jduncan017/1-hour-meeting"
             target="_blank"
             type="button"
           >
-            <SiteButton
-              size="large"
-              aria="Schedule a meeting"
-              textColor="text-orange-200"
-              style="orange"
-            >
+            <SiteButton size="large" textColor="text-orange-200" style="orange">
               Schedule a Meeting
             </SiteButton>
           </Link>

@@ -14,6 +14,17 @@ export const RESUME_DATA: ResumeData = {
   my unique mix of skills for an exciting new project where I can have a profound influence.`,
   education: [
     {
+      school: "TripleTen by Yandex",
+      position: "Graduate Full-Stack Software Developer Program",
+      time: "January 2023 - January 2024",
+      description: [
+        "Completed 1000+ hours of hands-on coding experience in JavaScript, React, Node.js, HTML5, and CSS3, using BEM methods, studying best practices and modern approaches to design challenges.",
+        "Developed several responsive single-page applications, focusing on efficiency and user experience.",
+        "Studied and implemented front-end and back-end aspects of applications, including database modeling, user authentication, REST APIs, web deployment, and modern UI/UX.",
+        "Finished my final project using Figma, Next.js 14, and PostgreSQL to develop a business site from start to finish for a real-world client.",
+      ],
+    },
+    {
       school: "Monroe Community College",
       position: "Associate of Science - Focus: Chemical Engineering",
       time: "September 2009 - June 2012",
@@ -25,14 +36,25 @@ export const RESUME_DATA: ResumeData = {
   ],
   jobs: [
     {
-      name: "TripleTen by Yandex",
-      position: "Graduate Full-Stack Software Developer Program",
-      time: "January 2023 - January 2024",
+      name: "WebSavvy Designs",
+      position: "Brand Strategist, Designer, & Web Developer",
+      time: "Remote | November 2023 - Current",
       description: [
-        "Completed 1000+ hours of hands-on coding experience in JavaScript, React, Node.js, HTML5, and CSS3, using BEM methods, studying best practices and modern approaches to design challenges.",
-        "Developed several responsive single-page applications, focusing on efficiency and user experience.",
-        "Studied and implemented front-end and back-end aspects of applications, including database modeling, user authentication, REST APIs, web deployment, and modern UI/UX.",
-        "Finished my final project using Figma, Next.js 14, and PostgreSQL to develop a business site from start to finish for a real-world client.",
+        "Design and implement responsive, high-performance websites for clients using modern tech stacks including TypeScript, Next.js, and React, emphasizing user experience and SEO performance.",
+        "Develop comprehensive brand identities that align with clients' visions, coupled with market research to increase conversion rates for target audiences.",
+        "Provide technical consultations that balance client needs with technological feasibility and scalability.",
+        "Analyze and refactor legacy codebases, modernizing outdated applications to modern standards.",
+      ],
+    },
+    {
+      name: "Slopopedia",
+      position: "Full Stack React Engineer",
+      time: "Remote | January 2024 - April 2024",
+      description: [
+        "Consistently hit 200% of my KPI targets, showcasing my ability to exceed goals and manage priorities.",
+        "Designed and executed marketing campaigns that led to a 60% increase in product sales across my accounts in the first year, which was triple that of my 20% target metric.",
+        "Collaborated with the local team to achieve a 150% increase in sales in the Colorado market within the first year, highlighting strong teamwork and communication skills.",
+        "Surpassed all sales and engagement targets while managing and staying under budget.",
       ],
     },
     {
@@ -40,7 +62,7 @@ export const RESUME_DATA: ResumeData = {
       position: "Brand Ambassador (Santa Teresa Rum)",
       time: "Denver, CO | September 2022 - January 2023",
       description: [
-        "Consistently hit 200% of my KPI targets, showcasing my ability to exceed goals and manage priorities.",
+        "Consistently hit 300% of my KPI targets, showcasing my ability to exceed goals and manage priorities.",
         "Designed and executed marketing campaigns that led to a 60% increase in product sales across my accounts in the first year, which was triple that of my 20% target metric.",
         "Collaborated with the local team to achieve a 150% increase in sales in the Colorado market within the first year, highlighting strong teamwork and communication skills.",
         "Surpassed all sales and engagement targets while managing and staying under budget.",
@@ -51,12 +73,9 @@ export const RESUME_DATA: ResumeData = {
       position: "General Manager | Beverage Director",
       time: "Denver, CO | January 2017 - April 2022",
       description: [
-        "Transformed a struggling business into a profitable high-end restaurant, increasing sales by 30% in the first year and doubling them over my 5-year tenure. Achieved profitability within the first year.",
-        "Fostered a team-oriented culture emphasizing personal growth, significantly reducing employee turnover and increasing average employee tenure from around six months to over two years.",
-        "Developed and managed a craft cocktail program that received recognition in local and national publications, balancing cost efficiency with a high standard of quality",
+        "Transformed a restaurant into a profitable, nationally recognized cocktail bar, doubling sales from $550k to $1.2M over my 5-year tenure.",
+        "Fostered a team-oriented culture focused on personal growth, significantly improving employee tenure.",
         "Streamlined standards of procedure to optimize operations, reducing overall labor costs.",
-        "Identified and capitalized on new revenue streams, including to-go, retail sales, and private events.",
-        "Managed and updated all digital platforms, including social media and WordPress sites.",
       ],
     },
   ],

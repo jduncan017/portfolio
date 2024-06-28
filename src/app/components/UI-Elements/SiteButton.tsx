@@ -2,11 +2,11 @@ import { text } from "stream/consumers";
 
 interface ButtonProps {
   addClasses?: string;
-  size?: string;
-  onSubmit?: () => void;
+  size?: "small" | "large";
+  onClick?: () => void;
   disabled?: boolean;
   type?: "button" | "submit" | "reset";
-  aria: string;
+  aria?: string;
   textColor: string;
   style: "orange" | "teal";
   children: React.ReactNode;
@@ -15,7 +15,7 @@ interface ButtonProps {
 const SiteButton = ({
   addClasses,
   size,
-  onSubmit,
+  onClick,
   disabled,
   type = "button",
   aria,
@@ -55,7 +55,7 @@ const SiteButton = ({
       className={`SiteButton rounded-lg font-sans text-sm transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white sm:text-base ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
       `}
       type={type ?? "button"}
-      onClick={onSubmit}
+      onClick={onClick}
       disabled={disabled}
       aria-label={aria}
     >

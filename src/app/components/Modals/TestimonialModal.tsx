@@ -43,9 +43,8 @@ export default function TestimonialModal({ testimonial }: TestimonialArray) {
         </div>
         <div className="ButtonContainer mx-auto flex h-fit w-fit gap-4">
           <SiteButton
-            onSubmit={() => hideModal()}
-            size="lg"
-            aria="submit"
+            onClick={() => hideModal()}
+            aria="close modal"
             textColor="text-gray-200"
             style="teal"
           >

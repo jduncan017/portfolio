@@ -5,12 +5,17 @@ import { CardData } from "@/src/lib/dataTypes";
 import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "../UI-Elements/SiteButton";
 import ModalWrapper from "./modalWrapper";
+import { useModal } from "@/src/contexts/ModalContext";
+import ExternalLinkModal from "./externalLinkModal";
 
 type ProjectModalProps = {
   cardData: CardData;
 };
 
 export default function ProjectModal({ cardData }: ProjectModalProps) {
+  const { showModal } = useModal();
+  // this had to be defined distinctly because TS wasn't picking up typesafety for the button
+  const repoURL = cardData.repoURL;
   const isURL = (path: string) => {
     try {
       new URL(path);
@@ -43,7 +48,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
 
   return (
     <ModalWrapper>
-      <div className="ProjectModal flex h-full flex-col items-start gap-2 p-2 text-darkTeal">
+      <div className="ProjectModal flex h-full w-full flex-col items-start gap-2 p-2 text-darkTeal">
         <div className="TitleSection flex w-full flex-col items-start">
           <h3 className="Title pointer-events-none mb-2 w-full border-b border-dotted border-gray-400 pb-1 text-start text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
             {cardData.name}
@@ -69,23 +74,40 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
         <p className="Description max-w-[550px] text-start font-sans text-gray-300">
           {cardData.description}
         </p>
-        <Link
-          href={cardData.liveLink}
-          rel="noopener noreferrer"
-          aria-label="live project"
-          target="_blank"
-          className="ImageLink mt-4 w-full"
-        >
-          <SiteButton
-            size="large"
-            aria={`Visit ${cardData.name}`}
-            addClasses="tracking-widest uppercase w-full"
-            textColor="text-gray-300"
-            style="teal"
+        <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
+          <Link
+            href={cardData.liveLink}
+            rel="noopener noreferrer"
+            aria-label={`Visit ${cardData.name}`}
+            target="_blank"
+            className="ImageLink mt-4 w-full"
           >
-            {cardData.liveButtonText}
-          </SiteButton>
-        </Link>
+            <SiteButton
+              size="large"
+              addClasses="tracking-widest uppercase w-full"
+              textColor="text-gray-300"
+              style="teal"
+            >
+              {cardData.liveButtonText}
+            </SiteButton>
+          </Link>
+          {repoURL && (
+            <SiteButton
+              aria={`github repo for ${repoURL}`}
+              size="large"
+              addClasses="tracking-widest uppercase w-full mt-4"
+              textColor="text-gray-300"
+              style="teal"
+              onClick={() =>
+                showModal(
+                  <ExternalLinkModal name={cardData.name} link={repoURL} />,
+                )
+              }
+            >
+              Github Repo
+            </SiteButton>
+          )}
+        </div>
       </div>
     </ModalWrapper>
   );

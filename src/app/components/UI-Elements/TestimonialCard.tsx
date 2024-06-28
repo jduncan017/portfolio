@@ -38,7 +38,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
         <p className="Date text-gray-400">{`- ${testimonial.date} -`}</p>
       </div>
       <SiteButton
-        onSubmit={() =>
+        onClick={() =>
           showModal(<TestimonialModal testimonial={testimonial} />)
         }
         aria="View full review"

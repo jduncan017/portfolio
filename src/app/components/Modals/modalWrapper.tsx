@@ -38,11 +38,11 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
         animate={{ scale: 1 }}
         initial={{ scale: 0 }}
         transition={{ duration: 0.2 }}
-        className="Conten custom-scrollbar relative mb-5 mt-16 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-2xl bg-slate-950 px-6 py-6 text-center shadow-customDim xs:py-8"
+        className="Content custom-scrollbar relative mb-5 mt-16 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-2xl bg-slate-950 px-6 py-6 text-center shadow-customDim xs:py-8"
         onClick={handleModalContentClick}
       >
         <button
-          className="CloseButton absolute right-5 top-5 z-10 transition-all hover:scale-110 hover:cursor-pointer"
+          className="CloseButton absolute right-4 top-6 z-10 transition-all hover:scale-110 hover:cursor-pointer"
           type="button"
           onClick={hideModal}
         >

@@ -6,36 +6,44 @@ export const TESTIMONIAL_DATA: TestimonialData[] = [
     imagePath: "/testimonialPhotos/loren-m.jpg",
     shortDescription: `"His organizational approach to overseeing multiple projects simultaneously, particularly in research and development 
     processes, resulted in radiant success for our business that caught the attention of local and national media."`,
-    fullReview: `"As the General Manager of Adrift Tiki Bar, Josh demonstrated exceptional leadership, problem-solving skills, adaptability, 
-    teamwork, and creativity. I firmly believe that his diverse skill set, honed in the hospitality sector, will prove invaluable in the tech 
-    industry. Specifically, I would like to highlight his skillset in the following areas:<br /><br />
-    
-    <strong>Problem Solving:</strong><br />
-    Josh has consistently exhibited outstanding problem-solving skills, such as helping our business to survive the particularly challenging 
-    times of the COVID-19 pandemic. Josh's ability to completely reinvent our company's operating approach and products to meet changing 
-    demands and guidelines showcased his nimbleness and strategic thinking. His leadership in leveraging online ordering systems and delivery 
-    during this period resulted in a successful relaunch, yielding sustainable profits through low-labor operations. Adrift quickly went from 
-    a shuttered operation to a highly sought-after establishment due to Josh’s decisions and problem-solving.<br /><br />
-    
-    <strong>Teamwork and Collaboration:</strong><br />
-    Josh excelled in working collaboratively within a team, demonstrating effective communication and collaboration. He embraced the 
-    company's mission and values, working with ownership to ensure alignment for success. Josh fostered a culture where ideas from all 
-    team members were welcomed, creating an innovative and enriching organizational environment that positively impacted our customers.<br /><br />
-    
-    <strong>Organized Innovation and Creativity:</strong><br />
-    Josh's greatest strength lies in his ability to showcase creativity and innovation, leading to improved processes and increased 
-    efficiencies. His organizational approach to overseeing multiple projects simultaneously, particularly in research and development processes, 
-    resulted in radiant success for our business that caught the attention of local and national media. Adrift, under Josh's leadership, 
-    became a nationally recognized establishment, solidifying its position in the industry.<br /><br />
-    
-    I am confident that Josh's experience as the General Manager of Adrift has equipped him with a unique skill set that makes him a 
-    valuable employee anywhere. His problem-solving prowess, adaptability, teamwork, and creativity make him an exceptional candidate 
-    for any role requiring strategic thinking and leadership.<br /><br />
-    
-    Please feel free to contact me if you have any further questions or require additional information.<br /><br />
-    
-    Sincerely,<br />
-    Loren Martinez"`,
+    fullReview: `"To Whom It May Concern:<br /><br />
+
+I am writing to recommend Joshua Duncan for software engineering roles in the tech industry. As the
+General Manager of Adrift Tiki Bar, Josh not only demonstrated exceptional leadership, but also
+problem-solving skills, adaptability, teamwork, and creativity. His leadership was instrumental in our
+success, and I firmly believe that his diverse skill set, honed in the hospitality sector, will prove
+invaluable in the tech industry.<br /><br />
+
+Josh's adaptability and problem-solving prowess were particularly evident during the challenging times
+of the COVID-19 pandemic. Josh's ability to completely reinvent our company's operating approach
+and products to meet changing demands and guidelines showcased his nimbleness and strategic
+thinking. His leadership in leveraging online ordering systems and delivery during this period resulted
+in a successful relaunch, yielding sustainable profits through low-labor operations. Due to Josh's
+decisions and problem-solving, Adrift quickly went from a shuttered operation to a highly sought-after
+establishment.<br /><br />
+
+In terms of teamwork and collaboration, Josh's skills were exemplary. He excelled at fostering an
+environment where ideas from all team members were welcomed and valued. His effective
+communication skills and ability to align team efforts with company goals are directly applicable to the
+collaborative nature of modern business. Josh's experience creating an innovative organizational
+environment will undoubtedly contribute to his ability to work effectively with cross-functional teams.<br /><br />
+
+Josh's greatest strength lies in his ability to showcase creativity and innovation, leading to improved
+processes and operational efficiencies. His organizational approach to overseeing multiple projects
+simultaneously, particularly in research and development processes, resulted in radiant success for our
+business, which caught the attention of local and national media. Under Josh's leadership, Adrift
+became a nationally recognized craft cocktail establishment, solidifying its position in the industry.<br /><br />
+
+I am confident that Josh's unique background has equipped him with a valuable skill set that will
+translate well into software engineering. His proven track record in problem-solving, adaptability,
+teamwork, and organized creativity makes him an exceptional candidate for any role requiring strategic
+thinking, innovation, and leadership.<br /><br />
+
+Please feel free to contact me for additional information about Josh's qualifications or achievements.<br /><br />
+
+Sincerely,<br /><br />
+
+Loren Martinez"`,
 
     relationship: "Previous Manager",
     contact: "loren@littlemanicecream.com",

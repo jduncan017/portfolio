@@ -1,14 +1,14 @@
 import ModalWrapper from "./modalWrapper";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "../../../contexts/ModalContext";
-import type { CardData } from "@/src/lib/dataTypes";
 import Link from "next/link";
 
 type LinkModalProps = {
-  cardData: CardData;
+  name: string;
+  link: string;
 };
 
-export default function ExternalLinkModal({ cardData }: LinkModalProps) {
+export default function ExternalLinkModal({ name, link }: LinkModalProps) {
   const { hideModal } = useModal();
 
   return (
@@ -18,13 +18,12 @@ export default function ExternalLinkModal({ cardData }: LinkModalProps) {
           Note:
         </h3>
         <p className="Description text-xl text-gray-300">
-          {`This will take you to the ${cardData.name} website.`}
+          {`This will take you to the ${name} website.`}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
           <SiteButton
-            onSubmit={() => hideModal()}
-            size="lg"
-            aria="submit"
+            onClick={() => hideModal()}
+            aria="go back"
             addClasses="mt-4"
             textColor="text-gray-200"
             style="teal"
@@ -32,15 +31,13 @@ export default function ExternalLinkModal({ cardData }: LinkModalProps) {
             Nevermind
           </SiteButton>
           <Link
-            href={cardData.liveLink}
+            href={link}
             rel="noopener noreferrer"
-            aria-label="visit site"
+            aria-label={`Visit ${name}`}
             target="_blank"
           >
             <SiteButton
-              onSubmit={() => hideModal()}
-              size="lg"
-              aria="submit"
+              onClick={() => hideModal()}
               addClasses="mt-4"
               textColor="text-gray-200"
               style="teal"
