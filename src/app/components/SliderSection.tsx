@@ -89,7 +89,7 @@ export default function SliderSection({
       id={id}
     >
       <div className="TitleContainer mb-4 flex w-[90%] flex-col items-start gap-2 sm:flex-row sm:items-end sm:gap-4">
-        <h1 className="Title text-start text-3xl font-semibold uppercase tracking-widest text-white md:text-4xl">
+        <h1 className="Title text-start text-3xl font-semibold tracking-widest text-white md:text-4xl">
           {title}
         </h1>
         <button
@@ -115,7 +115,7 @@ export default function SliderSection({
           keyBoardControl={true}
           customTransition="transform 500ms ease"
           transitionDuration={500}
-          containerClass="py-8 xs:py-8 bg-black sm:bg-blurBlack rounded-xl"
+          containerClass="py-8 xs:py-8 bg-black sm:bg-black/90 rounded-xl"
           removeArrowOnDeviceType={["tablet", "mobile"]}
           itemClass="project-item gap-10"
           centerMode={centerMode}

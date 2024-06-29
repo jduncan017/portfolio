@@ -12,7 +12,7 @@ export const PROJECT_DATA: CardData[] = [
     liveButtonText: "Visit Beta Site",
     liveLink: "https://www.happyhourhunt.net",
     imagePath: "/opengraphImages/h3-og.png",
-    tags: ["Next.js", "Current Project"],
+    tags: ["Personal Project", "Beta Site"],
   },
   {
     name: "LifeGuide Healing",
@@ -26,7 +26,7 @@ export const PROJECT_DATA: CardData[] = [
     liveButtonText: "Visit Site",
     liveLink: "https://lifeguidehealing.com/",
     imagePath: "/opengraphImages/lhh-og.png",
-    tags: ["Next.js", "Current Project"],
+    tags: ["Next.js", "Client Project"],
   },
   {
     name: "Cifernoise",
@@ -39,7 +39,7 @@ export const PROJECT_DATA: CardData[] = [
     liveButtonText: "Visit Site",
     liveLink: "https://www.cifernoiseproductions.com",
     imagePath: "/opengraphImages/cifernoise-og.png",
-    tags: ["Client Project", "Duda"],
+    tags: ["Client Project", "Website Redesign"],
   },
   {
     name: "Ryan Insurance",
@@ -52,7 +52,7 @@ export const PROJECT_DATA: CardData[] = [
     liveButtonText: "Visit Site",
     liveLink: "https://www.ryanpretection.com",
     imagePath: "/opengraphImages/rpi-og.png",
-    tags: ["Client Project", "Framer"],
+    tags: ["Client Project", "Next.js"],
   },
   {
     name: "Tailwind Plugin",
@@ -80,7 +80,7 @@ export const PROJECT_DATA: CardData[] = [
     liveButtonText: "Visit Site",
     liveLink: "https://www.johngerardwoodwork.com",
     imagePath: "/opengraphImages/jg-og.webp",
-    tags: ["Client Site", "Next.js"],
+    tags: ["Client Project", "Next.js"],
   },
   {
     name: "Developer Portfolio",
@@ -101,6 +101,6 @@ export const PROJECT_DATA: CardData[] = [
     liveButtonText: "Visit Site",
     liveLink: "https://www.joshuaduncan.info",
     imagePath: "/opengraphImages/portfolio-og.png",
-    tags: ["Personal Project", "Next.js"],
+    tags: ["Typescript", "Next.js"],
   },
 ];

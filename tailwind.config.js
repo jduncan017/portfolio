@@ -42,6 +42,7 @@ module.exports = {
         darkTeal: "rgb(26, 143, 152)",
         themeTeal: "#4cc3cc",
         themePurple: "rgb(143, 142, 255)",
+        themePurpleDark: "#242439",
         blurWhite: "rgba(255, 255, 255, 0.5)",
         blurBlack: "rgba(0, 0, 0, 0.85)",
       },

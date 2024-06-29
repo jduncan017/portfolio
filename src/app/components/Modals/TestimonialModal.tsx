@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { TestimonialData } from "@/src/lib/dataTypes";
-import { useModal } from "@/src/contexts/ModalContext";
 import ModalWrapper from "./modalWrapper";
 import parse from "html-react-parser";
 

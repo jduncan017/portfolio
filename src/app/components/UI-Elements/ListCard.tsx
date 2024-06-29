@@ -133,7 +133,7 @@ export default function DisplayCard({
                 )
               }
             >
-              Github Repo
+              Source Code
             </SiteButton>
           )}
         </div>

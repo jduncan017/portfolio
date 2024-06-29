@@ -57,15 +57,15 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
           </p>
         </div>
         {cardImage()}
-        <div className="TagsContainer mb-2 flex w-full flex-wrap gap-2">
-          {cardData.tags &&
-            cardData.tags.sort().map((tag: string): ReactNode => {
+        <div className="TechsUsedContainer mb-2 flex w-full flex-wrap gap-2">
+          {cardData.techsUsed &&
+            cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="Tag flex-grow rounded-sm bg-gray-600/50 bg-opacity-70 p-2 text-center text-gray-300 xs:text-sm"
-                  key={tag}
+                  className="tech flex-grow rounded-md bg-gray-600/50 bg-opacity-70 p-1 text-center text-gray-300 xs:text-sm"
+                  key={tech}
                 >
-                  {tag}
+                  {tech}
                 </div>
               );
             })}
@@ -111,7 +111,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
                 )
               }
             >
-              Github Repo
+              Source Code
             </SiteButton>
           )}
         </div>

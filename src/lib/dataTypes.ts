@@ -17,9 +17,7 @@ export type ResumeData = {
   gitHubURL: string;
   twitterURL: string;
   linkedInURL: string;
-  bioDescription1: string;
-  bioDescription2: string;
-  bioDescription3: string;
+  bioDescription: string;
   education: {
     school: string;
     position: string;

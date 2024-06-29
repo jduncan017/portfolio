@@ -5,13 +5,17 @@ export const RESUME_DATA: ResumeData = {
   gitHubURL: "https://github.com/jduncan017",
   twitterURL: "https://twitter.com/Jduncan017",
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
-  bioDescription1: `I'm Josh, a full-stack developer with a career history spanning roles in project management, 
-  brand development, design, marketing, and entrepreneurship.`,
-  bioDescription2: `Currently, I am enjoying the creative freedom of the client process as a freelance brand strategist and web developer. 
-  However, my true passion lies in tackling real-world issues, and I am actively seeking the right opportunity to improve people's lives with
-   a forward-thinking, impactful company.`,
-  bioDescription3: `Driving impactful growth through determination and creative thinking is ingrained in my character. I am eager to leverage 
-  my unique mix of skills for an exciting new project where I can have a profound influence.`,
+  bioDescription: `I'm a passionate and versatile full-stack developer with a wide range of experience to bring to the table. My career has encompassed
+                   software development, project management, brand strategy, leadership, sales, and marketing - providing me with a broad 
+                   and insightful perspective. <br/><br/>
+
+                  I lean on past experiences to approach problem-solving innovatively, allowing me to offer more than just task execution to overall
+                  product visioning, brand cultivation, and growth strategies where needed. I value humility and shared team successes, and I 
+                  thrive in environments where I can take ownership of my work. <br/><br/>
+
+                  Driving impactful growth through determination and creative thinking is ingrained in my character. I am eager to leverage my 
+                  unique mix of skills for an exciting new project where I can have a profound influence. If you'd like to work with me, don't 
+                  hesitate to reach out!`,
   education: [
     {
       school: "TripleTen by Yandex",

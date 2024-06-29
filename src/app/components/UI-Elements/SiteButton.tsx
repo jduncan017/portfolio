@@ -28,7 +28,7 @@ const SiteButton = ({
 
   switch (size) {
     case "small":
-      buttonSize = "px-3 py-2 text-sm";
+      buttonSize = "px-2.5 py-2 text-sm";
       break;
     case "large":
       buttonSize = "px-5 py-3 text-lg";
@@ -40,7 +40,7 @@ const SiteButton = ({
   switch (style) {
     case "orange":
       buttonStyle =
-        "border-orange-200 border hover:bg-orange-200 hover:text-black";
+        "border-orange-200/80 border hover:bg-orange-200 hover:text-black";
       break;
     case "teal":
       buttonStyle =

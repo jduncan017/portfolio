@@ -30,8 +30,8 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
         <SiteButton
           size="small"
           aria={`View Project`}
-          addClasses="tracking-widest font-medium sm:text-sm uppercase"
-          textColor="text-gray-300 m-2"
+          addClasses="tracking-widest font-medium uppercase sm:text-xs my-2"
+          textColor="text-gray-300"
           onClick={() => showModal(<ProjectModal cardData={cardData} />)}
           style="orange"
         >
@@ -44,8 +44,8 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
         <SiteButton
           size="small"
           aria={`View`}
-          addClasses="tracking-widest font-medium sm:text-sm uppercase"
-          textColor="text-gray-300 mb-2"
+          addClasses="tracking-widest font-medium uppercase sm:text-xs my-2"
+          textColor="text-gray-300"
           style="orange"
           onClick={() =>
             showModal(
@@ -68,13 +68,13 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
       return (
         <ImageLoadingWrapper
           cardData={cardData}
-          className="Image pointer-events-none mt-2 aspect-video w-full rounded-sm"
+          className="Image pointer-events-none mt-2 aspect-video w-full rounded-md border border-gray-800"
         />
       );
     } else {
       return (
         <Image
-          className="cardDataImage pointer-events-none mt-2 aspect-video w-full rounded-sm bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover"
+          className="cardDataImage pointer-events-none mt-2 aspect-video w-full rounded-md border border-gray-800 bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover"
           src={cardData.imagePath}
           alt="Screenshot of cardData"
           width={456}
@@ -85,24 +85,14 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   };
 
   return (
-    <div className="Card mx-auto flex h-full w-[88%] flex-col items-center gap-2 rounded-lg bg-gray-950 p-4 text-orange-200 shadow-custom transition-all duration-500 xs:w-[96%] xs:bg-black/90 xs:p-3 xs:text-gray-700 xs:saturate-0 sm:hover:scale-105 sm:hover:bg-slate-950 sm:hover:text-orange-200 sm:hover:opacity-100 sm:hover:shadow-customBright sm:hover:saturate-100 xl:p-4">
-      <div className="TitleSection flex flex-col items-center">
-        <h3 className="Title pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-lg xl:text-xl">
-          {cardData.name}
-        </h3>
-        {cardData.lastUpdated && (
-          <p className="LastUpdated text-xs italic text-gray-400">
-            {`Last updated: ${cardData.lastUpdated}`}
-          </p>
-        )}
-      </div>
+    <div className="Card mx-auto flex h-full w-[88%] flex-col items-start gap-1 rounded-lg border border-slate-800 bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:bg-black xs:p-3 xs:text-gray-700 xs:saturate-0 sm:hover:scale-105 sm:hover:bg-gray-950 sm:hover:text-orange-200 sm:hover:opacity-100 sm:hover:shadow-customBright sm:hover:saturate-100 xl:p-4">
       {cardImage()}
-      <div className="TagsContainer mb-2 flex w-full flex-wrap gap-2">
+      <div className="TagsContainer my-2 flex w-full flex-wrap gap-1">
         {cardData.tags &&
           cardData.tags.sort().map((tag: string): ReactNode => {
             return (
               <div
-                className="Tag pointer-events-none flex-grow rounded-sm bg-gray-600/50 bg-opacity-70 p-2 text-center text-gray-300 xs:text-sm"
+                className="Tag pointer-events-none flex-grow rounded-md bg-gray-600/50 bg-opacity-70 px-2 py-0.5 text-center text-xs text-gray-300 xs:text-sm"
                 key={tag}
               >
                 {tag}
@@ -110,7 +100,10 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
             );
           })}
       </div>
-      <p className="Description pointer-events-none h-16 w-full text-center font-sans text-sm capitalize text-gray-300 mini:text-base mini:leading-5 xs:h-20 sm:text-base xl:h-20">
+      <h3 className="Title pointer-events-none w-full text-start text-xl font-bold xs:text-lg xl:text-2xl">
+        {cardData.name}
+      </h3>
+      <p className="Description pointer-events-none h-16 w-full text-start font-sans text-sm text-gray-300 mini:leading-5 xs:h-16">
         {cardData.shortDescription}
       </p>
       {cardButton}
