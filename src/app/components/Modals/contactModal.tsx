@@ -50,17 +50,17 @@ export default function ContactModal() {
   return (
     <ModalWrapper>
       <div className="contactModal">
-        <div className="formWrapper relative flex max-h-[100dvh] w-full max-w-[500px] flex-col px-2 pb-4 font-sans xs:px-8">
-          <h1 className="mb-3 border-b border-dotted border-gray-400 pb-1 text-center font-sans text-3xl font-bold uppercase leading-10 tracking-widest text-darkTeal xs:text-4xl sm:text-4xl">
+        <div className="formWrapper relative flex max-h-[100dvh] w-full max-w-[500px] flex-col px-2 pb-4  xs:px-8">
+          <h1 className="text-gradient-clip mb-3 border-b border-dotted border-gray-400 pb-4 text-center text-4xl font-bold uppercase leading-10 tracking-widest text-darkTeal xs:text-4xl sm:text-5xl">
             Contact
           </h1>
-          <p className="formDescription m-0 w-full text-center leading-5 text-gray-400">
+          <p className="formDescription m-0 w-full text-center leading-5 text-gray-300">
             {`If you'd like to work together or have questions, you can schedule a meeting or reach me via this contact form.`}
           </p>
 
           {/* Contact Form */}
           <form
-            className="contactForm flex w-full flex-col items-center gap-2 pt-2 text-start text-gray-200 xs:gap-6 xs:pt-5"
+            className="contactForm flex w-full flex-col items-center gap-2 pt-2 text-start text-gray-300 xs:gap-6 xs:pt-5"
             onSubmit={handleSubmit}
             noValidate
           >
@@ -68,11 +68,11 @@ export default function ContactModal() {
 
             <div className="NameSection flex w-full gap-6">
               <div className="FirstNameContainer flex w-full flex-col gap-1">
-                <label className="m-0" htmlFor="name">
+                <label className="m-0 text-lg text-gray-400" htmlFor="name">
                   First Name:
                 </label>
                 <input
-                  className="FirstNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-400 p-1 text-black"
+                  className="FirstNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-900 p-1 text-gray-300"
                   type="text"
                   id="first-name"
                   name="first-name"
@@ -81,11 +81,11 @@ export default function ContactModal() {
                 />
               </div>
               <div className="LastNameContainer flex w-full flex-col gap-1">
-                <label className="m-0" htmlFor="name">
+                <label className="m-0 text-lg text-gray-400" htmlFor="name">
                   Last Name:
                 </label>
                 <input
-                  className="LastNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-400 p-1 text-black"
+                  className="LastNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-900 p-1 text-gray-300"
                   type="text"
                   id="last-name"
                   name="last-name"
@@ -97,11 +97,11 @@ export default function ContactModal() {
 
             {/* Email Input */}
             <div className="EmailContainer w-full">
-              <label className="m-0" htmlFor="email">
+              <label className="m-0 text-lg text-gray-400" htmlFor="email">
                 Email:
               </label>
               <input
-                className="EmailInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-400 p-1 text-black"
+                className="EmailInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-900 p-1 text-gray-300"
                 type="email"
                 id="email"
                 name="email"
@@ -110,11 +110,11 @@ export default function ContactModal() {
             </div>
 
             <div className="MessageContainer w-full">
-              <label className="m-0" htmlFor="message">
+              <label className="m-0 text-lg text-gray-400" htmlFor="message">
                 Message:
               </label>
               <textarea
-                className="MessageInput mt-1 box-border w-full rounded-md border border-gray-600 bg-gray-400 p-1 text-black"
+                className="MessageInput mt-1 box-border w-full rounded-md border border-gray-600 bg-gray-900 p-1 text-gray-300"
                 id="message"
                 name="message"
                 rows={4}
@@ -133,7 +133,7 @@ export default function ContactModal() {
                 target="_blank"
                 type="button"
               >
-                <SiteButton textColor="text-gray-200 uppercase" style="teal">
+                <SiteButton textColor="text-gray-300 uppercase" style="teal">
                   Schedule a Meeting
                 </SiteButton>
               </Link>
@@ -141,7 +141,7 @@ export default function ContactModal() {
                 type="submit"
                 disabled={buttonDisabled}
                 aria="submit"
-                textColor="text-gray-200 uppercase"
+                textColor="text-gray-300 uppercase"
                 style="teal"
               >
                 {buttonDisplay}

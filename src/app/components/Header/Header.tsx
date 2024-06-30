@@ -16,10 +16,7 @@ export const Header = () => {
   };
 
   return (
-    <section
-      className="HeaderContainer relative h-svh max-h-[1200px]"
-      id="header-section"
-    >
+    <section className="HeaderContainer relative h-svh" id="header-section">
       <div className="_particles-background pb-25 absolute z-[-10] h-svh w-full text-center">
         <ParticlesAnimation />
       </div>
@@ -29,12 +26,12 @@ export const Header = () => {
         px-8 py-20 opacity-90 shadow-custom backdrop-blur-md md:px-20 md:py-20 lg:py-28"
         >
           <h1
-            className="_title mb-4 text-center font-serif text-5xl font-medium uppercase leading-tight text-white
+            className="_title text-gradient-clip mb-4 text-center font-serif text-5xl font-medium uppercase leading-tight text-white
            sm:text-nowrap sm:pb-0 sm:text-6xl lg:text-7xl"
           >
             Joshua Duncan
           </h1>
-          <h2 className="_description mb-6 mt-1 font-serif text-2xl font-bold text-white sm:text-3xl">
+          <h2 className="_description text-gradient-clip  mb-6 mt-1 font-serif text-2xl font-bold text-white sm:text-3xl">
             Software Engineer
           </h2>
           <div className="_social-container">
@@ -43,7 +40,7 @@ export const Header = () => {
         </div>
         <div className="_scroll mt-[6vh] flex flex-col items-center">
           <h3
-            className="_scroll-down global__hover-animation font-serif text-xl font-bold italic text-white"
+            className="_scroll-down global__hover-animation text-gradient-clip font-teko text-2xl font-medium uppercase text-white"
             onClick={performSmoothScroll}
           >
             (Scroll Down)

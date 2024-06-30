@@ -6,8 +6,11 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["Inter", "sans-serif"],
-      serif: ["Playfair", "serif"],
+      sans: ["inter", "sans-serif"],
+      comfortaa: ["comfortaa", "sans-serif"],
+      noto: ["notoSansMono", "sans-serif"],
+      sixtyFour: ["sixtyFour", "sans-serif"],
+      teko: ["teko", "sans-serif"],
     },
     screens: {
       mini: "480px",
@@ -16,7 +19,7 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      sxl: "1480px",
+      xxl: "2000px",
     },
     extend: {
       transitionProperty: {
@@ -52,6 +55,7 @@ module.exports = {
     extend: {},
   },
   plugins: [addVariablesForColors],
+  safelist: ["text-gradient-clip"],
 };
 
 function addVariablesForColors({ addBase, theme }) {

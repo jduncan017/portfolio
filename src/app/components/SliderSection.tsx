@@ -15,12 +15,20 @@ type SliderSectionProps = {
 };
 
 const responsive = {
+  ultraWideScreen: {
+    breakpoint: { max: 4000, min: 3000 },
+    items: 6,
+  },
+  wideScreen: {
+    breakpoint: { max: 3000, min: 2000 },
+    items: 5,
+  },
   superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1700 },
+    breakpoint: { max: 2000, min: 1700 },
     items: 4,
   },
   desktop: {
-    breakpoint: { max: 1700, min: 1100 },
+    breakpoint: { max: 2000, min: 1100 },
     items: 3,
   },
   tablet: {
@@ -89,7 +97,7 @@ export default function SliderSection({
       id={id}
     >
       <div className="TitleContainer mb-4 flex w-[90%] flex-col items-start gap-2 sm:flex-row sm:items-end sm:gap-4">
-        <h1 className="Title text-start text-3xl font-semibold tracking-widest text-white md:text-4xl">
+        <h1 className="Title text-gradient-clip font-comfortaa text-start text-3xl font-black tracking-tight md:text-4xl md:leading-[3rem]">
           {title}
         </h1>
         <button

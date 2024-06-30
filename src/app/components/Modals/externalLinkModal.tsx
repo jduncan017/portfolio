@@ -30,10 +30,10 @@ export default function ExternalLinkModal({
   return (
     <ModalWrapper>
       <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl px-8 pb-5 text-center font-serif">
-        <h3 className="Header font-sans text-2xl font-extrabold uppercase text-darkTeal">
+        <h3 className="Header font-comfortaa text-2xl font-black uppercase text-darkTeal">
           Note:
         </h3>
-        <p className="Description font-sans text-xl text-gray-300">
+        <p className="Description font-comfortaa text-xl text-gray-300">
           {`This will take you to the ${name} ${linkType}.`}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">

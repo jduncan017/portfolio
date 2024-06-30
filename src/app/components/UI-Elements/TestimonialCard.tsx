@@ -13,7 +13,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
   const { showModal } = useModal();
   return (
     <BackgroundGradient
-      containerClassName="Container w-full h-full lg:h-[530px] xl:h-[515px] sxl:h-[480px] mx-auto p-0.5 sm:hover:scale-105 transition-all duration-500"
+      containerClassName="Container w-full h-full max-w-[700px] lg:h-[530px] xl:h-[515px] min-[1480px]:h-[480px] mx-auto p-0.5 sm:hover:scale-105 transition-all duration-500"
       className="Card relative flex h-full flex-col items-center gap-3 rounded-[12px] bg-slate-950 p-4 text-orange-200 transition-all duration-500 xs:text-orange-200 xs:saturate-0 sm:hover:bg-gray-900 sm:hover:text-orange-200 sm:hover:saturate-100 xl:px-10 xl:py-6"
     >
       <div className="TitleSection flex flex-col items-center">
@@ -32,7 +32,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
         height={150}
       />
       <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
-        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center font-sans text-base leading-6 text-gray-200">
+        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center  text-base leading-6 text-gray-200">
           {testimonial.shortDescription}
         </p>
         <p className="Date text-gray-400">{`- ${testimonial.date} -`}</p>
@@ -42,7 +42,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
           showModal(<TestimonialModal testimonial={testimonial} />)
         }
         aria="View full review"
-        addClasses="ReviewButton relative bottom-2 my-4 font-medium tracking-widest uppercase lg:absolute"
+        addClasses="ReviewButton relative bottom-2 sm:text-sm my-4 font-medium tracking-widest uppercase lg:absolute"
         textColor="text-gray-300"
         size="small"
         style="orange"

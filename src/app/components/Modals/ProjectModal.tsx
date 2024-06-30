@@ -49,7 +49,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
     <ModalWrapper>
       <div className="ProjectModal flex h-full w-full flex-col items-start gap-2 pb-2 text-darkTeal">
         <div className="TitleSection flex w-full flex-col items-start">
-          <h3 className="Title pointer-events-none mb-2 w-full border-b border-dotted border-gray-400 pb-1 text-start text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
+          <h3 className="Title pointer-events-none mb-2 w-full border-b border-dotted border-gray-400 pb-1 text-start font-serif text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
             {cardData.name}
           </h3>
           <p className="LastUpdated mb-2 text-sm italic text-gray-400">
@@ -70,7 +70,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
               );
             })}
         </div>
-        <p className="Description max-w-[550px] text-start font-sans text-gray-300">
+        <p className="Description max-w-[550px] text-start  text-gray-300">
           {cardData.description}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">

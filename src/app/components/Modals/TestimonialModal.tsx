@@ -34,7 +34,7 @@ export default function TestimonialModal({ testimonial }: TestimonialArray) {
         </div>
 
         <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
-          <p className="Description w-full max-w-[700px] rounded-md border border-gray-900 bg-gray-800 p-4 text-start font-sans leading-6 text-gray-200">
+          <p className="Description w-full max-w-[700px] rounded-md border border-gray-900 bg-gray-800 p-4 text-start  leading-6 text-gray-200">
             {parse(testimonial.fullReview)}
           </p>
         </div>

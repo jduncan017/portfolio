@@ -85,25 +85,25 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   };
 
   return (
-    <div className="Card mx-auto flex h-full w-[88%] flex-col items-start gap-1 rounded-lg border border-slate-800 bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:bg-black xs:p-3 xs:text-gray-700 xs:saturate-0 sm:hover:scale-105 sm:hover:bg-gray-950 sm:hover:text-orange-200 sm:hover:opacity-100 sm:hover:shadow-customBright sm:hover:saturate-100 xl:p-4">
+    <div className="Card mx-auto flex h-full w-[88%] max-w-[450px] flex-col items-start gap-1 rounded-lg border border-themePurple/60 bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:bg-black xs:p-3 xs:text-gray-300 xs:saturate-0 xs:hover:scale-105 xs:hover:bg-gray-950 xs:hover:text-orange-200 xs:hover:opacity-100 xs:hover:shadow-customBright xs:hover:saturate-100 xl:p-4">
       {cardImage()}
-      <div className="TagsContainer my-2 flex w-full flex-wrap gap-1">
+      <ul className="TagsContainer my-2 flex w-full flex-wrap gap-1">
         {cardData.tags &&
           cardData.tags.sort().map((tag: string): ReactNode => {
             return (
-              <div
+              <li
                 className="Tag pointer-events-none flex-grow rounded-md bg-gray-600/50 bg-opacity-70 px-2 py-0.5 text-center text-xs text-gray-300 xs:text-sm"
                 key={tag}
               >
                 {tag}
-              </div>
+              </li>
             );
           })}
-      </div>
-      <h3 className="Title pointer-events-none w-full text-start text-xl font-bold xs:text-lg xl:text-2xl">
+      </ul>
+      <h3 className="Title pointer-events-none w-full text-start font-serif text-2xl font-bold uppercase tracking-tight xs:text-xl xl:text-2xl">
         {cardData.name}
       </h3>
-      <p className="Description pointer-events-none h-16 w-full text-start font-sans text-sm text-gray-300 mini:leading-5 xs:h-16">
+      <p className="Description pointer-events-none h-16 w-full text-start text-gray-400 mini:leading-5 xs:h-16">
         {cardData.shortDescription}
       </p>
       {cardButton}

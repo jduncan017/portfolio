@@ -32,16 +32,53 @@
   }
 }
 
+@layer utilities {
+  .text-gradient-clip {
+    background-image: linear-gradient(to bottom right, #ffffff, #949494);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
 @font-face {
-  font-family: "Inter";
+  font-family: "inter";
   src: url("/fonts/inter.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "comfortaa";
+  src: url("/fonts/comfortaa.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "notoSansMono";
+  src: url("/fonts/notoSansMono.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "sixtyFour";
+  src: url("/fonts/sixtyFour.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "teko";
+  src: url("/fonts/teko.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
 
 /* Apply the fonts globally */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "noto", sans-serif;
 }
 
 p {
@@ -58,12 +95,6 @@ h1 {
 
 .no-scrollbar {
   -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-}
-
-body {
-  max-width: 1800px;
-  margin: auto;
-  background-color: #000000;
 }
 
 .global__hover-animation {

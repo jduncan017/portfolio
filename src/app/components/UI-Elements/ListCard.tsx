@@ -52,10 +52,10 @@ export default function DisplayCard({
   };
 
   return (
-    <div className="Card mx-auto flex h-fit w-full max-w-[456px] flex-col gap-2 rounded-xl bg-slate-950 px-4 py-6 text-start text-orange-200 shadow-customDim transition-all duration-500 xs:px-8 sm:hover:shadow-customBright md:w-[95%] md:max-w-none">
+    <div className="Card xxl:max-w-[1000px] mx-auto flex h-fit w-full max-w-[456px] flex-col gap-2 rounded-xl border border-themePurple/50 bg-slate-950 px-4 py-6 text-start text-orange-200 shadow-customDim transition-all duration-500 xs:px-8 sm:hover:shadow-customBright md:w-[95%] md:max-w-none">
       <div className="TopContainer flex flex-col gap-4 md:flex-row">
         <div className="TitleImageSection mx-auto flex h-full flex-col items-center md:mx-0 md:w-[350px] md:items-start">
-          <h3 className="Title text-lg font-semibold uppercase tracking-wider xs:text-2xl md:text-xl">
+          <h3 className="Title font-serif text-lg font-semibold uppercase tracking-wider xs:text-2xl md:text-xl">
             {cardData.name}
           </h3>
           {cardData.lastUpdated && (
@@ -66,7 +66,7 @@ export default function DisplayCard({
           {cardImage()}
         </div>
         <div className="InfoContainer flex w-full flex-col items-start justify-between gap-2">
-          <p className="Description w-fit text-start font-sans text-sm capitalize leading-6 text-gray-300 xs:text-base">
+          <p className="Description w-fit text-start  text-sm capitalize leading-6 text-gray-300 xs:text-base">
             {cardData.description}
           </p>
         </div>
