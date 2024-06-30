@@ -24,7 +24,7 @@ export default function ContactCard({ titlePosition }: ContactCardProps) {
         <h2 className="Name font-serif text-xl uppercase leading-relaxed tracking-wide sm:text-2xl">
           Joshua Duncan
         </h2>
-        <p className="Title font-comfortaa mb-6 text-xs uppercase opacity-60 mini:mb-12">
+        <p className="Title mb-6 font-sans text-xs uppercase opacity-60 mini:mb-12">
           Software Engineer / Web Developer
         </p>
         <div className="InfoContainer flex gap-2">

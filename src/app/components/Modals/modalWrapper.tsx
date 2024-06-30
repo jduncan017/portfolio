@@ -45,7 +45,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
         onClick={handleModalContentClick}
       >
         <div className="TopBar sticky left-0 top-0 h-fit min-h-[44px] w-full bg-slate-950 pb-4 pt-8">
-          <h2 className="Title font-comfortaa w-full text-center text-3xl font-bold uppercase tracking-wider text-white">
+          <h2 className="Title w-full text-center font-sans text-3xl font-bold uppercase tracking-wider text-white">
             {title}
           </h2>
           <button

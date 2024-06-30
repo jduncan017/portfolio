@@ -8,7 +8,7 @@ export default function TestimonialSection() {
       className="testimonialSection flex h-fit scroll-mt-20 flex-col items-center"
       id="testimonials-section"
     >
-      <h1 className="Header text-gradient-clip font-comfortaa mx-auto mb-4 w-[90%] border-solid text-start text-3xl font-black tracking-tight text-white md:text-4xl">
+      <h1 className="Header text-gradient-clip mx-auto mb-4 w-[90%] border-solid text-start font-sans text-3xl font-black tracking-tight text-white md:text-4xl">
         Testimonials
       </h1>
       <div className="BorderWrapper flex w-full justify-center border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 py-10 shadow-customBright sm:py-16">

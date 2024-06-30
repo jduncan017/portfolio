@@ -97,7 +97,7 @@ export default function SliderSection({
       id={id}
     >
       <div className="TitleContainer mb-4 flex w-[90%] flex-col items-start gap-2 sm:flex-row sm:items-end sm:gap-4">
-        <h1 className="Title text-gradient-clip font-comfortaa text-start text-3xl font-black tracking-tight md:text-4xl md:leading-[3rem]">
+        <h1 className="Title text-gradient-clip text-start font-sans text-3xl font-black tracking-tight md:text-4xl md:leading-[3rem]">
           {title}
         </h1>
         <button

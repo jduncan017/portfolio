@@ -18,7 +18,7 @@ export const SocialContainer = () => {
         <Image
           alt="Github icon"
           src={gitHubIcon}
-          className="_social-icon global__hover-animation"
+          className="SocialIcon global__hover-animation opacity-80"
           width={45}
           height={45}
         />
@@ -32,7 +32,7 @@ export const SocialContainer = () => {
         <Image
           alt="Linkedin icon"
           src={linkedInIcon}
-          className="_social-icon global__hover-animation"
+          className="SocialIcon global__hover-animation opacity-80"
           width={45}
           height={45}
         />
@@ -46,7 +46,7 @@ export const SocialContainer = () => {
         <Image
           alt="Twitter icon"
           src={xIcon}
-          className="_social-icon global__hover-animation"
+          className="SocialIcon global__hover-animation opacity-80"
           width={45}
           height={45}
         />

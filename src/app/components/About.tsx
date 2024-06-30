@@ -15,7 +15,7 @@ export const About = () => {
 
   return (
     <section className="AboutSection h-fit scroll-mt-20" id="about-section">
-      <h1 className="Header font-comfortaa text-gradient-clip mx-auto mb-4 w-[90%] border-solid text-start text-3xl font-black tracking-tight text-white md:text-4xl">
+      <h1 className="Header text-gradient-clip mx-auto mb-4 w-[90%] border-solid text-start font-sans text-3xl font-black tracking-tight text-white md:text-4xl">
         About Me
       </h1>
       <div className="OuterContainer flex h-full w-full justify-center border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 to-black shadow-customBright">
@@ -36,7 +36,7 @@ export const About = () => {
               <FlipWords
                 words={words}
                 duration={1500}
-                className="font-comfortaa pl-0 text-white"
+                className="pl-0 font-sans text-white"
               />
             </h2>
             <p className="BioDescription xxl:max-w-none mb-8 max-w-[350px] pr-4  text-white xs:max-w-[600px]">

@@ -46,4 +46,39 @@ export const FAV_TECH_DATA: CardData[] = [
     imagePath: "/opengraphImages/lukso-og.png",
     iconPath: "",
   },
+  {
+    name: "Claude.ai",
+    shortDescription:
+      "My go to LLM from Anthropic, a company that's been talking about AI safety from the start.",
+    description: `While OpenAI takes the world by storm due to first mover advantage, Anthropic (parent company for Claude) has been making
+    huge advances on the LLM front. Most likely ChatGPTs most capable competitor, I appreciate Claude for it's better writing style, the way
+    it converses with the user, and the general focus on AI safety compared to OpenAI.`,
+    liveButtonText: "Visit Site",
+    liveLink: "https://www.anthropic.com/claude",
+    imagePath: "https://www.anthropic.com/claude",
+    iconPath: "",
+  },
+  {
+    name: "Tidal",
+    shortDescription:
+      "An audiophile's music streaming service that focuses on quality audio and higher pay for artists.",
+    description: `Music on Tidal just sounds better.. period. That's one reason I stick with it. Additionally, Tidal pays artists more than
+    Apple Music or spotify, and you can stream music to your DJ setup through Tidal if you're into that!`,
+    liveButtonText: "Visit Site",
+    liveLink: "https://tidal.com/",
+    imagePath: "/opengraphImages/tidal.jpg",
+    iconPath: "",
+  },
+  {
+    name: "Formspark",
+    shortDescription:
+      "An incredibly easy-to-use form component that will work with pretty much any tech stack.",
+    description: `Setting up forms can be a tedious and annoying part of developing. Formspark makes it incredibly easy to setup your API,
+    and the user interface of their website makes it great for clients who aren't tech savvy. Formspark also integrates with Zapier for
+    further integration and custom workflows.`,
+    liveButtonText: "Visit Site",
+    liveLink: "https://formspark.io/",
+    imagePath: "/opengraphImages/formspark.jpg",
+    iconPath: "",
+  },
 ];

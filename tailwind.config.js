@@ -6,11 +6,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["inter", "sans-serif"],
-      comfortaa: ["comfortaa", "sans-serif"],
+      sans: ["comfortaa", "sans-serif"],
       noto: ["notoSansMono", "sans-serif"],
-      sixtyFour: ["sixtyFour", "sans-serif"],
-      teko: ["teko", "sans-serif"],
+      gulzar: ["gulzar", "serif"],
     },
     screens: {
       mini: "480px",
