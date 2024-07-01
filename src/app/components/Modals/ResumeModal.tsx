@@ -10,7 +10,7 @@ export default function ResumeModal() {
     return (
       <div className="Container">
         <div className="Border">
-          <h3 className="Heading mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase text-darkTeal">
+          <h3 className="Heading text-primaryDark mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase">
             {title}
           </h3>
         </div>

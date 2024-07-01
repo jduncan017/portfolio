@@ -44,11 +44,11 @@ const SiteButton = ({
       break;
     case "teal":
       buttonStyle =
-        "border-none bg-darkTeal/90 hover:bg-white hover:text-black";
+        "border-none bg-primaryDark/90 hover:bg-white hover:text-black";
       break;
     case "tealHollow":
       buttonStyle =
-        "border-darkTeal/90 border hover:bg-white hover:border-white hover:text-black";
+        "border-primaryDark/90 border hover:bg-white hover:border-white hover:text-black";
       break;
     default:
       buttonStyle = "";

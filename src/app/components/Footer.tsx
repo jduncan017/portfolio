@@ -10,7 +10,7 @@ export const Footer = () => {
   const { showModal } = useModal();
   return (
     <section
-      className="Footer flex flex-col items-center gap-10 border-t border-t-gray-800 bg-black px-5 py-10 shadow-customBright xs:px-20 md:flex-row md:items-start lg:gap-20"
+      className="Footer shadow-secondaryBright flex flex-col items-center gap-10 border-t border-t-gray-800 bg-black px-5 py-10 xs:px-20 md:flex-row md:items-start lg:gap-20"
       id="contact-section"
     >
       <ContactCard titlePosition="justify-center" />

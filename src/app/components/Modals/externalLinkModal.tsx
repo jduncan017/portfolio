@@ -30,7 +30,7 @@ export default function ExternalLinkModal({
   return (
     <ModalWrapper>
       <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl px-8 pb-5 text-center font-serif">
-        <h3 className="Header font-sans text-2xl font-black uppercase text-darkTeal">
+        <h3 className="Header text-primaryDark font-sans text-2xl font-black uppercase">
           Note:
         </h3>
         <p className="Description font-sans text-xl text-gray-300">

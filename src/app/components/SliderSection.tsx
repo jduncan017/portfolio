@@ -106,7 +106,7 @@ export default function SliderSection({
               <DisplayListModal cardArray={cardArray} dataType={dataType} />,
             )
           }
-          className="ShowAllButton text-lg italic text-gray-400 transition-all duration-500 hover:scale-105 hover:text-themePurple md:text-xl"
+          className="ShowAllButton hover:text-secondary text-lg italic text-gray-400 transition-all duration-500 hover:scale-105 md:text-xl"
         >
           View All
         </button>

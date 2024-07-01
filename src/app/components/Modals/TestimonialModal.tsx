@@ -20,7 +20,7 @@ export default function TestimonialModal({ testimonial }: TestimonialArray) {
             height={64}
           />
           <div className="TitleInfo flex flex-col items-start">
-            <h3 className="Title pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider text-darkTeal xs:text-2xl">
+            <h3 className="Title text-primaryDark pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-2xl">
               {testimonial.name}
             </h3>
             <p className="Relationship text-lg italic text-gray-300">

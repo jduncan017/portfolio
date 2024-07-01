@@ -8,7 +8,7 @@ export default function SubmitConfirmModal() {
   return (
     <ModalWrapper>
       <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl py-3 text-center font-serif sm:px-8">
-        <h2 className="Header text-2xl font-medium uppercase text-darkTeal">
+        <h2 className="Header text-primaryDark text-2xl font-medium uppercase">
           Thank You!
         </h2>
         <p className="Description max-w-64 text-xl text-gray-300">
@@ -18,7 +18,7 @@ export default function SubmitConfirmModal() {
           <SiteButton
             onClick={() => hideModal()}
             aria="submit"
-            addClasses="border-none bg-darkTeal/90 hover:bg-gray-300 hover:text-black mt-4"
+            addClasses="border-none bg-primaryDark/90 hover:bg-gray-300 hover:text-black mt-4"
             textColor="text-gray-200"
             style="teal"
           >

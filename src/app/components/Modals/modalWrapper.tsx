@@ -41,7 +41,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
         animate={{ scale: 1 }}
         initial={{ scale: 0 }}
         transition={{ duration: 0.2 }}
-        className="Content custom-scrollbar relative mb-5 mt-16 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl bg-slate-950 pl-3 text-center shadow-customDim"
+        className="Content custom-scrollbar shadow-secondaryDim relative mb-5 mt-16 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl bg-slate-950 pl-3 text-center"
         onClick={handleModalContentClick}
       >
         <div className="TopBar sticky left-0 top-0 h-fit min-h-[44px] w-full bg-slate-950 pb-4 pt-8">

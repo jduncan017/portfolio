@@ -85,7 +85,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   };
 
   return (
-    <div className="Card mx-auto flex h-full w-[88%] max-w-[420px] flex-col items-start gap-1 rounded-lg border border-themePurple/30  bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:border-themePurple/60 xs:bg-black xs:p-3 xs:text-gray-300 xs:saturate-0 xs:hover:scale-105 xs:hover:bg-gray-950 xs:hover:text-orange-200 xs:hover:opacity-100 xs:hover:shadow-customBright xs:hover:saturate-100 xl:p-4">
+    <div className="Card border-secondary/30 xs:border-secondary/60 xs:hover:shadow-secondaryBright mx-auto flex h-full w-[88%] max-w-[420px] flex-col items-start gap-1  rounded-lg border bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:bg-black xs:p-3 xs:text-gray-300 xs:saturate-0 xs:hover:scale-105 xs:hover:bg-gray-950 xs:hover:text-orange-200 xs:hover:opacity-100 xs:hover:saturate-100 xl:p-4">
       {cardImage()}
       <ul className="TagsContainer my-2 flex w-full flex-wrap gap-1">
         {cardData.tags &&
