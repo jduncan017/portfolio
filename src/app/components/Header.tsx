@@ -50,8 +50,7 @@ export const Header = () => {
         </div>
         <div className="Scroll mt-[6vh] flex flex-col items-center">
           <motion.h3
-            className="ScrollDown globalhover-animation text-gradient-clip font-gulzar text-xl font-medium uppercase text-gray-200"
-            onClick={performSmoothScroll}
+            className="ScrollDown text-gradient-clip font-gulzar text-xl uppercase tracking-wide text-gray-200"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.75, ease: "easeIn" }}
@@ -64,13 +63,13 @@ export const Header = () => {
             transition={{ duration: 1, delay: 3, ease: "easeIn" }}
           >
             <Image
-              width={40}
-              height={40}
+              width={30}
+              height={30}
               src={"/down-arrow.png"}
               alt="scroll down"
               aria-label="scroll down"
               onClick={performSmoothScroll}
-              className="DownArrow globalhover-animation relative mt-4 h-10 w-10 border-none delay-300"
+              className="DownArrow global__hover-animation relative mt-4 border-none delay-300"
               id="nav-trigger"
             />
           </motion.div>
