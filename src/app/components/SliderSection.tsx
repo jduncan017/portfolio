@@ -95,7 +95,7 @@ export default function SliderSection({
 
   return (
     <section className="SliderSection flex scroll-mt-20 flex-col" id={id}>
-      <div className="TitleContainer mb-4 flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:gap-4">
+      <div className="TitleContainer mb-4 ml-[5%] flex flex-col items-start xs:flex-row xs:items-end xs:gap-4">
         <SectionTitle title={title} />
         <motion.button
           className="ShowAllButton text-lg italic text-gray-400 transition-all duration-500 hover:scale-105 hover:text-secondary md:text-xl"

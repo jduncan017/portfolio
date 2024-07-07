@@ -9,7 +9,7 @@ export default function TestimonialSection() {
     show: {
       transition: {
         staggerChildren: 0.15,
-        delayChildren: 0.2,
+        delayChildren: 0.4,
       },
     },
   };
@@ -37,7 +37,9 @@ export default function TestimonialSection() {
       className="testimonialSection flex h-fit scroll-mt-20 flex-col"
       id="testimonials-section"
     >
-      <SectionTitle title="Testimonial" />
+      <div className="TitleContainer ml-[5%]">
+        <SectionTitle title="Testimonials" />
+      </div>
       <div className="BorderWrapper mt-4 flex w-full justify-center border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 py-10 shadow-secondaryBright sm:py-16">
         <motion.ul
           variants={motionContainer}

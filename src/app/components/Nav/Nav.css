@@ -1,79 +1,12 @@
-.full-nav {
-  position: fixed;
-  width: 100%;
-  z-index: 20;
-}
-
-.full-nav__links {
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  z-index: 1;
-  padding: 2px;
-  height: 40px;
-  position: absolute;
-}
-
-.full-nav__background {
-  background-color: #000;
-  box-shadow: 0px 5px 13px 0px #000;
-  height: 40px;
-  width: 100%;
-  max-width: 1800px;
-  transition:
-    background-color 0.5s,
-    transform 0.5s;
-}
-
-.full-nav__background_hidden {
-  transform: translateX(-100vw);
-  opacity: 0;
-  transition:
-    background-color 0.5s,
-    transform 0.5s,
-    opacity 2s;
-}
-
 .nav-buttons {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  font-size: 85%;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin: 0.5px;
-  padding: 10px 12px;
-  text-transform: uppercase;
-  border-radius: 3px;
   opacity: 0; /* Starts transparent, fades in */
   animation: fadeIn 1s ease forwards;
 }
 
 .nav-buttons:hover {
-  background-color: #dddddd;
-  cursor: pointer;
   transition:
-    background-color 0.75s,
+    background-color 1s,
     color 1.5s;
-  color: black;
-}
-
-.hamburger-button,
-.hamburger-button-active {
-  background: center/100% url("/triangle_white.png");
-  border: none;
-  height: 45px;
-  position: fixed;
-  width: 45px;
-  z-index: 30;
-  margin: 5px;
-  opacity: 70%;
-  transition-duration: 500ms;
-  transition:
-    opacity,
-    margin 0.5s,
-    background 1s;
 }
 
 .hamburger-button-turn-left {
@@ -81,36 +14,8 @@
 }
 
 .hamburger-button-active {
-  background: center/100% url("/triangle_white.png");
-  opacity: 100%;
   transform: rotate(180deg);
   animation: turnRight 0.9s 1;
-  margin: 0;
-  transition:
-    opacity,
-    margin 0.5s,
-    background 1s;
-}
-
-.hamburger-button:hover,
-.hamburger-button-active:hover {
-  cursor: pointer;
-}
-
-.mobile-nav-container {
-  display: none;
-  position: absolute;
-}
-
-.mobile-menu {
-  background-color: #000000;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 5px 5px 13px 2px #000;
-  height: auto;
-  position: fixed;
-  width: 100%;
-  z-index: 20;
 }
 
 @keyframes turnRight {
@@ -135,52 +40,30 @@
 
 @keyframes slide-in {
   0% {
-    top: -100%;
+    transform: translateY(-100%);
   }
 
   100% {
-    top: 0px;
+    transform: translateY(0);
   }
 }
 
 @keyframes slide-out {
   0% {
-    top: 0px;
+    transform: translateY(0);
   }
 
   100% {
-    top: -100%;
+    transform: translateY(-100%);
   }
 }
 
 .animate-slide-in {
-  animation: slide-in ease-out 1s;
+  animation: slide-in ease-out 0.7s;
 }
 
 .animate-slide-out {
-  animation: slide-out ease-in 1s;
-}
-
-@media only screen and (max-width: 660px) {
-  .mobile-nav-container {
-    display: block;
-  }
-
-  .full-nav-container {
-    display: none;
-  }
-
-  .nav-buttons {
-    font-size: 110%;
-    width: 100%;
-    padding: 15px;
-    border-bottom: darkgray 1px solid;
-  }
-
-  .nav-buttons:last-child {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
+  animation: slide-out ease-in 0.7s;
 }
 
 @keyframes fadeIn {

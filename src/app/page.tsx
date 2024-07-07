@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Nav } from "./components/Nav/Nav";
-import { Header } from "@/src/app/components/Header/Header";
+import { Header } from "@/src/app/components/Header";
 import { About } from "@/src/app/components/About";
 import { Footer } from "@/src/app/components/Footer";
 import SliderSection from "./components/SliderSection";

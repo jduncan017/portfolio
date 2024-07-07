@@ -18,7 +18,9 @@ export const About = () => {
 
   return (
     <section className="AboutSection h-fit scroll-mt-20" id="about-section">
-      <SectionTitle title="About Me" />
+      <div className="TitleContainer ml-[5%]">
+        <SectionTitle title="About Me" />
+      </div>
       <div className="OuterContainer mt-4 flex h-full w-full justify-center border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 to-black shadow-secondaryBright">
         <div className="InnerContainer flex w-full max-w-[2500px] flex-col items-center justify-center gap-8 py-8 md:py-16 lg:flex-row lg:items-start lg:gap-16 lg:text-left xxl:gap-20">
           <motion.div
@@ -27,10 +29,11 @@ export const About = () => {
             whileInView={{ x: "0" }}
             viewport={{ once: true }}
             transition={{
-              duration: 0.5,
+              duration: 0.6,
               ease: "easeInOut",
               type: "spring",
               bounce: 0.2,
+              delay: 0.5,
             }}
           >
             <div className="ImageContainer flex h-fit w-full justify-end overflow-hidden rounded-r-xl bg-black/90 p-4 pr-8 shadow-secondaryBright min-[382px]:pl-[calc((100vw-350px-32px)/2)] xs:justify-center xs:rounded-xl xs:pl-4 lg:justify-end lg:rounded-l-none xxl:rounded-xl xxl:pr-4">
@@ -49,11 +52,11 @@ export const About = () => {
             whileInView={{ x: "0" }}
             viewport={{ once: true }}
             transition={{
-              delay: 0.15,
-              duration: 0.5,
+              duration: 0.6,
               ease: "easeInOut",
               type: "spring",
               bounce: 0.2,
+              delay: 0.55,
             }}
           >
             <h2 className="Title mb-3 flex gap-2  text-3xl font-semibold uppercase leading-normal tracking-widest text-white sm:text-4xl">

@@ -38,7 +38,8 @@
     "**/*.tsx",
     "**/*.cjs",
     // "**/*.js", // Ensure this is commented out
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/app/components/Nav/Nav.js"
   ],
   "exclude": ["node_modules", "**/*.js"] // Add "**/*.js" here to exclude JS files
 }

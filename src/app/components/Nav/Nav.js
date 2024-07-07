@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Nav.css";
 import ContactModal from "../Modals/contactModal";
 import { useModal } from "@/src/contexts/ModalContext";
+import Image from "next/image";
 
 export const Nav = () => {
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
   const [animateClass, setAnimateClass] = useState("hidden");
-  const [hamburgerBtnTurnLeft, setHamburgerBtnTurnLeft] = useState("");
-  const [navStyle, setNavStyle] = useState("full-nav__background_hidden");
+  const [navStyle, setNavStyle] = useState(true);
   const { showModal } = useModal();
   const mobileNavRef = useRef();
   const navHeadings = [
@@ -27,9 +27,9 @@ export const Nav = () => {
         const [entry] = entries;
         // If header is not in viewport, change nav background
         if (!entry.isIntersecting) {
-          setNavStyle("full-nav__background");
+          setNavStyle(false);
         } else {
-          setNavStyle("full-nav__background full-nav__background_hidden");
+          setNavStyle(true);
         }
       },
       {
@@ -70,12 +70,12 @@ export const Nav = () => {
       const delay = index * 100; // Incremental delay, e.g., 0ms, 100ms, 200ms, etc.
       return (
         <button
+          className="nav-buttons m-[0.5px] w-full cursor-pointer rounded-sm border-b border-gray-400 bg-transparent p-4 font-semibold uppercase tracking-[2px] text-white hover:bg-gray-100 hover:text-black sm:w-fit sm:border-none sm:px-3 sm:py-2.5 sm:text-sm"
           tabIndex="0"
           aria-label={`${heading} section`}
           key={`${heading}`}
           onClick={() => performSmoothScroll(`${heading}`)}
           style={{ animationDelay: `${delay}ms` }}
-          className="nav-buttons"
         >{`${heading}`}</button>
       );
     });
@@ -83,53 +83,52 @@ export const Nav = () => {
 
   const onHamburgerClick = () => {
     if (mobileNavVisible) {
-      setHamburgerBtnTurnLeft("hamburger-button-turn-left");
       setMobileNavVisible(false);
-      setAnimateClass("mobile-menu animate-slide-out");
+      setAnimateClass("");
       setTimeout(() => {
         setAnimateClass("hidden");
-      }, 800);
+      }, 700);
     } else {
       setMobileNavVisible(true);
     }
   };
 
   return (
-    <nav className="nav">
-      {/* full nav */}
-      <div className="full-nav hidden sm:block">
-        <div className="full-nav__links">
+    <nav className="NavBar">
+      {/* Desktop Nav */}
+      <div className="DesktopNav fixed z-20 hidden w-full sm:block">
+        <div className="NavLinks absolute z-[1] flex h-12 w-full justify-center bg-transparent p-0.5">
           {printNavButtons()}{" "}
           <button
             tabIndex="0"
             aria-label="contact form"
             onClick={() => showModal(<ContactModal />)}
             style={{ animationDelay: `${(navHeadings.length + 1) * 100}ms` }}
-            className="nav-buttons"
+            className="nav-buttons m-[0.5px] w-full cursor-pointer rounded-sm border-b border-gray-400 bg-transparent p-4 font-semibold uppercase tracking-[2px] text-white hover:bg-gray-100 hover:text-black sm:w-fit sm:border-none sm:px-3 sm:py-2.5 sm:text-sm"
           >
             Contact
           </button>
         </div>
-        <div className={navStyle} />
+        <div
+          className={`DesktopNavBackground h-12 w-full border-b border-gray-800 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 shadow-2xl transition-all duration-500 ${navStyle && "translate-y-[-100px]"}`}
+        />
       </div>
 
-      {/* mobile nav */}
-      <div ref={mobileNavRef} className="mobile-nav-container">
-        <button
+      {/* Mobile Nav */}
+      <div
+        ref={mobileNavRef}
+        className="MobileNavContainer block sm:absolute sm:hidden"
+      >
+        <Image
           onClick={onHamburgerClick}
           aria-label="toggle menu visibility"
-          className={
-            !mobileNavVisible
-              ? `hamburger-button ${hamburgerBtnTurnLeft}`
-              : "hamburger-button-active"
-          }
-        ></button>
+          width={45}
+          height={45}
+          src="/nav-logo.png"
+          className={`HamburgerButton tranition-all fixed z-30 m-1 cursor-pointer opacity-70 duration-500 ${mobileNavVisible && `hamburger-button-turn-left hamburger-button-active opacity-100`}`}
+        ></Image>
         <div
-          className={
-            mobileNavVisible
-              ? "mobile-menu animate-slide-in"
-              : `${animateClass}`
-          }
+          className={`MobileMenu fixed z-20 h-auto w-full bg-black shadow-2xl ${mobileNavVisible ? "animate-slide-in block" : `animate-slide-out ${animateClass}`}`}
         >
           {printNavButtons()}
           <button
@@ -137,13 +136,12 @@ export const Nav = () => {
             aria-label="contact form"
             onClick={() => showModal(<ContactModal />)}
             style={{ animationDelay: `${(navHeadings.length + 1) * 100}ms` }}
-            className="nav-buttons"
+            className="nav-buttons m-[0.5px] w-full cursor-pointer rounded-sm border-b border-gray-400 bg-transparent p-4 font-semibold uppercase tracking-[2px] text-white hover:bg-gray-100 hover:text-black sm:w-fit sm:border-none sm:px-3 sm:py-2.5 sm:text-sm"
           >
             Contact
           </button>
           <div
-            className={`_mobile-overlay fixed inset-0 z-[-1] justify-center 
-            bg-black opacity-50 ${mobileNavVisible ? "flex" : "hidden"}`}
+            className={`MobileOverlay fixed inset-0 z-[-1] justify-center bg-black opacity-50 ${mobileNavVisible ? "flex" : "hidden"}`}
           />
         </div>
       </div>
