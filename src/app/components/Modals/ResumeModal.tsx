@@ -1,11 +1,7 @@
 import ModalWrapper from "./ModalWrapper";
 import { RESUME_DATA, TECH_SKILLS } from "@/src/lib/resumeData";
-import SiteButton from "../UI-Elements/SiteButton";
-import { useModal } from "@/src/contexts/ModalContext";
 
 export default function ResumeModal() {
-  const { hideModal } = useModal();
-
   const buildExperienceHeading = (title: string) => {
     return (
       <div className="Container">
