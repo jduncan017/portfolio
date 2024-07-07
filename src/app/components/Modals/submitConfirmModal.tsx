@@ -1,4 +1,4 @@
-import ModalWrapper from "./ModalWrapper";
+import ModalWrapper from "./M";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "../../../contexts/ModalContext";
 

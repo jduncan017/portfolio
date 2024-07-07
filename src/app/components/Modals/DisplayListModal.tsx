@@ -1,4 +1,4 @@
-import ModalWrapper from "./ModalWrapper";
+import ModalWrapper from "./M";
 import { CardData } from "@/src/lib/dataTypes";
 import ListCard from "@/src/app/components/UI-Elements/ListCard";
 import { motion } from "framer-motion";
