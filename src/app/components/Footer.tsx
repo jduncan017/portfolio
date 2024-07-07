@@ -22,8 +22,8 @@ export const Footer = () => {
           </p>
           <SocialContainer />
         </div>
-        <p className="FooterMessage max-w-[500px] text-center text-gray-400 md:text-start">
-          Please feel free to contact me for work, suggestions, or networking!
+        <p className="FooterMessage mt-2 max-w-[350px] text-center text-gray-400 md:text-start">
+          {`Let's connect! Feel free to contact me for work, questions, or just to network!`}
         </p>
         <div className="ButtonContainer my-6 flex flex-col items-center gap-4 mini:flex-row">
           <SiteButton

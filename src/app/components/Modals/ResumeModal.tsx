@@ -15,7 +15,7 @@ export default function ResumeModal() {
   };
 
   return (
-    <ModalWrapper title="Resume" closeButton>
+    <ModalWrapper title="Resume">
       <div className="OuterContainer max-w-[800px] items-start py-4 text-start text-white sm:px-4">
         <h2 className="Resume mb-1 text-start text-4xl font-bold uppercase">
           Joshua Duncan

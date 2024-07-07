@@ -4,19 +4,13 @@ import { motion } from "framer-motion";
 import { useModal } from "@/src/contexts/ModalContext";
 import Image from "next/image";
 import useEscape from "../../../hooks/useEscape";
-import SiteButton from "../UI-Elements/SiteButton";
 
 interface ModalWrapperProps {
   title?: string;
   children: ReactElement;
-  closeButton?: boolean;
 }
 
-const ModalWrapper: FC<ModalWrapperProps> = ({
-  title,
-  children,
-  closeButton,
-}) => {
+const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
   const { hideModal } = useModal();
   useEscape(hideModal);
 
@@ -34,7 +28,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
 
   return (
     <div
-      className="ModalOverlay fixed inset-0 z-20 flex h-svh items-center justify-center bg-black/80 backdrop-blur-lg backdrop-filter xs:p-6"
+      className="ModalOverlay fixed inset-0 z-20 flex h-svh items-center justify-center bg-black/75 backdrop-blur-lg backdrop-filter xs:p-6"
       onClick={hideModal}
     >
       <motion.div
@@ -68,21 +62,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
         <div className="ChildContainer mb-4 rounded-xl bg-slate-950 px-6">
           {children}
         </div>
-        <div className="BottomBar sticky bottom-0 left-0 h-fit min-h-8 w-full bg-gradient-to-t from-slate-950 from-70% to-transparent to-100%">
-          {closeButton && (
-            <div className="ButtonContainer flex w-full justify-center py-6">
-              <SiteButton
-                onClick={() => hideModal()}
-                aria="close modal"
-                textColor="text-gray-200 min-w-[200px]"
-                style="teal"
-                size="large"
-              >
-                Close
-              </SiteButton>
-            </div>
-          )}
-        </div>
+        <div className="BottomBar sticky bottom-0 left-0  h-8 w-full bg-gradient-to-t from-slate-950 from-70% to-transparent to-100%" />
       </motion.div>
     </div>
   );
