@@ -4,7 +4,7 @@ import { CardData } from "@/src/lib/dataTypes";
 import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "./SiteButton";
 import { useModal } from "@/src/contexts/ModalContext";
-import ExternalLinkModal from "../Modals/E";
+import ExternalLinkModal from "../Modals/ExternalLinkModal";
 import DisplayListModal from "../Modals/DisplayListModal";
 
 type DisplayCardProps = {

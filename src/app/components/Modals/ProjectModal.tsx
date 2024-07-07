@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import { CardData } from "@/src/lib/dataTypes";
 import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "../UI-Elements/SiteButton";
-import ModalWrapper from "./M";
+import ModalWrapper from "./ModalWrapper";
 import { useModal } from "@/src/contexts/ModalContext";
-import ExternalLinkModal from "./E";
+import ExternalLinkModal from "./ExternalLinkModal";
 
 type ProjectModalProps = {
   cardData: CardData;

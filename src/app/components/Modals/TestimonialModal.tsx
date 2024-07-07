@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { TestimonialData } from "@/src/lib/dataTypes";
-import ModalWrapper from "./M";
+import ModalWrapper from "./ModalWrapper";
 import parse from "html-react-parser";
 
 interface TestimonialArray {

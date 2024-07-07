@@ -1,5 +1,5 @@
 import React from "react";
-import ModalWrapper from "./M";
+import ModalWrapper from "./ModalWrapper";
 
 const CalendlyModal = () => {
   return (

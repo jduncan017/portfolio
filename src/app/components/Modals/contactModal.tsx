@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ModalWrapper from "./M";
+import ModalWrapper from "./ModalWrapper";
 import { useFormspark } from "@formspark/use-formspark";
 import { useModal } from "../../../contexts/ModalContext";
 import SubmitConfirmModal from "./submitConfirmModal";
