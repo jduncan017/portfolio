@@ -5,7 +5,7 @@ import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "./SiteButton";
 import { useModal } from "@/src/contexts/ModalContext";
 import ProjectModal from "../Modals/ProjectModal";
-import ExternalLinkModal from "../Modals/externalLinkModal";
+import ExternalLinkModal from "../Modals/ExternalLinkModal";
 
 type DisplayCardProps = {
   cardData: CardData;
@@ -85,7 +85,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   };
 
   return (
-    <div className="Card border-secondary/30 xs:border-secondary/60 xs:hover:shadow-secondaryBright mx-auto flex h-full w-[88%] max-w-[420px] flex-col items-start gap-1  rounded-lg border bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:bg-black xs:p-3 xs:text-gray-300 xs:saturate-0 xs:hover:scale-105 xs:hover:bg-gray-950 xs:hover:text-orange-200 xs:hover:opacity-100 xs:hover:saturate-100 xl:p-4">
+    <div className="Card mx-auto flex h-full w-[88%] max-w-[420px] flex-col items-start gap-1 rounded-lg border border-secondary/30  bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:border-secondary/60 xs:bg-black xs:p-3 xs:text-gray-300 xs:saturate-0 xs:hover:scale-105 xs:hover:bg-gray-950 xs:hover:text-orange-200 xs:hover:opacity-100 xs:hover:shadow-secondaryBright xs:hover:saturate-100 xl:p-4">
       {cardImage()}
       <ul className="TagsContainer my-2 flex w-full flex-wrap gap-1">
         {cardData.tags &&
@@ -100,7 +100,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
             );
           })}
       </ul>
-      <h3 className="Title pointer-events-none w-full text-start font-serif text-2xl font-bold uppercase tracking-tight xs:text-xl xl:text-2xl">
+      <h3 className="Title pointer-events-none w-full text-start font-serif text-2xl font-bold uppercase xs:text-xl xl:text-2xl">
         {cardData.name}
       </h3>
       <p className="Description pointer-events-none h-16 w-full text-start text-gray-400 mini:leading-5 xs:h-16">

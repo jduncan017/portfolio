@@ -3,9 +3,9 @@ import type { ReactNode } from "react";
 import { CardData } from "@/src/lib/dataTypes";
 import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "../UI-Elements/SiteButton";
-import ModalWrapper from "./modalWrapper";
+import ModalWrapper from "./ModalWrapper";
 import { useModal } from "@/src/contexts/ModalContext";
-import ExternalLinkModal from "./externalLinkModal";
+import ExternalLinkModal from "./ExternalLinkModal";
 
 type ProjectModalProps = {
   cardData: CardData;
@@ -47,7 +47,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
 
   return (
     <ModalWrapper>
-      <div className="ProjectModal text-primaryDark flex h-full w-full flex-col items-start gap-2 pb-2">
+      <div className="ProjectModal flex h-full w-full flex-col items-start gap-2 pb-2 text-primaryDark">
         <div className="TitleSection flex w-full flex-col items-start">
           <h3 className="Title pointer-events-none mb-2 w-full border-b border-dotted border-gray-400 pb-1 text-start font-serif text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
             {cardData.name}

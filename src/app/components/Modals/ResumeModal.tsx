@@ -1,4 +1,4 @@
-import ModalWrapper from "./modalWrapper";
+import ModalWrapper from "./ModalWrapper";
 import { RESUME_DATA, TECH_SKILLS } from "@/src/lib/resumeData";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "@/src/contexts/ModalContext";
@@ -10,7 +10,7 @@ export default function ResumeModal() {
     return (
       <div className="Container">
         <div className="Border">
-          <h3 className="Heading text-primaryDark mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase">
+          <h3 className="Heading mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase text-primaryDark">
             {title}
           </h3>
         </div>

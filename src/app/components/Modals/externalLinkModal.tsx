@@ -1,4 +1,4 @@
-import ModalWrapper from "./modalWrapper";
+import ModalWrapper from "./ModalWrapper";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "../../../contexts/ModalContext";
 import Link from "next/link";
@@ -29,11 +29,11 @@ export default function ExternalLinkModal({
 
   return (
     <ModalWrapper>
-      <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl px-8 pb-5 text-center font-serif">
-        <h3 className="Header text-primaryDark font-sans text-2xl font-black uppercase">
+      <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl px-6 pb-5 text-center font-serif">
+        <h3 className="Header font-noto text-2xl font-black uppercase text-primaryDark">
           Note:
         </h3>
-        <p className="Description font-sans text-xl text-gray-300">
+        <p className="Description font-noto text-xl text-gray-300">
           {`This will take you to the ${name} ${linkType}.`}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">

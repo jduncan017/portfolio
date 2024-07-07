@@ -15,8 +15,9 @@ export type CardData = {
 export type ResumeData = {
   resumeURL: string;
   gitHubURL: string;
-  twitterURL: string;
+  xURL: string;
   linkedInURL: string;
+  mediumURL: string;
   bioDescription: string;
   education: {
     school: string;

@@ -6,13 +6,13 @@ Note - I'm currently transitioning from CSS3 to Tailwind, please ignore the inco
 
 ## About Me
 
-I'm Joshua Duncan, a software engineer based in Denver, CO. With a background in sales, business management, and hospitality. I specialize in full-stack development using next.js and typescript. I'm passionate about designing beautiful and intuitive user interfaces and creating impactful software solutions to everyday problems. I'm also constantly looking to explore new technologies and continue my education.
+I'm Joshua Duncan, a software engineer based in Denver, CO. With a background in sales, business management, and hospitality. I specialize in full-stack development using next.js and typescript. I'm passionate about designing beautiful and intuitive user interfaces and creating impactful software solutions to everyday problems. I'm also constantly looking to explore new technologies and hone new skills.
 
 ## Skills
 
-- **Programming Languages**: Typescript, HTML5, Tailwind CSS
+- **Programming Languages**: Typescript, HTML5, CSS & Tailwind CSS
 - **Frameworks & Tools**: Next.js, React, Node.js, Express.js, MongoDB, Postman, Git/Github, Figma
-- **Libraries**: Aceternity UI
+- **Libraries**: Aceternity UI, Framer Motion
 - **Other Hard Skills**: Web Design, Business Management, Small Business Consulting
 - **Soft Skills**: Problem-solving, Communication, Culture Development, Project Management, People Management, Brand Development, Marketing, & Sales
 
@@ -29,6 +29,6 @@ Thanks for checking out my portfolio. Let me know if you have any questions, com
 ## Ideas Site Improvements
 
 - **Matrix Style Section Titles**: Creating a cool matric style text effect for the section titles.
-- **Minigam**: Been pondering adding a minigame to the site.
+- **Minigame**: Been pondering adding a minigame to the site.
 - **Articles**: A section for displaying Medium articles I've written.
 - **Github Live Updates**: Incorporating github API for live info.

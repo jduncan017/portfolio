@@ -4,7 +4,7 @@ import { CardData } from "@/src/lib/dataTypes";
 import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "./SiteButton";
 import { useModal } from "@/src/contexts/ModalContext";
-import ExternalLinkModal from "../Modals/externalLinkModal";
+import ExternalLinkModal from "../Modals/ExternalLinkModal";
 import DisplayListModal from "../Modals/DisplayListModal";
 
 type DisplayCardProps = {
@@ -19,7 +19,7 @@ export default function DisplayCard({
   cardArray,
 }: DisplayCardProps) {
   const { showModal } = useModal();
-  // this had to be defined distinctly because TS wasn't picking up typesafety for the button
+  // repoURL had to be defined distinctly because TS wasn't picking up typesafety for the button
   const repoURL = cardData.repoURL;
   const isURL = (path: string) => {
     try {
@@ -35,13 +35,13 @@ export default function DisplayCard({
       return (
         <ImageLoadingWrapper
           cardData={cardData}
-          className="Image mt-2 h-auto w-full rounded-md object-cover md:h-[110px] md:w-[210px] md:rounded-sm"
+          className="Image mt-2 h-auto w-full rounded-lg border border-gray-800 object-cover md:h-[110px] md:w-[210px]"
         />
       );
     } else {
       return (
         <Image
-          className="cardDataImage mt-2 rounded-md bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover md:h-[110px] md:w-[210px] md:rounded-sm"
+          className="cardDataImage mt-2 rounded-lg border border-gray-800 bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover md:h-[110px] md:w-[210px]"
           src={cardData.imagePath}
           alt="Screenshot of cardData"
           width={456}
@@ -52,7 +52,7 @@ export default function DisplayCard({
   };
 
   return (
-    <div className="Card border-secondary/50 shadow-secondaryDim sm:hover:shadow-secondaryBright mx-auto flex h-fit w-full max-w-[456px] flex-col gap-2 rounded-xl border bg-slate-950 px-4 py-6 text-start text-orange-200 transition-all duration-500 xs:px-8 md:w-[95%] md:max-w-none xxl:max-w-[1000px]">
+    <div className="Card mx-auto flex h-fit w-full max-w-[456px] flex-col justify-between gap-2 rounded-xl border border-secondary/50 bg-slate-950 px-4 py-6 text-start text-orange-200 shadow-secondaryDim transition-all duration-500 xs:px-8 sm:hover:shadow-secondaryBright md:w-[95%] md:max-w-none xl:h-full xl:w-full xxl:max-w-[1000px]">
       <div className="TopContainer flex flex-col gap-4 md:flex-row">
         <div className="TitleImageSection mx-auto flex h-full flex-col items-center md:mx-0 md:w-[350px] md:items-start">
           <h3 className="Title font-serif text-lg font-semibold uppercase tracking-wider xs:text-2xl md:text-xl">
@@ -71,13 +71,13 @@ export default function DisplayCard({
           </p>
         </div>
       </div>
-      <div className="BottomContainer flex h-fit w-full flex-col items-start justify-between gap-2 md:flex-row">
-        <div className="TechContainer flex w-fit flex-wrap items-start justify-start gap-2">
+      <div className="BottomContainer mt-2 flex h-fit w-full flex-col items-end justify-between gap-2 md:flex-row">
+        <div className="TechContainer flex w-fit flex-wrap items-start justify-start gap-2 xl:w-[350px]">
           {cardData.techsUsed &&
             cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="Technology h-fit w-fit rounded-md bg-gray-600/50 bg-opacity-90 p-2 text-center text-gray-300"
+                  className="Technology h-fit w-fit flex-grow rounded-md bg-gray-600/50 bg-opacity-90 p-1 text-center text-gray-300"
                   key={tech}
                 >
                   {tech}
@@ -85,7 +85,7 @@ export default function DisplayCard({
               );
             })}
         </div>
-        <div className="ButtonContainer flex h-full w-full min-w-fit flex-col items-center text-nowrap sm:flex-row sm:gap-2 md:w-fit">
+        <div className="ButtonContainer flex h-full w-full min-w-fit flex-col items-end text-nowrap sm:flex-row sm:gap-2 md:w-fit">
           <SiteButton
             size="small"
             addClasses="tracking-widest mt-3 md:mt-0 uppercase w-full md:w-auto"

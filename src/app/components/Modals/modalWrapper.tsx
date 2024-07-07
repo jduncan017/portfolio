@@ -38,13 +38,16 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
       onClick={hideModal}
     >
       <motion.div
-        animate={{ scale: 1 }}
         initial={{ scale: 0 }}
-        transition={{ duration: 0.2 }}
-        className="Content custom-scrollbar shadow-secondaryDim relative mb-5 mt-16 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl bg-slate-950 pl-3 text-center"
+        animate={{ scale: 1 }}
+        transition={{
+          duration: 0.2,
+          ease: "easeInOut",
+        }}
+        className="Content custom-scrollbar relative mb-5 mt-16 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl bg-slate-950 text-center shadow-secondaryDim xs:pl-3"
         onClick={handleModalContentClick}
       >
-        <div className="TopBar sticky left-0 top-0 h-fit min-h-[44px] w-full bg-slate-950 pb-4 pt-8">
+        <div className="TopBar sticky left-0 top-0 h-fit min-h-[44px] w-full bg-gradient-to-b from-slate-950 from-70% to-transparent to-100% pb-10 pt-8">
           <h2 className="Title w-full text-center font-sans text-3xl font-bold uppercase tracking-wider text-white">
             {title}
           </h2>
@@ -65,7 +68,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
         <div className="ChildContainer mb-4 rounded-xl bg-slate-950 px-6">
           {children}
         </div>
-        <div className="BottomBar sticky bottom-0 left-0 h-fit min-h-2 w-full bg-slate-950">
+        <div className="BottomBar sticky bottom-0 left-0 h-fit min-h-8 w-full bg-gradient-to-t from-slate-950 from-70% to-transparent to-100%">
           {closeButton && (
             <div className="ButtonContainer flex w-full justify-center py-6">
               <SiteButton

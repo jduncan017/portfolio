@@ -25,8 +25,8 @@ export const Header = () => {
       </div>
       <div className="_header-text-container mx-auto flex flex-col items-center pt-[15vh] sm:pt-[30vh]">
         <div
-          className="_text-container shadow-primary flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/5 px-4 py-20 
-        text-center opacity-90 backdrop-blur-md xs:max-w-[80%] xs:px-8 md:px-20 md:py-20 lg:py-28"
+          className="_text-container flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/5 px-4 py-20 text-center 
+        opacity-90 shadow-primary backdrop-blur-md xs:max-w-[80%] xs:px-8 md:px-20 md:py-20 lg:py-28"
         >
           <h1
             className="_title text-gradient-clip text-center font-gulzar text-5xl font-medium uppercase leading-tight

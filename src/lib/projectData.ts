@@ -88,10 +88,10 @@ export const PROJECT_DATA: CardData[] = [
     techsUsed: [
       "Next.js",
       "TypeScript",
-      "HTML5",
-      "CSS3",
+      "Tailwind",
       "tsParticles",
       "Ascernity UI",
+      "Framer Motion",
     ],
     shortDescription:
       "This portfolio page that you're currently on. An ever evolving page of my work.",

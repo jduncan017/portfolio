@@ -3,8 +3,9 @@ import type { ResumeData } from "./dataTypes";
 export const RESUME_DATA: ResumeData = {
   resumeURL: "https://jduncan017.github.io/resume/JoshDuncan.pdf",
   gitHubURL: "https://github.com/jduncan017",
-  twitterURL: "https://twitter.com/Jduncan017",
+  xURL: "https://twitter.com/Jduncan017",
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
+  mediumURL: "https://medium.com/@emailjoshduncan",
   bioDescription: `I'm a passionate and versatile full-stack developer with a wide range of experience to bring to the table. My career has encompassed
                    software development, project management, brand strategy, leadership, sales, and marketing - providing me with a broad 
                    and insightful perspective. <br/><br/>

@@ -6,6 +6,8 @@ import DisplayCard from "./UI-Elements/DisplayCard";
 import DisplayListModal from "@/src/app/components/Modals/DisplayListModal";
 import { CardData } from "@/src/lib/dataTypes";
 import { useModal } from "@/src/contexts/ModalContext";
+import SectionTitle from "./UI-Elements/SectionTitle";
+import { motion } from "framer-motion";
 
 type SliderSectionProps = {
   cardArray: CardData[];
@@ -92,26 +94,28 @@ export default function SliderSection({
   }, [id, handleUserInteraction]);
 
   return (
-    <section
-      className="SliderSection flex scroll-mt-20 flex-col items-center"
-      id={id}
-    >
-      <div className="TitleContainer mb-4 flex w-[90%] flex-col items-start gap-2 sm:flex-row sm:items-end sm:gap-4">
-        <h1 className="Title text-gradient-clip text-start font-sans text-3xl font-black tracking-tight md:text-4xl md:leading-[3rem]">
-          {title}
-        </h1>
-        <button
+    <section className="SliderSection flex scroll-mt-20 flex-col" id={id}>
+      <div className="TitleContainer mb-4 flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:gap-4">
+        <SectionTitle title={title} />
+        <motion.button
+          className="ShowAllButton text-lg italic text-gray-400 transition-all duration-500 hover:scale-105 hover:text-secondary md:text-xl"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.8,
+            delay: 0.3,
+          }}
           onClick={() =>
             showModal(
               <DisplayListModal cardArray={cardArray} dataType={dataType} />,
             )
           }
-          className="ShowAllButton hover:text-secondary text-lg italic text-gray-400 transition-all duration-500 hover:scale-105 md:text-xl"
         >
           View All
-        </button>
+        </motion.button>
       </div>
-      <BackgroundGradient containerClassName="CarouselTrack w-[105%] rounded-xl p-1">
+      <BackgroundGradient containerClassName="CarouselTrack self-center w-[105%] rounded-xl p-1">
         <Carousel
           responsive={responsive}
           swipeable={true}

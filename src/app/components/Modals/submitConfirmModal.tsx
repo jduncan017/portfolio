@@ -1,4 +1,4 @@
-import ModalWrapper from "./modalWrapper";
+import ModalWrapper from "./ModalWrapper";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "../../../contexts/ModalContext";
 
@@ -8,7 +8,7 @@ export default function SubmitConfirmModal() {
   return (
     <ModalWrapper>
       <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl py-3 text-center font-serif sm:px-8">
-        <h2 className="Header text-primaryDark text-2xl font-medium uppercase">
+        <h2 className="Header text-2xl font-medium uppercase text-primaryDark">
           Thank You!
         </h2>
         <p className="Description max-w-64 text-xl text-gray-300">
