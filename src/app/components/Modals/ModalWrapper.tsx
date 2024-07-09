@@ -28,7 +28,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
 
   return (
     <div
-      className="ModalOverlay fixed inset-0 z-20 flex h-svh items-center justify-center bg-black/75 backdrop-blur-lg backdrop-filter xs:p-6"
+      className="ModalOverlay fixed inset-0 z-50 flex h-svh items-center justify-center bg-black/75 backdrop-blur-lg backdrop-filter xs:p-6"
       onClick={hideModal}
     >
       <motion.div
@@ -38,7 +38,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
           duration: 0.2,
           ease: "easeInOut",
         }}
-        className="Content custom-scrollbar relative mb-5 mt-16 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl bg-slate-950 text-center shadow-secondaryDim xs:pl-3"
+        className="Content custom-scrollbar relative mb-5 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl bg-slate-950 text-center shadow-secondaryDim xs:pl-3"
         onClick={handleModalContentClick}
       >
         <div className="TopBar sticky left-0 top-0 h-fit min-h-[44px] w-full bg-gradient-to-b from-slate-950 from-70% to-transparent to-100% pb-10 pt-8">

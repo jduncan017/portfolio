@@ -110,7 +110,7 @@ export const Nav = () => {
   };
 
   return (
-    <nav className="NavBar fixed left-0 right-0 top-0 z-50">
+    <nav className="NavBar fixed left-0 right-0 top-0 z-40">
       {/* Desktop Nav */}
       <div className="DesktopNav fixed z-50 hidden w-full sm:block">
         <div className="NavLinks absolute z-[1] flex h-12 w-full justify-center bg-transparent p-0.5">
