@@ -1,13 +1,9 @@
-.siteContainer {
-  text-align: center;
-}
-
 .hamburgerIcon {
   cursor: pointer;
-  z-index: 30;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 16px;
+  top: 16px;
+  z-index: 30;
 }
 
 .hamburgerIcon rect {
@@ -25,7 +21,7 @@
 }
 
 .hamburgerIconActive .top {
-  transform: rotate(-135deg) translate(0, 20px);
+  transform: rotate(-135deg) translate(0, 22.5px);
 }
 
 .hamburgerIconActive .bottom {

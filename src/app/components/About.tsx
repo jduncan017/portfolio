@@ -31,6 +31,7 @@ export const About = () => {
               ease: "easeInOut",
               type: "tween",
               duration: 0.6,
+              delay: 0.15,
             }}
           >
             <div className="ImageContainer flex h-fit w-full justify-end overflow-hidden rounded-r-xl bg-black/90 p-4 pr-8 shadow-secondaryBright min-[382px]:pl-[calc((100vw-350px-32px)/2)] xs:justify-center xs:rounded-xl xs:pl-4 lg:justify-end lg:rounded-l-none xxl:rounded-xl xxl:pr-4">
@@ -53,7 +54,7 @@ export const About = () => {
               ease: "easeInOut",
               type: "tween",
               duration: 0.6,
-              delay: 0.15,
+              delay: 0.3,
             }}
           >
             <h2 className="Title mb-3 flex gap-2  text-3xl font-semibold uppercase leading-normal tracking-widest text-white sm:text-4xl">

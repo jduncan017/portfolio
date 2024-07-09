@@ -26,7 +26,7 @@ const HamburgerIcon: React.FC<HamburgerIconProps> = ({
           rx="4"
           ry="4"
           width="100%"
-          height="6"
+          height="4"
         />
         <rect
           className={`${styles.rect} ${styles.middle}`}
@@ -35,7 +35,7 @@ const HamburgerIcon: React.FC<HamburgerIconProps> = ({
           rx="4"
           ry="4"
           width="100%"
-          height="6"
+          height="4"
         />
         <rect
           className={`${styles.rect} ${styles.bottom}`}
@@ -44,7 +44,7 @@ const HamburgerIcon: React.FC<HamburgerIconProps> = ({
           rx="4"
           ry="4"
           width="100%"
-          height="6"
+          height="4"
         />
       </svg>
     </button>

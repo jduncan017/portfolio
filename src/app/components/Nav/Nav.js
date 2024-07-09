@@ -68,7 +68,7 @@ export const Nav = () => {
 
   const printNavButtons = () => {
     return (
-      <>
+      <div className="NavButtonsContainer">
         {navHeadings.map((heading, index) => {
           const delay = index * 100; // Incremental delay, e.g., 0ms, 100ms, 200ms, etc.
           return (
@@ -93,7 +93,7 @@ export const Nav = () => {
         >
           Contact
         </button>
-      </>
+      </div>
     );
   };
 
@@ -110,36 +110,48 @@ export const Nav = () => {
   };
 
   return (
-    <nav className="NavBar">
+    <nav className="NavBar fixed left-0 right-0 top-0 z-50">
       {/* Desktop Nav */}
-      <div className="DesktopNav fixed z-20 hidden w-full sm:block">
+      <div className="DesktopNav fixed z-50 hidden w-full sm:block">
         <div className="NavLinks absolute z-[1] flex h-12 w-full justify-center bg-transparent p-0.5">
-          {printNavButtons()}{" "}
+          {printNavButtons()}
         </div>
         <div
-          className={`DesktopNavBackground h-12 w-full border-b border-gray-800 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 shadow-2xl transition-all duration-500 ${navStyle && "translate-y-[-100px]"}`}
+          className={`DesktopNavBackground h-12 w-full border-b border-gray-800 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 shadow-2xl transition-all duration-500 ${
+            navStyle ? "translate-y-[-100px]" : ""
+          }`}
         />
       </div>
 
       {/* Mobile Nav */}
       <div
         ref={mobileNavRef}
-        className={`MobileNavContainer relative h-[72px] sm:absolute sm:hidden ${mobileNavVisible && "border-b border-white bg-black"}`}
+        className={`MobileNavContainer fixed right-0 top-0 z-50 h-[64px] sm:absolute sm:hidden ${
+          mobileNavVisible ? "border-b border-white bg-black" : ""
+        }`}
       >
         <HamburgerIcon
           onToggleMenu={onHamburgerClick}
           menuOpen={mobileNavVisible}
         />
         <div
-          className={`MobileMenu fixed z-20 mt-12 h-auto w-full bg-black shadow-2xl ${mobileNavVisible ? "animate-slide-in block" : `animate-slide-out ${animateClass}`}`}
+          className={`MobileMenu mt-10 h-auto w-full bg-black shadow-2xl ${
+            mobileNavVisible
+              ? "animate-slide-in block"
+              : `animate-slide-out ${animateClass}`
+          }`}
         >
           {printNavButtons()}
-
-          <div
-            className={`MobileOverlay fixed inset-0 z-[-1] justify-center bg-black opacity-50 ${mobileNavVisible ? "flex" : "hidden"}`}
-          />
         </div>
       </div>
+
+      {/* Mobile Overlay */}
+      {mobileNavVisible && (
+        <div
+          className="MobileOverlay fixed inset-0 z-40 bg-black opacity-50 sm:hidden"
+          onClick={onHamburgerClick}
+        />
+      )}
     </nav>
   );
 };
