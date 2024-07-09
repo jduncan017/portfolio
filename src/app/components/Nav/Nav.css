@@ -9,33 +9,9 @@
     color 1.5s;
 }
 
-.hamburger-button-turn-left {
-  animation: turnLeft 0.9s 1;
-}
-
 .hamburger-button-active {
   transform: rotate(180deg);
   animation: turnRight 0.9s 1;
-}
-
-@keyframes turnRight {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes turnLeft {
-  0% {
-    transform: rotate(180deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
 }
 
 @keyframes slide-in {

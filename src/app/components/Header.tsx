@@ -15,10 +15,10 @@ export const Header = () => {
 
   return (
     <section
-      className="HeaderContainer relative h-svh max-h-[1500px]"
+      className="HeaderContainer relative h-[100vh] max-h-[1500px]"
       id="header-section"
     >
-      <div className="ParticlesBackground pb-25 absolute z-[-10] h-svh w-full text-center">
+      <div className="ParticlesBackground pb-25 absolute z-[-10] h-full w-full text-center">
         <ParticlesAnimation />
       </div>
       <div className="HeaderTextContainer mx-auto flex flex-col items-center pt-[15vh] sm:pt-[30vh]">

@@ -66,13 +66,13 @@ export default function DisplayCard({
           {cardImage()}
         </div>
         <div className="InfoContainer flex w-full flex-col items-start justify-between gap-2">
-          <p className="Description w-fit text-start  text-sm capitalize leading-6 text-gray-300 xs:text-base">
+          <p className="Description w-fit text-start text-sm leading-6 text-gray-300 xs:text-base">
             {cardData.description}
           </p>
         </div>
       </div>
-      <div className="BottomContainer mt-2 flex h-fit w-full flex-col items-end justify-between gap-2 md:flex-row">
-        <div className="TechContainer flex w-fit flex-wrap items-start justify-start gap-2 xl:w-[350px]">
+      <div className="BottomContainer mt-2 flex h-fit w-full flex-col justify-between gap-2 xs:items-end md:flex-row">
+        <div className="TechContainer flex w-full flex-wrap items-start justify-start gap-2 md:w-fit xl:w-[350px]">
           {cardData.techsUsed &&
             cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (

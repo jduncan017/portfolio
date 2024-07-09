@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { RESUME_DATA } from "@/src/lib/resumeData";
 import { FlipWords } from "./UI-Libraries/FlipWords";
 import ContactCard from "./UI-Elements/ContactCard";
@@ -26,13 +25,12 @@ export const About = () => {
           <motion.div
             className="LeftContainer mr-5 h-fit max-w-[620px] flex-col gap-8 self-start mini:mr-0 xs:w-[75%] xs:self-center lg:max-w-none lg:gap-16 lg:self-start xxl:w-fit"
             initial={{ x: "-100%" }}
-            whileInView={{ x: "0" }}
+            whileInView={{ x: "0%" }}
             viewport={{ once: true }}
             transition={{
-              duration: 0.6,
               ease: "easeInOut",
-              type: "spring",
-              bounce: 0.2,
+              type: "tween",
+              duration: 0.6,
             }}
           >
             <div className="ImageContainer flex h-fit w-full justify-end overflow-hidden rounded-r-xl bg-black/90 p-4 pr-8 shadow-secondaryBright min-[382px]:pl-[calc((100vw-350px-32px)/2)] xs:justify-center xs:rounded-xl xs:pl-4 lg:justify-end lg:rounded-l-none xxl:rounded-xl xxl:pr-4">
@@ -42,6 +40,7 @@ export const About = () => {
                 className="ProfilePic ml-4 aspect-square h-auto max-h-[350px] w-auto rounded-xl object-contain xs:ml-0 lg:aspect-square lg:h-full lg:max-h-[450px] lg:w-auto"
                 width={450}
                 height={450}
+                priority
               />
             </div>
           </motion.div>
@@ -51,10 +50,9 @@ export const About = () => {
             whileInView={{ x: "0" }}
             viewport={{ once: true }}
             transition={{
-              duration: 0.6,
               ease: "easeInOut",
-              type: "spring",
-              bounce: 0.2,
+              type: "tween",
+              duration: 0.6,
               delay: 0.15,
             }}
           >

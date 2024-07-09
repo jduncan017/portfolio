@@ -44,9 +44,9 @@ export default function TestimonialSection() {
         <motion.ul
           variants={motionContainer}
           initial="hidden"
-          whileInView="show"
           viewport={{ once: true }}
           className="CardContainer flex h-fit w-[90%] flex-wrap justify-between gap-5 sm:w-[80%] lg:w-[95%] lg:flex-nowrap xl:w-[90%] xxl:max-w-[2400px]"
+          whileInView="show"
         >
           {TESTIMONIAL_DATA.map((testimonial) => (
             <motion.li

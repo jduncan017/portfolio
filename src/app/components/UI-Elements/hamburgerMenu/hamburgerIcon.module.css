@@ -1,0 +1,37 @@
+.siteContainer {
+  text-align: center;
+}
+
+.hamburgerIcon {
+  cursor: pointer;
+  z-index: 30;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.hamburgerIcon rect {
+  transition: all 300ms ease-in-out;
+  fill: rgb(190, 190, 190);
+}
+
+.hamburgerIconActive rect {
+  fill: rgb(190, 190, 190);
+}
+
+.hamburgerIconActive .top,
+.hamburgerIconActive .bottom {
+  transform-origin: center;
+}
+
+.hamburgerIconActive .top {
+  transform: rotate(-135deg) translate(0, 20px);
+}
+
+.hamburgerIconActive .bottom {
+  display: none;
+}
+
+.hamburgerIconActive .middle {
+  transform: rotate(-45deg) translate(-24px, 10px);
+}
