@@ -54,8 +54,8 @@ export default function ContactModal() {
           <h1 className="text-gradient-clip mb-3 border-b border-dotted border-gray-400 pb-4 text-center text-4xl font-bold uppercase leading-10 tracking-widest text-primaryDark xs:text-4xl sm:text-5xl">
             Contact
           </h1>
-          <p className="formDescription m-0 w-full text-center leading-5 text-gray-300">
-            {`If you'd like to work together or have questions, you can schedule a meeting or reach me via this contact form.`}
+          <p className="formDescription m-0 w-full text-center text-gray-300">
+            {`Looking to work together? In need of branding or web design services? Schedule a meeting or reach out!`}
           </p>
 
           {/* Contact Form */}
@@ -133,7 +133,10 @@ export default function ContactModal() {
                 target="_blank"
                 type="button"
               >
-                <SiteButton textColor="text-gray-300 uppercase" style="teal">
+                <SiteButton
+                  textColor="text-gray-300 uppercase"
+                  style="tealHollow"
+                >
                   Schedule a Meeting
                 </SiteButton>
               </Link>

@@ -47,7 +47,7 @@ export default function ExternalLinkModal({
               onClick={() => handleModal()}
               addClasses="mt-4"
               textColor="text-gray-200 uppercase"
-              style="tealHollow"
+              style="teal"
             >
               {`Let's Go!`}
             </SiteButton>
@@ -57,7 +57,7 @@ export default function ExternalLinkModal({
             aria="go back"
             addClasses="mt-4"
             textColor="text-gray-200 uppercase"
-            style="teal"
+            style="tealHollow"
           >
             Go Back
           </SiteButton>

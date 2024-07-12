@@ -2,17 +2,11 @@ import Image from "next/image";
 import { useModal } from "@/src/contexts/ModalContext";
 import ContactModal from "../Modals/contactModal";
 
-type ContactCardProps = {
-  titlePosition: "justify-start" | "justify-center";
-};
-
-export default function ContactCard({ titlePosition }: ContactCardProps) {
+export default function ContactCard() {
   const { showModal } = useModal();
   return (
     <div className="ContactCard">
-      <div
-        className={`ContactHeader mb-1 flex h-min w-full items-end gap-1 ${titlePosition}`}
-      >
+      <div className={`ContactHeader mb-1 flex h-min w-full items-end gap-1`}>
         <h3 className="ContactTitle text-gradient-clip text-semibold text-lg uppercase tracking-wide text-white">
           Contact Card
         </h3>

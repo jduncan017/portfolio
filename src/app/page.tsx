@@ -2,7 +2,7 @@
 import React from "react";
 import { Nav } from "./components/Nav/Nav";
 import { Header } from "@/src/app/components/Header";
-import { About } from "@/src/app/components/About";
+import { About } from "@/src/app/components/AboutSection/AboutSection";
 import { Footer } from "@/src/app/components/Footer";
 import SliderSection from "./components/SliderSection";
 import ToggleScrollbarButton from "@/src/app/components/UI-Elements/ScrollBarButton";

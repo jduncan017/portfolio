@@ -14,15 +14,15 @@ export const Footer = () => {
       className="Footer flex flex-col items-center gap-10 border-t border-t-gray-800 bg-black px-5 py-10 shadow-secondaryBright xs:px-20 md:flex-row md:items-start lg:gap-20"
       id="contact-section"
     >
-      <ContactCard titlePosition="justify-center" />
+      <ContactCard />
       <div className="FooterRightContainer flex w-full flex-col items-center md:items-start">
         <div className="SocialContainer w-fit">
-          <p className="SocialTitle mb-2 w-full text-center text-sm uppercase text-white md:text-start">
+          <p className="SocialTitle text-gradient-clip text-semibold mb-2 w-full text-center text-lg uppercase tracking-wide text-white md:text-start">
             Social
           </p>
           <SocialContainer />
         </div>
-        <p className="FooterMessage mt-2 max-w-[350px] text-center text-gray-400 md:text-start">
+        <p className="FooterMessage max-w-[350px] text-center text-gray-400 md:text-start">
           {`Let's connect! Feel free to contact me for work, questions, or just to network!`}
         </p>
         <div className="ButtonContainer my-6 flex flex-col items-center gap-4 mini:flex-row">

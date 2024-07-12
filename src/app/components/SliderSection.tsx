@@ -43,6 +43,26 @@ const responsive = {
   },
 };
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { y: "500px" },
+  visible: {
+    y: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.2,
+    },
+  },
+};
+
 export default function SliderSection({
   cardArray,
   id,
@@ -116,31 +136,36 @@ export default function SliderSection({
         </motion.button>
       </div>
       <BackgroundGradient containerClassName="CarouselTrack self-center w-[105%] rounded-xl p-1">
-        <Carousel
-          responsive={responsive}
-          swipeable={true}
-          draggable={true}
-          showDots={false}
-          ssr={true}
-          infinite={true}
-          autoPlay={autoPlay}
-          keyBoardControl={true}
-          customTransition="transform 500ms ease"
-          transitionDuration={500}
-          containerClass="py-8 xs:py-8 bg-black sm:bg-black/90 rounded-xl"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          itemClass="project-item gap-10"
-          centerMode={centerMode}
-          rtl={false}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
-          {cardArray.map((cardData: CardData) => (
-            <DisplayCard
-              key={cardData.name}
-              cardData={cardData}
-              dataType={dataType}
-            />
-          ))}
-        </Carousel>
+          <Carousel
+            responsive={responsive}
+            swipeable={true}
+            draggable={true}
+            showDots={false}
+            ssr={true}
+            infinite={true}
+            autoPlay={autoPlay}
+            keyBoardControl={true}
+            customTransition="transform 500ms ease"
+            transitionDuration={500}
+            containerClass="py-8 xs:py-8 bg-black sm:bg-black/90 rounded-xl"
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            itemClass="project-item gap-10"
+            centerMode={centerMode}
+            rtl={false}
+          >
+            {cardArray.map((cardData: CardData) => (
+              <motion.div key={cardData.name} variants={cardVariants}>
+                <DisplayCard cardData={cardData} dataType={dataType} />
+              </motion.div>
+            ))}
+          </Carousel>
+        </motion.div>
       </BackgroundGradient>
     </section>
   );

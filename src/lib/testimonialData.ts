@@ -4,8 +4,9 @@ export const TESTIMONIAL_DATA: TestimonialData[] = [
   {
     name: "Loren Martinez",
     imagePath: "/testimonialPhotos/loren-m.jpg",
-    shortDescription: `"His organizational approach to overseeing multiple projects simultaneously, particularly in research and development 
-    processes, resulted in radiant success for our business that caught the attention of local and national media."`,
+    shortDescription: `"His organizational approach to overseeing multiple projects
+simultaneously, particularly in R&D processes, resulted in radiant success for our
+business."`,
     fullReview: `"To Whom It May Concern:<br /><br />
 
 I am writing to recommend Joshua Duncan for software engineering roles in the tech industry. As the
@@ -31,8 +32,8 @@ environment will undoubtedly contribute to his ability to work effectively with 
 Josh's greatest strength lies in his ability to showcase creativity and innovation, leading to improved
 processes and operational efficiencies. His organizational approach to overseeing multiple projects
 simultaneously, particularly in research and development processes, resulted in radiant success for our
-business, which caught the attention of local and national media. Under Josh's leadership, Adrift
-became a nationally recognized craft cocktail establishment, solidifying its position in the industry.<br /><br />
+business. Under Josh's leadership, Adrift became a nationally recognized craft cocktail establishment, 
+solidifying its position in the industry.<br /><br />
 
 I am confident that Josh's unique background has equipped him with a valuable skill set that will
 translate well into software engineering. His proven track record in problem-solving, adaptability,
@@ -52,8 +53,7 @@ Loren Martinez"`,
   {
     name: "Nicholas Pasquarella",
     imagePath: "/testimonialPhotos/nick.jpg",
-    shortDescription: `"He adeptly guides you through design, functionality, business insights, and associated costs. 
-    What sets him apart is his honesty; he welcomes all ideas while offering insightful explanations for alternative approaches."`,
+    shortDescription: `"What sets him apart is his honesty; he welcomes all ideas while offering insightful explanations for alternative approaches."`,
     fullReview: `"After experiencing the quality, seamlessness, and professionalism of working with Josh, my business partner and I are 
     enthusiastic about providing a recommendation. <br /><br />
     
@@ -71,8 +71,7 @@ Loren Martinez"`,
   {
     name: "Charles Ryan",
     imagePath: "/testimonialPhotos/charles-r.webp",
-    shortDescription: `"Josh was able to take my feedback along the way to shape and deliver exactly what I wanted, if not 
-    more! My clients have complimented me on how easy-to-maneuver and "sleek" my website is."`,
+    shortDescription: `"He did a better job of making me feel comfortable and confident during the pricing process compared to anyone else I contacted."`,
     fullReview: `"After a couple months of struggling and stressing over building my dream website on Wix, I realized I needed a professional. 
     I gave up the idea of building it alone, and was referred to Josh through my friend Marc.<br /><br />
 

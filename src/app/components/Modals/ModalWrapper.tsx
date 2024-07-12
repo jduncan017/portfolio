@@ -41,7 +41,9 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
         className="Content custom-scrollbar relative mb-5 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl bg-slate-950 text-center shadow-secondaryDim xs:pl-3"
         onClick={handleModalContentClick}
       >
-        <div className="TopBar sticky left-0 top-0 h-fit min-h-[44px] w-full bg-gradient-to-b from-slate-950 from-70% to-transparent to-100% pb-10 pt-8">
+        <div
+          className={`TopBar ${title && "min-h-[44px] pt-8"} sticky left-0 top-0 z-10 h-fit w-full bg-gradient-to-b from-slate-950 from-70% to-transparent to-100% pb-10`}
+        >
           <h2 className="Title w-full text-center font-sans text-3xl font-bold uppercase tracking-wider text-white">
             {title}
           </h2>

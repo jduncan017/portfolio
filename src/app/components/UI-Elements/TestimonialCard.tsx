@@ -13,7 +13,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
   const { showModal } = useModal();
   return (
     <BackgroundGradient
-      containerClassName="Container w-full h-full max-w-[700px] lg:h-[530px] xl:h-[515px] min-[1480px]:h-[480px] mx-auto p-0.5 sm:hover:scale-105 transition-all duration-500"
+      containerClassName="Container w-full h-full max-w-[700px] lg:h-[450px] min-[1480px]:h-[440px] mx-auto p-0.5 sm:hover:scale-105 transition-all duration-500"
       className="Card relative flex h-full flex-col items-center gap-3 rounded-[12px] bg-slate-950 p-4 text-orange-200 transition-all duration-500 xs:text-orange-200 xs:saturate-0 sm:hover:bg-gray-900 sm:hover:text-orange-200 sm:hover:saturate-100 xl:px-10 xl:py-6"
     >
       <div className="TitleSection flex flex-col items-center">
