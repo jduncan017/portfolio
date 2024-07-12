@@ -1,4 +1,5 @@
 import "./globals.css";
+import "../utils/promisePolyFill";
 import { ModalProvider } from "../contexts/ModalContext";
 
 if (!process.env.NEXT_PUBLIC_BASE_URL) {
