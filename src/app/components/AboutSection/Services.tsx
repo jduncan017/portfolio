@@ -43,7 +43,7 @@ export default function Services() {
     >
       <div className="InnerContainer h-fit w-full max-w-[500px] flex-col gap-8 self-end rounded-r-xl py-6 pl-8 pr-4 mini:pl-4 xs:px-8 lg:gap-16 xxl:w-fit">
         <motion.h2
-          className="ServicesTitle text-gradient-clip mb-3 flex gap-2 font-sans text-3xl uppercase leading-normal tracking-widest text-white sm:text-4xl"
+          className="ServicesTitle text-gradient-clip mb-3 flex gap-2 font-sans text-2xl uppercase leading-normal tracking-widest text-white sm:text-3xl"
           variants={itemVariants}
         >
           Services

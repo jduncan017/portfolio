@@ -6,29 +6,40 @@ import { PDFDocumentProxy } from "pdfjs-dist";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 
+// Use the locally copied worker file
 pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
 
 export default function BrandModal() {
   const [numPages, setNumPages] = useState(0);
-  const [width, setWidth] = useState(280); // Initial width
+  const [loaded, setLoaded] = useState(false);
+  const [pdfWidth, setPdfWidth] = useState(280);
+  const [placeholderWidth, setPlaceholderWidth] = useState(280);
 
   const onDocumentLoadSuccess = ({ numPages }: PDFDocumentProxy) => {
     setNumPages(numPages);
+    setLoaded(true);
   };
 
-  const updateWidth = () => {
+  function updateWidth() {
     const calculatedWidth = Math.min(
-      800,
+      800, // Maximum width
       Math.max(280, window.innerWidth * 0.8),
     );
-    setWidth(calculatedWidth);
-  };
+
+    if (loaded) {
+      setPdfWidth(calculatedWidth);
+      setPlaceholderWidth(calculatedWidth);
+      return;
+    }
+    setPlaceholderWidth(calculatedWidth);
+  }
 
   useEffect(() => {
     updateWidth();
     window.addEventListener("resize", updateWidth);
+
     return () => window.removeEventListener("resize", updateWidth);
-  }, []);
+  }, [loaded]);
 
   return (
     <ModalWrapper title="Brand Strategy">
@@ -39,20 +50,27 @@ export default function BrandModal() {
           strategy elements include a unique selling proposition, target market,
           competitor research, tone of voice, and more.
         </p>
-        <Document
-          file="/MVN.pdf"
-          onLoadSuccess={onDocumentLoadSuccess}
-          loading="Loading PDF..."
-        >
-          {Array.from(new Array(numPages), (el, index) => (
-            <Page
-              key={`page_${index + 1}`}
-              pageNumber={index + 1}
-              width={width}
-              className="mb-4 overflow-hidden rounded-xl"
-            />
-          ))}
-        </Document>
+        <div className="relative">
+          {!loaded && (
+            <div
+              style={{
+                width: `${Math.round(placeholderWidth)}px`,
+                height: `${Math.round(placeholderWidth / 1.49)}px`,
+              }}
+              className="flex items-center justify-center rounded-xl bg-black"
+            ></div>
+          )}
+          <Document file="/MVN.pdf" onLoadSuccess={onDocumentLoadSuccess}>
+            {Array.from(new Array(numPages), (el, index) => (
+              <Page
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+                width={pdfWidth}
+                className="mb-4 overflow-hidden rounded-xl"
+              />
+            ))}
+          </Document>
+        </div>
       </div>
     </ModalWrapper>
   );
