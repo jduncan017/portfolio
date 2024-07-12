@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@formspark/use-formspark": "^0.1.39",
-    "@react-pdf/renderer": "^3.4.4",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.1.0",
     "autoprefixer": "^10.4.17",
