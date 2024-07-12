@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./hamburgerIcon.module.css";
+import "./hamburgerIcon.css";
 
 interface HamburgerIconProps {
   menuOpen: boolean;
@@ -11,16 +11,16 @@ const HamburgerIcon: React.FC<HamburgerIconProps> = ({
   onToggleMenu,
 }) => {
   return (
-    <button className={styles.siteContainer} onClick={onToggleMenu}>
+    <button className={"siteContainer"} onClick={onToggleMenu}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className={`${styles.hamburgerIcon} ${menuOpen ? styles.hamburgerIconActive : ""}`}
+        className={`hamburgerIcon ${menuOpen ? "hamburgerIconActive" : ""}`}
         width="30"
         height="30"
         viewBox="0 0 48 48"
       >
         <rect
-          className={`${styles.rect} ${styles.top}`}
+          className={`rect top`}
           x="0"
           y="0"
           rx="4"
@@ -29,7 +29,7 @@ const HamburgerIcon: React.FC<HamburgerIconProps> = ({
           height="4"
         />
         <rect
-          className={`${styles.rect} ${styles.middle}`}
+          className={`rect middle`}
           x="0"
           y="20"
           rx="4"
@@ -38,7 +38,7 @@ const HamburgerIcon: React.FC<HamburgerIconProps> = ({
           height="4"
         />
         <rect
-          className={`${styles.rect} ${styles.bottom}`}
+          className={`rect bottom`}
           x="0"
           y="40"
           rx="4"

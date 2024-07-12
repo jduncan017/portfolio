@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "1.1.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,6 +17,7 @@
     "framer-motion": "^11.2.10",
     "html-react-parser": "^5.1.10",
     "next": "^14.1.4",
+    "pdfjs-dist": "^4.4.168",
     "postcss": "^8.4.35",
     "react": "^18",
     "react-dom": "^18",
