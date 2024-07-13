@@ -68,7 +68,7 @@ export default function ContactModal() {
 
             <div className="NameSection flex w-full gap-6">
               <div className="FirstNameContainer flex w-full flex-col gap-1">
-                <label className="m-0 text-lg text-gray-400" htmlFor="name">
+                <label className="m-0 text-gray-400" htmlFor="name">
                   First Name:
                 </label>
                 <input
@@ -81,7 +81,7 @@ export default function ContactModal() {
                 />
               </div>
               <div className="LastNameContainer flex w-full flex-col gap-1">
-                <label className="m-0 text-lg text-gray-400" htmlFor="name">
+                <label className="m-0 text-gray-400" htmlFor="name">
                   Last Name:
                 </label>
                 <input
@@ -97,7 +97,7 @@ export default function ContactModal() {
 
             {/* Email Input */}
             <div className="EmailContainer w-full">
-              <label className="m-0 text-lg text-gray-400" htmlFor="email">
+              <label className="m-0 text-gray-400" htmlFor="email">
                 Email:
               </label>
               <input
@@ -110,7 +110,7 @@ export default function ContactModal() {
             </div>
 
             <div className="MessageContainer w-full">
-              <label className="m-0 text-lg text-gray-400" htmlFor="message">
+              <label className="m-0 text-gray-400" htmlFor="message">
                 Message:
               </label>
               <textarea
@@ -134,7 +134,7 @@ export default function ContactModal() {
                 type="button"
               >
                 <SiteButton
-                  textColor="text-gray-300 uppercase"
+                  textColor="text-gray-300 uppercase sm:text-xs"
                   style="silverHollow"
                 >
                   Schedule a Meeting
@@ -144,7 +144,7 @@ export default function ContactModal() {
                 type="submit"
                 disabled={buttonDisabled}
                 aria="submit"
-                textColor="text-black uppercase"
+                textColor="text-black uppercase sm:text-xs"
                 style="silver"
               >
                 {buttonDisplay}

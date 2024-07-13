@@ -89,8 +89,8 @@ export default function DisplayCard({
           <SiteButton
             size="small"
             addClasses="tracking-widest sm:text-xs mt-3 md:mt-0 uppercase w-full md:w-auto"
-            textColor="text-white"
-            style="orange"
+            textColor="text-secondary"
+            style="purple"
             aria={`Visit ${cardData.name}`}
             onClick={() =>
               showModal(
@@ -115,8 +115,8 @@ export default function DisplayCard({
               size="small"
               aria={`github repo for ${repoURL}`}
               addClasses="tracking-widest sm:text-xs uppercase mt-3 md:mt-0 w-full md:w-auto"
-              textColor="text-white"
-              style="orange"
+              textColor="text-secondary"
+              style="purple"
               onClick={() =>
                 showModal(
                   <ExternalLinkModal

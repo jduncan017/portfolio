@@ -6,7 +6,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   aria?: string;
   textColor: string;
-  style: "orange" | "teal" | "tealHollow" | "silver" | "silverHollow";
+  style: "purple" | "teal" | "tealHollow" | "silver" | "silverHollow";
   children: React.ReactNode;
 }
 
@@ -36,9 +36,9 @@ const SiteButton = ({
   }
 
   switch (style) {
-    case "orange":
+    case "purple":
       buttonStyle =
-        "border-orange-200/80 border hover:bg-orange-200 hover:text-black";
+        "border-secondaryDark border hover:bg-secondary hover:border-secondary hover:text-black";
       break;
     case "teal":
       buttonStyle =
@@ -54,7 +54,7 @@ const SiteButton = ({
       break;
     case "silverHollow":
       buttonStyle =
-        "border-gray-300 border bg-transparent hover:bg-gradient-to-br hover:border-none hover:from-gray-200 hover:to-gray-400 hover:border-white hover:text-black";
+        "border-gray-300 border bg-opacity-0 hover:border-secondaryDark hover:bg-opacity-100 bg-secondaryDark text-white";
       break;
     default:
       buttonStyle = "";
@@ -62,7 +62,7 @@ const SiteButton = ({
 
   return (
     <button
-      className={`SiteButton rounded-md font-sans text-sm font-semibold transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white sm:text-base ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
+      className={`SiteButton rounded-md font-sans text-sm font-semibold transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
       `}
       type={type ?? "button"}
       onClick={onClick}

@@ -35,7 +35,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
     } else {
       return (
         <Image
-          className="cardDataImage pointer-events-none aspect-video w-full rounded-sm bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover"
+          className="cardDataImage pointer-events-none aspect-video w-full rounded-md border border-gray-800 bg-gradient-to-br from-cyan-600 to-cyan-900 object-cover"
           src={cardData.imagePath}
           alt="Screenshot of cardData"
           width={456}
@@ -47,7 +47,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
 
   return (
     <ModalWrapper>
-      <div className="ProjectModal flex h-full w-full max-w-[500px] flex-col items-start gap-2 pb-2 text-primaryDark">
+      <div className="ProjectModal flex h-full w-full max-w-[450px] flex-col items-start gap-2 pb-2 text-primaryDark">
         <div className="TitleSection flex w-full flex-col items-start">
           <h3 className="Title text-gradient-clip pointer-events-none mb-2 w-full border-b border-dotted border-gray-400 pb-1 text-start font-serif text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
             {cardData.name}
@@ -62,7 +62,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
             cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="tech flex-grow rounded-md bg-gray-600/50 bg-opacity-70 p-1 text-center text-gray-300 xs:text-sm"
+                  className="tech flex-grow rounded-md bg-gray-600/50 bg-opacity-70 p-1 text-center text-xs text-gray-300 xs:text-xs"
                   key={tech}
                 >
                   {tech}
@@ -70,14 +70,14 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
               );
             })}
         </div>
-        <p className="Description max-w-[500px] text-start  text-gray-300">
+        <p className="Description max-w-[500px] text-start text-sm  text-gray-300">
           {cardData.description}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
           <SiteButton
             size="large"
             aria-label={`Visit ${cardData.name}`}
-            addClasses="tracking-widest uppercase w-full mt-4"
+            addClasses="tracking-widest sm:text-xs uppercase w-full mt-4"
             textColor="text-gray-300"
             style="silverHollow"
             onClick={() =>
@@ -97,7 +97,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
             <SiteButton
               aria={`github repo for ${repoURL}`}
               size="large"
-              addClasses="tracking-widest uppercase w-full mt-4"
+              addClasses="tracking-widest sm:text-xs uppercase w-full mt-4"
               textColor="text-gray-300"
               style="silverHollow"
               onClick={() =>

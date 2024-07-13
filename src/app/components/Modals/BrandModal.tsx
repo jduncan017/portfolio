@@ -45,10 +45,10 @@ export default function BrandModal() {
     <ModalWrapper title="Brand Strategy">
       <div className="BrandModal flex w-full flex-col items-center justify-center px-4">
         <p className="Description mb-10 w-full max-w-[700px] text-center leading-6 text-gray-200">
-          The following is a brand strategy guide I did for a client - MVN
-          Travel. Design work includes logo, color palette, and fonts. Brand
-          strategy elements include a unique selling proposition, target market,
-          competitor research, tone of voice, and more.
+          Get your brand off the ground! Brand strategy packages include logo
+          design, visual identity, and font packages. Brand strategy elements
+          include a unique selling proposition, target market, competitor
+          research, tone of voice, and more.
         </p>
         <div className="relative">
           {!loaded && (

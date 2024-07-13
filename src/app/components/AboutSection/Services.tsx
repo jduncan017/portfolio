@@ -17,7 +17,7 @@ export default function Services() {
         duration: 0.6,
         when: "beforeChildren",
         staggerChildren: 0.4,
-        delay: 0.8,
+        delay: 0.5,
       },
     },
   };
@@ -35,7 +35,7 @@ export default function Services() {
 
   return (
     <motion.div
-      className="ServicesContainer w-full justify-end rounded-r-xl border border-white/30 bg-black/90 shadow-secondaryDim min-[382px]:pl-[calc((100vw-350px-32px)/2)] xs:rounded-xl xs:pl-0 lg:flex xxl:rounded-xl"
+      className="ServicesContainer w-full justify-end rounded-r-xl border-t border-white/30 bg-black/40 shadow-secondaryDim min-[382px]:pl-[calc((100vw-375px-32px)/2)] xs:rounded-xl xs:pl-0 sm:border-l lg:flex xxl:rounded-xl"
       variants={leftContainerVariants}
       initial="hidden"
       whileInView="visible"
@@ -49,12 +49,11 @@ export default function Services() {
           Services
         </motion.h2>
         <motion.p
-          className="ServicesTitle leading-7 text-white xs:max-w-[600px]"
+          className="ServicesDescription max-w-[375px] leading-6 text-white xs:max-w-[600px]"
           variants={itemVariants}
         >
-          Need Branding, Design, or Web Development services? <br />
-          See examples of client sites in the projects section. <br />
-          Brand Strategy example below.
+          Need Branding, Design, or Web Development services? See examples of
+          client sites in the projects section. Brand Strategy example below.
         </motion.p>
         <motion.div
           className="ButtonContainer mb-2 mr-5 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"
@@ -62,16 +61,16 @@ export default function Services() {
         >
           <SiteButton
             size="large"
-            textColor="text-orange-200"
-            style="orange"
+            textColor="text-black"
+            style="silver"
             onClick={() => showModal(<BrandModal />)}
           >
             Example Brand Guide
           </SiteButton>
           <SiteButton
             size="large"
-            textColor="text-orange-200"
-            style="orange"
+            textColor="text-gray-200"
+            style="silverHollow"
             onClick={() => showModal(<ContactModal />)}
           >
             Inquire

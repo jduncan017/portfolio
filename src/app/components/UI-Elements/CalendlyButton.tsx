@@ -10,8 +10,8 @@ const CalendlyButton = () => {
     <>
       <SiteButton
         size="large"
-        textColor="text-orange-200"
-        style="orange"
+        textColor="text-secondary"
+        style="purple"
         addClasses="w-full mini:w-auto"
         onClick={() => showModal(<CalendlyModal />)}
       >

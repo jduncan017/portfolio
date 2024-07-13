@@ -42,7 +42,7 @@ module.exports = {
       colors: {
         primaryDark: "rgb(26, 143, 152)",
         secondary: "rgb(143, 142, 255)",
-        secondaryDark: "#242439",
+        secondaryDark: "#4846b2",
         blurWhite: "rgba(255, 255, 255, 0.5)",
         blurBlack: "rgba(0, 0, 0, 0.85)",
       },

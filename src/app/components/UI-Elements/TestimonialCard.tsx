@@ -14,7 +14,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
   return (
     <BackgroundGradient
       containerClassName="Container w-full h-full max-w-[700px] lg:h-[450px] min-[1480px]:h-[440px] mx-auto p-[0.75px] sm:hover:scale-105 transition-all duration-500"
-      className="Card relative flex h-full flex-col items-center gap-3 rounded-[12px] bg-slate-950 p-4 text-orange-200 transition-all duration-500 xs:text-orange-200 xs:saturate-0 sm:hover:bg-slate-950/90 sm:hover:text-orange-200 sm:hover:saturate-100 xl:px-10 xl:py-6"
+      className="Card relative flex h-full flex-col items-center gap-3 rounded-[12px] bg-slate-950 p-4 transition-all duration-500 xs:saturate-0 sm:hover:bg-slate-950/90 sm:hover:saturate-100 xl:px-10 xl:py-6"
     >
       <div className="TitleSection flex flex-col items-center">
         <h3 className="Title text-gradient-clip pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-lg xl:text-xl">
@@ -43,9 +43,9 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
         }
         aria="View full review"
         addClasses="ReviewButton relative bottom-2 sm:text-sm my-4 font-medium tracking-widest uppercase lg:absolute"
-        textColor="text-gray-300"
+        textColor="text-gray-200"
         size="small"
-        style="silverHollow"
+        style="purple"
       >
         Full Review
       </SiteButton>

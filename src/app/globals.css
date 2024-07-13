@@ -17,18 +17,18 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #fed7aa;
+    background-color: #4846b2;
     border-radius: 10px;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: #f6ad55;
+    background-color: #4846b2;
   }
 
   /* For Firefox */
   .custom-scrollbar {
     scrollbar-width: thin;
-    scrollbar-color: #fed7aa transparent;
+    scrollbar-color: #4846b2 transparent;
   }
 }
 
@@ -106,7 +106,7 @@ h1 {
 
 /* for sliderSection buttons */
 .react-multiple-carousel__arrow {
-  background-color: #6c6bdc !important;
+  background-color: #4846b2 !important;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   border-radius: 12px !important;
   height: 48px;
@@ -115,7 +115,7 @@ h1 {
 
 .react-multiple-carousel__arrow:hover {
   background-color: #000 !important;
+  box-shadow: 0 0 20px rgb(214, 255, 112);
   filter: invert();
   scale: 105%;
-  box-shadow: none;
 }

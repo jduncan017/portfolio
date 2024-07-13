@@ -22,7 +22,7 @@ export const Header = () => {
         <ParticlesAnimation />
       </div>
       <div className="HeaderTextContainer mx-auto flex flex-col items-center pt-[15vh] sm:pt-[30vh]">
-        <div className="TextContainer flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/5 px-4 py-20 text-center opacity-90 shadow-primary backdrop-blur-md xs:max-w-[80%] xs:px-8 md:px-20 md:py-20 lg:py-28">
+        <div className="TextContainer flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/20 px-4 py-20 text-center opacity-90 shadow-primary backdrop-blur-md xs:max-w-[80%] xs:px-8 md:px-20 md:py-20 lg:py-28">
           <motion.h1
             className="Title text-gradient-clip text-center font-gulzar text-5xl font-medium uppercase leading-tight text-white sm:text-nowrap sm:pb-0 sm:text-6xl sm:leading-tight lg:text-7xl lg:leading-tight"
             initial={{ opacity: 0 }}

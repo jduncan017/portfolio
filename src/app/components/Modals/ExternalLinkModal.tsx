@@ -29,12 +29,15 @@ export default function ExternalLinkModal({
 
   return (
     <ModalWrapper>
-      <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl px-6 pb-5 text-center font-serif">
-        <h3 className="Header text-gradient-clip font-noto text-2xl font-black uppercase">
-          Note:
+      <div className="ModalContainer flex h-fit w-fit flex-col items-center rounded-2xl px-6 pb-5 text-center font-serif">
+        <h3 className="Header text-gradient-clip font-noto text-2xl font-black capitalize">
+          Quick Note:
         </h3>
-        <p className="Description font-noto text-xl text-gray-300">
-          {`Visit ${name} ${linkType}?`}
+        <p className="Description font-noto italic text-gray-400">
+          This is an external link.
+        </p>
+        <p className="Description my-4 font-noto text-xl text-gray-300">
+          {`Do you want to visit the ${name} ${linkType}?`}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
           <Link

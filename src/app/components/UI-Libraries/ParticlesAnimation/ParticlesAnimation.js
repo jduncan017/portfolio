@@ -25,7 +25,7 @@ export const ParticlesAnimation = () => {
       fullScreen: { enable: false },
       background: {
         color: {
-          value: "#000",
+          value: "#00060d",
         },
       },
       fpsLimit: 60,

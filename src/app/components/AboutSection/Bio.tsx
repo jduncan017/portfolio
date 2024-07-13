@@ -40,7 +40,7 @@ export default function Bio() {
 
   return (
     <motion.div
-      className="RightContainer ml-5 w-auto max-w-[620px] self-end overflow-hidden rounded-l-xl border border-white/30 bg-black/90 px-8 py-6 pr-[calc((100vw-350px)/2)] shadow-secondaryDim mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
+      className="RightContainer ml-5 w-auto max-w-[620px] self-end overflow-hidden rounded-l-xl border-l border-t border-white/30 bg-black/40 px-8 py-6 pr-[calc((100vw-375px)/2)] shadow-secondaryDim mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
       variants={rightContainerVariants}
       initial="hidden"
       whileInView="visible"
@@ -53,12 +53,12 @@ export default function Bio() {
         <FlipWords
           words={words}
           duration={1800}
-          className="pl-0 font-sans text-white"
+          className="text-gradient-clip pl-0 font-sans text-white"
           start={startFlipping}
         />
       </motion.h2>
       <motion.p
-        className="BioDescription mb-8 max-w-[350px] pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
+        className="BioDescription mb-8 max-w-[375px] pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
         variants={itemVariants}
         onAnimationComplete={() => setStartFlipping(true)}
       >
@@ -73,8 +73,8 @@ export default function Bio() {
       >
         <SiteButton
           size="large"
-          textColor="text-orange-200"
-          style="orange"
+          textColor="text-gray-200"
+          style="silverHollow"
           onClick={() => showModal(<ResumeModal />)}
         >
           View Resume

@@ -11,7 +11,7 @@ export const SocialContainer = () => {
         aria-label="github profile"
         href={RESUME_DATA.gitHubURL}
         target="_blank"
-        className="global__hover-animation flex flex-col items-center gap-1.5 text-transparent sm:hover:text-white"
+        className="global__hover-animation flex flex-col items-center gap-1 text-transparent sm:hover:text-white"
       >
         <Image
           alt="Github icon"
@@ -29,7 +29,7 @@ export const SocialContainer = () => {
         aria-label="linkedin profile"
         href={RESUME_DATA.linkedInURL}
         target="_blank"
-        className="global__hover-animation flex flex-col items-center gap-1.5 text-transparent hover:text-white"
+        className="global__hover-animation flex flex-col items-center gap-1 text-transparent hover:text-white"
       >
         <Image
           alt="Linkedin icon"
@@ -47,7 +47,7 @@ export const SocialContainer = () => {
         aria-label="X profile"
         href={RESUME_DATA.xURL}
         target="_blank"
-        className="global__hover-animation flex flex-col items-center gap-1.5 text-transparent hover:text-white"
+        className="global__hover-animation flex flex-col items-center gap-1 text-transparent hover:text-white"
       >
         <Image
           alt="X icon"
@@ -65,7 +65,7 @@ export const SocialContainer = () => {
         aria-label="medium profile"
         href={RESUME_DATA.mediumURL}
         target="_blank"
-        className="global__hover-animation flex flex-col items-center gap-1.5 text-transparent hover:text-white"
+        className="global__hover-animation flex flex-col items-center gap-1 text-transparent hover:text-white"
       >
         <Image
           alt="Medium Icon"

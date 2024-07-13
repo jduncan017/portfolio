@@ -6,7 +6,7 @@ export default function ResumeModal() {
     return (
       <div className="Container">
         <div className="Border">
-          <h3 className="Heading mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase text-primaryDark">
+          <h3 className="Heading mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase tracking-wider text-secondaryDark">
             {title}
           </h3>
         </div>
@@ -16,11 +16,11 @@ export default function ResumeModal() {
 
   return (
     <ModalWrapper title="Resume">
-      <div className="OuterContainer max-w-[800px] items-start py-4 text-start text-white sm:px-4">
-        <h2 className="Resume mb-1 text-start text-4xl font-bold uppercase">
+      <div className="OuterContainer max-w-[800px] items-start pb-4 text-start text-white sm:px-4">
+        <h2 className="Name text-gradient-clip mb-1 text-start text-4xl font-bold uppercase">
           Joshua Duncan
         </h2>
-        <h2 className="Resume mb-6 text-start text-2xl font-bold uppercase text-gray-400">
+        <h2 className="Title mb-6 text-start text-2xl font-medium uppercase text-gray-400">
           Software Engineer
         </h2>
         <div className="TechExperience">
@@ -30,7 +30,7 @@ export default function ResumeModal() {
               {TECH_SKILLS.map((item) => (
                 <li
                   key={item}
-                  className="ExperienceItem rounded-sm bg-slate-600/50 p-1 text-sm capitalize text-gray-300"
+                  className="ExperienceItem rounded-sm bg-slate-600/50 p-1 text-xs capitalize text-gray-300"
                 >
                   {item}
                 </li>
@@ -48,7 +48,7 @@ export default function ResumeModal() {
                   className="Container mb-4 flex flex-col justify-start"
                 >
                   <div className="TitleContainer flex flex-col items-start sm:flex-row sm:items-center sm:gap-2">
-                    <p className="Title text-xl font-bold capitalize text-white">
+                    <p className="Title text-gradient-clip text-xl font-bold capitalize text-white">
                       {job.name}
                     </p>
                     <p className="Time text-sm italic text-gray-500">
@@ -77,7 +77,7 @@ export default function ResumeModal() {
               return (
                 <div key={item.school} className="JobContainer">
                   <div className="TitleContainer flex flex-col items-start sm:flex-row sm:items-center sm:gap-2">
-                    <h3 className="SchoolTitle text-xl font-bold capitalize text-white">
+                    <h3 className="SchoolTitle text-gradient-clip text-xl font-bold capitalize text-white">
                       {item.school}
                     </h3>
                     <p className="SchoolTime text-sm italic text-gray-500">

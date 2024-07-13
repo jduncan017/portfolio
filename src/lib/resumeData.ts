@@ -6,17 +6,15 @@ export const RESUME_DATA: ResumeData = {
   xURL: "https://twitter.com/Jduncan017",
   linkedInURL: "https://www.linkedin.com/in/jduncan017/",
   mediumURL: "https://medium.com/@emailjoshduncan",
-  bioDescription: `I'm a passionate and versatile full-stack developer with a wide range of experience to bring to the table. My career has encompassed
-                   software development, project management, brand strategy, leadership, sales, and marketing - providing me with a broad 
-                   and insightful perspective. <br/><br/>
-
-                  I lean on past experiences to approach problem-solving innovatively, allowing me to offer more than just task execution to overall
-                  product visioning, brand cultivation, and growth strategies where needed. I value humility and shared team successes, and I 
-                  thrive in environments where I can take ownership of my work. <br/><br/>
-
-                  Driving impactful growth through determination and creative thinking is ingrained in my character. I am eager to leverage my 
-                  unique mix of skills for an exciting new project where I can have a profound influence. If you'd like to work with me, don't 
-                  hesitate to reach out!`,
+  bioDescription: `As a full-stack developer, I bring a unique blend of technical expertise and business acumen to every project.
+   My career has spanned software development, project management, brand strategy, leadership, sales, and marketing, providing me with a 
+   broad perspective of the digital landscape.<br /><br />
+   <span className="leading-7">Currently, I specialize in creating digital brand identities including:</span><br />
+<span className="text-secondary leading-7">-></span> <i>Target Audience Identification & Market Research</i><br />
+<span className="text-secondary leading-7">-></span> <i>Brand Strategy & Design</i><br />
+<span className="text-secondary leading-7">-></span> <i>Development of Modern Web Applications</i><br /><br />
+I became a developer with the ambition to improve the lives of others, and I'm eager to connect with innovative teams that are doing so. If you're looking for someone who brings more than just tech skills to the table, I'd love to chat!
+`,
   education: [
     {
       school: "TripleTen by Yandex",

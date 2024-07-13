@@ -42,7 +42,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
         onClick={handleModalContentClick}
       >
         <div
-          className={`TopBar ${title && "min-h-[44px] pt-8"} sticky left-0 top-0 z-10 h-fit w-full bg-gradient-to-b from-slate-950 from-70% to-transparent to-100% pb-10`}
+          className={`TopBar ${title && "min-h-[44px] pt-10"} sticky left-0 top-0 z-10 h-fit w-full bg-gradient-to-b from-slate-950 from-70% to-transparent to-100% pb-8`}
         >
           <h2 className="Title text-gradient-clip w-full text-center font-sans text-3xl font-bold uppercase tracking-wider">
             {title}
@@ -61,7 +61,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
             />
           </button>
         </div>
-        <div className="ChildContainer mb-4 rounded-xl bg-slate-950 px-6">
+        <div className="ChildContainer rounded-xl bg-slate-950 px-6">
           {children}
         </div>
         <div className="BottomBar sticky bottom-0 left-0  h-8 w-full bg-gradient-to-t from-slate-950 from-70% to-transparent to-100%" />
