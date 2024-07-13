@@ -8,7 +8,7 @@ type LinkModalProps = {
   name: string;
   link: string;
   currentModal?: ReactNode;
-  linkType: "repository" | "website";
+  linkType: "Repository" | "Website";
 };
 
 export default function ExternalLinkModal({
@@ -30,11 +30,11 @@ export default function ExternalLinkModal({
   return (
     <ModalWrapper>
       <div className="ModalContainer flex h-fit w-fit flex-col items-center gap-4 rounded-2xl px-6 pb-5 text-center font-serif">
-        <h3 className="Header font-noto text-2xl font-black uppercase text-primaryDark">
+        <h3 className="Header text-gradient-clip font-noto text-2xl font-black uppercase">
           Note:
         </h3>
         <p className="Description font-noto text-xl text-gray-300">
-          {`This will take you to the ${name} ${linkType}.`}
+          {`Visit ${name} ${linkType}?`}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
           <Link
@@ -46,8 +46,8 @@ export default function ExternalLinkModal({
             <SiteButton
               onClick={() => handleModal()}
               addClasses="mt-4"
-              textColor="text-gray-200 uppercase"
-              style="teal"
+              textColor="text-black uppercase"
+              style="silver"
             >
               {`Let's Go!`}
             </SiteButton>
@@ -57,7 +57,7 @@ export default function ExternalLinkModal({
             aria="go back"
             addClasses="mt-4"
             textColor="text-gray-200 uppercase"
-            style="tealHollow"
+            style="silverHollow"
           >
             Go Back
           </SiteButton>

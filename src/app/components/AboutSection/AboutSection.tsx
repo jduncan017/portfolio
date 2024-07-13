@@ -11,7 +11,7 @@ export const About = () => {
       </div>
       <div className="OuterContainer mt-4 flex h-full w-full justify-center border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-gray-900 to-black shadow-secondaryBright">
         <div className="InnerContainer flex w-full max-w-[2500px] flex-col items-center justify-center gap-8 py-8 md:py-16 lg:flex-row lg:items-start lg:gap-16 lg:text-left xxl:gap-20">
-          <div className="LeftContainer mr-5 flex flex-col gap-8 self-start xs:mr-0 xs:w-[75%] xs:items-center  xs:self-center xs:pr-0 lg:h-full lg:w-full lg:gap-16 lg:self-start xxl:w-fit">
+          <div className="LeftContainer mr-5 flex flex-col gap-8 self-start xs:mr-0 xs:w-[75%] xs:items-center  xs:self-center xs:pr-0 lg:h-full lg:w-fit lg:gap-16 lg:self-start">
             <ProfilePicture />
             <div className="ServicesContainerLargeScreens hidden w-full lg:block">
               <Services />

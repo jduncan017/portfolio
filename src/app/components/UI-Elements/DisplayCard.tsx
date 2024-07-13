@@ -31,9 +31,9 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           size="small"
           aria={`View Project`}
           addClasses="tracking-widest font-medium uppercase sm:text-xs my-2"
-          textColor="text-gray-300"
+          textColor="text-gray-950"
           onClick={() => showModal(<ProjectModal cardData={cardData} />)}
-          style="orange"
+          style="silver"
         >
           View Project
         </SiteButton>
@@ -45,14 +45,14 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           size="small"
           aria={`View`}
           addClasses="tracking-widest font-medium uppercase sm:text-xs my-2"
-          textColor="text-gray-300"
-          style="orange"
+          textColor="text-gray-950"
+          style="silver"
           onClick={() =>
             showModal(
               <ExternalLinkModal
                 name={cardData.name}
                 link={cardData.liveLink}
-                linkType="website"
+                linkType="Website"
               />,
             )
           }
@@ -87,12 +87,12 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
   return (
     <div className="Card mx-auto flex h-full w-[88%] max-w-[420px] flex-col items-start gap-1 rounded-lg border border-secondary/30  bg-gray-950 p-4 text-orange-200 transition-all duration-500 xs:w-[96%] xs:border-secondary/60 xs:bg-black xs:p-3 xs:text-gray-300 xs:saturate-0 xs:hover:-translate-y-5 xs:hover:bg-gray-950 xs:hover:text-orange-200 xs:hover:opacity-100 xs:hover:shadow-secondaryBright xs:hover:saturate-100 xl:p-4">
       {cardImage()}
-      <ul className="TagsContainer my-2 flex w-full flex-wrap gap-1">
+      <ul className="TagsContainer my-2 flex w-full flex-wrap gap-2">
         {cardData.tags &&
           cardData.tags.sort().map((tag: string): ReactNode => {
             return (
               <li
-                className="Tag pointer-events-none flex-grow rounded-md bg-gray-600/50 bg-opacity-70 px-2 py-0.5 text-center text-xs text-gray-300 xs:text-sm"
+                className="Tag pointer-events-none flex-grow rounded-sm bg-gray-600/50 bg-opacity-70 bg-gradient-to-br from-gray-700 to-gray-800 p-1 px-2 py-0.5 text-center text-xs text-gray-300 xs:text-sm"
                 key={tag}
               >
                 {tag}
@@ -100,7 +100,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
             );
           })}
       </ul>
-      <h3 className="Title pointer-events-none w-full text-start font-serif text-2xl font-bold uppercase xs:text-xl xl:text-2xl">
+      <h3 className="Title text-gradient-clip pointer-events-none w-full text-start font-serif text-2xl font-bold uppercase xs:text-xl xl:text-2xl">
         {cardData.name}
       </h3>
       <p className="Description pointer-events-none h-16 w-full text-start text-gray-400 mini:leading-5 xs:h-16">

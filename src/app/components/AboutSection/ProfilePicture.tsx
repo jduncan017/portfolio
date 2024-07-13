@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function ProfilePicture() {
   return (
     <motion.div
-      className="LeftTopContainer h-fit w-full max-w-[620px] flex-col gap-8 rounded-r-xl bg-black/90 shadow-secondaryBright min-[382px]:pl-[calc((100vw-350px-32px)/2)] mini:mr-0 xs:rounded-xl xs:pl-0 lg:max-w-none lg:gap-16 lg:rounded-l-none xxl:w-fit xxl:rounded-xl"
+      className="Container h-fit w-full max-w-[620px] flex-col gap-8 rounded-r-xl border border-white/30 bg-black/90 shadow-secondaryDim min-[382px]:pl-[calc((100vw-350px-32px)/2)] mini:mr-0 xs:rounded-xl xs:pl-0 lg:max-w-none lg:gap-16 xxl:w-fit xxl:rounded-xl"
       initial={{ x: "-100%" }}
       whileInView={{ x: "0%" }}
       viewport={{ once: true }}
@@ -15,7 +15,7 @@ export default function ProfilePicture() {
         delay: 0.4,
       }}
     >
-      <div className="ImageContainer flex h-fit w-full justify-end overflow-hidden p-4 mini:pr-8 xs:justify-center xs:rounded-xl xs:pl-4 lg:justify-end lg:rounded-l-none xxl:pr-4">
+      <div className="ImageContainer flex h-fit w-full justify-end overflow-hidden p-4 xs:justify-center xs:rounded-xl xs:pl-4 xxl:pr-4">
         <Image
           alt="Josh's Picture"
           src="/profile_pic.jpeg"

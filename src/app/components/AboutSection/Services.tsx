@@ -35,7 +35,7 @@ export default function Services() {
 
   return (
     <motion.div
-      className="ServicesContainer w-full justify-end rounded-r-xl bg-black/90 shadow-secondaryBright min-[382px]:pl-[calc((100vw-350px-32px)/2)] xs:rounded-xl xs:pl-0 lg:flex lg:rounded-l-none xxl:rounded-xl"
+      className="ServicesContainer w-full justify-end rounded-r-xl border border-white/30 bg-black/90 shadow-secondaryDim min-[382px]:pl-[calc((100vw-350px-32px)/2)] xs:rounded-xl xs:pl-0 lg:flex xxl:rounded-xl"
       variants={leftContainerVariants}
       initial="hidden"
       whileInView="visible"
@@ -49,15 +49,15 @@ export default function Services() {
           Services
         </motion.h2>
         <motion.p
-          className="ServicesTitle text-white xs:max-w-[600px]"
+          className="ServicesTitle leading-7 text-white xs:max-w-[600px]"
           variants={itemVariants}
         >
-          I offer full branding, design, and web development services. You can
-          find examples of client sites below in the projects section, or see
-          examples of brand work here.
+          Need Branding, Design, or Web Development services? <br />
+          See examples of client sites in the projects section. <br />
+          Brand Strategy example below.
         </motion.p>
         <motion.div
-          className="ButtonContainer my-6 mr-5 flex flex-col gap-4 mini:mr-0 mini:flex-row"
+          className="ButtonContainer mb-2 mr-5 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"
           variants={itemVariants}
         >
           <SiteButton

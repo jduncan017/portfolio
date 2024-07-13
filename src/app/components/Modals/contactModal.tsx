@@ -55,7 +55,7 @@ export default function ContactModal() {
             Contact
           </h1>
           <p className="formDescription m-0 w-full text-center text-gray-300">
-            {`Looking to work together? In need of branding or web design services? Schedule a meeting or reach out!`}
+            {`Looking to work together? Curious about my services? Schedule a meeting or reach out!`}
           </p>
 
           {/* Contact Form */}
@@ -72,7 +72,7 @@ export default function ContactModal() {
                   First Name:
                 </label>
                 <input
-                  className="FirstNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-900 p-1 text-gray-300"
+                  className="FirstNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-white/20 bg-gray-900 p-1 text-gray-300"
                   type="text"
                   id="first-name"
                   name="first-name"
@@ -85,7 +85,7 @@ export default function ContactModal() {
                   Last Name:
                 </label>
                 <input
-                  className="LastNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-900 p-1 text-gray-300"
+                  className="LastNameInput mt-0.5 box-border h-[32px] w-full rounded-md border border-white/20 bg-gray-900 p-1 text-gray-300"
                   type="text"
                   id="last-name"
                   name="last-name"
@@ -101,7 +101,7 @@ export default function ContactModal() {
                 Email:
               </label>
               <input
-                className="EmailInput mt-0.5 box-border h-[32px] w-full rounded-md border border-gray-600 bg-gray-900 p-1 text-gray-300"
+                className="EmailInput mt-0.5 box-border h-[32px] w-full rounded-md border border-white/20 bg-gray-900 p-1 text-gray-300"
                 type="email"
                 id="email"
                 name="email"
@@ -114,7 +114,7 @@ export default function ContactModal() {
                 Message:
               </label>
               <textarea
-                className="MessageInput mt-1 box-border w-full rounded-md border border-gray-600 bg-gray-900 p-1 text-gray-300"
+                className="MessageInput mt-1 box-border w-full rounded-md border border-white/20 bg-gray-900 p-1 text-gray-300"
                 id="message"
                 name="message"
                 rows={4}
@@ -135,7 +135,7 @@ export default function ContactModal() {
               >
                 <SiteButton
                   textColor="text-gray-300 uppercase"
-                  style="tealHollow"
+                  style="silverHollow"
                 >
                   Schedule a Meeting
                 </SiteButton>
@@ -144,8 +144,8 @@ export default function ContactModal() {
                 type="submit"
                 disabled={buttonDisabled}
                 aria="submit"
-                textColor="text-gray-300 uppercase"
-                style="teal"
+                textColor="text-black uppercase"
+                style="silver"
               >
                 {buttonDisplay}
               </SiteButton>

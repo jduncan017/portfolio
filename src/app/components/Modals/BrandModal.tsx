@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import ModalWrapper from "./ModalWrapper";
 import { Document, Page, pdfjs } from "react-pdf";
 import { PDFDocumentProxy } from "pdfjs-dist";
@@ -20,7 +20,7 @@ export default function BrandModal() {
     setLoaded(true);
   };
 
-  function updateWidth() {
+  const updateWidth = useCallback(() => {
     const calculatedWidth = Math.min(
       800, // Maximum width
       Math.max(280, window.innerWidth * 0.8),
@@ -32,14 +32,14 @@ export default function BrandModal() {
       return;
     }
     setPlaceholderWidth(calculatedWidth);
-  }
+  }, [loaded]);
 
   useEffect(() => {
     updateWidth();
     window.addEventListener("resize", updateWidth);
 
     return () => window.removeEventListener("resize", updateWidth);
-  }, [loaded]);
+  }, [loaded, updateWidth]);
 
   return (
     <ModalWrapper title="Brand Strategy">

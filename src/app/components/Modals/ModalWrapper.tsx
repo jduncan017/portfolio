@@ -28,7 +28,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
 
   return (
     <div
-      className="ModalOverlay fixed inset-0 z-50 flex h-svh items-center justify-center bg-black/75 backdrop-blur-lg backdrop-filter xs:p-6"
+      className="ModalOverlay fixed inset-0 z-50 flex h-svh items-center justify-center bg-black/70 backdrop-blur-lg backdrop-filter xs:p-6"
       onClick={hideModal}
     >
       <motion.div
@@ -38,13 +38,13 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
           duration: 0.2,
           ease: "easeInOut",
         }}
-        className="Content custom-scrollbar relative mb-5 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl bg-slate-950 text-center shadow-secondaryDim xs:pl-3"
+        className="Content custom-scrollbar relative mb-5 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl border border-white/20 bg-slate-950 text-center  xs:pl-3"
         onClick={handleModalContentClick}
       >
         <div
           className={`TopBar ${title && "min-h-[44px] pt-8"} sticky left-0 top-0 z-10 h-fit w-full bg-gradient-to-b from-slate-950 from-70% to-transparent to-100% pb-10`}
         >
-          <h2 className="Title w-full text-center font-sans text-3xl font-bold uppercase tracking-wider text-white">
+          <h2 className="Title text-gradient-clip w-full text-center font-sans text-3xl font-bold uppercase tracking-wider">
             {title}
           </h2>
           <button

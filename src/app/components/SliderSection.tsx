@@ -135,7 +135,7 @@ export default function SliderSection({
           View All
         </motion.button>
       </div>
-      <BackgroundGradient containerClassName="CarouselTrack self-center w-[105%] rounded-xl p-1">
+      <BackgroundGradient containerClassName="CarouselTrack self-center w-[105%] rounded-xl p-[0.75px]">
         <motion.div
           variants={containerVariants}
           initial="hidden"

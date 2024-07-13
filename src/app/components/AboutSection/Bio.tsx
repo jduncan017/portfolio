@@ -4,7 +4,6 @@ import { RESUME_DATA } from "@/src/lib/resumeData";
 import { FlipWords } from "../UI-Libraries/FlipWords";
 import ContactCard from "../UI-Elements/ContactCard";
 import SiteButton from "../UI-Elements/SiteButton";
-import CalendlyButton from "../UI-Elements/CalendlyButton";
 import ResumeModal from "../Modals/ResumeModal";
 import parse from "html-react-parser";
 import { useModal } from "@/src/contexts/ModalContext";
@@ -41,7 +40,7 @@ export default function Bio() {
 
   return (
     <motion.div
-      className="RightContainer ml-5 w-auto max-w-[620px] self-end overflow-hidden rounded-l-xl bg-black/90 px-8 py-6 pr-[calc((100vw-350px)/2)] shadow-secondaryBright mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:w-full lg:max-w-none lg:self-start lg:rounded-r-none xxl:max-w-[900px] xxl:rounded-xl"
+      className="RightContainer ml-5 w-auto max-w-[620px] self-end overflow-hidden rounded-l-xl border border-white/30 bg-black/90 px-8 py-6 pr-[calc((100vw-350px)/2)] shadow-secondaryDim mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
       variants={rightContainerVariants}
       initial="hidden"
       whileInView="visible"
@@ -69,7 +68,7 @@ export default function Bio() {
         <ContactCard />
       </motion.div>
       <motion.div
-        className="ButtonContainer my-6 mr-5 flex flex-col gap-4 mini:mr-0 mini:flex-row"
+        className="ButtonContainer mb-2 mr-5 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"
         variants={itemVariants}
       >
         <SiteButton

@@ -52,10 +52,10 @@ export default function DisplayCard({
   };
 
   return (
-    <div className="Card mx-auto flex h-fit w-full max-w-[456px] flex-col justify-between gap-2 rounded-lg border border-secondary/50 bg-black px-4 py-6 text-start text-orange-200 shadow-secondaryDim transition-all duration-500 hover:brightness-100 xs:px-8 sm:hover:shadow-secondaryBright md:w-[95%] md:max-w-none lg:brightness-75 xl:h-full xl:w-full xxl:max-w-[1000px]">
+    <div className="Card mx-auto flex h-fit w-full max-w-[456px] flex-col justify-between gap-2 rounded-lg border border-white/30 bg-black px-4 py-6 text-start shadow-secondaryDim transition-all duration-500 hover:border-secondary/50 hover:brightness-100 xs:px-8 sm:hover:shadow-secondaryBright md:w-[95%] md:max-w-none lg:brightness-75 xl:h-full xl:w-full xxl:max-w-[1000px]">
       <div className="TopContainer flex flex-col gap-4 md:flex-row">
         <div className="TitleImageSection mx-auto flex h-full flex-col items-center md:mx-0 md:w-[350px] md:items-start">
-          <h3 className="Title font-serif text-lg font-semibold uppercase tracking-wider xs:text-2xl md:text-xl">
+          <h3 className="Title text-gradient-clip font-serif text-lg font-semibold uppercase tracking-wider xs:text-2xl md:text-xl">
             {cardData.name}
           </h3>
           {cardData.lastUpdated && (
@@ -77,7 +77,7 @@ export default function DisplayCard({
             cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="Technology h-fit w-fit flex-grow rounded-md bg-gray-600/50 bg-opacity-90 p-1 text-center text-gray-300"
+                  className="Technology h-fit w-fit flex-grow rounded-sm bg-opacity-90 bg-gradient-to-br from-gray-600 to-gray-800 p-0.5 text-center text-gray-300"
                   key={tech}
                 >
                   {tech}
@@ -88,16 +88,16 @@ export default function DisplayCard({
         <div className="ButtonContainer flex h-full w-full min-w-fit flex-col items-end text-nowrap sm:flex-row sm:gap-2 md:w-fit">
           <SiteButton
             size="small"
-            addClasses="tracking-widest mt-3 md:mt-0 uppercase w-full md:w-auto"
-            textColor="text-gray-300"
-            style="teal"
+            addClasses="tracking-widest sm:text-xs mt-3 md:mt-0 uppercase w-full md:w-auto"
+            textColor="text-white"
+            style="orange"
             aria={`Visit ${cardData.name}`}
             onClick={() =>
               showModal(
                 <ExternalLinkModal
                   name={cardData.name}
                   link={cardData.liveLink}
-                  linkType="website"
+                  linkType="Website"
                   currentModal={
                     <DisplayListModal
                       cardArray={cardArray}
@@ -114,15 +114,15 @@ export default function DisplayCard({
             <SiteButton
               size="small"
               aria={`github repo for ${repoURL}`}
-              addClasses="tracking-widest uppercase mt-3 md:mt-0 w-full md:w-auto"
-              textColor="text-gray-300"
-              style="teal"
+              addClasses="tracking-widest sm:text-xs uppercase mt-3 md:mt-0 w-full md:w-auto"
+              textColor="text-white"
+              style="orange"
               onClick={() =>
                 showModal(
                   <ExternalLinkModal
                     name={cardData.name}
                     link={repoURL}
-                    linkType="repository"
+                    linkType="Repository"
                     currentModal={
                       <DisplayListModal
                         cardArray={cardArray}

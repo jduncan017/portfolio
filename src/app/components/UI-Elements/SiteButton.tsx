@@ -6,7 +6,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   aria?: string;
   textColor: string;
-  style: "orange" | "teal" | "tealHollow";
+  style: "orange" | "teal" | "tealHollow" | "silver" | "silverHollow";
   children: React.ReactNode;
 }
 
@@ -48,13 +48,21 @@ const SiteButton = ({
       buttonStyle =
         "border-primaryDark/90 border hover:bg-white hover:border-white hover:text-black";
       break;
+    case "silver":
+      buttonStyle =
+        "border-none bg-gradient-to-br from-gray-200 opacity-80 hover:opacity-200 to-gray-400 hover:opacity-100 hover:text-black";
+      break;
+    case "silverHollow":
+      buttonStyle =
+        "border-gray-300 border bg-transparent hover:bg-gradient-to-br hover:border-none hover:from-gray-200 hover:to-gray-400 hover:border-white hover:text-black";
+      break;
     default:
       buttonStyle = "";
   }
 
   return (
     <button
-      className={`SiteButton rounded-lg font-sans text-sm font-semibold transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white sm:text-base ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
+      className={`SiteButton rounded-md font-sans text-sm font-semibold transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white sm:text-base ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
       `}
       type={type ?? "button"}
       onClick={onClick}

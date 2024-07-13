@@ -49,7 +49,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
     <ModalWrapper>
       <div className="ProjectModal flex h-full w-full max-w-[500px] flex-col items-start gap-2 pb-2 text-primaryDark">
         <div className="TitleSection flex w-full flex-col items-start">
-          <h3 className="Title pointer-events-none mb-2 w-full border-b border-dotted border-gray-400 pb-1 text-start font-serif text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
+          <h3 className="Title text-gradient-clip pointer-events-none mb-2 w-full border-b border-dotted border-gray-400 pb-1 text-start font-serif text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
             {cardData.name}
           </h3>
           <p className="LastUpdated mb-2 text-sm italic text-gray-400">
@@ -79,13 +79,13 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
             aria-label={`Visit ${cardData.name}`}
             addClasses="tracking-widest uppercase w-full mt-4"
             textColor="text-gray-300"
-            style="teal"
+            style="silverHollow"
             onClick={() =>
               showModal(
                 <ExternalLinkModal
                   name={cardData.name}
                   link={cardData.liveLink}
-                  linkType="website"
+                  linkType="Website"
                   currentModal={<ProjectModal cardData={cardData} />}
                 />,
               )
@@ -99,13 +99,13 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
               size="large"
               addClasses="tracking-widest uppercase w-full mt-4"
               textColor="text-gray-300"
-              style="teal"
+              style="silverHollow"
               onClick={() =>
                 showModal(
                   <ExternalLinkModal
                     name={cardData.name}
                     link={repoURL}
-                    linkType="repository"
+                    linkType="Repository"
                     currentModal={<ProjectModal cardData={cardData} />}
                   />,
                 )
