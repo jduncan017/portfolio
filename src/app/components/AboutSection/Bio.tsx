@@ -5,6 +5,7 @@ import SiteButton from "../UI-Elements/SiteButton";
 import ResumeModal from "../Modals/ResumeModal";
 import { useModal } from "@/src/contexts/ModalContext";
 import ContactCard from "../UI-Elements/ContactCard";
+import ContactModal from "../Modals/contactModal";
 
 export default function Bio() {
   const words = ["Hello,", "Bonjour,", "Hola,", "Kanichiwa,"];
@@ -45,7 +46,7 @@ export default function Bio() {
       viewport={{ once: true }}
     >
       <motion.h2
-        className="Title mb-3 flex gap-2 text-xl font-semibold uppercase leading-normal tracking-widest text-white sm:text-2xl"
+        className="Title mb-2 flex gap-2 text-xl font-semibold uppercase leading-normal tracking-widest text-white sm:text-2xl"
         variants={itemVariants}
       >
         <FlipWords
@@ -71,7 +72,7 @@ export default function Bio() {
           Current Occupation:
         </h3>
         <p className="mb-3 border-b border-dotted border-gray-600 pb-3 text-lg capitalize">
-          Freelance Developer
+          Freelance Developer & Brand Strategist
         </p>
       </motion.div>
       <motion.div
@@ -97,7 +98,7 @@ export default function Bio() {
             <p>Target Audience Identification</p>
           </li>
 
-          <li className="JobItem mb-3 flex items-center gap-2">
+          <li className="JobItem flex items-center gap-2">
             <span className="text-secondary">{"->"}</span>
             <p>Competitor Market Research</p>
           </li>
@@ -117,6 +118,14 @@ export default function Bio() {
           onClick={() => showModal(<ResumeModal />)}
         >
           View Resume
+        </SiteButton>
+        <SiteButton
+          size="large"
+          textColor="text-gray-200"
+          style="silverHollow"
+          onClick={() => showModal(<ContactModal />)}
+        >
+          Contact Me
         </SiteButton>
       </motion.div>
     </motion.div>

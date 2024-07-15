@@ -92,7 +92,7 @@ export default function DisplayCard({
               {cardData.keyFeatures.map((feature: string): ReactNode => {
                 return (
                   <div className="Keyfeature text-gray-300" key={feature}>
-                    <span className="Arrow text-secondary">{`-> `}</span>
+                    <span className="Arrow text-gray-400">{`-> `}</span>
                     {feature}
                   </div>
                 );
@@ -107,7 +107,7 @@ export default function DisplayCard({
             cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="Technology h-fit w-fit flex-grow rounded-full bg-secondaryDark/30 bg-opacity-90 p-0.5 text-center text-secondary/80"
+                  className="Technology h-fit w-fit flex-grow rounded-full bg-secondaryDark/30 p-0.5 text-center text-secondary/80"
                   key={tech}
                 >
                   {tech}

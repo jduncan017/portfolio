@@ -62,7 +62,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
             cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="tech flex-grow rounded-md bg-gray-600/50 bg-opacity-70 p-1 text-center text-xs text-gray-300 xs:text-xs"
+                  className="tech flex-grow rounded-full bg-secondaryDark/30 p-1 text-center text-xs text-secondary/80 xs:text-xs"
                   key={tech}
                 >
                   {tech}
@@ -70,7 +70,8 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
               );
             })}
         </div>
-        <p className="Description max-w-[500px] text-start text-sm  text-gray-300">
+        <p className="Description w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
+          <span className="font-medium text-gray-400">Description: </span>
           {cardData.description}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
@@ -78,8 +79,8 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
             size="large"
             aria-label={`Visit ${cardData.name}`}
             addClasses="tracking-widest sm:text-xs uppercase w-full mt-4"
-            textColor="text-gray-300"
-            style="silverHollow"
+            textColor="text-black"
+            style="purple"
             onClick={() =>
               showModal(
                 <ExternalLinkModal
@@ -98,8 +99,8 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
               aria={`github repo for ${repoURL}`}
               size="large"
               addClasses="tracking-widest sm:text-xs uppercase w-full mt-4"
-              textColor="text-gray-300"
-              style="silverHollow"
+              textColor="text-secondary"
+              style="purpleHollow"
               onClick={() =>
                 showModal(
                   <ExternalLinkModal

@@ -15,7 +15,7 @@ export const Callouts: CalloutData = {
   },
   techstack: {
     prompt: "My toolkit",
-    header: "A Fast & Flexible Tech Stack",
+    header: "Fast & Flexible Development",
     description: `I thrive with Next.js, TypeScript, Prisma, MongoDB, and Tailwind CSS, but I'm always eager to expand my skills and 
     adapt to project needs.`,
   },

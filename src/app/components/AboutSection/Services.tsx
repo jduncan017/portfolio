@@ -7,6 +7,12 @@ import ContactModal from "../Modals/contactModal";
 export default function Services() {
   const { showModal } = useModal();
 
+  const performSmoothScroll = (sectionName: string) => {
+    const section = document.querySelector(`#${sectionName}-section`);
+
+    section && section.scrollIntoView({ behavior: "smooth" });
+  };
+
   const leftContainerVariants = {
     hidden: { x: "-100%" },
     visible: {
@@ -58,8 +64,8 @@ export default function Services() {
           className="ServicesDescription max-w-[375px] leading-6 text-gray-200 xs:max-w-[600px] "
           variants={itemVariants}
         >
-          See examples of client sites in the projects section. Brand Strategy
-          example below.
+          {`Let's bring your ideas to life! See client website examples in the
+          projects section. Branding examples below.`}
         </motion.p>
         <motion.div
           className="ButtonContainer mb-2 mr-5 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"
@@ -71,15 +77,15 @@ export default function Services() {
             style="silver"
             onClick={() => showModal(<BrandModal />)}
           >
-            Example Brand Guide
+            View Branding Services
           </SiteButton>
           <SiteButton
             size="large"
             textColor="text-gray-200"
             style="silverHollow"
-            onClick={() => showModal(<ContactModal />)}
+            onClick={() => performSmoothScroll("projects")}
           >
-            Inquire
+            View Projects
           </SiteButton>
         </motion.div>
       </div>

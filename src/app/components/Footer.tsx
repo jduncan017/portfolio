@@ -28,8 +28,8 @@ export const Footer = () => {
         <div className="ButtonContainer my-6 flex flex-col items-center gap-4 mini:flex-row">
           <SiteButton
             size="large"
-            textColor="text-secondary"
-            style="purpleHollow"
+            textColor="text-black"
+            style="purple"
             onClick={() => showModal(<ResumeModal />)}
           >
             View Resume

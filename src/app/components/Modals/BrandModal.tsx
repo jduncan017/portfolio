@@ -1,77 +1,132 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useRef } from "react";
 import ModalWrapper from "./ModalWrapper";
-import { Document, Page, pdfjs } from "react-pdf";
-import { PDFDocumentProxy } from "pdfjs-dist";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import "react-pdf/dist/esm/Page/TextLayer.css";
-
-// Use the locally copied worker file
-pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import SiteButton from "../UI-Elements/SiteButton";
+import ContactModal from "./contactModal";
+import { useModal } from "@/src/contexts/ModalContext";
 
 export default function BrandModal() {
-  const [numPages, setNumPages] = useState(0);
-  const [loaded, setLoaded] = useState(false);
-  const [pdfWidth, setPdfWidth] = useState(280);
-  const [placeholderWidth, setPlaceholderWidth] = useState(280);
+  const { showModal } = useModal();
+  const [expandedImage, setExpandedImage] = useState<number | null>(null);
+  const pages = 20;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const packageElements = [
+    "Logo Design",
+    "Visual Identity",
+    "Color Palette",
+    "Typography & Fonts",
+    "Unique Selling Proposition",
+    "Color Palette",
+    "Brand Messaging",
+    "Brand Voice Guidelines",
+    "Brand Story Script",
+    "Competitive Market Analysis",
+    "Audience Insight",
+    "Strategic Brand Positioning",
+    "Visual Mood Board",
+    "Custom Website (optional)",
+  ];
 
-  const onDocumentLoadSuccess = ({ numPages }: PDFDocumentProxy) => {
-    setNumPages(numPages);
-    setLoaded(true);
-  };
+  type sortedProps = { packageElements: string[] };
 
-  const updateWidth = useCallback(() => {
-    const calculatedWidth = Math.min(
-      800, // Maximum width
-      Math.max(280, window.innerWidth * 0.8),
+  function SortedPackageElements({ packageElements }: sortedProps) {
+    const sortedElements = [...packageElements].sort((a, b) =>
+      a.localeCompare(b),
     );
 
-    if (loaded) {
-      setPdfWidth(calculatedWidth);
-      setPlaceholderWidth(calculatedWidth);
-      return;
-    }
-    setPlaceholderWidth(calculatedWidth);
-  }, [loaded]);
+    return (
+      <ul className="JobItems my-4 grid grid-cols-1 flex-col items-center gap-x-6 border-b border-t border-dotted border-gray-600 py-4 text-gray-300 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {sortedElements.map((element) => (
+          <li
+            className="JobItem mb-1 flex items-center gap-2 text-nowrap md:mb-3"
+            key={element}
+          >
+            <span className="text-secondary">{"->"}</span>
+            <p>{element}</p>
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
-  useEffect(() => {
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-
-    return () => window.removeEventListener("resize", updateWidth);
-  }, [loaded, updateWidth]);
+  function renderPages() {
+    return Array.from({ length: pages }, (_, i) => i + 1).map((page) => (
+      <motion.div
+        key={page}
+        className="ImageWrapper cursor-pointer"
+        layoutId={`image-${page}`}
+      >
+        <Image
+          src={`/mvnBrandGuide/${page}.webp`}
+          width={500}
+          height={335}
+          alt={`Brand Strategy Page ${page}`}
+          className="rounded-md transition-transform duration-300 hover:scale-105"
+          onClick={() => setExpandedImage(page)}
+        />
+      </motion.div>
+    ));
+  }
 
   return (
     <ModalWrapper title="Brand Strategy">
-      <div className="BrandModal flex w-full flex-col items-center justify-center px-4">
-        <p className="Description mb-10 w-full max-w-[700px] text-center leading-6 text-gray-200">
-          Get your brand off the ground! Brand strategy packages include logo
-          design, visual identity, and font packages. Brand strategy elements
-          include a unique selling proposition, target market, competitor
-          research, tone of voice, and more.
-        </p>
-        <div className="relative">
-          {!loaded && (
-            <div
-              style={{
-                width: `${Math.round(placeholderWidth)}px`,
-                height: `${Math.round(placeholderWidth / 1.49)}px`,
-              }}
-              className="flex items-center justify-center rounded-xl bg-black"
-            ></div>
-          )}
-          <Document file="/MVN.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page
-                key={`page_${index + 1}`}
-                pageNumber={index + 1}
-                width={pdfWidth}
-                className="mb-4 overflow-hidden rounded-xl"
-              />
-            ))}
-          </Document>
+      <>
+        <div
+          className="BrandModal flex w-full flex-col items-center justify-center px-4"
+          ref={containerRef}
+        >
+          <h3 className="Description text-gradient-clip mb-5 w-full max-w-[700px] text-xl capitalize tracking-widest sm:text-2xl">
+            Launch Your Brand Today!
+          </h3>
+          <div className="MotionContainer">
+            <h4 className="BioHeader text-lg uppercase tracking-wide text-gray-400">
+              Branding Packages Include:
+            </h4>
+            {SortedPackageElements({ packageElements })}
+          </div>
+          <SiteButton
+            size="large"
+            textColor="text-gray-200"
+            style="silverHollow"
+            onClick={() => showModal(<ContactModal />)}
+          >
+            Inquire About Brand Services
+          </SiteButton>
+          <h3 className="Description text-gradient-clip mt-10 w-full max-w-[700px] text-xl capitalize tracking-widest sm:text-2xl">
+            Example Brand Strategy Guide
+          </h3>
+          <div className="GuideContainer my-5 grid grid-cols-1 gap-6 border-t border-dotted border-gray-600 py-5 sm:grid-cols-2 lg:grid-cols-3">
+            {renderPages()}
+          </div>
         </div>
-      </div>
+        <AnimatePresence>
+          {expandedImage && (
+            <motion.div
+              className="ExpandedImageOverlay fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setExpandedImage(null)}
+            >
+              <motion.div
+                className="ExpandedImageWrapper w-[90vw] max-w-[800px]"
+                layoutId={`image-${expandedImage}`}
+                style={{ zIndex: 51 }}
+              >
+                <Image
+                  src={`/mvnBrandGuide/${expandedImage}.webp`}
+                  width={800}
+                  height={536}
+                  alt={`Expanded Brand Strategy Page ${expandedImage}`}
+                  className="rounded-lg shadow-xl"
+                />
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </>
     </ModalWrapper>
   );
 }

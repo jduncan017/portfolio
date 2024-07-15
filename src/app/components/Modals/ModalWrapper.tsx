@@ -38,7 +38,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
           duration: 0.2,
           ease: "easeInOut",
         }}
-        className="Content custom-scrollbar relative mb-5 h-fit max-h-[84vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl border border-white/20 bg-slate-950 text-center  xs:pl-3"
+        className="Content custom-scrollbar relative h-fit max-h-[96vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl border border-white/20 bg-slate-950 text-center xs:pl-3"
         onClick={handleModalContentClick}
       >
         <div
@@ -64,7 +64,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
         <div className="ChildContainer rounded-xl bg-slate-950 px-6">
           {children}
         </div>
-        <div className="BottomBar sticky bottom-0 left-0  h-8 w-full bg-gradient-to-t from-slate-950 from-70% to-transparent to-100%" />
+        <div className="BottomBar sticky -bottom-1 left-0 h-10 w-full bg-gradient-to-t from-slate-950 from-70% to-transparent to-100%" />
       </motion.div>
     </div>
   );

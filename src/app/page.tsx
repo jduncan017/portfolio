@@ -9,7 +9,6 @@ import ToggleScrollbarButton from "@/src/app/components/UI-Elements/ScrollBarBut
 import TestimonialSection from "./components/TestimonialSection";
 import { FAV_TECH_DATA } from "../lib/favoriteTechData";
 import { PROJECT_DATA } from "../lib/projectData";
-import { motion } from "framer-motion";
 import TextCallout from "./components/TextCallout";
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
       <Nav />
       <Header />
       <About />
-      <div className="PageContent flex flex-col gap-6 bg-gradient-to-b from-slate-950 to-[#001117] py-20 sm:gap-20">
+      <div className="PageContent flex flex-col gap-4 bg-gradient-to-b from-[#120f36] to-[#00173a] py-4 sm:gap-20 sm:py-20">
         <TextCallout name={"why"} id={1} />
         <SliderSection
           cardArray={PROJECT_DATA}

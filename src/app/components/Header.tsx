@@ -24,7 +24,7 @@ export const Header = () => {
       <div className="HeaderTextContainer mx-auto flex flex-col items-center pt-[25vh] sm:my-auto sm:pt-[30vh]">
         <div className="TextContainer flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/50 px-4 pb-8 pt-10 text-center shadow-primary backdrop-blur-lg xs:max-w-[80%] xs:px-8 sm:py-20 md:px-20 md:py-20 lg:py-28">
           <motion.h1
-            className="Title text-gradient-clip text-center font-gulzar text-4xl font-medium uppercase leading-tight text-white xs:text-5xl xs:leading-tight sm:pb-0 sm:leading-loose md:text-6xl md:leading-tight lg:text-7xl lg:leading-tight"
+            className="Title text-gradient-teal text-center font-gulzar text-4xl font-medium uppercase leading-tight text-white xs:text-5xl xs:leading-tight sm:pb-0 sm:leading-loose md:text-6xl md:leading-tight lg:text-7xl lg:leading-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 1.5, ease: "easeOut" }}
@@ -32,7 +32,7 @@ export const Header = () => {
             Joshua Duncan
           </motion.h1>
           <motion.h2
-            className="Description text-gradient-clip mb-6 mt-1 font-gulzar text-2xl font-bold text-white sm:text-3xl"
+            className="Description text-gradient-teal mb-6 mt-1 font-gulzar text-2xl font-bold text-white sm:text-3xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 1.75, ease: "easeOut" }}
@@ -50,7 +50,7 @@ export const Header = () => {
         </div>
         <div className="Scroll mt-[6vh] flex flex-col items-center">
           <motion.h3
-            className="ScrollDown text-gradient-clip font-gulzar text-xl uppercase tracking-wide text-gray-200"
+            className="ScrollDown text-gradient-teal font-gulzar text-xl uppercase tracking-wide text-gray-200"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2.75, ease: "easeIn" }}
