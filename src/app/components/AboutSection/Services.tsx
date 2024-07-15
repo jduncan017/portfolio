@@ -49,13 +49,13 @@ export default function Services() {
           Services
         </motion.h2>
         <motion.p
-          className="ServicesDescription mb-3 max-w-[375px] text-sm uppercase text-gray-400 xs:max-w-[600px]"
+          className="ServicesDescription mb-3 mb-3 max-w-[375px] border-b border-dotted border-gray-600 pb-3 text-sm uppercase text-gray-400 xs:max-w-[600px]"
           variants={itemVariants}
         >
           In Need of Branding or Web Development services?
         </motion.p>
         <motion.p
-          className="ServicesDescription max-w-[375px] leading-6 text-gray-200 xs:max-w-[600px]"
+          className="ServicesDescription max-w-[375px] leading-6 text-gray-200 xs:max-w-[600px] "
           variants={itemVariants}
         >
           See examples of client sites in the projects section. Brand Strategy

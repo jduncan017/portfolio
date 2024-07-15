@@ -7,7 +7,7 @@ import { useModal } from "@/src/contexts/ModalContext";
 import ContactCard from "../UI-Elements/ContactCard";
 
 export default function Bio() {
-  const words = ["Hello!", "Bonjour!", "Hola!", "Kanichiwa!"];
+  const words = ["Hello,", "Bonjour,", "Hola,", "Kanichiwa,"];
   const [startFlipping, setStartFlipping] = useState(false);
   const { showModal } = useModal();
 
@@ -45,7 +45,7 @@ export default function Bio() {
       viewport={{ once: true }}
     >
       <motion.h2
-        className="Title mb-3 flex gap-2 text-3xl font-semibold uppercase leading-normal tracking-widest text-white sm:text-4xl"
+        className="Title text-1xl mb-3 flex gap-2 font-semibold uppercase leading-normal tracking-widest text-white sm:text-2xl"
         variants={itemVariants}
       >
         <FlipWords
@@ -56,24 +56,29 @@ export default function Bio() {
         />
       </motion.h2>
       <motion.p
-        className="BioDescription mb-3 max-w-[375px] pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
+        className="BioDescription mb-3 max-w-[375px] border-b border-dotted border-gray-600 pb-3 pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
         variants={itemVariants}
         onAnimationComplete={() => setStartFlipping(true)}
       >
-        As a full-stack developer, I bring a unique blend of technical expertise
-        and business acumen to every project. My career has spanned software
-        development, project management, brand strategy, leadership, sales, and
-        marketing, providing me with a broad perspective of the digital
-        landscape.
+        {` My name is Josh. I'm a full-stack developer that brings a unique background
+        of technical expertise and business acumen to my projects. My career
+        has included roles in software development, project management, leadership,
+         sales, and marketing, providing me with a broad perspective
+        of the digital landscape.`}
       </motion.p>
       <motion.div className="MotionContainer" variants={itemVariants}>
         <h3 className="BioHeader text-gradient-clip text-lg uppercase tracking-wide">
           Current Occupation:
         </h3>
-        <p className="text-lg capitalize">Freelance Developer</p>
+        <p className="mb-3 border-b border-dotted border-gray-600 pb-3 text-lg capitalize">
+          Freelance Developer
+        </p>
       </motion.div>
-      <motion.div className="MotionContainer" variants={itemVariants}>
-        <h3 className="BioHeader text-gradient-clip mb-2 mt-3 text-lg uppercase tracking-wide">
+      <motion.div
+        className="MotionContainer mb-3 border-b border-dotted border-gray-600 pb-3"
+        variants={itemVariants}
+      >
+        <h3 className="BioHeader text-gradient-clip mb-2 text-lg uppercase tracking-wide">
           I Specialize In:
         </h3>
         <ul className="JobItems flex flex-col">
@@ -96,14 +101,9 @@ export default function Bio() {
             <span className="text-secondary">{"->"}</span>
             <p>Competitor Market Research</p>
           </li>
-
-          <li className="JobItem mb-3 flex items-center gap-2">
-            <span className="text-secondary">{"->"}</span>
-            <p>Targeted SEO & Marketing</p>
-          </li>
         </ul>
       </motion.div>
-      <motion.div className="CardContainer mt-3" variants={itemVariants}>
+      <motion.div className="CardContainer " variants={itemVariants}>
         <ContactCard />
       </motion.div>
       <motion.div

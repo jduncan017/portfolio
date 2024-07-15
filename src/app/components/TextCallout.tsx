@@ -22,6 +22,15 @@ export default function TextCallout({ name, id }: TextCalloutProps) {
         <CalloutParticles id={id} />
       </div>
       <div className="Container mx-auto flex w-full flex-col items-center bg-gradient-to-b from-transparent via-black to-transparent px-10 py-32">
+        <motion.h4
+          className="mb-2 text-center font-noto font-bold uppercase text-gray-500 sm:text-lg md:leading-tight"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          {callout.prompt}
+        </motion.h4>
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

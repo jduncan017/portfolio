@@ -42,5 +42,5 @@ export type TestimonialData = {
 };
 
 export type CalloutData = {
-  [name: string]: { header: string; description: string };
+  [name: string]: { prompt: string; header: string; description: string };
 };
