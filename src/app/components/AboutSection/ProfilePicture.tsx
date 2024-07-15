@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function ProfilePicture() {
   return (
     <motion.div
-      className="Container h-fit w-full max-w-[620px] flex-col gap-8 rounded-r-xl border-t border-white/30 bg-black/40 shadow-secondaryDim min-[382px]:pl-[calc((100vw-375px-32px)/2)] mini:mr-0 xs:rounded-xl xs:pl-0 sm:border-l lg:max-w-none lg:gap-16 xxl:w-fit xxl:rounded-xl"
+      className="Container h-fit w-full max-w-[620px] flex-col gap-8 rounded-r-xl border-t border-white/30 bg-black/50 shadow-secondaryDim min-[382px]:pl-[calc((100vw-375px-32px)/2)] mini:mr-0 xs:rounded-xl xs:pl-0 sm:border-l lg:max-w-none lg:gap-16 xxl:w-fit xxl:rounded-xl"
       initial={{ x: "-100%" }}
       whileInView={{ x: "0%" }}
       viewport={{ once: true }}

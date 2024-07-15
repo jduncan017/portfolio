@@ -153,7 +153,7 @@ export default function SliderSection({
             keyBoardControl={true}
             customTransition="transform 500ms ease"
             transitionDuration={500}
-            containerClass="py-8 xs:py-8 bg-black sm:bg-black/90 rounded-xl"
+            containerClass="py-8 xs:py-8 bg-black rounded-xl"
             removeArrowOnDeviceType={["tablet", "mobile"]}
             itemClass="project-item gap-10"
             centerMode={centerMode}

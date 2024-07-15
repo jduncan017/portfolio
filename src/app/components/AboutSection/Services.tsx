@@ -35,7 +35,7 @@ export default function Services() {
 
   return (
     <motion.div
-      className="ServicesContainer w-full justify-end rounded-r-xl border-t border-white/30 bg-black/40 shadow-secondaryDim min-[382px]:pl-[calc((100vw-375px-32px)/2)] xs:rounded-xl xs:pl-0 sm:border-l lg:flex xxl:rounded-xl"
+      className="ServicesContainer w-full justify-end rounded-r-xl border-t border-white/30 bg-black/50 shadow-secondaryDim min-[382px]:pl-[calc((100vw-375px-32px)/2)] xs:rounded-xl xs:pl-0 sm:border-l lg:flex xxl:rounded-xl"
       variants={leftContainerVariants}
       initial="hidden"
       whileInView="visible"
@@ -49,7 +49,7 @@ export default function Services() {
           Services
         </motion.h2>
         <motion.p
-          className="ServicesDescription mb-3 mb-3 max-w-[375px] border-b border-dotted border-gray-600 pb-3 text-sm uppercase text-gray-400 xs:max-w-[600px]"
+          className="ServicesDescription mb-3 max-w-[375px] border-b border-dotted border-gray-600 pb-3 text-sm uppercase text-gray-400 xs:max-w-[600px]"
           variants={itemVariants}
         >
           In Need of Branding or Web Development services?

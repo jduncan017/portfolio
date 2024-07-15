@@ -13,7 +13,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
   const { showModal } = useModal();
   return (
     <BackgroundGradient
-      containerClassName="Container w-full h-full max-w-[700px] lg:h-[450px] min-[1480px]:h-[440px] mx-auto p-[0.75px] sm:hover:scale-105 transition-all duration-500"
+      containerClassName="Container w-full h-full max-w-[700px] lg:h-[450px] min-[1480px]:h-[420px] mx-auto p-[0.75px] sm:hover:scale-105 transition-all duration-500"
       className="Card relative flex h-full flex-col items-center gap-3 rounded-[12px] bg-slate-950 p-4 transition-all duration-500 xs:saturate-0 sm:hover:bg-slate-950/90 sm:hover:saturate-100 xl:px-10 xl:py-6"
     >
       <div className="TitleSection flex flex-col items-center">
@@ -25,14 +25,14 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
         </p>
       </div>
       <Image
-        className="TestimonialImage pointer-events-none aspect-square w-28 rounded-full object-cover"
+        className="TestimonialImage pointer-events-none aspect-square w-24 rounded-full object-cover"
         src={testimonial.imagePath}
         alt="Screenshot of testimonial"
-        width={150}
-        height={150}
+        width={120}
+        height={120}
       />
       <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
-        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center  text-base leading-6 text-gray-200">
+        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center text-base leading-6 text-gray-200">
           {testimonial.shortDescription}
         </p>
         <p className="Date font-noto text-gray-400">{`- ${testimonial.date} -`}</p>
