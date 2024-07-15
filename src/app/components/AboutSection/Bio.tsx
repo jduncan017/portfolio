@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { RESUME_DATA } from "@/src/lib/resumeData";
 import { FlipWords } from "../UI-Libraries/FlipWords";
-import ContactCard from "../UI-Elements/ContactCard";
 import SiteButton from "../UI-Elements/SiteButton";
 import ResumeModal from "../Modals/ResumeModal";
-import parse from "html-react-parser";
 import { useModal } from "@/src/contexts/ModalContext";
+import ContactCard from "../UI-Elements/ContactCard";
 
 export default function Bio() {
   const words = ["Hello!", "Bonjour!", "Hola!", "Kanichiwa!"];
@@ -22,7 +20,7 @@ export default function Bio() {
         type: "tween",
         duration: 0.6,
         when: "beforeChildren",
-        staggerChildren: 0.4,
+        staggerChildren: 0.3,
       },
     },
   };
@@ -40,7 +38,7 @@ export default function Bio() {
 
   return (
     <motion.div
-      className="RightContainer ml-5 w-auto max-w-[620px] self-end overflow-hidden rounded-l-xl border-l border-t border-white/30 bg-black/40 px-8 py-6 pr-[calc((100vw-375px)/2)] shadow-secondaryDim mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
+      className="RightContainer ml-5 flex w-auto max-w-[620px] flex-col self-end overflow-hidden rounded-l-xl border-l border-t border-white/30 bg-black/40 px-8 py-6 pr-[calc((100vw-375px)/2)] text-white shadow-secondaryDim mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
       variants={rightContainerVariants}
       initial="hidden"
       whileInView="visible"
@@ -58,13 +56,54 @@ export default function Bio() {
         />
       </motion.h2>
       <motion.p
-        className="BioDescription mb-5 max-w-[375px] pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
+        className="BioDescription mb-3 max-w-[375px] pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
         variants={itemVariants}
         onAnimationComplete={() => setStartFlipping(true)}
       >
-        {parse(RESUME_DATA.bioDescription as string)}
+        As a full-stack developer, I bring a unique blend of technical expertise
+        and business acumen to every project. My career has spanned software
+        development, project management, brand strategy, leadership, sales, and
+        marketing, providing me with a broad perspective of the digital
+        landscape.
       </motion.p>
-      <motion.div className="CardContainer" variants={itemVariants}>
+      <motion.div className="MotionContainer" variants={itemVariants}>
+        <h3 className="BioHeader text-gradient-clip text-lg uppercase tracking-wide">
+          Current Occupation:
+        </h3>
+        <p className="text-lg capitalize">Freelance Developer</p>
+      </motion.div>
+      <motion.div className="MotionContainer" variants={itemVariants}>
+        <h3 className="BioHeader text-gradient-clip mt-3 text-lg uppercase tracking-wide">
+          I Specialize In:
+        </h3>
+        <ul className="JobItems flex flex-col">
+          <li className="JobItem mb-2 flex items-center gap-2">
+            <span className="text-secondary">{"->"}</span>
+            <p>Development of Web Applications</p>
+          </li>
+
+          <li className="JobItem mb-2 flex items-center gap-2">
+            <span className="text-secondary">{"->"}</span>
+            <p>Creating Digital Brand Identities</p>
+          </li>
+
+          <li className="JobItem mb-2 flex items-center gap-2">
+            <span className="text-secondary">{"->"}</span>
+            <p>Target Audience Identification</p>
+          </li>
+
+          <li className="JobItem mb-2 flex items-center gap-2">
+            <span className="text-secondary">{"->"}</span>
+            <p>Competitor Market Research</p>
+          </li>
+
+          <li className="JobItem mb-2 flex items-center gap-2">
+            <span className="text-secondary">{"->"}</span>
+            <p>Targeted SEO & Marketing</p>
+          </li>
+        </ul>
+      </motion.div>
+      <motion.div className="CardContainer mt-3" variants={itemVariants}>
         <ContactCard />
       </motion.div>
       <motion.div

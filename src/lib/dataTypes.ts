@@ -18,7 +18,6 @@ export type ResumeData = {
   xURL: string;
   linkedInURL: string;
   mediumURL: string;
-  bioDescription: string;
   education: {
     school: string;
     position: string;
@@ -40,4 +39,8 @@ export type TestimonialData = {
   fullReview: string;
   relationship: string;
   date: string;
+};
+
+export type CalloutData = {
+  [name: string]: { header: string; description: string };
 };

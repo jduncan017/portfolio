@@ -1,5 +1,5 @@
 import SocialContainer from "./UI-Elements/SocialContainer";
-import { ParticlesAnimation } from "./UI-Libraries/ParticlesAnimation/ParticlesAnimation";
+import { ParticlesAnimation } from "./UI-Libraries/ParticlesAnimation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

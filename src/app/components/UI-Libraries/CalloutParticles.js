@@ -2,9 +2,8 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
-import "./ParticlesAnimation.css";
 
-export const ParticlesAnimation = () => {
+export const CalloutParticles = ({ id }) => {
   const [init, setInit] = useState(false);
   const [particleLoad, setParticleLoad] = useState(false);
 
@@ -23,39 +22,10 @@ export const ParticlesAnimation = () => {
   const options = useMemo(
     () => ({
       fullScreen: { enable: false },
-      background: {
-        color: {
-          value: "#00060d",
-        },
-      },
       fpsLimit: 60,
-      interactivity: {
-        events: {
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 10,
-          },
-          repulse: {
-            distance: 150,
-            duration: 0.4,
-          },
-        },
-      },
       particles: {
         color: {
-          value: "#004e54",
-        },
-        links: {
-          color: "#004e54",
-          distance: 200,
-          enable: true,
-          opacity: 1,
-          width: 1,
+          value: "#fff",
         },
         move: {
           direction: "none",
@@ -64,24 +34,20 @@ export const ParticlesAnimation = () => {
             default: "bounce",
           },
           random: false,
-          speed: 0.8,
+          speed: 0.6,
           straight: false,
         },
         number: {
-          density: {
-            enable: true,
-            height: 600,
-          },
-          value: 200,
+          value: 100,
         },
         opacity: {
-          value: 1,
+          value: 0.6,
         },
         shape: {
           type: "circle",
         },
         size: {
-          value: 3,
+          value: 0.6,
         },
       },
       detectRetina: true,
@@ -92,13 +58,15 @@ export const ParticlesAnimation = () => {
   if (init) {
     return (
       <div
-        className={
-          particleLoad ? "particles-outer-container" : "particles-hidden"
-        }
+        className={`ParticlesContainer flex w-full items-center transition-all duration-[2s] ${
+          particleLoad
+            ? "absolute left-0 top-0 h-full w-full overflow-hidden opacity-100"
+            : "opacity-0"
+        }`}
       >
         <Particles
-          className="particles"
-          id="tsparticles"
+          className="Particles h-[60%] w-full"
+          id={id}
           particlesLoaded={particlesLoaded}
           options={options}
         />

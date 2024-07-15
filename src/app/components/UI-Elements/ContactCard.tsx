@@ -7,7 +7,7 @@ export default function ContactCard() {
   return (
     <div className="ContactCard">
       <div className={`ContactHeader mb-1 flex h-min w-full items-end gap-1`}>
-        <h3 className="ContactTitle text-gradient-clip text-semibold mb-1 text-xl uppercase tracking-wide text-white">
+        <h3 className="ContactTitle text-gradient-clip text-semibold text-lg uppercase tracking-wide text-white">
           Contact Card
         </h3>
       </div>
