@@ -11,12 +11,13 @@ export const Callouts: CalloutData = {
     prompt: "My passion",
     header: "Where Tech Meets Life",
     description: `I'm passionate about pushing boundaries in the fields of medical and agricultural technologies. There is so much we
-    can improve in these industries.`,
+    can improve.`,
   },
   techstack: {
     prompt: "My toolkit",
     header: "A Fast & Flexible Tech Stack",
-    description: `I thrive with Next.js, TypeScript, Prisma, MongoDB, and Tailwind CSS, but I'm always eager to expand my skills and adapt to project needs.`,
+    description: `I thrive with Next.js, TypeScript, Prisma, MongoDB, and Tailwind CSS, but I'm always eager to expand my skills and 
+    adapt to project needs.`,
   },
   cta: {
     prompt: "My aim",

@@ -45,7 +45,7 @@ export default function Bio() {
       viewport={{ once: true }}
     >
       <motion.h2
-        className="Title text-1xl mb-3 flex gap-2 font-semibold uppercase leading-normal tracking-widest text-white sm:text-2xl"
+        className="Title mb-3 flex gap-2 text-xl font-semibold uppercase leading-normal tracking-widest text-white sm:text-2xl"
         variants={itemVariants}
       >
         <FlipWords
