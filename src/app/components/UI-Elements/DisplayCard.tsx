@@ -30,10 +30,10 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
         <SiteButton
           size="small"
           aria={`View Project`}
-          addClasses="tracking-widest font-medium uppercase sm:text-xs my-2"
-          textColor="text-gray-950"
+          addClasses="tracking-widest font-medium my-2"
+          textColor="text-black"
           onClick={() => showModal(<ProjectModal cardData={cardData} />)}
-          style="silver"
+          style="purple"
         >
           View Project
         </SiteButton>
@@ -44,9 +44,9 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
         <SiteButton
           size="small"
           aria={`View`}
-          addClasses="tracking-widest font-medium uppercase sm:text-xs my-2"
-          textColor="text-gray-950"
-          style="silver"
+          addClasses="tracking-widest font-medium my-2"
+          textColor="text-black"
+          style="purple"
           onClick={() =>
             showModal(
               <ExternalLinkModal
