@@ -17,7 +17,7 @@ export default function Home() {
     <main className="Main overflow-hidden" id="home-section">
       <Nav />
       <Header />
-      <div className="PageContent flex flex-col gap-12 bg-gradient-to-b from-[#00060d] to-slate-950 py-20 sm:gap-20">
+      <div className="PageContent flex flex-col gap-6 bg-gradient-to-b from-[#00060d] to-slate-950 py-20 sm:gap-20">
         <About />
         <TextCallout name={"why"} id={1} />
         <SliderSection

@@ -34,11 +34,11 @@ export const CalloutParticles = ({ id }) => {
             default: "bounce",
           },
           random: false,
-          speed: 0.6,
+          speed: 0.5,
           straight: false,
         },
         number: {
-          value: 100,
+          value: 80,
         },
         opacity: {
           value: 0.6,

@@ -43,17 +43,23 @@ export default function Services() {
     >
       <div className="InnerContainer h-fit w-full max-w-[500px] flex-col gap-8 self-end rounded-r-xl py-6 pl-8 pr-4 mini:pl-4 xs:px-8 lg:gap-16 xxl:w-fit">
         <motion.h2
-          className="ServicesTitle text-gradient-clip mb-3 flex gap-2 font-sans text-2xl uppercase leading-normal tracking-widest text-white sm:text-3xl"
+          className="ServicesTitle text-gradient-clip mb-1 flex gap-2 font-sans text-2xl uppercase leading-normal tracking-widest text-white sm:text-3xl"
           variants={itemVariants}
         >
           Services
         </motion.h2>
         <motion.p
-          className="ServicesDescription max-w-[375px] leading-6 text-white xs:max-w-[600px]"
+          className="ServicesDescription mb-3 max-w-[375px] text-sm uppercase text-gray-400 xs:max-w-[600px]"
           variants={itemVariants}
         >
-          Need Branding, Design, or Web Development services? See examples of
-          client sites in the projects section. Brand Strategy example below.
+          In Need of Branding or Web Development services?
+        </motion.p>
+        <motion.p
+          className="ServicesDescription max-w-[375px] leading-6 text-gray-200 xs:max-w-[600px]"
+          variants={itemVariants}
+        >
+          See examples of client sites in the projects section. Brand Strategy
+          example below.
         </motion.p>
         <motion.div
           className="ButtonContainer mb-2 mr-5 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"

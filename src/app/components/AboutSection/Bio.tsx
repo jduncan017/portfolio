@@ -73,31 +73,31 @@ export default function Bio() {
         <p className="text-lg capitalize">Freelance Developer</p>
       </motion.div>
       <motion.div className="MotionContainer" variants={itemVariants}>
-        <h3 className="BioHeader text-gradient-clip mt-3 text-lg uppercase tracking-wide">
+        <h3 className="BioHeader text-gradient-clip mb-2 mt-3 text-lg uppercase tracking-wide">
           I Specialize In:
         </h3>
         <ul className="JobItems flex flex-col">
-          <li className="JobItem mb-2 flex items-center gap-2">
+          <li className="JobItem mb-3 flex items-center gap-2">
             <span className="text-secondary">{"->"}</span>
             <p>Development of Web Applications</p>
           </li>
 
-          <li className="JobItem mb-2 flex items-center gap-2">
+          <li className="JobItem mb-3 flex items-center gap-2">
             <span className="text-secondary">{"->"}</span>
             <p>Creating Digital Brand Identities</p>
           </li>
 
-          <li className="JobItem mb-2 flex items-center gap-2">
+          <li className="JobItem mb-3 flex items-center gap-2">
             <span className="text-secondary">{"->"}</span>
             <p>Target Audience Identification</p>
           </li>
 
-          <li className="JobItem mb-2 flex items-center gap-2">
+          <li className="JobItem mb-3 flex items-center gap-2">
             <span className="text-secondary">{"->"}</span>
             <p>Competitor Market Research</p>
           </li>
 
-          <li className="JobItem mb-2 flex items-center gap-2">
+          <li className="JobItem mb-3 flex items-center gap-2">
             <span className="text-secondary">{"->"}</span>
             <p>Targeted SEO & Marketing</p>
           </li>

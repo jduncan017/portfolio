@@ -3,8 +3,8 @@ import type { CalloutData } from "./dataTypes";
 export const Callouts: CalloutData = {
   why: {
     header: "Impact Through Innovation",
-    description: `I want improve the lives of others, and I think there are so many problems we could be solving with technology to 
-      make the world a better place. I want to lead that change.`,
+    description: `I want improve the lives of others. There are so many problems we could be solving with technology to 
+      make the world a better place. I want to be a part of that change.`,
   },
   what: {
     header: "Where Tech Meets Life",
