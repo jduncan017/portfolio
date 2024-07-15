@@ -40,7 +40,7 @@ module.exports = {
         serif: ["Jost", "serif"],
       },
       colors: {
-        primaryDark: "rgb(26, 143, 152)",
+        headerTeal: "rgba(57, 212, 255)",
         secondary: "rgb(134, 134, 255)",
         secondaryDark: "#4846b2",
         offBlack: "#00060d",

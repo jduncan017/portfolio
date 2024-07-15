@@ -4,27 +4,24 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export const Header = () => {
-  const performSmoothScroll = () => {
-    const aboutSection = document.querySelector("#about-section");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.error("Section does not exist!");
-    }
+  const performSmoothScroll = (sectionName: string) => {
+    const section = document.querySelector(`#${sectionName}-section`);
+
+    section && section.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
-      className="HeaderContainer relative mb-32 flex h-[100vh] max-h-[1500px] sm:block"
+      className="HeaderContainer relative mb-32 flex h-[100vh] max-h-[1500px] justify-center px-6"
       id="header-section"
     >
       <div className="ParticlesBackground pb-25 absolute z-[-10] h-full w-full text-center">
         <ParticlesAnimation />
       </div>
-      <div className="HeaderTextContainer mx-auto flex flex-col items-center pt-[25vh] sm:my-auto sm:pt-[30vh]">
-        <div className="TextContainer flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/50 px-4 pb-8 pt-10 text-center shadow-primary backdrop-blur-lg xs:max-w-[80%] xs:px-8 sm:py-20 md:px-20 md:py-20 lg:py-28">
+      <div className="HeaderTextContainer flex flex-col items-center pt-[25vh] sm:my-auto sm:pt-[15vh]">
+        <div className="TextContainer flex w-full max-w-[1000px] flex-col items-center rounded-[20px] bg-black/50 px-10 pb-10 pt-12 text-center shadow-primary backdrop-blur-lg sm:px-20 md:py-28">
           <motion.h1
-            className="Title text-gradient-teal text-center font-gulzar text-4xl font-medium uppercase leading-tight text-white xs:text-5xl xs:leading-tight sm:pb-0 sm:leading-loose md:text-6xl md:leading-tight lg:text-7xl lg:leading-tight"
+            className="Title text-gradient-teal text-center font-gulzar text-3xl font-medium uppercase leading-tight text-white mini:text-4xl xs:text-5xl xs:leading-tight sm:pb-0 sm:leading-loose md:text-6xl md:leading-tight lg:text-7xl lg:leading-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 1.5, ease: "easeOut" }}
@@ -68,7 +65,7 @@ export const Header = () => {
               src={"/down-arrow.png"}
               alt="scroll down"
               aria-label="scroll down"
-              onClick={performSmoothScroll}
+              onClick={() => performSmoothScroll("about")}
               className="DownArrow global__hover-animation relative mt-4 border-none delay-300"
               id="nav-trigger"
             />
