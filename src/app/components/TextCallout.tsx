@@ -21,7 +21,7 @@ export default function TextCallout({ name, id }: TextCalloutProps) {
       <div className="ParticlesBackground absolute h-full w-full">
         <CalloutParticles id={id} />
       </div>
-      <div className="Container mx-auto flex w-full flex-col items-center bg-gradient-to-b from-transparent via-black to-transparent px-6 py-32 sm:px-10">
+      <div className="Container mx-auto flex w-full flex-col items-center bg-gradient-to-b from-transparent via-black to-transparent px-6 py-40 sm:px-10">
         <motion.h4
           className="Prompt mb-2 text-center font-noto font-bold uppercase text-gray-500 sm:text-lg md:leading-tight"
           initial={{ opacity: 0 }}
@@ -41,7 +41,7 @@ export default function TextCallout({ name, id }: TextCalloutProps) {
           {callout.header}
         </motion.h2>
         <motion.p
-          className="Description max-w-[750px] border-t border-secondary/60 p-2 text-center text-sm font-medium capitalize text-gray-400 sm:text-base lg:text-lg xxl:max-w-none"
+          className="Description max-w-[750px] border-t border-secondary/60 p-2 text-center text-sm font-medium text-gray-400 sm:text-base lg:text-lg xxl:max-w-none"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2, delay: 0.8 }}

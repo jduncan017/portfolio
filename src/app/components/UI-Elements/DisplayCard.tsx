@@ -92,7 +92,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           {cardData.tags.sort().map((tag: string): ReactNode => {
             return (
               <li
-                className="Tag pointer-events-none flex-grow rounded-sm bg-gray-600/50 bg-opacity-70 bg-gradient-to-br from-gray-700 to-gray-800 p-1 px-2 py-0.5 text-center text-xs text-gray-300 xs:text-sm"
+                className="Tag pointer-events-none flex-grow rounded-full bg-secondaryDark/20 p-1 px-2 py-0.5 text-center text-xs text-secondary/70 xs:text-sm"
                 key={tag}
               >
                 {tag}
@@ -105,7 +105,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
         {cardData.name}
       </h3>
       <p className="Description pointer-events-none h-16 w-full text-start leading-5 text-gray-400 xs:h-16">
-        {cardData.shortDescription}
+        {cardData.description}
       </p>
       {cardButton}
     </div>

@@ -15,14 +15,14 @@ export const Header = () => {
 
   return (
     <section
-      className="HeaderContainer relative flex h-[100vh] max-h-[1500px] sm:block"
+      className="HeaderContainer relative mb-32 flex h-[100vh] max-h-[1500px] sm:block"
       id="header-section"
     >
       <div className="ParticlesBackground pb-25 absolute z-[-10] h-full w-full text-center">
         <ParticlesAnimation />
       </div>
       <div className="HeaderTextContainer mx-auto flex flex-col items-center pt-[25vh] sm:my-auto sm:pt-[30vh]">
-        <div className="TextContainer flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/20 px-4 pb-8 pt-10 text-center opacity-90 shadow-primary backdrop-blur-md xs:max-w-[80%] xs:px-8 sm:py-20 md:px-20 md:py-20 lg:py-28">
+        <div className="TextContainer flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/50 px-4 pb-8 pt-10 text-center shadow-primary backdrop-blur-lg xs:max-w-[80%] xs:px-8 sm:py-20 md:px-20 md:py-20 lg:py-28">
           <motion.h1
             className="Title text-gradient-clip text-center font-gulzar text-4xl font-medium uppercase leading-tight text-white xs:text-5xl xs:leading-tight sm:pb-0 sm:leading-loose md:text-6xl md:leading-tight lg:text-7xl lg:leading-tight"
             initial={{ opacity: 0 }}

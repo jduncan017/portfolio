@@ -17,13 +17,13 @@ export default function Home() {
     <main className="Main overflow-hidden" id="home-section">
       <Nav />
       <Header />
-      <div className="PageContent flex flex-col gap-6 bg-gradient-to-b from-[#00060d] to-slate-950 py-20 sm:gap-20">
-        <About />
+      <About />
+      <div className="PageContent flex flex-col gap-6 bg-gradient-to-b from-slate-950 to-[#001117] py-20 sm:gap-20">
         <TextCallout name={"why"} id={1} />
         <SliderSection
           cardArray={PROJECT_DATA}
           id="projects-section"
-          title="My Projects"
+          title="Projects"
           dataType="projects"
         />
         <TextCallout name={"what"} id={2} />
@@ -32,7 +32,7 @@ export default function Home() {
         <SliderSection
           cardArray={FAV_TECH_DATA}
           id="technologies-section"
-          title="Favorite Technologies"
+          title="Favorite Tech"
           dataType="technologies"
         />
         <TextCallout name={"cta"} id={4} />

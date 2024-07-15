@@ -23,10 +23,24 @@ export const ParticlesAnimation = () => {
     () => ({
       fullScreen: { enable: false },
       background: {
-        color: {
-          value: "#00060d",
-        },
+        image: "url('/bg1.jpg')",
+        position: "50% 50%",
+        repeat: "no-repeat",
+        size: "cover",
+        opacity: 1,
       },
+      backgroundMask: {
+        composite: "destination-out",
+        cover: {
+          color: {
+            value: "#00060d",
+          },
+          opacity: 1,
+        },
+        enable: true,
+      },
+      clear: true,
+
       fpsLimit: 60,
       interactivity: {
         events: {
@@ -35,27 +49,9 @@ export const ParticlesAnimation = () => {
             mode: "repulse",
           },
         },
-        modes: {
-          push: {
-            quantity: 10,
-          },
-          repulse: {
-            distance: 150,
-            duration: 0.4,
-          },
-        },
+        modes: {},
       },
       particles: {
-        color: {
-          value: "#004e54",
-        },
-        links: {
-          color: "#004e54",
-          distance: 200,
-          enable: true,
-          opacity: 1,
-          width: 1,
-        },
         move: {
           direction: "none",
           enable: true,
@@ -63,7 +59,7 @@ export const ParticlesAnimation = () => {
             default: "bounce",
           },
           random: false,
-          speed: 0.8,
+          speed: 1,
           straight: false,
         },
         number: {
@@ -71,7 +67,7 @@ export const ParticlesAnimation = () => {
             enable: true,
             height: 600,
           },
-          value: 200,
+          value: 150,
         },
         opacity: {
           value: 1,
@@ -80,10 +76,15 @@ export const ParticlesAnimation = () => {
           type: "circle",
         },
         size: {
-          value: 3,
+          value: {
+            min: 1,
+            max: 30,
+          },
         },
       },
       detectRetina: true,
+      pauseOnBlur: true,
+      pauseOnOutsideViewport: true,
     }),
     [],
   );

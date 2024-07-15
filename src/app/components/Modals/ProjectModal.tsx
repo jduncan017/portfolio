@@ -47,7 +47,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
 
   return (
     <ModalWrapper>
-      <div className="ProjectModal flex h-full w-full max-w-[450px] flex-col items-start gap-2 pb-2 text-primaryDark">
+      <div className="ProjectModal flex h-full w-full max-w-[450px] flex-col items-start gap-2 pb-2">
         <div className="TitleSection flex w-full flex-col items-start">
           <h3 className="Title text-gradient-clip pointer-events-none mb-2 w-full border-b border-dotted border-gray-400 pb-1 text-start font-serif text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
             {cardData.name}

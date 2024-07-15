@@ -2,14 +2,16 @@ export type CardData = {
   name: string;
   lastUpdated?: string;
   techsUsed?: string[];
-  shortDescription: string;
   description: string;
   liveButtonText: string;
   liveLink: string;
   imagePath: string;
   tags?: string[];
+  role?: string;
+  keyFeatures?: string[];
+  stage?: string;
+  type: string;
   repoURL?: string;
-  iconPath?: string;
 };
 
 export type ResumeData = {

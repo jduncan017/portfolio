@@ -18,6 +18,7 @@
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background-color: #4846b2;
+    color: #001117;
     border-radius: 10px;
   }
 
@@ -34,7 +35,7 @@
 
 @layer utilities {
   .text-gradient-clip {
-    background-image: linear-gradient(to bottom right, #ffffff, #949494);
+    background-image: linear-gradient(to bottom right, #f9f5ff, #737395);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

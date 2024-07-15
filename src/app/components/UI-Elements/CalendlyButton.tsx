@@ -11,7 +11,7 @@ const CalendlyButton = () => {
       <SiteButton
         size="large"
         textColor="text-secondary"
-        style="purple"
+        style="purpleHollow"
         addClasses="w-full mini:w-auto"
         onClick={() => showModal(<CalendlyModal />)}
       >

@@ -29,7 +29,7 @@ export const Footer = () => {
           <SiteButton
             size="large"
             textColor="text-secondary"
-            style="purple"
+            style="purpleHollow"
             onClick={() => showModal(<ResumeModal />)}
           >
             View Resume

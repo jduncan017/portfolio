@@ -6,7 +6,7 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
   aria?: string;
   textColor: string;
-  style: "purple" | "teal" | "tealHollow" | "silver" | "silverHollow";
+  style: "purple" | "purpleHollow" | "silver" | "silverHollow";
   children: React.ReactNode;
 }
 
@@ -26,7 +26,7 @@ const SiteButton = ({
 
   switch (size) {
     case "small":
-      buttonSize = "px-2.5 py-2 text-sm";
+      buttonSize = "px-2.5 py-2 text-sm min-w-[150px]";
       break;
     case "large":
       buttonSize = "px-5 py-3 text-lg w-full mini:w-fit";
@@ -38,15 +38,11 @@ const SiteButton = ({
   switch (style) {
     case "purple":
       buttonStyle =
-        "border-secondaryDark border hover:bg-secondary hover:border-secondary hover:text-black";
+        "border-none border bg-secondary text-black hover:bg-slate-300 hover:text-black";
       break;
-    case "teal":
+    case "purpleHollow":
       buttonStyle =
-        "border-none bg-primaryDark/90 hover:bg-white hover:text-black";
-      break;
-    case "tealHollow":
-      buttonStyle =
-        "border-primaryDark/90 border hover:bg-white hover:border-white hover:text-black";
+        "border-secondaryDark border hover:bg-slate-300 hover:border-none hover:text-black";
       break;
     case "silver":
       buttonStyle =

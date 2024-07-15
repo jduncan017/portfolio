@@ -42,10 +42,10 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
           showModal(<TestimonialModal testimonial={testimonial} />)
         }
         aria="View full review"
-        addClasses="ReviewButton relative bottom-2 sm:text-sm my-4 font-medium tracking-widest uppercase lg:absolute"
-        textColor="text-gray-200"
+        addClasses="ReviewButton relative bottom-2 sm:text-sm my-4 font-medium tracking-widest capitalize lg:absolute"
+        textColor="text-secondary"
         size="small"
-        style="purple"
+        style="purpleHollow"
       >
         Full Review
       </SiteButton>

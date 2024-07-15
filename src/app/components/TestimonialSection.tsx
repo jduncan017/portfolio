@@ -40,7 +40,7 @@ export default function TestimonialSection() {
       <div className="TitleContainer ml-[5%]">
         <SectionTitle title="Testimonials" />
       </div>
-      <div className="BorderWrapper mt-4 flex w-full justify-center border-y-4 border-double border-gray-500 bg-black py-10 shadow-secondaryBright sm:py-16">
+      <div className="BorderWrapper mt-4 flex w-full justify-center border-y-4 border-double border-gray-500 bg-gradient-to-br from-black via-slate-950 to-black py-10 shadow-secondaryBright sm:py-16">
         <motion.ul
           variants={motionContainer}
           initial="hidden"

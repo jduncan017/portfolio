@@ -38,7 +38,7 @@ export default function Bio() {
 
   return (
     <motion.div
-      className="RightContainer ml-5 flex w-auto max-w-[620px] flex-col self-end overflow-hidden rounded-l-xl border-l border-t border-white/30 bg-black/50 px-8 py-6 pr-[calc((100vw-375px)/2)] text-white shadow-secondaryDim mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
+      className="RightContainer ml-5 flex w-auto max-w-[620px] flex-col self-end overflow-hidden rounded-l-xl border-l border-t border-white/30 bg-black/50 px-8 py-6 pr-[calc((100vw-375px)/2)] text-white shadow-secondaryDim transition-all duration-700 hover:shadow-secondaryBright mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
       variants={rightContainerVariants}
       initial="hidden"
       whileInView="visible"

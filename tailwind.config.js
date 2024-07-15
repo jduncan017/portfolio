@@ -31,8 +31,8 @@ module.exports = {
       },
       boxShadow: {
         primary: "0 0 10px rgba(116, 255, 229, 0.3)",
-        secondaryBright: "0 0 20px rgba(143, 142, 255, 0.8)",
-        secondaryDim: "0 0 20px rgba(143, 142, 255, 0.4)",
+        secondaryBright: "0 0 30px rgba(134, 134, 255, 0.8)",
+        secondaryDim: "0 0 20px rgba(134, 134, 255, 0.4)",
         tertiary: "0 0 8px rgba(254, 215, 170, 0.6)",
         tertiaryBright: "0 0 20px rgba(254, 215, 170, 0.8)",
       },
@@ -41,10 +41,9 @@ module.exports = {
       },
       colors: {
         primaryDark: "rgb(26, 143, 152)",
-        secondary: "rgb(143, 142, 255)",
+        secondary: "rgb(134, 134, 255)",
         secondaryDark: "#4846b2",
-        blurWhite: "rgba(255, 255, 255, 0.5)",
-        blurBlack: "rgba(0, 0, 0, 0.85)",
+        offBlack: "#00060d",
       },
     },
   },

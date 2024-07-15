@@ -117,7 +117,7 @@ export const Nav = () => {
           {printNavButtons()}
         </div>
         <div
-          className={`DesktopNavBackground h-12 w-full border-b border-gray-800 bg-gradient-to-b from-[#00060d] via-gray-900 to-gray-950 shadow-2xl transition-all duration-500 ${
+          className={`DesktopNavBackground from-offBlack h-12 w-full border-b border-gray-800 bg-gradient-to-b via-gray-900 to-gray-950 shadow-2xl transition-all duration-500 ${
             navStyle ? "translate-y-[-100px]" : ""
           }`}
         />

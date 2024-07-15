@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="no-scrollbar m-auto max-w-[4000px] touch-pan-y overflow-x-hidden bg-black">
+      <body className="no-scrollbar bg-offBlack m-auto max-w-[4000px] touch-pan-y overflow-x-hidden">
         <ModalProvider>{children}</ModalProvider>
       </body>
     </html>

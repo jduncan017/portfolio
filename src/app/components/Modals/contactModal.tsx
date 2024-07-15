@@ -51,7 +51,7 @@ export default function ContactModal() {
     <ModalWrapper>
       <div className="contactModal">
         <div className="formWrapper relative flex max-h-[100dvh] w-full max-w-[500px] flex-col px-2 pb-4  xs:px-8">
-          <h1 className="text-gradient-clip mb-3 border-b border-dotted border-gray-400 pb-4 text-center text-4xl font-bold uppercase leading-10 tracking-widest text-primaryDark xs:text-4xl sm:text-5xl">
+          <h1 className="text-gradient-clip mb-3 border-b border-dotted border-gray-400 pb-4 text-center text-4xl font-bold uppercase leading-10 tracking-widest xs:text-4xl sm:text-5xl">
             Contact
           </h1>
           <p className="formDescription m-0 w-full text-center text-gray-300">
