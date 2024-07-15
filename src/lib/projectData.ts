@@ -128,7 +128,7 @@ export const PROJECT_DATA: CardData[] = [
     repoURL: "https://github.com/jduncan017/portfolio",
     liveButtonText: "Visit Site",
     liveLink: "https://www.joshuaduncan.info",
-    imagePath: "/opengraphImages/portfolio-og.png",
+    imagePath: "/opengraphImages/portfolio-opengraph.png",
     tags: ["Typescript", "Next.js"],
     role: "Developer & Designer",
     keyFeatures: [

@@ -20,7 +20,7 @@ export const metadata = {
   },
   openGraph: {
     images: {
-      url: "/opengraphImages/portfolio-og.png",
+      url: "/opengraphImages/portfolio-opengraph.png",
       width: 1903,
       height: 997,
     },
@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="no-scrollbar bg-offBlack m-auto max-w-[4000px] touch-pan-y overflow-x-hidden">
+      <body className="no-scrollbar m-auto max-w-[4000px] touch-pan-y overflow-x-hidden bg-offBlack">
         <ModalProvider>{children}</ModalProvider>
       </body>
     </html>
