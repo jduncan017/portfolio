@@ -9,10 +9,11 @@ export const RESUME_DATA: ResumeData = {
   bioDescription: `As a full-stack developer, I bring a unique blend of technical expertise and business acumen to every project.
    My career has spanned software development, project management, brand strategy, leadership, sales, and marketing, providing me with a 
    broad perspective of the digital landscape.<br /><br />
-   <span className="leading-7">Currently, I specialize in creating digital brand identities including:</span><br />
-<span className="text-secondary leading-7">-></span> <i>Target Audience Identification & Market Research</i><br />
+   <span className="leading-7">I specialize in creating digital brand identities including:</span><br />
+<span className="text-secondary leading-7">-></span> <i>Target Audience Identification</i><br />
+<span className="text-secondary leading-7">-></span> <i>Competitor Market Research</i><br />
 <span className="text-secondary leading-7">-></span> <i>Brand Strategy & Design</i><br />
-<span className="text-secondary leading-7">-></span> <i>Development of Modern Web Applications</i><br /><br />
+<span className="text-secondary leading-7">-></span> <i>Development of Web Applications</i><br /><br />
 I became a developer with the ambition to improve the lives of others, and I'm eager to connect with innovative teams that are doing so. If you're looking for someone who brings more than just tech skills to the table, I'd love to chat!
 `,
   education: [

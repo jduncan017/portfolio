@@ -35,7 +35,7 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
         <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center  text-base leading-6 text-gray-200">
           {testimonial.shortDescription}
         </p>
-        <p className="Date text-gray-400">{`- ${testimonial.date} -`}</p>
+        <p className="Date font-noto text-gray-400">{`- ${testimonial.date} -`}</p>
       </div>
       <SiteButton
         onClick={() =>

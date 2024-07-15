@@ -15,16 +15,16 @@ export const Header = () => {
 
   return (
     <section
-      className="HeaderContainer relative h-[100vh] max-h-[1500px]"
+      className="HeaderContainer relative flex h-[100vh] max-h-[1500px] sm:block"
       id="header-section"
     >
       <div className="ParticlesBackground pb-25 absolute z-[-10] h-full w-full text-center">
         <ParticlesAnimation />
       </div>
-      <div className="HeaderTextContainer mx-auto flex flex-col items-center pt-[15vh] sm:pt-[30vh]">
+      <div className="HeaderTextContainer m-auto flex flex-col items-center pt-[15vh] sm:pt-[30vh]">
         <div className="TextContainer flex max-w-[95%] flex-col items-center rounded-[20px] bg-black/20 px-4 py-20 text-center opacity-90 shadow-primary backdrop-blur-md xs:max-w-[80%] xs:px-8 md:px-20 md:py-20 lg:py-28">
           <motion.h1
-            className="Title text-gradient-clip text-center font-gulzar text-5xl font-medium uppercase leading-tight text-white sm:text-nowrap sm:pb-0 sm:text-6xl sm:leading-tight lg:text-7xl lg:leading-tight"
+            className="Title text-gradient-clip text-center font-gulzar text-4xl font-medium uppercase leading-tight text-white xs:text-5xl sm:text-nowrap sm:pb-0 sm:leading-tight md:text-6xl lg:text-7xl lg:leading-tight"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 1.5, ease: "easeOut" }}

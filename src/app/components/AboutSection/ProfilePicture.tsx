@@ -18,7 +18,7 @@ export default function ProfilePicture() {
       <div className="ImageContainer flex h-fit w-full justify-end overflow-hidden p-4 xs:justify-center xs:rounded-xl xs:pl-4 xxl:pr-4">
         <Image
           alt="Josh's Picture"
-          src="/profile_pic.jpeg"
+          src="/josh-4.png"
           className="ProfilePic ml-4 aspect-square h-auto max-h-[375px] w-auto rounded-xl object-contain mini:ml-0 lg:aspect-square lg:h-full lg:max-h-[450px] lg:w-auto"
           width={450}
           height={450}

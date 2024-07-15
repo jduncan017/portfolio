@@ -18,7 +18,7 @@ export const About = () => {
             </div>
           </div>
           <Bio />
-          <div className="ServicesContainerSmallScreens mr-5 block max-w-[620px] self-start xs:mr-0 xs:w-[75%] lg:hidden lg:w-full">
+          <div className="ServicesContainerSmallScreens mr-5 block max-w-[620px] self-start xs:mr-0 xs:w-[75%] xs:self-center lg:hidden lg:w-full">
             <Services />
           </div>
         </div>

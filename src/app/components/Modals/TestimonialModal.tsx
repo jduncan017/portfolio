@@ -13,28 +13,27 @@ export default function TestimonialModal({ testimonial }: TestimonialArray) {
       <div className="TestomonialModal flex flex-col gap-5 overflow-hidden py-2 md:px-6">
         <div className="TitleSection flex items-center gap-4">
           <Image
-            className="TestimonialImage pointer-events-none aspect-square w-16 rounded-full object-cover"
+            className="TestimonialImage pointer-events-none aspect-square w-20 rounded-full object-cover"
             src={testimonial.imagePath}
             alt="Screenshot of testimonial"
-            width={64}
-            height={64}
+            width={80}
+            height={80}
           />
           <div className="TitleInfo flex flex-col items-start">
             <h3 className="Title text-gradient-clip pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-2xl">
               {testimonial.name}
             </h3>
-            <p className="Relationship text-lg italic text-gray-300">
+            <p className="Relationship text-xl text-gray-300">
               {testimonial.relationship}
+            </p>
+            <p className="Date text-start font-noto text-gray-400">
+              {testimonial.date}
             </p>
           </div>
         </div>
-        <div className="InfoSection flex flex-col gap-1">
-          <p className="Date text-start text-gray-400">{`Date: ${testimonial.date}`}</p>
-          <p className="Date text-start text-gray-400">{`Contact: ${testimonial.contact}`}</p>
-        </div>
 
         <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
-          <p className="Description w-full max-w-[700px] rounded-md border border-gray-900 bg-gray-800 p-4 text-start  leading-6 text-gray-200">
+          <p className="Description w-full max-w-[700px] rounded-md border border-gray-900 bg-gray-800 p-4 text-start leading-8 text-gray-200">
             {parse(testimonial.fullReview)}
           </p>
         </div>

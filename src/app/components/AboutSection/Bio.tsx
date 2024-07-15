@@ -47,7 +47,7 @@ export default function Bio() {
       viewport={{ once: true }}
     >
       <motion.h2
-        className="Title mb-5 flex gap-2 text-3xl font-semibold uppercase leading-normal tracking-widest text-white sm:text-4xl"
+        className="Title mb-3 flex gap-2 text-3xl font-semibold uppercase leading-normal tracking-widest text-white sm:text-4xl"
         variants={itemVariants}
       >
         <FlipWords
@@ -58,7 +58,7 @@ export default function Bio() {
         />
       </motion.h2>
       <motion.p
-        className="BioDescription mb-8 max-w-[375px] pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
+        className="BioDescription mb-5 max-w-[375px] pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
         variants={itemVariants}
         onAnimationComplete={() => setStartFlipping(true)}
       >

@@ -39,6 +39,5 @@ export type TestimonialData = {
   shortDescription: string;
   fullReview: string;
   relationship: string;
-  contact: string;
   date: string;
 };

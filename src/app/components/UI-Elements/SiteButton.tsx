@@ -29,7 +29,7 @@ const SiteButton = ({
       buttonSize = "px-2.5 py-2 text-sm";
       break;
     case "large":
-      buttonSize = "px-5 py-3 text-lg";
+      buttonSize = "px-5 py-3 text-lg w-full mini:w-fit";
       break;
     default:
       buttonSize = "w-[220px] py-3 flex-1";
