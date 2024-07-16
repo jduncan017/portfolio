@@ -35,7 +35,7 @@
 
 @layer utilities {
   .text-gradient-clip {
-    background-image: linear-gradient(to bottom right, #f9f5ff, #8d8dbb);
+    background-image: linear-gradient(to bottom right, #f9f5ff, #7e7e94);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

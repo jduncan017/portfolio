@@ -135,7 +135,7 @@ export default function SliderSection({
           View All
         </motion.button>
       </div>
-      <BackgroundGradient containerClassName="CarouselTrack self-center w-[105%] rounded-xl p-[1px]">
+      <BackgroundGradient containerClassName="CarouselTrack min-h-[400px] self-center w-[105%] rounded-xl p-[1px]">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -153,7 +153,7 @@ export default function SliderSection({
             keyBoardControl={true}
             customTransition="transform 500ms ease"
             transitionDuration={500}
-            containerClass="py-8 xs:py-8 bg-offBlack rounded-xl"
+            containerClass="py-8 xs:py-8 bg-offBlack rounded-xl min-h-[400px]"
             removeArrowOnDeviceType={["tablet", "mobile"]}
             itemClass="project-item gap-10"
             centerMode={centerMode}

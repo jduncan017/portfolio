@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import ModalWrapper from "./ModalWrapper";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,28 +10,49 @@ import { useModal } from "@/src/contexts/ModalContext";
 export default function BrandModal() {
   const { showModal } = useModal();
   const [expandedImage, setExpandedImage] = useState<number | null>(null);
+  const [preloadedImages, setPreloadedImages] = useState<(string | null)[]>([]);
   const pages = 20;
   const containerRef = useRef<HTMLDivElement>(null);
   const packageElements = [
-    "Logo Design",
+    "Logo Design & Development",
     "Visual Identity",
     "Color Palette",
-    "Typography & Fonts",
+    "Typography & Font Selection",
     "Unique Selling Proposition",
-    "Color Palette",
-    "Brand Messaging",
-    "Brand Voice Guidelines",
+    "Brand Messaging Guidelines",
+    "Tone & Voice Guidelines",
     "Brand Story Script",
     "Competitive Market Analysis",
-    "Audience Insight",
-    "Strategic Brand Positioning",
-    "Visual Mood Board",
-    "Custom Website (optional)",
+    "Target Market Analysis",
+    "Mood Boards & Imagery",
+    "Website Design & Development",
   ];
 
-  type sortedProps = { packageElements: string[] };
+  useEffect(() => {
+    const preloadImages = async () => {
+      const imagePromises = Array.from({ length: pages }, (_, i) => i + 1).map(
+        async (page) => {
+          const src = `/mvnBrandGuide/${page}.webp`;
+          try {
+            const res = await fetch(src, { method: "HEAD" });
+            return res.ok ? src : null;
+          } catch (error) {
+            console.error(`Failed to preload image: ${src}`, error);
+            return null;
+          }
+        },
+      );
 
-  function SortedPackageElements({ packageElements }: sortedProps) {
+      const loadedImages = await Promise.all(imagePromises);
+      setPreloadedImages(loadedImages);
+    };
+
+    preloadImages();
+  }, []);
+
+  type SortedProps = { packageElements: string[] };
+
+  function SortedPackageElements({ packageElements }: SortedProps) {
     const sortedElements = [...packageElements].sort((a, b) =>
       a.localeCompare(b),
     );
@@ -52,22 +73,27 @@ export default function BrandModal() {
   }
 
   function renderPages() {
-    return Array.from({ length: pages }, (_, i) => i + 1).map((page) => (
-      <motion.div
-        key={page}
-        className="ImageWrapper cursor-pointer"
-        layoutId={`image-${page}`}
-      >
-        <Image
-          src={`/mvnBrandGuide/${page}.webp`}
-          width={500}
-          height={335}
-          alt={`Brand Strategy Page ${page}`}
-          className="rounded-md transition-transform duration-300 hover:scale-105"
-          onClick={() => setExpandedImage(page)}
-        />
-      </motion.div>
-    ));
+    return preloadedImages
+      .map(
+        (src, index) =>
+          src && (
+            <motion.div
+              key={index + 1}
+              className="ImageWrapper cursor-pointer"
+              layoutId={`image-${index + 1}`}
+            >
+              <Image
+                src={src}
+                width={500}
+                height={335}
+                alt={`Brand Strategy Page ${index + 1}`}
+                className="rounded-md transition-transform duration-300 hover:scale-105"
+                onClick={() => setExpandedImage(index + 1)}
+              />
+            </motion.div>
+          ),
+      )
+      .filter(Boolean);
   }
 
   return (
@@ -77,19 +103,20 @@ export default function BrandModal() {
           className="BrandModal flex w-full flex-col items-center justify-center px-4"
           ref={containerRef}
         >
-          <h3 className="Description text-gradient-clip mb-5 w-full max-w-[700px] text-xl capitalize tracking-widest sm:text-2xl">
+          <h3 className="Description text-gradient-clip mb-5 w-full max-w-[700px] text-2xl capitalize tracking-widest sm:text-3xl">
             Launch Your Brand Today!
           </h3>
           <div className="MotionContainer">
             <h4 className="BioHeader text-lg uppercase tracking-wide text-gray-400">
               Branding Packages Include:
             </h4>
-            {SortedPackageElements({ packageElements })}
+            <SortedPackageElements packageElements={packageElements} />
           </div>
           <SiteButton
             size="large"
-            textColor="text-gray-200"
-            style="silverHollow"
+            textColor="text-secondary"
+            addClasses="mt-5"
+            style="purpleHollow"
             onClick={() => showModal(<ContactModal />)}
           >
             Inquire About Brand Services
@@ -102,7 +129,7 @@ export default function BrandModal() {
           </div>
         </div>
         <AnimatePresence>
-          {expandedImage && (
+          {expandedImage !== null && (
             <motion.div
               className="ExpandedImageOverlay fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
               initial={{ opacity: 0 }}
@@ -111,17 +138,31 @@ export default function BrandModal() {
               onClick={() => setExpandedImage(null)}
             >
               <motion.div
-                className="ExpandedImageWrapper w-[90vw] max-w-[800px]"
+                className="ExpandedImageWrapper relative w-[90vw] max-w-[800px]"
                 layoutId={`image-${expandedImage}`}
                 style={{ zIndex: 51 }}
               >
                 <Image
-                  src={`/mvnBrandGuide/${expandedImage}.webp`}
-                  width={800}
-                  height={536}
-                  alt={`Expanded Brand Strategy Page ${expandedImage}`}
-                  className="rounded-lg shadow-xl"
+                  src="/close-button.svg"
+                  width={20}
+                  height={20}
+                  alt="close button"
+                  className="CloseButton absolute right-5 top-5 mix-blend-difference hover:scale-105 hover:cursor-pointer"
+                  onClick={() => setExpandedImage(null)}
                 />
+                {preloadedImages[expandedImage - 1] ? (
+                  <Image
+                    src={preloadedImages[expandedImage - 1]!}
+                    width={800}
+                    height={536}
+                    alt={`Expanded Brand Strategy Page ${expandedImage}`}
+                    className="rounded-lg shadow-xl"
+                  />
+                ) : (
+                  <div className="flex h-[536px] w-[800px] items-center justify-center rounded-lg bg-gray-200">
+                    <p>Image not available</p>
+                  </div>
+                )}
               </motion.div>
             </motion.div>
           )}

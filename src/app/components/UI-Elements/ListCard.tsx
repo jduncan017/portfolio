@@ -107,7 +107,7 @@ export default function DisplayCard({
             cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="Technology h-fit w-fit flex-grow rounded-full bg-secondaryDark/30 p-0.5 text-center text-secondary/80"
+                  className="Technology flex-grow rounded-sm bg-secondaryDark/50 px-2 py-1 text-center text-sm text-gray-400"
                   key={tech}
                 >
                   {tech}

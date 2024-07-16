@@ -12,10 +12,10 @@ export const RESUME_DATA: ResumeData = {
       position: "Graduate Full-Stack Software Developer Program",
       time: "January 2023 - January 2024",
       description: [
-        "Completed 1000+ hours of hands-on coding experience in JavaScript, React, Node.js, HTML5, and CSS3, using BEM methods, studying best practices and modern approaches to design challenges.",
+        "Completed a 1000+ hour full-stack program creating projects with JavaScript, React, Node.js, HTML, and CSS, studying modern web technologies and best practices.",
         "Developed several responsive single-page applications, focusing on efficiency and user experience.",
-        "Studied and implemented front-end and back-end aspects of applications, including database modeling, user authentication, REST APIs, web deployment, and modern UI/UX.",
-        "Finished my final project using Figma, Next.js 14, and PostgreSQL to develop a business site from start to finish for a real-world client.",
+        "Implemented full-stack features such as user auth, error handling, database modeling, and RESTful APIs.",
+        "Gained experience with testing methodologies, including unit testing with Jest.",
       ],
     },
     {
@@ -34,10 +34,10 @@ export const RESUME_DATA: ResumeData = {
       position: "Web Developer, Designer, & Brand Strategist",
       time: "Remote | November 2023 - Current",
       description: [
-        "Design and implement responsive, high-performance websites for clients using modern tech stacks including TypeScript, Next.js, and React, emphasizing user experience and SEO performance.",
-        "Develop comprehensive brand identities that align with clients' visions, coupled with market research to increase conversion rates for target audiences.",
-        "Provide technical consultations that balance client needs with technological feasibility and scalability.",
-        "Analyze and refactor legacy codebases, modernizing outdated applications to modern standards.",
+        "Developed 4 client websites using TypeScript and Next.js. Typical turnaround of 2-4 weeks per project.",
+        "Created 5 brands - logo, visual identity, tone, audience. Average 1-day turnaround. See Example Here.",
+        "Client Consultations - Translated technical requirements considering time and budget constraints.",
+        "Optimized sites using SSR, image optimization, server-less APIs, and enhanced accessibility.",
       ],
     },
     {
@@ -45,10 +45,11 @@ export const RESUME_DATA: ResumeData = {
       position: "Full Stack React Engineer (Freelance)",
       time: "Remote | January 2024 - April 2024",
       description: [
-        "Built and implemented full-stack CRUD functionality, allowing for user content management.",
-        "Designed database models and managed seamless data flow with GraphQL",
-        "Utilized Jira for agile project management, noting areas for improvement and resolving issues.",
-        "Conducted frequent code reviews, providing constructive feedback and suggesting improvements to enhance code quality and maintainability.",
+        "Developed full-stack CRUD functionality for a movie database, managing over 1,000 entries.",
+        "Managed GraphQL & Prisma backend, creating database models for efficient management.",
+        "Played a key role in team meetings, offering insights and feedback to guide project development.",
+        "Conducted regular code reviews, focusing on reusability, efficiency, and user experience.",
+        "Improved project functionality by noting and creating an admin dashboard for submission management.",
       ],
     },
     {
@@ -56,9 +57,9 @@ export const RESUME_DATA: ResumeData = {
       position: "General Manager",
       time: "Denver, CO | January 2017 - April 2022",
       description: [
-        "Transformed a restaurant into a profitable, nationally recognized cocktail bar, doubling sales from $550k to $1.2M over my 5-year tenure.",
-        "Fostered a team-oriented culture focused on personal growth, significantly improving employee tenure.",
-        "Streamlined standards of procedure to optimize operations, reducing overall labor costs.",
+        "Doubled annual sales from $550k to $1.2M over my 5-year tenure via strategic improvements.",
+        "Improved average employee tenure from 6 months to 2.5 years by fostering a growth-oriented culture.",
+        "Hosted frequent team meetings and encouraged communication to improve collaboration.",
       ],
     },
   ],

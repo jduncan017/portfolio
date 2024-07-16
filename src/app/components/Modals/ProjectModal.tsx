@@ -62,7 +62,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
             cardData.techsUsed.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="tech flex-grow rounded-full bg-secondaryDark/30 p-1 text-center text-xs text-secondary/80 xs:text-xs"
+                  className="tech flex-grow rounded-sm bg-secondaryDark/40 px-2 py-1 text-center text-sm text-gray-400"
                   key={tech}
                 >
                   {tech}

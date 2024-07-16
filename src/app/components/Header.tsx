@@ -12,7 +12,7 @@ export const Header = () => {
 
   return (
     <section
-      className="HeaderContainer relative mb-32 flex h-[100vh] max-h-[1500px] justify-center px-6"
+      className="HeaderContainer relative mb-32 flex h-[100vh] max-h-[1500px] justify-center px-4"
       id="header-section"
     >
       <div className="ParticlesBackground pb-25 absolute z-[-10] h-full w-full text-center">

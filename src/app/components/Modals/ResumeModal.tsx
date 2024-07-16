@@ -6,7 +6,7 @@ export default function ResumeModal() {
     return (
       <div className="Container">
         <div className="Border">
-          <h3 className="Heading mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase tracking-wider text-secondaryDark">
+          <h3 className="Heading mb-2 border-b border-dotted border-gray-400 text-2xl font-semibold uppercase tracking-wider text-secondary/80">
             {title}
           </h3>
         </div>
@@ -16,7 +16,7 @@ export default function ResumeModal() {
 
   return (
     <ModalWrapper title="Resume">
-      <div className="OuterContainer max-w-[800px] items-start pb-4 text-start text-white sm:px-4">
+      <div className="OuterContainer max-w-[850px] items-start pb-4 text-start text-white sm:px-4">
         <h2 className="Name text-gradient-clip mb-1 text-start text-4xl font-bold uppercase">
           Joshua Duncan
         </h2>
@@ -30,7 +30,7 @@ export default function ResumeModal() {
               {TECH_SKILLS.map((item) => (
                 <li
                   key={item}
-                  className="ExperienceItem rounded-sm bg-slate-600/50 p-1 text-xs capitalize text-gray-300"
+                  className="ExperienceItem rounded-sm bg-slate-800 px-2 py-1 text-sm capitalize text-gray-300"
                 >
                   {item}
                 </li>
@@ -61,7 +61,7 @@ export default function ResumeModal() {
                   <ul className="Descriptions leading-6 text-gray-400">
                     {job.description.map((item) => (
                       <li key={item} className="ExperienceItem mt-1">
-                        {`- ${item}`}
+                        {`-> ${item}`}
                       </li>
                     ))}
                   </ul>
@@ -90,7 +90,7 @@ export default function ResumeModal() {
                   <ul className="Descriptions leading-6 text-gray-400">
                     {item.description.map((item) => (
                       <li key={item} className="ExperienceItem mt-1">
-                        {`- ${item}`}
+                        {`-> ${item}`}
                       </li>
                     ))}
                   </ul>

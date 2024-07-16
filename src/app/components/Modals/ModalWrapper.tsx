@@ -38,7 +38,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
           duration: 0.2,
           ease: "easeInOut",
         }}
-        className="Content custom-scrollbar relative h-fit max-h-[96vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl border border-white/20 bg-slate-950 text-center xs:pl-3"
+        className="Content custom-scrollbar relative h-fit max-h-[93vh] w-fit max-w-[96vw] overflow-hidden overflow-y-scroll rounded-xl border border-white/20 bg-slate-950 text-center xs:max-h-[96vh] xs:pl-3"
         onClick={handleModalContentClick}
       >
         <div

@@ -23,7 +23,7 @@ export default function Services() {
         duration: 0.6,
         when: "beforeChildren",
         staggerChildren: 0.4,
-        delay: 0.5,
+        delay: 0.2,
       },
     },
   };
