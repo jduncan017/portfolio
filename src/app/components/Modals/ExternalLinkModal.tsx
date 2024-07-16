@@ -2,18 +2,17 @@ import ModalWrapper from "./ModalWrapper";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "../../../contexts/ModalContext";
 import Link from "next/link";
+import type { CardData } from "@/src/lib/dataTypes";
 import type { ReactNode } from "react";
 
 type LinkModalProps = {
-  name: string;
-  link: string;
+  cardData: CardData;
   currentModal?: ReactNode;
-  linkType: "Repository" | "Website";
+  linkType: "repository" | "website";
 };
 
 export default function ExternalLinkModal({
-  name,
-  link,
+  cardData,
   currentModal,
   linkType,
 }: LinkModalProps) {
@@ -27,31 +26,53 @@ export default function ExternalLinkModal({
     }
   };
 
+  // logic for displaying text correctly
+  let displayText;
+  let modalTitle;
+  let showLinkButton = true;
+
+  switch (cardData.altName) {
+    case "You're already here!":
+      displayText = cardData.altName;
+      modalTitle = "Oops!";
+      showLinkButton = false;
+      break;
+    case undefined:
+      displayText = `Are you ready to visit ${cardData.name}'s ${linkType}?`;
+      modalTitle = "Note - External Link";
+      break;
+    default:
+      displayText = `Are you ready to visit ${cardData.altName}'s ${linkType}?`;
+      modalTitle = "Note - External Link";
+  }
+
   return (
     <ModalWrapper>
       <div className="ModalContainer flex h-fit w-fit flex-col items-center rounded-2xl px-6 py-5 text-center font-serif">
-        <h3 className="Header text-gradient-clip font-noto text-2xl font-black capitalize">
-          This is an External Link
+        <h3 className="Header font-noto text-2xl font-black capitalize text-gray-400">
+          {modalTitle}
         </h3>
         <p className="Description my-4 font-noto text-xl text-gray-300">
-          {`Are you ready to visit the ${name} ${linkType}?`}
+          {displayText}
         </p>
         <div className="ButtonContainer flex h-fit w-full flex-col items-center sm:flex-row sm:gap-4">
-          <Link
-            href={link}
-            rel="noopener noreferrer"
-            aria-label={`Visit ${name}`}
-            target="_blank"
-          >
-            <SiteButton
-              onClick={() => handleModal()}
-              addClasses="mt-4"
-              textColor="text-black capitalize"
-              style="purple"
+          {showLinkButton && (
+            <Link
+              href={cardData.liveLink}
+              rel="noopener noreferrer"
+              aria-label={`Visit ${cardData.name}`}
+              target="_blank"
             >
-              {`Let's Go!`}
-            </SiteButton>
-          </Link>
+              <SiteButton
+                onClick={() => handleModal()}
+                addClasses="mt-4"
+                textColor="text-black capitalize"
+                style="purple"
+              >
+                {`Let's Go!`}
+              </SiteButton>
+            </Link>
+          )}
           <SiteButton
             onClick={() => handleModal()}
             aria="go back"

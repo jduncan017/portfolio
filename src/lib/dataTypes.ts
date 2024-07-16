@@ -5,6 +5,7 @@ export type CardData = {
   description: string;
   liveButtonText: string;
   liveLink: string;
+  altName?: string;
   imagePath: string;
   tags?: string[];
   role?: string;

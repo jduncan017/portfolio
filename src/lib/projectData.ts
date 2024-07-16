@@ -10,7 +10,7 @@ export const PROJECT_DATA: CardData[] = [
     liveButtonText: "Visit Site",
     liveLink: "https://www.happyhourhunt.net",
     imagePath: "/opengraphImages/h3-og.png",
-    tags: ["Personal Project", "Beta Site"],
+    tags: ["Personal Project", "Next.js"],
     role: "Developer & Designer",
     keyFeatures: ["Scalable Data Structuring"],
     type: "Personal Project",
@@ -77,6 +77,7 @@ export const PROJECT_DATA: CardData[] = [
     repoURL: "https://github.com/jduncan017/tailwind-fold-with-class-names",
     liveLink:
       "https://marketplace.visualstudio.com/items?itemName=jduncan017.tailwind-fold-with-class-names",
+    altName: "Visual Studio Marketplace",
     imagePath: "/opengraphImages/tailwind-og.png",
     tags: ["Typescript", "VS Code Plugin"],
     role: "Developer",
@@ -100,6 +101,7 @@ export const PROJECT_DATA: CardData[] = [
     repoURL: "https://github.com/jduncan017/jgsite",
     liveButtonText: "Visit Site",
     liveLink: "https://www.johngerardwoodwork.com",
+    altName: "John Gerard Woodwork",
     imagePath: "/opengraphImages/jg-og.webp",
     tags: ["Client Project", "Next.js"],
     role: "Developer & Designer",
@@ -129,6 +131,7 @@ export const PROJECT_DATA: CardData[] = [
     liveButtonText: "Visit Site",
     liveLink: "https://www.joshuaduncan.info",
     imagePath: "/opengraphImages/portfolio-opengraph.png",
+    altName: "You're already here!",
     tags: ["Typescript", "Next.js"],
     role: "Developer & Designer",
     keyFeatures: [

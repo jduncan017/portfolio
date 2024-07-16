@@ -7,9 +7,9 @@ export const TESTIMONIAL_DATA: TestimonialData[] = [
     shortDescription: `"His organizational approach to overseeing multiple projects
 simultaneously, particularly in R&D processes, resulted in radiant success for our
 business."`,
-    fullReview: `"To Whom It May Concern:<br /><br />
+    fullReview: `To Whom It May Concern:<br /><br />
 
-I am writing to recommend Joshua Duncan for software engineering roles in the tech industry. As the
+I am writing to recommend Joshua Duncan for roles in the tech industry. As the
 General Manager of Adrift Tiki Bar, Josh not only demonstrated exceptional leadership, but also
 problem-solving skills, adaptability, teamwork, and creativity. His leadership was instrumental in our
 success, and I firmly believe that his diverse skill set, honed in the hospitality sector, will prove
@@ -44,7 +44,7 @@ Please feel free to contact me for additional information about Josh's qualifica
 
 Sincerely,<br /><br />
 
-Loren Martinez"`,
+Loren Martinez`,
 
     relationship: "Manager",
     date: "02/21/24",
@@ -54,13 +54,16 @@ Loren Martinez"`,
     imagePath: "/testimonialPhotos/dillon.jpeg",
     shortDescription: `"Josh showed a deep understanding of both frontend and backend development with a knack for 
     translating that knowledge to myself and his peers as needed."`,
-    fullReview: `"Josh and I were both full-stack developers at Slopopedia. During our time working together, Josh was extremely 
+    fullReview: `Josh and I were both full-stack developers at Slopopedia. During our time working together, Josh was extremely 
     proactive, insightful and helpful. Josh showed a deep understanding of both frontend and backend development with a knack for 
-    translating that knowledge to his peers including myself as needed. Josh is a great problem solver with an ability to make 
-    complex code look easy. Over the past 3 months I have since looked over Josh's client work and I can say that his passion 
+    translating that knowledge to myself and his peers as needed. Josh is a great problem solver with an ability to make 
+    complex code look easy. <br /><br />
+    
+    Over the past 3 months I have since looked over Josh's client work and I can say that his passion 
     for creating impactful and efficient solutions will without a doubt make him a very important developer for any team. Additionally, 
-    Josh's kindness, respectfulness, and passion is incredibly contagious, making him a pleasure to get to know and work with. 
-    I very highly recommend Josh."`,
+    Josh's kindness, respectfulness, and passion is incredibly contagious, making him a pleasure to get to know and work with.
+    I very highly recommend Josh.<br /><br />
+    - Dillon Arnold`,
     relationship: "Co-Worker",
     date: "07/14/24",
   },
@@ -68,7 +71,7 @@ Loren Martinez"`,
     name: "Nicholas Pasquarella",
     imagePath: "/testimonialPhotos/nick.jpg",
     shortDescription: `"What sets him apart is his honesty; he welcomes all ideas while offering insightful explanations for alternative approaches."`,
-    fullReview: `"After experiencing the quality, seamlessness, and professionalism of working with Josh, my business partner and I are 
+    fullReview: `After experiencing the quality, seamlessness, and professionalism of working with Josh, my business partner and I are 
     enthusiastic about providing a recommendation. <br /><br />
     
     Initially seeking a simple website for our woodworking business—a landing page for showcasing 
@@ -77,7 +80,9 @@ Loren Martinez"`,
     What sets him apart is his honesty; he welcomes all ideas while offering insightful explanations for alternative approaches.<br /><br />
 
     Moreover, Josh demonstrates a keen understanding of contemporary market trends in website development. He delivers tailored solutions 
-    efficiently, ensuring they align with your specific market needs. In summary, we wholeheartedly endorse Josh as a developer."`,
+    efficiently, ensuring they align with your specific market needs. In summary, we wholeheartedly endorse Josh as a developer.
+    <br /><br />
+    - Nicholas Pasquarella`,
     relationship: "Client",
     date: "02/12/24",
   },

@@ -49,11 +49,7 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
           style="purple"
           onClick={() =>
             showModal(
-              <ExternalLinkModal
-                name={cardData.name}
-                link={cardData.liveLink}
-                linkType="Website"
-              />,
+              <ExternalLinkModal cardData={cardData} linkType="website" />,
             )
           }
         >

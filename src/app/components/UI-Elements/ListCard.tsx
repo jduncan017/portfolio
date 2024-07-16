@@ -125,9 +125,8 @@ export default function DisplayCard({
             onClick={() =>
               showModal(
                 <ExternalLinkModal
-                  name={cardData.name}
-                  link={cardData.liveLink}
-                  linkType="Website"
+                  cardData={cardData}
+                  linkType="website"
                   currentModal={
                     <DisplayListModal
                       cardArray={cardArray}
@@ -150,9 +149,8 @@ export default function DisplayCard({
               onClick={() =>
                 showModal(
                   <ExternalLinkModal
-                    name={cardData.name}
-                    link={repoURL}
-                    linkType="Repository"
+                    cardData={cardData}
+                    linkType="repository"
                     currentModal={
                       <DisplayListModal
                         cardArray={cardArray}
