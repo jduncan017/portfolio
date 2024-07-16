@@ -161,7 +161,7 @@ export default function SliderSection({
           >
             {cardArray.map((cardData: CardData) => (
               <motion.div key={cardData.name} variants={cardVariants}>
-                <DisplayCard cardData={cardData} dataType={dataType} />
+                <DisplayCard cardData={cardData} />
               </motion.div>
             ))}
           </Carousel>
