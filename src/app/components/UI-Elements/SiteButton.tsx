@@ -58,7 +58,7 @@ const SiteButton = ({
 
   return (
     <button
-      className={`SiteButton rounded-md font-sans text-sm font-semibold transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
+      className={`SiteButton text-nowrap rounded-md font-sans text-sm font-semibold transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
       `}
       type={type ?? "button"}
       onClick={onClick}

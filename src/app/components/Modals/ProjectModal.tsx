@@ -13,6 +13,7 @@ type ProjectModalProps = {
 
 export default function ProjectModal({ cardData }: ProjectModalProps) {
   const { showModal } = useModal();
+  const displayTags = cardData.tagsFull ? cardData.tagsFull : cardData.tags;
   // this had to be defined distinctly because TS wasn't picking up typesafety for the button
   const repoURL = cardData.repoURL;
   const isURL = (path: string) => {
@@ -52,23 +53,24 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
           <h3 className="Title text-gradient-clip pointer-events-none mb-2 w-full border-b border-dotted border-secondary/50 pb-1 text-start font-serif text-3xl font-semibold uppercase tracking-wider xs:text-4xl">
             {cardData.name}
           </h3>
-          <p className="LastUpdated mb-2 text-sm italic text-gray-400">
-            {`Last updated: ${cardData.lastUpdated}`}
-          </p>
+          {cardData.lastUpdated && (
+            <p className="LastUpdated mb-2 text-sm italic text-gray-400">
+              {`Last updated: ${cardData.lastUpdated}`}
+            </p>
+          )}
         </div>
         {cardImage()}
         <div className="TechsUsedContainer flex w-full flex-wrap gap-2 py-1">
-          {cardData.techsUsed &&
-            cardData.techsUsed.sort().map((tech: string): ReactNode => {
-              return (
-                <div
-                  className="tech flex-grow rounded-sm bg-secondaryDark/40 px-2 py-1 text-center text-sm text-gray-400"
-                  key={tech}
-                >
-                  {tech}
-                </div>
-              );
-            })}
+          {displayTags.sort().map((tech: string): ReactNode => {
+            return (
+              <div
+                className="tech flex-grow rounded-sm bg-secondaryDark/40 px-2 py-1 text-center text-sm text-gray-400"
+                key={tech}
+              >
+                {tech}
+              </div>
+            );
+          })}
         </div>
         <div className="InfoContainer flex w-full flex-col items-start gap-1">
           <p className="Description w-fit border-b border-secondary/50 pb-2 text-start text-sm leading-5 text-gray-300 xs:text-base">
@@ -77,7 +79,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
             </span>
             {cardData.description}
           </p>
-          <div className="DataContainer flex flex-wrap gap-x-3 gap-y-1 border-b border-secondary/50 pb-2 pt-1">
+          <div className="DataContainer flex w-full flex-wrap gap-x-4 gap-y-1 border-b border-secondary/50 pb-2 pt-1">
             <p className="Type w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
               <span className="font-medium uppercase text-gray-400">
                 Type:{" "}

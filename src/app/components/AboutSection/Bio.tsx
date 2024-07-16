@@ -39,7 +39,7 @@ export default function Bio() {
 
   return (
     <motion.div
-      className="RightContainer ml-5 flex w-auto max-w-[620px] flex-col self-end overflow-hidden rounded-l-xl border-l border-t border-white/30 bg-black/50 px-8 py-6 pr-[calc((100vw-375px)/2)] text-white shadow-secondaryDim transition-all duration-700 hover:shadow-secondaryBright mini:ml-0 xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
+      className="RightContainer ml-5 flex w-auto max-w-[620px] flex-col self-end overflow-hidden rounded-l-xl border-l border-t border-white/30 bg-black/50 py-6 pl-6 pr-[44px] text-white shadow-secondaryDim transition-all duration-700 hover:shadow-secondaryBright mini:ml-0 mini:pl-8 mini:pr-[calc((100vw-375px)/2)] xs:w-[75%] xs:self-center xs:rounded-xl xs:pr-8 sm:ml-0 lg:h-full lg:w-fit lg:max-w-none lg:self-start xxl:max-w-[900px] xxl:rounded-xl"
       variants={rightContainerVariants}
       initial="hidden"
       whileInView="visible"
@@ -57,7 +57,7 @@ export default function Bio() {
         />
       </motion.h2>
       <motion.p
-        className="BioDescription mb-3 max-w-[375px] border-b border-dotted border-gray-600 pb-3 pr-4 text-white xs:max-w-[600px] xxl:max-w-none"
+        className="BioDescription mb-3 max-w-[375px] border-b border-dotted border-gray-600 pb-3 text-white xs:max-w-[600px] xxl:max-w-none"
         variants={itemVariants}
         onAnimationComplete={() => setStartFlipping(true)}
       >
@@ -108,9 +108,17 @@ export default function Bio() {
         <ContactCard />
       </motion.div>
       <motion.div
-        className="ButtonContainer mb-2 mr-5 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"
+        className="ButtonContainer mb-2 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"
         variants={itemVariants}
       >
+        <SiteButton
+          size="large"
+          textColor="text-black"
+          style="silver"
+          onClick={() => showModal(<ContactModal />)}
+        >
+          Contact Me
+        </SiteButton>
         <SiteButton
           size="large"
           textColor="text-gray-200"
@@ -118,14 +126,6 @@ export default function Bio() {
           onClick={() => showModal(<ResumeModal />)}
         >
           View Resume
-        </SiteButton>
-        <SiteButton
-          size="large"
-          textColor="text-gray-200"
-          style="silverHollow"
-          onClick={() => showModal(<ContactModal />)}
-        >
-          Contact Me
         </SiteButton>
       </motion.div>
     </motion.div>

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "@/src/contexts/ModalContext";
 import BrandModal from "../Modals/BrandModal";
-import ContactModal from "../Modals/contactModal";
 
 export default function Services() {
   const { showModal } = useModal();
@@ -41,13 +40,13 @@ export default function Services() {
 
   return (
     <motion.div
-      className="ServicesContainer w-full justify-end rounded-r-xl border-t border-white/30 bg-black/50 shadow-secondaryDim transition-all duration-700 hover:shadow-secondaryBright min-[382px]:pl-[calc((100vw-375px-32px)/2)] xs:rounded-xl xs:pl-0 sm:border-l lg:flex xxl:rounded-xl"
+      className="ServicesContainer w-full justify-end rounded-r-xl border-t border-white/30 bg-black/50 shadow-secondaryDim transition-all duration-700 hover:shadow-secondaryBright mini:pl-[calc((100vw-375px-32px)/2)] xs:rounded-xl xs:pl-0 sm:border-l lg:flex xxl:rounded-xl"
       variants={leftContainerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <div className="InnerContainer h-fit w-full max-w-[500px] flex-col gap-8 self-end rounded-r-xl py-6 pl-8 pr-4 mini:pl-4 xs:px-8 lg:gap-16 xxl:w-fit">
+      <div className="InnerContainer h-fit w-full flex-col gap-8 self-end rounded-r-xl py-6 pl-[44px] pr-6 mini:pl-4 mini:pr-8 xs:px-8 lg:max-w-[500px] lg:gap-16 xxl:w-fit">
         <motion.h2
           className="ServicesTitle text-gradient-clip mb-1 flex gap-2 font-sans text-2xl uppercase leading-normal tracking-widest text-white sm:text-3xl"
           variants={itemVariants}
@@ -68,7 +67,7 @@ export default function Services() {
           projects section. Branding examples below.`}
         </motion.p>
         <motion.div
-          className="ButtonContainer mb-2 mr-5 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"
+          className="ButtonContainer mb-2 mt-6 flex flex-col gap-4 mini:mr-0 mini:flex-row"
           variants={itemVariants}
         >
           <SiteButton

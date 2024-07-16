@@ -91,7 +91,10 @@ export default function DisplayCard({
               <span className="font-medium text-gray-400">Key Features: </span>
               {cardData.keyFeatures.map((feature: string): ReactNode => {
                 return (
-                  <div className="Keyfeature text-gray-300" key={feature}>
+                  <div
+                    className="Keyfeature capitalize text-gray-300"
+                    key={feature}
+                  >
                     <span className="Arrow text-gray-400">{`-> `}</span>
                     {feature}
                   </div>
@@ -101,10 +104,10 @@ export default function DisplayCard({
           )}
         </div>
       </div>
-      <div className="BottomContainer relative mt-2 flex h-fit w-full flex-col justify-between gap-2 xs:items-end md:flex-row">
+      <div className="BottomContainer min-h relative mt-2 flex h-fit w-full flex-col justify-between gap-2 xs:items-end md:flex-row">
         <div className="TechContainer flex w-full flex-wrap items-start justify-start gap-2 md:w-fit xl:w-[350px]">
-          {cardData.techsUsed &&
-            cardData.techsUsed.sort().map((tech: string): ReactNode => {
+          {cardData.tagsFull &&
+            cardData.tagsFull.sort().map((tech: string): ReactNode => {
               return (
                 <div
                   className="Technology flex-grow rounded-sm bg-secondaryDark/50 px-2 py-1 text-center text-sm text-gray-400"
@@ -115,7 +118,7 @@ export default function DisplayCard({
               );
             })}
         </div>
-        <div className="ButtonContainer bottom-0 right-0 flex h-full w-full min-w-fit flex-col items-end justify-end text-nowrap sm:gap-2 md:absolute md:w-fit">
+        <div className="ButtonContainer bottom-0 right-0 flex h-full w-full min-w-fit flex-col items-end justify-end text-nowrap sm:gap-2 md:relative md:w-fit">
           <SiteButton
             size="small"
             addClasses="tracking-widest sm:text-xs mt-3 md:mt-0 uppercase w-full md:w-auto"

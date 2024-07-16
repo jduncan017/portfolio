@@ -5,15 +5,12 @@ import ImageLoadingWrapper from "../../../utils/PreLoader/ImageLoadingWrapper";
 import SiteButton from "./SiteButton";
 import { useModal } from "@/src/contexts/ModalContext";
 import ProjectModal from "../Modals/ProjectModal";
-import ExternalLinkModal from "../Modals/ExternalLinkModal";
 
 type DisplayCardProps = {
   cardData: CardData;
-  dataType: "projects" | "technologies";
 };
 
-export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
-  let cardButton: ReactNode;
+export default function DisplayCard({ cardData }: DisplayCardProps) {
   const { showModal } = useModal();
   const isURL = (path: string) => {
     try {
@@ -23,41 +20,6 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
       return false;
     }
   };
-
-  switch (dataType) {
-    case "projects":
-      cardButton = (
-        <SiteButton
-          size="small"
-          aria={`View Project`}
-          addClasses="tracking-widest font-medium my-2"
-          textColor="text-black"
-          onClick={() => showModal(<ProjectModal cardData={cardData} />)}
-          style="purple"
-        >
-          View Project
-        </SiteButton>
-      );
-      break;
-    case "technologies":
-      cardButton = (
-        <SiteButton
-          size="small"
-          aria={`View`}
-          addClasses="tracking-widest font-medium my-2"
-          textColor="text-black"
-          style="purple"
-          onClick={() =>
-            showModal(
-              <ExternalLinkModal cardData={cardData} linkType="website" />,
-            )
-          }
-        >
-          {cardData.liveButtonText}
-        </SiteButton>
-      );
-      break;
-  }
 
   const cardImage = () => {
     if (isURL(cardData.imagePath)) {
@@ -103,7 +65,16 @@ export default function DisplayCard({ cardData, dataType }: DisplayCardProps) {
       <p className="Description pointer-events-none h-16 w-full text-start leading-5 text-gray-400 xs:h-16">
         {cardData.description}
       </p>
-      {cardButton}
+      <SiteButton
+        size="small"
+        aria={`View Project`}
+        addClasses="tracking-widest font-medium my-2"
+        textColor="text-black"
+        onClick={() => showModal(<ProjectModal cardData={cardData} />)}
+        style="purple"
+      >
+        View Project
+      </SiteButton>
     </div>
   );
 }

@@ -4,7 +4,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Happy Hour Hunt",
     lastUpdated: "6/17/24",
-    techsUsed: ["Next.js", "TypeScript", "HTML5", "Tailwind CSS"],
+    tagsFull: ["Next.js", "TypeScript", "HTML5", "Tailwind CSS"],
     description:
       "A Yelp-style platform aimed at helping users discover and engage with local happy hours.",
     liveButtonText: "Visit Site",
@@ -19,7 +19,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "LifeGuide Healing",
     lastUpdated: "6/14/24",
-    techsUsed: ["Next.js", "TypeScript", "HTML5", "Tailwind", "Formspark"],
+    tagsFull: ["Next.js", "TypeScript", "HTML5", "Tailwind", "Formspark"],
     description:
       "Client Project including full branding and design package for a holistic health website.",
     repoURL: "https://github.com/jduncan017/lifeguide-holistic-healing",
@@ -38,7 +38,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Cifernoise",
     lastUpdated: "6/20/24",
-    techsUsed: ["Duda", "EmbedSocial"],
+    tagsFull: ["Duda", "EmbedSocial"],
     description: "Website for a popular silent disco company in Denver, CO.",
     liveButtonText: "Visit Site",
     liveLink: "https://www.cifernoiseproductions.com",
@@ -52,7 +52,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Ryan Insurance",
     lastUpdated: "6/05/24",
-    techsUsed: ["Framer", "Figma", "Formspark"],
+    tagsFull: ["Framer", "Figma", "Formspark"],
     description:
       "Website for an insurance company that sells life, disability, and long-term care insurances.",
     liveButtonText: "Visit Site",
@@ -70,7 +70,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Tailwind Plugin",
     lastUpdated: "5/8/24",
-    techsUsed: ["TypeScript"],
+    tagsFull: ["TypeScript"],
     description:
       "VS Code plugin that hides excess tailwind code and allows for naming classes.",
     liveButtonText: "View Plugin",
@@ -88,7 +88,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "John Gerard",
     lastUpdated: "6/15/24",
-    techsUsed: [
+    tagsFull: [
       "Next.js",
       "TypeScript",
       "HTML5",
@@ -115,7 +115,7 @@ export const PROJECT_DATA: CardData[] = [
   {
     name: "Developer Portfolio",
     lastUpdated: "6/21/24",
-    techsUsed: [
+    tagsFull: [
       "Next.js",
       "TypeScript",
       "Tailwind",

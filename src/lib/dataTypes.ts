@@ -1,13 +1,13 @@
 export type CardData = {
   name: string;
   lastUpdated?: string;
-  techsUsed?: string[];
+  tagsFull?: string[];
   description: string;
   liveButtonText: string;
   liveLink: string;
   altName?: string;
   imagePath: string;
-  tags?: string[];
+  tags: string[];
   role?: string;
   keyFeatures?: string[];
   stage?: string;
