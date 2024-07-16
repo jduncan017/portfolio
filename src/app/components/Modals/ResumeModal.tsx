@@ -61,7 +61,8 @@ export default function ResumeModal() {
                   <ul className="Descriptions leading-6 text-gray-400">
                     {job.description.map((item) => (
                       <li key={item} className="ExperienceItem mt-1">
-                        {`-> ${item}`}
+                        <span className="Arrow text-secondary/80">{`-> `}</span>
+                        {item}
                       </li>
                     ))}
                   </ul>
@@ -90,7 +91,8 @@ export default function ResumeModal() {
                   <ul className="Descriptions leading-6 text-gray-400">
                     {item.description.map((item) => (
                       <li key={item} className="ExperienceItem mt-1">
-                        {`-> ${item}`}
+                        <span className="Arrow text-secondary/80">{`-> `}</span>
+                        {item}
                       </li>
                     ))}
                   </ul>
