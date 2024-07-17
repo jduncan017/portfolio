@@ -1,4 +1,5 @@
-import { useState, useEffect, useCallback } from "react";
+"use client";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { BackgroundGradient } from "./UI-Libraries/background-gradient";
@@ -7,7 +8,7 @@ import DisplayListModal from "@/src/app/components/Modals/DisplayListModal";
 import { CardData } from "@/src/lib/dataTypes";
 import { useModal } from "@/src/contexts/ModalContext";
 import SectionTitle from "./UI-Elements/SectionTitle";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 type SliderSectionProps = {
   cardArray: CardData[];
@@ -53,14 +54,41 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { y: "500px" },
+  hidden: { y: "500px", opacity: 0 },
   visible: {
     y: 0,
+    opacity: 1,
     transition: {
       type: "spring",
       bounce: 0.2,
     },
   },
+};
+
+// Needed to use custom intersection observer to force reanimation of
+// cards on screen resize
+const useIntersectionObserver = (options = {}) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const currentRef = ref.current;
+    const observer = new IntersectionObserver(([entry]) => {
+      entry && setIsIntersecting(entry.isIntersecting);
+    }, options);
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [options]);
+
+  return [ref, isIntersecting];
 };
 
 export default function SliderSection({
@@ -72,6 +100,14 @@ export default function SliderSection({
   const [centerMode, setCenterMode] = useState(false);
   const [autoPlay, setAutoPlay] = useState(true);
   const { showModal } = useModal();
+  const controls = useAnimation();
+  const [ref, isInView] = useIntersectionObserver({ threshold: 0.1 });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [controls, isInView]);
 
   // sets center mode based on screen width
   useEffect(() => {
@@ -137,9 +173,10 @@ export default function SliderSection({
       </div>
       <BackgroundGradient containerClassName="CarouselTrack min-h-[400px] self-center w-[105%] rounded-xl p-[1px]">
         <motion.div
+          ref={ref as React.RefObject<HTMLDivElement>}
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
+          animate={controls}
           viewport={{ once: true }}
         >
           <Carousel
