@@ -61,6 +61,9 @@ const cardVariants = {
     transition: {
       type: "spring",
       bounce: 0.2,
+      stiffness: 100,
+      damping: 15,
+      mass: 1.2,
     },
   },
 };
