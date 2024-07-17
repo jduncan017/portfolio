@@ -135,12 +135,15 @@ export const Nav = () => {
           menuOpen={mobileNavVisible}
         />
         <div
-          className={`MobileMenu mt-10 h-auto w-full bg-black shadow-2xl ${
+          className={`MobileMenu h-auto w-full bg-black shadow-2xl ${
             mobileNavVisible
               ? "animate-slide-in block"
               : `animate-slide-out ${animateClass}`
           }`}
         >
+          <h3 className="Menu w-full rounded-sm border-b border-gray-400 bg-transparent px-4 pb-4 text-center text-xl font-semibold uppercase tracking-[2px] text-gray-500 sm:m-[0.5px] sm:w-fit sm:border-none sm:px-2 sm:py-2.5 sm:text-sm md:px-3">
+            Navigation Menu
+          </h3>
           {printNavButtons()}
         </div>
       </div>
