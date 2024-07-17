@@ -15,7 +15,7 @@ export default function ProfilePicture() {
         delay: 0.4,
       }}
     >
-      <div className="ImageContainer m-4 flex h-fit w-fit justify-end overflow-hidden bg-secondaryDark p-0 xs:mx-4 xs:justify-center xs:rounded-xl xxl:mx-auto">
+      <div className="ImageContainer m-4 flex h-fit w-fit justify-end overflow-hidden bg-secondary p-0 xs:mx-4 xs:justify-center xs:rounded-xl xxl:mx-auto">
         <Image
           alt="Josh's Picture"
           src="/my-pic.jpg"
