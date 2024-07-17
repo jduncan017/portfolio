@@ -124,7 +124,7 @@ export default function BrandModal() {
           <SiteButton
             size="large"
             textColor="text-gray-200"
-            addClasses="mt-5 bg-secondaryDark text-lg"
+            addClasses="mt-5 bg-secondaryDark text-lg max-w-[350px]"
             style="purple"
             onClick={() => showModal(<ContactModal />)}
           >
@@ -151,14 +151,6 @@ export default function BrandModal() {
                 layoutId={`image-${expandedImage + 1}`}
                 style={{ zIndex: 51 }}
               >
-                <Image
-                  src="/close-button.svg"
-                  width={20}
-                  height={20}
-                  alt="close button"
-                  className="CloseButton absolute right-5 top-5 mix-blend-difference hover:scale-105 hover:cursor-pointer"
-                  onClick={() => setExpandedImage(null)}
-                />
                 {prerenderedExpandedImages[expandedImage] || (
                   <div className="flex h-[536px] w-[800px] items-center justify-center rounded-lg bg-gray-200">
                     <p>Image not available</p>

@@ -50,7 +50,7 @@ export default function DisplayCard({ cardData }: DisplayCardProps) {
           {cardData.tags.sort().map((tag: string): ReactNode => {
             return (
               <li
-                className="Tag pointer-events-none flex-grow rounded-sm bg-secondaryDark/40 px-2 py-1 text-center text-sm text-gray-400"
+                className="Tag pointer-events-none flex-grow rounded-sm bg-secondaryDark/40 px-2 py-1 text-center text-sm text-gray-300/80"
                 key={tag}
               >
                 {tag}

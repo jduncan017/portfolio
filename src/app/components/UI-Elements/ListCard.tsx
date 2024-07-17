@@ -59,7 +59,7 @@ export default function DisplayCard({
             {cardData.name}
           </h3>
           {cardData.lastUpdated && (
-            <p className="LastUpdated w-full text-center text-sm italic text-gray-400 md:text-start">
+            <p className="LastUpdated w-full text-center text-sm italic text-gray-300/60 md:text-start">
               {`Last updated: ${cardData.lastUpdated}`}
             </p>
           )}
@@ -67,35 +67,37 @@ export default function DisplayCard({
         </div>
         <div className="InfoContainer flex w-full flex-col items-start gap-1">
           <p className="Description w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-            <span className="font-medium text-gray-400">Description: </span>
+            <span className="font-medium text-gray-300/60">Description: </span>
             {cardData.description}
           </p>
           <p className="Type w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-            <span className="font-medium text-gray-400">Type: </span>
+            <span className="font-medium text-gray-300/60">Type: </span>
             {cardData.type}
           </p>
           {cardData.role && (
             <p className="Role w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-              <span className="font-medium text-gray-400">Role: </span>
+              <span className="font-medium text-gray-300/60">Role: </span>
               {cardData.role}
             </p>
           )}
           {cardData.stage && (
             <p className="Stage w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-              <span className="font-medium text-gray-400">Stage: </span>
+              <span className="font-medium text-gray-300/60">Stage: </span>
               {cardData.stage}
             </p>
           )}
           {cardData.keyFeatures && (
             <p className="KeyFeatures w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-              <span className="font-medium text-gray-400">Key Features: </span>
+              <span className="font-medium text-gray-300/60">
+                Key Features:{" "}
+              </span>
               {cardData.keyFeatures.map((feature: string): ReactNode => {
                 return (
                   <div
                     className="Keyfeature capitalize text-gray-300"
                     key={feature}
                   >
-                    <span className="Arrow text-gray-400">{`-> `}</span>
+                    <span className="Arrow text-gray-300/60">{`-> `}</span>
                     {feature}
                   </div>
                 );
@@ -110,7 +112,7 @@ export default function DisplayCard({
             cardData.tagsFull.sort().map((tech: string): ReactNode => {
               return (
                 <div
-                  className="Technology flex-grow rounded-sm bg-secondaryDark/50 px-2 py-1 text-center text-sm text-gray-400"
+                  className="Technology flex-grow rounded-sm bg-secondaryDark/50 px-2 py-1 text-center text-sm text-gray-300/70"
                   key={tech}
                 >
                   {tech}

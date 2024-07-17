@@ -64,7 +64,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
           {displayTags.sort().map((tech: string): ReactNode => {
             return (
               <div
-                className="tech flex-grow rounded-sm bg-secondaryDark/40 px-2 py-1 text-center text-sm text-gray-400"
+                className="tech flex-grow rounded-sm bg-secondaryDark/40 px-2 py-1 text-center text-sm text-gray-300/80"
                 key={tech}
               >
                 {tech}
@@ -74,21 +74,21 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
         </div>
         <div className="InfoContainer flex w-full flex-col items-start gap-1">
           <p className="Description w-fit border-b border-secondary/50 pb-2 text-start text-sm leading-5 text-gray-300 xs:text-base">
-            <span className="font-medium uppercase text-gray-400">
+            <span className="font-medium uppercase text-gray-300/60">
               Description:{" "}
             </span>
             {cardData.description}
           </p>
           <div className="DataContainer flex w-full flex-wrap gap-x-4 gap-y-1 border-b border-secondary/50 pb-2 pt-1">
             <p className="Type w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-              <span className="font-medium uppercase text-gray-400">
+              <span className="font-medium uppercase text-gray-300/60">
                 Type:{" "}
               </span>
               {cardData.type}
             </p>
             {cardData.role && (
               <p className="Role w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-                <span className="font-medium uppercase text-gray-400">
+                <span className="font-medium uppercase text-gray-300/60">
                   Role:{" "}
                 </span>
                 {cardData.role}
@@ -96,7 +96,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
             )}
             {cardData.stage && (
               <p className="Stage w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-                <span className="font-medium uppercase text-gray-400">
+                <span className="font-medium uppercase text-gray-300/60">
                   Stage:{" "}
                 </span>
                 {cardData.stage}
@@ -105,7 +105,7 @@ export default function ProjectModal({ cardData }: ProjectModalProps) {
           </div>
           {cardData.keyFeatures && (
             <p className="KeyFeatures w-fit text-start text-sm leading-5 text-gray-300 xs:text-base">
-              <span className="font-medium uppercase text-gray-400">
+              <span className="font-medium uppercase text-gray-300/60">
                 Key Features:{" "}
               </span>
               {cardData.keyFeatures.map((feature: string): ReactNode => {
