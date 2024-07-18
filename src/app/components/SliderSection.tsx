@@ -44,34 +44,6 @@ const responsive = {
   },
 };
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-// sets cardAnimation depending on screen width
-const cardAnimation =
-  window.innerWidth > 850 ? { y: "500px", opacity: 0 } : { opacity: 0 };
-
-const cardVariants = {
-  hidden: cardAnimation,
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.2,
-      stiffness: 100,
-      damping: 15,
-      mass: 1.2,
-    },
-  },
-};
-
 // Needed to use custom intersection observer to force reanimation of
 // cards on screen resize
 const useIntersectionObserver = (options = {}) => {
@@ -109,24 +81,60 @@ export default function SliderSection({
   const { showModal } = useModal();
   const controls = useAnimation();
   const [ref, isInView] = useIntersectionObserver({ threshold: 0.1 });
+  const [cardAnimation, setCardAnimation] = useState({ y: "", opacity: 0 });
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: cardAnimation,
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.2,
+        stiffness: 100,
+        damping: 15,
+        mass: 1.2,
+      },
+    },
+  };
+
+  // sets the animation and centermode based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      setCenterMode(window.innerWidth > 550);
+      setCardAnimation(
+        window.innerWidth > 850
+          ? { y: "500px", opacity: 0 }
+          : { y: "", opacity: 0 },
+      );
+    };
+
+    if (typeof window !== "undefined") {
+      handleResize(); // Call once to set initial state
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (isInView) {
       controls.start("visible");
     }
   }, [controls, isInView]);
-
-  // sets center mode based on screen width
-  useEffect(() => {
-    setCenterMode(window.innerWidth > 550);
-    const handleResize = () => {
-      setCenterMode(window.innerWidth > 550);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   //sets delay for autoplay after user interaction
   const handleUserInteraction = useCallback(() => {
