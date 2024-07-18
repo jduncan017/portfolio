@@ -19,7 +19,7 @@ export default function ProfilePicture() {
         <Image
           alt="Josh's Picture"
           src="/my-pic.jpg"
-          className="ProfilePic ml-4 aspect-square h-auto max-h-[375px] w-auto object-contain opacity-90 mini:ml-0 lg:aspect-square lg:h-full lg:max-h-[450px] lg:w-auto"
+          className="ProfilePic ml-4 aspect-square h-auto max-h-[375px] w-auto object-contain opacity-85 contrast-[110%] mini:ml-0 lg:aspect-square lg:h-full lg:max-h-[450px] lg:w-auto"
           width={450}
           height={450}
           priority

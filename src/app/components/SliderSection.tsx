@@ -53,8 +53,12 @@ const containerVariants = {
   },
 };
 
+// sets cardAnimation depending on screen width
+const cardAnimation =
+  window.innerWidth > 850 ? { y: "500px", opacity: 0 } : { opacity: 0 };
+
 const cardVariants = {
-  hidden: { y: "500px", opacity: 0 },
+  hidden: cardAnimation,
   visible: {
     y: 0,
     opacity: 1,
