@@ -1,6 +1,7 @@
 import "./globals.css";
 import "../utils/promisePolyFill";
 import { ModalProvider } from "../contexts/ModalContext";
+import { Analytics } from "@vercel/analytics/react";
 
 if (!process.env.NEXT_PUBLIC_BASE_URL) {
   throw new Error("NEXT_PUBLIC_BASE_URL is not defined");
@@ -42,6 +43,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="no-scrollbar m-auto max-w-[4000px] touch-pan-y overflow-x-hidden bg-offBlack">
         <ModalProvider>{children}</ModalProvider>
+        <Analytics />
       </body>
     </html>
   );
