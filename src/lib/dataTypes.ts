@@ -42,6 +42,7 @@ export type TestimonialData = {
   fullReview: string;
   relationship: string;
   date: string;
+  title: string;
 };
 
 export type CalloutData = {

@@ -121,7 +121,7 @@ export default function Bio() {
         </SiteButton>
         <SiteButton
           size="large"
-          textColor="text-gray-200"
+          textColor="text-gray-300"
           style="silverHollow"
           onClick={() => showModal(<ResumeModal />)}
         >

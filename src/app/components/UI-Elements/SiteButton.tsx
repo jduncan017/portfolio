@@ -38,19 +38,19 @@ const SiteButton = ({
   switch (style) {
     case "purple":
       buttonStyle =
-        "border-none border bg-secondary text-black hover:bg-slate-300 hover:text-black";
+        "bg-secondary text-black hover:bg-slate-300 hover:text-black";
       break;
     case "purpleHollow":
       buttonStyle =
-        "border-secondaryDark border hover:bg-slate-300 hover:border-none hover:text-black";
+        "border-secondaryDark border hover:bg-slate-300 hover:border-slate-300 hover:text-black";
       break;
     case "silver":
       buttonStyle =
-        "border-none bg-gradient-to-br from-gray-200 opacity-80 hover:opacity-200 to-gray-400 hover:opacity-100 hover:text-black";
+        "bg-gradient-to-br from-gray-200 opacity-70 hover:opacity-200 to-gray-400 hover:opacity-100 hover:text-black";
       break;
     case "silverHollow":
       buttonStyle =
-        "border-gray-300 border bg-opacity-0 hover:border-secondaryDark hover:bg-opacity-100 bg-secondaryDark text-white";
+        "border-gray-300/50 border bg-opacity-0 hover:border-secondaryDark hover:bg-opacity-100 bg-secondaryDark hover:text-white";
       break;
     default:
       buttonStyle = "";
@@ -58,7 +58,7 @@ const SiteButton = ({
 
   return (
     <button
-      className={`SiteButton text-nowrap rounded-md font-sans text-sm font-semibold transition-all duration-300 hover:scale-105 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
+      className={`SiteButton text-nowrap rounded-md font-sans text-sm font-medium transition-all duration-300 disabled:bg-gray-500 disabled:hover:cursor-not-allowed disabled:hover:text-white ${buttonSize} ${addClasses} ${textColor} ${buttonStyle}
       `}
       type={type ?? "button"}
       onClick={onClick}

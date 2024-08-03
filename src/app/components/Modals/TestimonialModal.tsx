@@ -23,17 +23,20 @@ export default function TestimonialModal({ testimonial }: TestimonialArray) {
             <h3 className="Title text-gradient-clip pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-2xl">
               {testimonial.name}
             </h3>
-            <p className="Relationship text-xl text-gray-400">
-              {testimonial.relationship}
+            <p className="Title text-start font-noto text-gray-500">
+              {testimonial.title}
             </p>
-            <p className="Date text-start font-noto text-gray-500">
-              {testimonial.date}
+            <p className="Relationship text-gray-500">
+              {testimonial.relationship}
             </p>
           </div>
         </div>
 
         <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
           <p className="Description w-full max-w-[700px] rounded-md border border-gray-700 bg-[#11121c]/60 p-4 text-start leading-6 text-gray-300">
+            <p className="Date mb-4 text-start font-noto text-gray-500">
+              {`Date: ${testimonial.date}`}
+            </p>
             {parse(testimonial.fullReview)}
           </p>
         </div>

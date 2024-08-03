@@ -1,4 +1,3 @@
-import { BackgroundGradient } from "../UI-Libraries/background-gradient";
 import Image from "next/image";
 import type { TestimonialData } from "@/src/lib/dataTypes";
 import { useModal } from "@/src/contexts/ModalContext";
@@ -12,43 +11,44 @@ interface TestimonialArray {
 export default function TestimonialCard({ testimonial }: TestimonialArray) {
   const { showModal } = useModal();
   return (
-    <BackgroundGradient
-      containerClassName="Container w-full h-full max-w-[700px] lg:h-[450px] min-[1480px]:h-[420px] mx-auto p-[0.75px] sm:hover:scale-105 transition-all duration-500"
-      className="Card relative flex h-full flex-col items-center gap-3 rounded-[12px] bg-slate-950 p-4 transition-all duration-500 xs:saturate-0 sm:hover:bg-slate-950/90 sm:hover:saturate-100 xl:px-10 xl:py-6"
-    >
-      <div className="TitleSection flex flex-col items-center">
-        <h3 className="Title text-gradient-clip pointer-events-none w-full text-center text-xl font-semibold uppercase tracking-wider xs:text-lg xl:text-xl">
-          {testimonial.name}
-        </h3>
-        <p className="Relationship text-lg italic text-gray-300">
-          {testimonial.relationship}
-        </p>
+    <div className="Card relative mx-auto flex  h-[300px] w-[310px] flex-col items-start gap-2 rounded-[8px] border border-white/30 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-0 px-7 py-5 shadow-secondaryDim transition-all duration-500 hover:shadow-secondaryBright sm:hover:-translate-y-2 md:h-[270px] md:w-[500px]">
+      <div className="TitleSection flex items-start gap-3 md:gap-4">
+        <Image
+          className="TestimonialImage aspect-square w-16 rounded-full object-cover md:w-20"
+          src={testimonial.imagePath}
+          alt="Screenshot of testimonial"
+          width={80}
+          height={80}
+        />
+        <div className="TitleInfo flex flex-col items-start">
+          <h3 className="Title text-gradient-clip w-full font-semibold uppercase tracking-wider md:text-2xl">
+            {testimonial.name}
+          </h3>
+          <p className="Title text-start font-noto text-sm text-gray-500">
+            {`${testimonial.title}`}
+          </p>
+          <p className="Relationship text-sm text-gray-600">
+            {testimonial.relationship}
+          </p>
+        </div>
       </div>
-      <Image
-        className="TestimonialImage pointer-events-none aspect-square w-24 rounded-full object-cover"
-        src={testimonial.imagePath}
-        alt="Screenshot of testimonial"
-        width={120}
-        height={120}
-      />
-      <div className="DescriptionContainer my-2 flex flex-col items-center gap-1 text-base">
-        <p className="Description pointer-events-none h-full w-full max-w-[500px] text-center text-base leading-6 text-gray-200">
+      <div className="DescriptionContainer my-2 flex flex-col items-center gap-1">
+        <p className="Description h-full w-full text-sm text-gray-400 md:text-base">
           {testimonial.shortDescription}
         </p>
-        <p className="Date font-noto text-gray-400">{`- ${testimonial.date} -`}</p>
       </div>
       <SiteButton
         onClick={() =>
           showModal(<TestimonialModal testimonial={testimonial} />)
         }
         aria="View full review"
-        addClasses="ReviewButton relative bottom-2 sm:text-sm my-4 font-medium tracking-widest capitalize lg:absolute"
-        textColor="text-secondary"
+        addClasses="ReviewButton bottom-2 text-xs md:text-sm my-4 font-medium tracking-widest capitalize absolute"
+        textColor="text-gray-400"
         size="small"
-        style="purpleHollow"
+        style="silverHollow"
       >
         Full Review
       </SiteButton>
-    </BackgroundGradient>
+    </div>
   );
 }

@@ -9,12 +9,13 @@ import { useModal } from "@/src/contexts/ModalContext";
 
 export default function BrandModal() {
   const { showModal } = useModal();
+  const [brandGuide, setBrandGuide] = useState("mvnBrandGuide");
+  const [pages, setPages] = useState(20);
   const [expandedImage, setExpandedImage] = useState<number | null>(null);
   const [prerenderedImages, setPrerenderedImages] = useState<JSX.Element[]>([]);
   const [prerenderedExpandedImages, setPrerenderedExpandedImages] = useState<
     JSX.Element[]
   >([]);
-  const pages = 20;
   const containerRef = useRef<HTMLDivElement>(null);
   const packageElements = [
     "Logo Design & Development",
@@ -37,7 +38,7 @@ export default function BrandModal() {
       const expandedImages: JSX.Element[] = [];
 
       for (let i = 1; i <= pages; i++) {
-        const src = `/mvnBrandGuide/${i}.webp`;
+        const src = `/${brandGuide}/${i}.webp`;
         thumbnails.push(
           <Image
             key={`thumbnail-${i}`}
@@ -53,8 +54,8 @@ export default function BrandModal() {
           <Image
             key={`expanded-${i}`}
             src={src}
-            width={800}
-            height={536}
+            width={1000}
+            height={670}
             alt={`Expanded Brand Strategy Page ${i}`}
             className="rounded-lg shadow-xl"
           />,
@@ -66,7 +67,7 @@ export default function BrandModal() {
     };
 
     prerenderImages();
-  }, []);
+  }, [brandGuide]);
 
   type SortedProps = { packageElements: string[] };
 
@@ -118,7 +119,7 @@ export default function BrandModal() {
             </h4>
             <SortedPackageElements packageElements={packageElements} />
           </div>
-          <h4 className="BioHeader capitaliz mt-2 text-2xl tracking-wide text-gray-400">
+          <h4 className="BioHeader capitaliz text-lg tracking-wide text-gray-500">
             Free Consultations
           </h4>
           <SiteButton
@@ -128,11 +129,40 @@ export default function BrandModal() {
             style="purple"
             onClick={() => showModal(<ContactModal />)}
           >
-            Inquire About Brand Services
+            Inquire
           </SiteButton>
           <h3 className="Description text-gradient-clip mt-10 w-full max-w-[700px] text-xl capitalize tracking-widest sm:text-2xl">
-            Example Brand Strategy Guide
+            Example Brand/Product Strategy Guides
           </h3>
+          <div className="ButtonContainer mb-2 mt-6 flex flex-col gap-3 mini:mr-0 mini:flex-row">
+            <button
+              className={`SelectButton rounded-sm px-4 py-2 text-gray-300 transition-colors ${brandGuide === "mvnBrandGuide" ? "cursor-default bg-slate-500" : "bg-gray-700 hover:bg-gray-600"}`}
+              onClick={() => {
+                setBrandGuide("mvnBrandGuide");
+                setPages(20);
+              }}
+            >
+              MVN Travel
+            </button>
+            <button
+              className={`SelectButton rounded-sm px-4 py-2 text-gray-300 transition-colors ${brandGuide === "rdsBrandGuide" ? "cursor-default bg-slate-500" : "bg-gray-700 hover:bg-gray-600"}`}
+              onClick={() => {
+                setBrandGuide("rdsBrandGuide");
+                setPages(25);
+              }}
+            >
+              Ronin Data Solutions
+            </button>
+            <button
+              className={`SelectButton rounded-sm px-4 py-2 text-gray-300 transition-colors ${brandGuide === "levitaBrandGuide" ? "cursor-default bg-slate-500" : "bg-gray-700 hover:bg-gray-600"}`}
+              onClick={() => {
+                setBrandGuide("levitaBrandGuide");
+                setPages(25);
+              }}
+            >
+              Levita Beverages
+            </button>
+          </div>
           <div className="GuideContainer my-5 grid grid-cols-1 gap-6 border-t border-dotted border-gray-600 py-5 sm:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4">
             {renderPages()}
           </div>
@@ -147,12 +177,12 @@ export default function BrandModal() {
               onClick={() => setExpandedImage(null)}
             >
               <motion.div
-                className="ExpandedImageWrapper relative w-[90vw] max-w-[800px]"
+                className="ExpandedImageWrapper relative w-[90vw] max-w-[1000px]"
                 layoutId={`image-${expandedImage + 1}`}
                 style={{ zIndex: 51 }}
               >
                 {prerenderedExpandedImages[expandedImage] || (
-                  <div className="flex h-[536px] w-[800px] items-center justify-center rounded-lg bg-gray-200">
+                  <div className="flex h-[670px] w-[1000px] items-center justify-center rounded-lg bg-gray-200">
                     <p>Image not available</p>
                   </div>
                 )}

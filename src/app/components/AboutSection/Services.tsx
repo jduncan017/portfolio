@@ -80,7 +80,7 @@ export default function Services() {
           </SiteButton>
           <SiteButton
             size="large"
-            textColor="text-gray-200"
+            textColor="text-gray-300"
             style="silverHollow"
             onClick={() => performSmoothScroll("projects")}
           >

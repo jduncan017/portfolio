@@ -5,7 +5,7 @@ import { RESUME_DATA } from "@/src/lib/resumeData";
 
 export const SocialContainer = () => {
   return (
-    <div className="_social-container flex gap-3">
+    <div className="_social-container flex gap-4">
       <Link
         rel="noopener noreferrer"
         aria-label="github profile"
@@ -42,7 +42,7 @@ export const SocialContainer = () => {
           LinkedIn
         </p>
       </Link>
-      <Link
+      {/* <Link
         rel="noopener noreferrer"
         aria-label="X profile"
         href={RESUME_DATA.xURL}
@@ -59,7 +59,7 @@ export const SocialContainer = () => {
         <p className="IconName w-[40px] text-center text-xs font-light italic transition-all duration-300">
           X
         </p>
-      </Link>
+      </Link> */}
       <Link
         rel="noopener noreferrer"
         aria-label="medium profile"
