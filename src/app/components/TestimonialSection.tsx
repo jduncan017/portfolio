@@ -3,13 +3,12 @@ import { TESTIMONIAL_DATA } from "@/src/lib/testimonialData";
 import TestimonialCard from "./UI-Elements/TestimonialCard";
 import { motion } from "framer-motion";
 import SectionTitle from "./UI-Elements/SectionTitle";
-import Ticker from "framer-motion-ticker";
 import { useState } from "react";
 import DisplayListModal from "@/src/app/components/Modals/DisplayListModal";
 import { useModal } from "@/src/contexts/ModalContext";
+import FramerMotionTicker from "./UI-Libraries/FramerMotionTicker";
 
 export default function TestimonialSection() {
-  const [isPlaying, setIsPlaying] = useState(true);
   const { showModal } = useModal();
   const motionContainer = {
     show: {
@@ -78,13 +77,7 @@ export default function TestimonialSection() {
           className="CardContainer flex h-fit w-[90%] flex-wrap justify-center gap-10 sm:w-[80%] lg:w-[95%]"
           whileInView="show"
         >
-          <Ticker
-            duration={100}
-            direction={-1}
-            onMouseEnter={() => setIsPlaying(false)}
-            onMouseLeave={() => setIsPlaying(true)}
-            isPlaying={isPlaying}
-          >
+          <FramerMotionTicker duration={80}>
             {sortedTestimonials.map((testimonial) => (
               <motion.li
                 key={testimonial.name}
@@ -94,7 +87,7 @@ export default function TestimonialSection() {
                 <TestimonialCard testimonial={testimonial} />
               </motion.li>
             ))}
-          </Ticker>
+          </FramerMotionTicker>
         </motion.ul>
       </div>
     </section>
