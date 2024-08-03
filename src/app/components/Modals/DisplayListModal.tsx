@@ -1,14 +1,18 @@
 import ModalWrapper from "./ModalWrapper";
-import { CardData } from "@/src/lib/dataTypes";
+import { CardData, TestimonialData } from "@/src/lib/dataTypes";
 import ListCard from "@/src/app/components/UI-Elements/ListCard";
 import { motion } from "framer-motion";
+import TestimonialCard from "../UI-Elements/TestimonialCard";
 
 type DisplayListProps = {
-  cardArray: CardData[];
-  dataType: "projects" | "technologies";
+  cardArray: CardData[] | TestimonialData[];
+  dataType: "projects" | "technologies" | "testimonial";
 };
 
-export default function DisplayList({ cardArray, dataType }: DisplayListProps) {
+export default function DisplayListModal({
+  cardArray,
+  dataType,
+}: DisplayListProps) {
   const motionContainer = {
     show: {
       transition: {
@@ -45,15 +49,29 @@ export default function DisplayList({ cardArray, dataType }: DisplayListProps) {
           initial="hidden"
           whileInView="show"
         >
-          {cardArray.map((cardData: CardData) => (
-            <motion.li key={cardData.name} variants={motionItem}>
-              <ListCard
-                cardData={cardData}
-                dataType={dataType}
-                cardArray={cardArray}
-              />
-            </motion.li>
-          ))}
+          {cardArray.map((cardData) =>
+            dataType === "projects" || dataType === "technologies" ? (
+              <motion.li key={cardData.name} variants={motionItem}>
+                <ListCard
+                  cardData={cardData as CardData}
+                  dataType={dataType}
+                  cardArray={cardArray as CardData[]}
+                />
+              </motion.li>
+            ) : (
+              <motion.li key={cardData.name} variants={motionItem}>
+                <TestimonialCard
+                  testimonial={cardData as TestimonialData}
+                  currentModal={
+                    <DisplayListModal
+                      cardArray={cardArray}
+                      dataType={"testimonial"}
+                    />
+                  }
+                />
+              </motion.li>
+            ),
+          )}
         </motion.ul>
       </>
     </ModalWrapper>

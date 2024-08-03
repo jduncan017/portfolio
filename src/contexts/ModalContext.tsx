@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 interface ModalContextType {
   showModal: (content: ReactNode) => void;
-  hideModal: () => void;
+  hideModal: (content?: ReactNode) => void;
 }
 
 interface ModalProviderProps {
@@ -25,8 +25,10 @@ export function ModalProvider({ children }: ModalProviderProps) {
   const [modalContent, setModalContent] = useState<ReactNode>(null);
 
   const showModal = (content: ReactNode): void => setModalContent(content);
-  const hideModal = () => setModalContent(null);
-
+  const hideModal = (currentModal?: ReactNode): void => {
+    console.log(currentModal);
+    setModalContent(currentModal ? currentModal : null);
+  };
   return (
     <ModalContext.Provider value={{ showModal, hideModal }}>
       {children}

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import type { TestimonialData } from "@/src/lib/dataTypes";
 import { useModal } from "@/src/contexts/ModalContext";
 import SiteButton from "./SiteButton";
@@ -6,9 +7,13 @@ import TestimonialModal from "../Modals/TestimonialModal";
 
 interface TestimonialArray {
   testimonial: TestimonialData;
+  currentModal?: ReactNode;
 }
 
-export default function TestimonialCard({ testimonial }: TestimonialArray) {
+export default function TestimonialCard({
+  testimonial,
+  currentModal,
+}: TestimonialArray) {
   const { showModal } = useModal();
   return (
     <div className="Card relative mx-auto flex  h-[300px] w-[310px] flex-col items-start gap-2 rounded-[8px] border border-white/30 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-0 px-7 py-5 shadow-secondaryDim transition-all duration-500 hover:shadow-secondaryBright sm:hover:-translate-y-2 md:h-[270px] md:w-[500px]">
@@ -33,13 +38,18 @@ export default function TestimonialCard({ testimonial }: TestimonialArray) {
         </div>
       </div>
       <div className="DescriptionContainer my-2 flex flex-col items-center gap-1">
-        <p className="Description h-full w-full text-sm text-gray-400 md:text-base">
+        <p className="Description h-full w-full text-start text-sm text-gray-400 md:text-base">
           {testimonial.shortDescription}
         </p>
       </div>
       <SiteButton
         onClick={() =>
-          showModal(<TestimonialModal testimonial={testimonial} />)
+          showModal(
+            <TestimonialModal
+              testimonial={testimonial}
+              currentModal={currentModal}
+            />,
+          )
         }
         aria="View full review"
         addClasses="ReviewButton bottom-2 text-xs md:text-sm my-4 font-medium tracking-widest capitalize absolute"

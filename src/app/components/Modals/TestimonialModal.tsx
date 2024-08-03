@@ -2,14 +2,19 @@ import Image from "next/image";
 import type { TestimonialData } from "@/src/lib/dataTypes";
 import ModalWrapper from "./ModalWrapper";
 import parse from "html-react-parser";
+import type { ReactNode } from "react";
 
 interface TestimonialArray {
   testimonial: TestimonialData;
+  currentModal?: ReactNode;
 }
 
-export default function TestimonialModal({ testimonial }: TestimonialArray) {
+export default function TestimonialModal({
+  testimonial,
+  currentModal,
+}: TestimonialArray) {
   return (
-    <ModalWrapper title="Testimonial">
+    <ModalWrapper title="Testimonial" currentModal={currentModal}>
       <div className="TestomonialModal flex flex-col gap-5 overflow-hidden py-2 md:px-6">
         <div className="TitleSection flex items-center gap-4">
           <Image

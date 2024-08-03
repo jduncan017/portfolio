@@ -22,7 +22,7 @@ export default function ExternalLinkModal({
     if (currentModal) {
       showModal(currentModal);
     } else {
-      hideModal();
+      () => hideModal();
     }
   };
 
@@ -47,7 +47,7 @@ export default function ExternalLinkModal({
   }
 
   return (
-    <ModalWrapper>
+    <ModalWrapper currentModal={currentModal}>
       <div className="ModalContainer flex h-fit w-fit flex-col items-center rounded-2xl px-6 py-5 text-center font-serif">
         <h3 className="Header font-noto text-2xl font-black capitalize text-gray-400">
           {modalTitle}

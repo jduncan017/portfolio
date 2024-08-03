@@ -2,15 +2,11 @@ import { motion } from "framer-motion";
 import SiteButton from "../UI-Elements/SiteButton";
 import { useModal } from "@/src/contexts/ModalContext";
 import BrandModal from "../Modals/BrandModal";
+import DisplayListModal from "../Modals/DisplayListModal";
+import { PROJECT_DATA } from "@/src/lib/projectData";
 
 export default function Services() {
   const { showModal } = useModal();
-
-  const performSmoothScroll = (sectionName: string) => {
-    const section = document.querySelector(`#${sectionName}-section`);
-
-    section && section.scrollIntoView({ behavior: "smooth" });
-  };
 
   const leftContainerVariants = {
     hidden: { x: "-100%" },
@@ -82,7 +78,14 @@ export default function Services() {
             size="large"
             textColor="text-gray-300"
             style="silverHollow"
-            onClick={() => performSmoothScroll("projects")}
+            onClick={() =>
+              showModal(
+                <DisplayListModal
+                  cardArray={PROJECT_DATA}
+                  dataType={"projects"}
+                />,
+              )
+            }
           >
             View Projects
           </SiteButton>

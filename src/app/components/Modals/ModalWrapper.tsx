@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import type { FC, ReactElement } from "react";
+import type { FC, ReactElement, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { useModal } from "@/src/contexts/ModalContext";
 import Image from "next/image";
@@ -8,11 +8,16 @@ import useEscape from "../../../hooks/useEscape";
 interface ModalWrapperProps {
   title?: string;
   children: ReactElement;
+  currentModal?: ReactNode;
 }
 
-const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
+const ModalWrapper: FC<ModalWrapperProps> = ({
+  title,
+  children,
+  currentModal,
+}) => {
   const { hideModal } = useModal();
-  useEscape(hideModal);
+  useEscape(() => hideModal(currentModal));
 
   const handleModalContentClick = (event: React.MouseEvent) => {
     event.stopPropagation();
@@ -29,7 +34,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
   return (
     <div
       className="ModalOverlay fixed inset-0 z-50 flex h-svh items-center justify-center bg-black/70 backdrop-blur-lg backdrop-filter xs:p-6"
-      onClick={hideModal}
+      onClick={() => hideModal(currentModal)}
     >
       <motion.div
         initial={{ scale: 0 }}
@@ -50,7 +55,7 @@ const ModalWrapper: FC<ModalWrapperProps> = ({ title, children }) => {
           <button
             className="CloseButton absolute right-4 top-6 z-10 transition-all hover:scale-110 hover:cursor-pointer"
             type="button"
-            onClick={hideModal}
+            onClick={() => hideModal(currentModal)}
           >
             <Image
               src="/close-button.svg"
