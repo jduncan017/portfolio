@@ -40,7 +40,7 @@
     // "**/*.js", // Ensure this is commented out
     ".next/types/**/*.ts",
     "src/app/components/Nav/Nav.js",
-    "src/app/components/UI-Libraries/framer-ticker.js"
+    "src/app/components/UI-Libraries/FramerMotionTicker.js"
   ],
   "exclude": ["node_modules", "**/*.js"] // Add "**/*.js" here to exclude JS files
 }

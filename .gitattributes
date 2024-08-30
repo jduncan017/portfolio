@@ -1,3 +1,4 @@
 *.ts linguist-language=TypeScript
-*.tsx linguist-language=TypeScript
-vendor/* linguist-documentation
+   *.tsx linguist-language=TypeScript
+   *.js linguist-language=JavaScript
+   *.jsx linguist-language=JavaScript
