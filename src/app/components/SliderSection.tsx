@@ -201,7 +201,7 @@ export default function SliderSection({
             showDots={false}
             ssr={true}
             infinite={true}
-            autoPlay={autoPlay}
+            autoPlay={false}
             keyBoardControl={true}
             customTransition="transform 500ms ease"
             transitionDuration={500}
