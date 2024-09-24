@@ -30,8 +30,20 @@ export const RESUME_DATA: ResumeData = {
   ],
   jobs: [
     {
-      name: "WebSavvy Designs",
-      position: "Web Developer, Designer, & Brand Strategist",
+      name: "Straightforward Job Site",
+      position: "Lead Front-End Developer",
+      time: "Remote | August 2024 - Current",
+      description: [
+        "Architected and implemented scalable front-end solutions using Next.js, TypeScript, and Tailwind CSS.",
+        "Established coding standards, improving overall code quality and team productivity.",
+        "Conducted code reviews, ensuring adherence to best practices and fostering knowledge sharing.",
+        "Mentored developers in Next.js, TypeScript, and Tailwind CSS, accelerating their skill development.",
+        "Developed scalable component library, enhancing UI consistency and reducing development time.",
+      ],
+    },
+    {
+      name: "DigitalNova Studio",
+      position: "Founder & Creative Director",
       time: "Remote | November 2023 - Current",
       description: [
         "Developed 4 client websites using TypeScript and Next.js. Typical turnaround of 2-4 weeks per project.",
